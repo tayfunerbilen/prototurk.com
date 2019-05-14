@@ -1,0 +1,20 @@
+{
+  "title": "<html> Etiketi",
+  "tag": "html",
+  "lang": "html",
+  "compatibilities": [
+    "HTML",
+    "HTML5"
+  ],
+  "closing_tag": true,
+  "syntax": "<html> ... </html>",
+  "display": "blok",
+  "usage": "yapısal",
+  "default_css": "html {\n\tdisplay: block;\n}",
+  "description": "<code>&lt;html></code> etiketi en temel html etiketidir ve diğer tüm html etiketlerini kapsar.",
+  "examples": [
+    {
+      "code": "<!doctype html>\n<html lang=\"tr\">\n<head>\n\t<meta charset=\"UTF-8\">\n\t<title>Başlık</title>\n</head>\n<body>\n\t...\n</body>\n</html>"
+    }
+  ]
+}

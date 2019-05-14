@@ -1,0 +1,53 @@
+{
+  "title": "PHP addslashes() Fonksiyonu",
+  "name": "addslashes",
+  "lang": "PHP",
+  "description": "Metin içerisinde bulunanan belli başlı karakterlerde escape işlemi yapar. Bu karakterler şunlardır;\n\nTek tırnak (')\nÇift tırnak (\")\nTers slash (\\)\n\nYukarıda belirtilen karakterler olması durumunda başlarına ters slash (\\) koyarak escape işlemini yapar ve olası hataları önler.",
+  "syntax": "addslashes ( string $str ) : string",
+  "params": [
+    {
+      "name": "$str",
+      "type": "string",
+      "description": "Escape edilecek ifade",
+      "required": true
+    }
+  ],
+  "return": {
+    "type": "string",
+    "text": "İşlemin sonucunda geriye escape edilmiş bir string ifade döner."
+  },
+  "note": "PHP'nin 5.4.0 sürümünden itibaren <b>magic_quotes_gpc</b> direktifi standart olarak açık geliyor ve tüm <code>$_GET</code>, <code>$_POST</code> ve <code>$_COOKIE</code> verileri için bu işlemi otomatik yapıyor. Yani eğer bu ayarınız açık ise, <code>addslashes()</code> fonksiyonu kullanmanıza gerek yoktur.\n\n<code>addslashes()</code> veritabanı işlemlerinde bir escape fonksiyonu olarak kullanılamaz, güvenlik sebebiyle veritabanı işlemlerinde veritabanı fonksiyonlarını kullanmaya özen gösterin.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "examples": [
+    {
+      "description": "Temel anlamda escape işlemi için birkaç örnek vermek gerekirse;",
+      "code": "<?php\n\n$str = \"Hakan'ın Odası\";\n\n// Çıktı: Hakan\\'ın Odası\necho addslashes($str);\n\n?>"
+    },
+    {
+      "description": "<b>magic_quotes_gpc</b> direktifini kontrol ederek kullanımı;",
+      "code": "<?php\n\n$str = \"Hakan'ın Odası\";\nif (!get_magic_quotes_gpc()) {\n\t$str = addslashes($str);\n}\necho $str;\n\n?>"
+    }
+  ],
+  "see_also": [
+    {
+      "title": "stripslashes()",
+      "url": "php/stripslashes"
+    },
+    {
+      "title": "htmlspecialchars()",
+      "url": "php/htmlspecialchars"
+    },
+    {
+      "title": "quotemeta()",
+      "url": "php/quotemeta"
+    },
+    {
+      "title": "get_magic_quotes_gpc()",
+      "url": "php/get_magic_quotes_gpc"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "title": "CSS font-size Özelliği",
+  "name": "font-size",
+  "lang": "css",
+  "description": "<code>font-size</code> özelliği, yazının boyutunu belirmek için kullanılır.",
+  "syntax": "font-size: medium | xx-small | x-small | small | large | x-large | xx-large | smaller | larger | uzunluk | yüzdelik | initial | inherit;",
+  "version": "CSS1",
+  "animatable": true,
+  "inherited": true,
+  "default_value": "medium",
+  "js_syntax": "object.style.fontSize=\"DEĞER\"",
+  "values": [
+    {
+      "value": "medium",
+      "description": "Yazının boyutunu orta boyut olarak ayarlar. * Bu varsayılan değerdir."
+    },
+    {
+      "value": "xx-small",
+      "description": "Yazının boyutunu çok çok küçük olarak ayarlar."
+    },
+    {
+      "value": "x-small",
+      "description": "Yazının boyutunu çok küçük olarak ayarlar."
+    },
+    {
+      "value": "small",
+      "description": "Yazının boyutunu küçük olarak ayarlar."
+    },
+    {
+      "value": "large",
+      "description": "Yazının boyutunu büyük olarak ayarlar."
+    },
+    {
+      "value": "x-large",
+      "description": "Yazının boyutunu çok büyük olarak ayarlar."
+    },
+    {
+      "value": "xx-large",
+      "description": "Yazının boyutunu çok çok büyük olarak ayarlar."
+    },
+    {
+      "value": "smaller",
+      "description": "Yazının boyutunu üst öğesinden daha küçük olarak ayarlar."
+    },
+    {
+      "value": "larger",
+      "description": "Yazının boyutunu üst öğesinden daha büyük olarak ayarlar."
+    },
+    {
+      "value": "uzunluk",
+      "description": "Yazının boyutunu px, pt vb. gibi sabit bir boyut olarak ayarlar."
+    },
+    {
+      "value": "yüzdelik",
+      "description": "Yazının boyutunu üst öğesine göre yüzdelik olarak ayarlar."
+    },
+    {
+      "value": "initial",
+      "description": "Yazı boyutunu varsayılan değerlerine göre ayarlar"
+    },
+    {
+      "value": "inherit",
+      "description": "Yazının boyutunu üst öğesinden miras alır"
+    }
+  ],
+  "examples": [
+    {
+      "description": "Uzunluk birimlerini örnek vermek gerekirse;",
+      "code": "h1 { font-size: 1em }\n\np { font-size: 18px }\n\n.test { font-size: 150% }\n\nspan { font-size: 1.8pt }"
+    },
+    {
+      "description": "Diğer kullanımları;",
+      "code": ".test { font-size: xx-large }\n\n#wrapper span { font-size: smaller }"
+    }
+  ],
+  "related": [
+    {
+      "title": "font",
+      "url": "css/font",
+      "description": "Tüm font özelliklerinin kısa kullanımıdır."
+    },
+    {
+      "title": "font-style",
+      "url": "css/font-style",
+      "description": "Yazının stilini belirler."
+    },
+    {
+      "title": "font-variant",
+      "url": "css/font-variant",
+      "description": "Yazının küçük harfli bir fontta görüntülenip görüntülenmeyeceğini belirler."
+    },
+    {
+      "title": "font-weight",
+      "url": "css/font-weight",
+      "description": "Yazının kalınlığını belirler."
+    }
+  ]
+}

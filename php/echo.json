@@ -1,0 +1,40 @@
+{
+  "title": "PHP: echo",
+  "name": "echo",
+  "lang": "PHP",
+  "description": "Bir ve ya daha fazla ifadeyi ekrana yazdırmayı sağlar. <code>echo</code> bir fonksiyon değil, dilin temel işlevlerinden birisidir.",
+  "syntax": "echo ( string $deger1 [, string $... ] ) : void",
+  "return": {
+    "type": "void",
+    "text": "echo bir fonksiyon olmadığından geriye herhangi bir değer döndürmez."
+  },
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "examples": [
+    {
+      "description": "En basit haliyle kullanımı aşağıdaki şekildedir.",
+      "code": "<?php\n\necho \"Merhaba Dünya\";\n\n?>"
+    },
+    {
+      "description": "Ayrıca bir çok farklı şekilde kullanımları mevcut olup hemen hemen tüm kullanımları aşağıdaki örnekte mevcuttur.",
+      "code": "<?php\n\n$date = date('Y-m-d H:i:s');\nlist($date, $time) = explode(' ', $date);\n\necho $time;\n\n?>"
+    }
+  ],
+  "see_also": [
+    {
+      "title": "print",
+      "url": "php/print"
+    },
+    {
+      "title": "printf()",
+      "url": "php/printf"
+    },
+    {
+      "title": "flush()",
+      "url": "php/flush"
+    }
+  ]
+}

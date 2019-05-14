@@ -1,0 +1,87 @@
+{
+  "title": "PHP explode() Fonksiyonu",
+  "name": "explode",
+  "lang": "PHP",
+  "description": "Belirlenen ayraç ile string bir ifade array'e dönüştürülür.",
+  "syntax": "explode ( string $delimiter , string $str [, int $limit = PHP_INT_MAX ] ) : array",
+  "params": [
+    {
+      "name": "$delimiter",
+      "type": "string",
+      "description": "İfadeyi bölmek için kullanılan ayraç",
+      "required": true
+    },
+    {
+      "name": "$str",
+      "type": "string",
+      "description": "Parçalanacak ifadenin kendisi",
+      "required": true
+    },
+    {
+      "name": "$limit",
+      "type": "int",
+      "default": "PHP_INT_MAX",
+      "description": "Oluşacak dizinin toplam eleman sayısı.\n\nEğer <code>$limit</code> negatif bir değer olarak belirlenirse, dizi son değere göre sıralanacaktır. Yani -2 belirlendiğinde, toplam dizi elemanı - 2 olarak çıktı verecektir.\n\nEğer <code>$limit</code> değeri 0 olarak belirlenirse 1 olarak algılanacaktır."
+    }
+  ],
+  "return": {
+    "type": "array",
+    "text": "İşlemin sonucunda geriye bir dizi (<code>array</code>) dönmesi beklenir.\n\nEğer <code>$delimiter</code> yani <code>ayraç</code> boş bırakılır ise, sonuç <b>FALSE</b> dönecektir. Kullanılan ayraç yazının içerisinde yok ise, boş bir dizi geriye dönecektir."
+  },
+  "note": "Bu fonksiyon binary-safe'dir. Yani binary değerleriyle bile doğru çalışmaktadır.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "deprecated": false,
+  "changelogs": [
+    {
+      "version": "5.1.0",
+      "description": "<code>$limit</code> parametresine negatif değer desteği eklendi"
+    }
+  ],
+  "examples": [
+    {
+      "title": "Örnek Kullanımı #1",
+      "description": "En temel anlamda kullanımı, bir ayraç yardımı ile string bir ifadeyi parçalayıp dizi haline getirmektir.",
+      "code": "<?php\n\n$str = '1,3,4,5';\nprint_r( explode(',', $str) );\n\n?>"
+    },
+    {
+      "title": "Örnek Kullanımı #2",
+      "description": "Bu örnekte list() fonksiyonu ile birlikte kullanımı gösterilmiştir.",
+      "code": "<?php\n\n$date = date('Y-m-d H:i:s');\nlist($date, $time) = explode(' ', $date);\n\necho $time;\n\n?>"
+    },
+    {
+      "title": "Örnek Kullanım #3",
+      "description": "<code>$limit</code> parametresi ile kullanım örneği;",
+      "code": "<?php\n\n$str = '1,2,3,4,5,6,7,8,9,10';\n$array = explode(',', $str, 4);\n\nprint_r($array);\n\n/*\nArray\n(\n\t[0] => 1\n\t[1] => 2\n\t[2] => 3\n\t[3] => 4,5,6,7,8,9,10\n)\n*/\n\n?>"
+    }
+  ],
+  "see_also": [
+    {
+      "title": "preg_split()",
+      "url": "php/preg_split"
+    },
+    {
+      "title": "str_split()",
+      "url": "php/str_split"
+    },
+    {
+      "title": "mb_split()",
+      "url": "php/mb_split"
+    },
+    {
+      "title": "str_word_count()",
+      "url": "php/str_word_count"
+    },
+    {
+      "title": "strtok()",
+      "url": "php/strtok"
+    },
+    {
+      "title": "implode()",
+      "url": "php/implode"
+    }
+  ]
+}

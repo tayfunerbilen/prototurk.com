@@ -1,0 +1,48 @@
+{
+  "title": "CSS color Özelliği",
+  "name": "color",
+  "lang": "css",
+  "description": "<code>color</code> özelliği, yazının rengini belirmek için kullanılır.",
+  "syntax": "color: renk | initial | inherit;",
+  "version": "CSS1",
+  "animatable": true,
+  "inherited": true,
+  "default_value": null,
+  "js_syntax": "object.style.color=\"RENK\"",
+  "values": [
+    {
+      "value": "renk",
+      "description": "Belirlenecek renk değeri"
+    },
+    {
+      "value": "initial",
+      "description": "Bu özelliği varsayılan değerlerine ayarlar"
+    },
+    {
+      "value": "inherit",
+      "description": "Bu özelliğin değerini üst nesnesinden miras alır"
+    }
+  ],
+  "examples": [
+    {
+      "description": "HEX değeriyle bir renk belirlemek için;",
+      "code": "body { color: #fa6585 }"
+    },
+    {
+      "description": "RGB değeriyle bir renk belirlemek için;",
+      "code": ".test { color: rgb(0, 0, 0) }"
+    },
+    {
+      "description": "RGBA değeriyle bir renk belirlemek için; (Beyaz rengin %40 şeffaf hali)",
+      "code": "#container { color: rgb(255, 255, 255, .4) }"
+    },
+    {
+      "description": "HSL değeriyle bir renk belirlemek için;",
+      "code": "a { color: hsl(89, 43%, 51%) }"
+    },
+    {
+      "description": "HSLA değeriyle bir renk belirlemek için;",
+      "code": "h1 { color: hsla(89, 43%, 51%, .4) }"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "title": "PHP implode() Fonksiyonu",
+  "name": "implode",
+  "lang": "PHP",
+  "description": "Bir diziyi belirlenen ayraç yardımı ile birleştirip string bir değer döndürür.",
+  "syntax": "implode ( string $glue , array $pieces ) : string",
+  "params": [
+    {
+      "name": "$glue",
+      "type": "string",
+      "description": "Birleştirirken kullanılacak ayraç",
+      "required": true
+    },
+    {
+      "name": "$pieces",
+      "type": "string",
+      "description": "Birleştirilecek olan dizi",
+      "required": true
+    }
+  ],
+  "return": {
+    "type": "string",
+    "text": "İşlemin sonucunda array'den birleştirilen string değer döner."
+  },
+  "note": "Normalde ayraç belirtmeden tek parametre diziyide gönderseniz bu fonksiyon çalışacaktır. Ancak her zaman doğru bir sonuç elde etmek için sırasına uygun değerler göndermekte fayda var.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "deprecated": false,
+  "examples": [
+    {
+      "description": "Fonksiyonun çalışan örneği aşağıda verilmiştir.",
+      "code": "<?php\n\n$dizi = ['adsoyad', 'eposta', 'telefon'];\n$str = implode(',', $dizi);\n\necho $str; // Çıktı: adsoyad,eposta,telefon\n\n?>"
+    }
+  ],
+  "see_also": [
+    {
+      "title": "explode()",
+      "url": "php/explode"
+    },
+    {
+      "title": "preg_split()",
+      "url": "php/preg_split"
+    },
+    {
+      "title": "http_build_query()",
+      "url": "php/http_build_query"
+    }
+  ]
+}

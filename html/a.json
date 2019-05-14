@@ -1,0 +1,88 @@
+{
+  "title": "<a> Etiketi",
+  "tag": "a",
+  "lang": "html",
+  "compatibilities": [
+    "HTML",
+    "HTML5"
+  ],
+  "closing_tag": true,
+  "syntax": "<a href=\"..\">..</a>",
+  "display": "satıriçi",
+  "usage": "metinsel",
+  "default_css": "a {\n\tcolor: -webkit-link;\n\tcursor: pointer;\n\ttext-decoration: underline;\n}",
+  "description": "Web sayfaları arasında geçişi sağlamak yani link vermek için <code>&lt;a></code> etiket kullanılır. <code>&lt;a></code> etiketi içerisinde metin, resim ya da diğer <b>HTML</b> etiketleri bulunabilir. ",
+  "examples": [
+    {
+      "description": "En basit haliyle kullanımı;",
+      "code": "<p>\n\t<a href=\"https://prototurk.com\">Prototürk</a>, web dilleriyle ilgili türkçe kaynaklar üretir.\n</p>"
+    },
+    {
+      "description": "Bağlantı içerisinde resimli kullanımı;",
+      "code": "<a href=\"https://prototurk.com\">\n\t<img src=\"https://prototurk.com/img/logo.png\">\n</a>"
+    },
+    {
+      "description": "Bağlantıyı yeni pencerede açmak için;",
+      "code": "<a href=\"https://prototurk.com\" target=\"_blank\">prototurk.com</a>"
+    },
+    {
+      "description": "Bağlantıya tıklandığında e-posta gönderme işlemi için;",
+      "code": "<a href=\"mailto:destek@prototurk.com?subject=Konu\" target=\"_top\">E-posta Gönder</a>"
+    },
+    {
+      "description": "Bağlantıya tıklandığında e-posta gönderme işlemi için (detaylı olarak);",
+      "code": "<a href=\"mailto:destek@prototurk.com?subject=Konu&body=İçerik&cc=mailadresi2@mail.com&bcc=mailadresi3@mail.com\" target=\"_top\">\n\tE-posta Gönder\n</a>"
+    },
+    {
+      "description": "Telefon bağlantısı oluşturmak için;",
+      "code": "<a href=\"tel:+905303001965\">0530 300 1965</a>"
+    },
+    {
+      "description": "Bağlantı kullanırken javascript örneği;",
+      "code": "<a href=\"javascript:alert('Merhaba Dünya!');\">:JavaScript'i Çalıştır</a>"
+    }
+  ],
+  "note": "* Eğer href belirtilmemiş ise, download, hreflang, media, rel, target, ve type nitelikleri işe yaramaz.\n* Mevcut bağlantıya tıklandığında aksi belirtilmediği taktirde (rel) standart olarak mevcut pencere içerisinde açılır.",
+  "attributes": [
+    {
+      "name": "download",
+      "value": "Dosya adı",
+      "description": "Bağlantıya tıklandığında eğer indirilebilecek bir dosya var ise indirme işlemini başlatır"
+    },
+    {
+      "name": "href",
+      "value": "URL",
+      "description": "Bağlantıya tıkladığında gideceği adres"
+    },
+    {
+      "name": "hreflang",
+      "value": "dil_kodu",
+      "description": "Bağlantının dilini belirtir"
+    },
+    {
+      "name": "media",
+      "value": "media_sorgusu",
+      "description": "Bağlantının hangi cihaz/ortam için optimize olduğunu belirtir"
+    },
+    {
+      "name": "ping",
+      "value": "URL",
+      "description": "Bağlantıya tıklandığında belirlenen bir adrese HTTP POST isteği gönderir"
+    },
+    {
+      "name": "rel",
+      "value": "alternate\nauthor\nbookmark\nexternal\nhelp\nlicense\nnext\nnofollow\nnoreferrer\nnoopener\nprev\nsearch\ntag",
+      "description": "Geçerli bağlantı ile belirtilen bağlantı arasındaki ilişkiyi belirtir"
+    },
+    {
+      "name": "target",
+      "value": "_blank\n_parent\n_self\n_top\nframe_adı",
+      "description": "Bağlantının nerede nasıl açılacağını belirtir"
+    },
+    {
+      "name": "type",
+      "value": "medya_tipi",
+      "description": "Bağlantının ortam türünü belirtir."
+    }
+  ]
+}
