@@ -14,7 +14,10 @@
   "description": "<code>&lt;p></code> etiketi bir paragraf tanımlar.",
   "examples": [
     {
-      "code": "<!doctype html>\n<html lang=\"tr\">\n<head>\n\t<meta charset=\"UTF-8\">\n\t<title>Başlık</title>\n</head>\n<body>\n\t<p>This is some text in a paragraph.</p>\n</body>\n</html>"
+      "code": "<p>Bu bir paragraftır.</p>"
+    },
+    {
+      "code": "<p>Buda\nçok satırlı\nparagraf\nörneğidir.</p>"
     }
   ]
 }
