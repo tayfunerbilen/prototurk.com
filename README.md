@@ -11,4 +11,4 @@ Eklenen tüm bilgiler, belli bir kontrol işleminden sonra prototurk.com'da ilgi
 
 # Gözatın!
 Şu an için neler olup bittiğine siteden gözatın!
-[https://prototurk.com]()
+[https://prototurk.com](https://prototurk.com)
