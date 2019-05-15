@@ -1,0 +1,20 @@
+{
+  "title": "<p> Etiketi",
+  "tag": "p",
+  "lang": "html",
+  "compatibilities": [
+    "HTML",
+    "HTML5"
+  ],
+  "closing_tag": true,
+  "syntax": "<p> ... </p>",
+  "display": "blok",
+  "usage": "metinsel",
+  "default_css": "html {\n\tdisplay: block;\n\tmargin-top: 1em;\n\tmargin-bottom: 1em;\n\tmargin-left: 0;\n\tmargin-right: 0;\n}",
+  "description": "<code>&lt;p></code> etiketi bir paragraf tanımlar.",
+  "examples": [
+    {
+      "code": "<!doctype html>\n<html lang=\"tr\">\n<head>\n\t<meta charset=\"UTF-8\">\n\t<title>Başlık</title>\n</head>\n<body>\n\t<p>This is some text in a paragraph.</p>\n</body>\n</html>"
+    }
+  ]
+}
