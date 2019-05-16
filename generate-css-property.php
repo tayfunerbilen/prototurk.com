@@ -85,13 +85,13 @@
                 <div class="form-group">
                     <label>CSS Versiyonu</label>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="CSS1" id="css1">
+                        <input class="form-check-input version" type="checkbox" value="CSS1" id="css1">
                         <label class="form-check-label" for="css1">
                             CSS1
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="CSS3" id="css3">
+                        <input class="form-check-input version" type="checkbox" value="CSS3" id="css3">
                         <label class="form-check-label" for="css3">
                             CSS3
                         </label>
@@ -100,8 +100,9 @@
                 <div class="form-group">
                     <label>Animasyon Özellikleri Uygulanabilir mi?</label>
                     <select name="animatable" class="form-control">
+                        <option value="">Seçin</option>
                         <option value="1">Evet</option>
-                        <option value="2">Hayır</option>
+                        <option value="0">Hayır</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -113,46 +114,57 @@
                     <textarea name="description" cols="30" rows="6" class="form-control"></textarea>
                 </div>
                 <h3>Değerler</h3>
-                <div class="row">
-                    <div class="col">
-                        <div class="form-group">
-                            <label>Değer</label>
-                            <input type="text" class="form-control" name="value_name[]" placeholder="Örn: cover">
+                <div class="values">
+                    <div class="row value">
+                        <div class="col">
+                            <div class="form-group">
+                                <label>Değer</label>
+                                <input type="text" class="form-control" name="value_name" placeholder="Örn: cover">
+                            </div>
                         </div>
-                    </div>
-                    <div class="col">
-                        <div class="form-group">
-                            <label>Açıklama</label>
-                            <input type="text" class="form-control" name="value_description[]">
+                        <div class="col">
+                            <div class="form-group">
+                                <label>Açıklama</label>
+                                <input type="text" class="form-control" name="value_description">
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div class="col">
-                        <a href="#" class="btn btn-primary">Yeni Ekle</a>
+                        <a href="#" class="btn btn-primary" id="add-value">Yeni Ekle</a>
                     </div>
                 </div>
                 <h3>Örnekler</h3>
-                <div class="row">
-                    <div class="col">
-                        <div class="form-group">
-                            <label>Başlık</label>
-                            <input type="text" name="example_title[]" class="form-control">
+                <div class="examples">
+                    <div class="example">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Başlık</label>
+                                    <input type="text" name="title" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Açıklama</label>
+                                    <input type="text" name="description" class="form-control">
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col">
-                        <div class="form-group">
-                            <label>Açıklama</label>
-                            <input type="text" name="example_description[]" class="form-control">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Örnek Kodlar</label>
+                                    <textarea name="code" class="form-control" cols="30" rows="10"></textarea>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row mb-3">
                     <div class="col">
-                        <div class="form-group">
-                            <label>Örnek Kodlar</label>
-                            <textarea name="example_code[]" class="form-control" cols="30" rows="10"></textarea>
-                        </div>
+                        <a href="#" class="btn btn-primary" id="add-example">Yeni Ekle</a>
                     </div>
                 </div>
             </form>
@@ -167,11 +179,55 @@
     </div>
 </div>
 
+<template id="value">
+    <div class="row value">
+        <div class="col">
+            <div class="form-group">
+                <label>Değer</label>
+                <input type="text" class="form-control" name="value_name" placeholder="Örn: cover">
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-group">
+                <label>Açıklama</label>
+                <input type="text" class="form-control" name="value_description">
+            </div>
+        </div>
+    </div>
+</template>
+
+<template id="example">
+    <div class="example">
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label>Başlık</label>
+                    <input type="text" name="title" class="form-control">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label>Açıklama</label>
+                    <input type="text" name="description" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label>Örnek Kodlar</label>
+                    <textarea name="code" class="form-control" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
 <script>
     $(function () {
 
-        $("textarea").keydown(function(e) {
-            if(e.keyCode === 9) { // tab was pressed
+        $("textarea").keydown(function (e) {
+            if (e.keyCode === 9) { // tab was pressed
                 // get caret position/selection
                 var start = this.selectionStart;
                 end = this.selectionEnd;
@@ -191,7 +247,19 @@
             }
         });
 
-        $('.form-control').on('change input', function () {
+        $('#add-value').on('click', function (e) {
+            var html = $('#value').html();
+            $('.values').append(html);
+            e.preventDefault();
+        });
+
+        $('#add-example').on('click', function (e) {
+            var html = $('#example').html();
+            $('.examples').append(html);
+            e.preventDefault();
+        });
+
+        $(document.body).on('change input click', '.form-control, .form-check-input', function () {
 
             var json = {};
 
@@ -201,7 +269,9 @@
                 name = $('[name=\'name\']').val(),
                 syntax = $('[name=\'syntax\']').val(),
                 js_syntax = $('[name=\'js_syntax\']').val(),
-                description = $('[name=\'description\']').val();
+                description = $('[name=\'description\']').val(),
+                animatable = $('[name=\'animatable\'] option:selected').val(),
+                default_value = $('[name=\'default_value\']').val();
 
             if (author_name || author_email) json.author = `${author_name} &lt;${author_email }>`;
             if (title) json.title = title.replace(/</g, '&lt;');
@@ -209,6 +279,44 @@
             if (syntax) json.syntax = syntax.replace(/</g, '&lt;');
             if (js_syntax) json.js_syntax = js_syntax.replace(/</g, '&lt;');
             if (description) json.description = description.replace(/</g, '&lt;');
+
+            $('.version').each(function () {
+                var checked = $(this).is(':checked');
+                if (checked) {
+                    if (!json.version) json.version = [];
+                    json.version.push($(this).val());
+                }
+            });
+
+            $('.value').each(function(){
+                var name = $('[name=\'value_name\']', this).val(),
+                    desc = $('[name=\'value_description\']', this).val();
+                if (name && desc){
+                    if (!json.values) json.values = [];
+                    json.values.push({
+                        value: name,
+                        description: desc
+                    });
+                }
+            });
+
+            $('.example').each(function(){
+                var title = $('[name=\'title\']', this).val(),
+                    desc = $('[name=\'description\']', this).val(),
+                    code = $('[name=\'code\']', this).val();
+                if (code){
+                    if (!json.examples) json.examples = [];
+                    var example = {
+                        code: code
+                    };
+                    if (desc) example.description = desc;
+                    if (title) example.title = title;
+                    json.examples.push(example);
+                }
+            });
+
+            if (animatable) json.animatable = animatable == '1' ? true : false;
+            if (default_value) json.default_value = default_value;
 
             if (Object.keys(json).length)
                 $('#output').html(JSON.stringify(json, null, 2));
