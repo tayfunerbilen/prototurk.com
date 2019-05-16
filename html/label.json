@@ -15,7 +15,7 @@
   "description": "<code>&lt;label></code> etiketi kullanıcı için kullanım kolaylığı sağlamak amacıyla kullanılır.\n<code>&lt;input></code>, <code>&lt;button></code>, <code>&lt;meter></code>, <code>&lt;output></code>, <code>&lt;progress></code>, <code>&lt;select></code> ve <code>&lt;textarea></code> etiketleri için kontrol yapılabilmesini sağlar.",
   "examples": [
     {
-      "description": "Kedi metnine tıklandığı zaman radio butonun tıklanmasını sağlar.",
+      "description": "Kedi metnine tıklandığı zaman checkbox elementinin tıklanmasını sağlar.",
       "code": "<input type=\"checkbox\" name=\"hayvan\" id=\"kedi\" value=\"kedi\">\n<label for=\"kedi\">Kedi</label>"
     },
   ],
