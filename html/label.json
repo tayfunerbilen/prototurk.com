@@ -17,7 +17,7 @@
     {
       "description": "Kedi metnine tıklandığı zaman checkbox elementinin tıklanmasını sağlar.",
       "code": "<input type=\"checkbox\" name=\"hayvan\" id=\"kedi\" value=\"kedi\">\n<label for=\"kedi\">Kedi</label>"
-    },
+    }
   ],
   "attributes": [
     {
