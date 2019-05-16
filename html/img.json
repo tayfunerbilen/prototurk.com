@@ -1,0 +1,82 @@
+{
+  "author": "ahmetkorkmaz3 <ahmetkorkmaz3453@gmail.com>",
+  "title": "<img> Etiketi",
+  "tag": "img",
+  "lang": "html",
+  "compatibilities": [
+    "HTML",
+    "HTML5"
+  ],
+  "closing_tag": false,
+  "syntax": "<img src=\"..\">",
+  "display": "satır içi",
+  "usage": "görsel",
+  "default_css": "img {\n\tdisplay: inline-block;\n}",
+  "description": "<code>&lt;img></code> etiketi bir web sayfasına bir resim eklemek için kullanılır.",
+  "examples": [
+    {
+      "description": "En basit haliyle kullanımı;",
+      "code": "<img src=\"dosya_yolu\">"
+    },
+    {
+      "description": "<code>&lt;img></code> etiketini kullanırken alt özelliğini kullanarak resim için alternatif bir metin belirtebilirsiniz;",
+      "code": "<img src=\"https://prototurk.com/img/logo.png\" alt=\"resim metni\">"
+    },
+    {
+      "description": "width ve height özelliklerini kullanarak resmin boyutunu düzenleyebilirsiniz;",
+      "code": "<img src=\"https://prototurk.com/img/logo.png\" alt=\"Prototürk Logo\" width=\"200px\" height=\"200px\""
+    }
+  ],
+  "attributes": [
+    {
+      "name": "alt",
+      "value": "metin",
+      "description": "Resim için alternatif bir metin oluşturur."
+    },
+    {
+      "name": "crossorigin",
+      "value": "anonymous\nuse-credentials",
+      "description": "Resimin başka bir web sayfasından erişim izini."
+    },
+    {
+      "name": "height",
+      "value": "pixels",
+      "description": "Resmi belirli bir yükseklik boyutuna ayarlar."
+    },
+    {
+      "name": "ismap",
+      "value": "ismap",
+      "description": "Bir görüntüyü sunucu tarafında image-map(görüntü haritası) olarak belirtir."
+    },
+    {
+      "name": "longdesc",
+      "value": "URL",
+      "description": "Resmin ayrıntılı açıklamasında URL belirtir."
+    },
+    {
+      "name": "sizes",
+      "value": "",
+      "description": "Farklı sayfa düzenleri için resim boyutlarını belirtir."
+    },
+    {
+      "name": "src",
+      "value": "URL",
+      "description": "Resmin adresini belirtir."
+    },
+    {
+      "name": "srcset",
+      "value": "URL",
+      "description": "Farklı durumlarda kullanılacak resmin adresini belirtir."
+    },
+    {
+      "name": "usemap",
+      "value": "#mapname",
+      "description": "Resmi kullanıcı tarafında image-map(görüntü haritası) olarak belirtir."
+    },
+    {
+      "name": "width",
+      "value": "pixels",
+      "description": "Resmi belirli bir genişlik boyutuna ayarlar."
+    },
+  ]
+}
