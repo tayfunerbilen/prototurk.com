@@ -1,0 +1,34 @@
+{
+  "author": "ahmetkorkmaz3 <ahmetkorkmaz3453@gmail.com>",
+  "title": "<label> Etiketi",
+  "tag": "label",
+  "lang": "html",
+  "compatibilities": [
+    "HTML",
+    "HTML5"
+  ],
+  "closing_tag": true,
+  "syntax": "<label for=\"..\"> .. </label>",
+  "display": "satır içi",
+  "usage": "metinsel",
+  "default_css": "label {\n\tcursor: default;\n}",
+  "description": "<code>&lt;label></code> etiketi kullanıcı için kullanım kolaylığı sağlamak amacıyla kullanılır.\n<code>&lt;input></code>, <code>&lt;button></code>, <code>&lt;meter></code>, <code>&lt;output></code>, <code>&lt;progress></code>, <code>&lt;select></code> ve <code>&lt;textarea></code> etiketleri için kontrol yapılabilmesini sağlar.",
+  "examples": [
+    {
+      "description": "Kedi metnine tıklandığı zaman radio butonun tıklanmasını sağlar.",
+      "code": "<input type=\"checkbox\" name=\"hayvan\" id=\"kedi\" value=\"kedi\">\n<label for=\"kedi\">Kedi</label>"
+    },
+  ],
+  "attributes": [
+    {
+      "name": "for",
+      "value": "element_id",
+      "description": "Belirli bir form elemanının kontrolu için kullanılır."
+    },
+    {
+      "name": "form",
+      "value": "form_id",
+      "description": "Etiketin ait olduğu formu belirtir."
+    }
+  ]
+}
