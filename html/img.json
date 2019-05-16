@@ -24,7 +24,7 @@
     },
     {
       "description": "width ve height özelliklerini kullanarak resmin boyutunu düzenleyebilirsiniz;",
-      "code": "<img src=\"https://prototurk.com/img/logo.png\" alt=\"Prototürk Logo\" width=\"200px\" height=\"200px\""
+      "code": "<img src=\"https://prototurk.com/img/logo.png\" alt=\"Prototürk Logo\" width=\"200px\" height=\"200px\">"
     }
   ],
   "attributes": [
