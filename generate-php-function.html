@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML Etiket Oluşturucu</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+    <style>
+        .output {
+            border-left: 1px solid;
+            background: #333;
+        }
+
+        .output h3 {
+            color: #fff;
+        }
+
+        .output pre {
+            color: rgba(255, 255, 255, .7);
+            line-height: 140%;
+            background: rgba(255, 255, 255, .04);
+            padding: 20px;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-md-7">
+
+            <div class="alert alert-primary">
+                Bu bölümde PHP'de fonksiyonlar için JSON formatında dosya oluşturabilirsiniz. Lütfen tam olarak
+                doldurduğunuzdan emin olun.
+            </div>
+
+            <form method="post" action="">
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Yazar Adınız</label>
+                            <input type="text" class="form-control" name="author_name">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Yazar E-posta Adresiniz</label>
+                            <input type="text" class="form-control" name="author_email">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Makale Başlığı</label>
+                    <input type="text" class="form-control" name="title" placeholder="Örn: PHP'de explode() Fonksiyonu">
+                </div>
+                <div class="form-group">
+                    <label>Fonksiyon Adı</label>
+                    <input type="text" class="form-control" name="name" placeholder="Örn: explode">
+                </div>
+                <div class="form-group">
+                    <label>Fonksiyon Yapısı (Syntax)</label>
+                    <input type="text" class="form-control" name="syntax"
+                           placeholder="Örn: explode ( string $delimiter , string $str [, int $limit = PHP_INT_MAX ] ) : array">
+                </div>
+                <div class="form-group">
+                    <label>Fonksiyon Uyumluluğu</label>
+                    <div class="form-check">
+                        <input class="form-check-input version" type="checkbox" value="php 4" id="php4">
+                        <label class="form-check-label" for="php4">
+                            PHP 4
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input version" type="checkbox" value="php 5" id="php5">
+                        <label class="form-check-label" for="php5">
+                            PHP 5
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input version" type="checkbox" value="php 7" id="php7">
+                        <label class="form-check-label" for="php7">
+                            PHP 7
+                        </label>
+                    </div>
+                </div>
+
+                <hr>
+
+                <h3>Geriye Dönen Değer</h3>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Dönen Tip</label>
+                            <select name="return_type" class="form-control">
+                                <option value="">Seçin</option>
+                                <option value="string">string</option>
+                                <option value="int">int</option>
+                                <option value="array">array</option>
+                                <option value="boolean">boolean</option>
+                                <option value="null">null</option>
+                                <option value="true">true</option>
+                                <option value="mixed">mixed</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Dönen Değer Açıklaması</label>
+                            <input class="form-control" type="text" name="return_description">
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="form-group">
+                    <label>Fonksiyon Hakkında Not</label>
+                    <textarea name="note" cols="30" rows="6" class="form-control"></textarea>
+                </div>
+
+                <hr>
+
+                <div class="form-group">
+                    <label>Fonksiyon Kullanımdan Kaldırıldı mı?</label>
+                    <select name="deprecated" class="form-control">
+                        <option value="">Seçin</option>
+                        <option value="1">Evet</option>
+                        <option value="0">Hayır</option>
+                    </select>
+                </div>
+
+                <hr>
+
+                <div class="form-group">
+                    <label>Fonksiyon Açıklaması</label>
+                    <textarea name="description" cols="30" rows="6" class="form-control"></textarea>
+                </div>
+
+                <hr>
+                <h3>Parametreler</h3>
+                <div class="values">
+                    <div class="value">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Parametre Adı</label>
+                                    <input type="text" class="form-control" name="value_name"
+                                           placeholder="Örn: $delimiter">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Parametre Tipi</label>
+                                    <select name="param_type" class="form-control">
+                                        <option value="">Seçin</option>
+                                        <option value="string">string</option>
+                                        <option value="int">int</option>
+                                        <option value="array">array</option>
+                                        <option value="boolean">boolean</option>
+                                        <option value="null">null</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Parametre Varsayılan Değeri</label>
+                                    <input type="text" class="form-control" name="param_default_value"
+                                           placeholder="Örn: $delimiter">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label>Parametre Açıklaması</label>
+                                <input type="text" class="form-control" name="param_desc">
+                            </div>
+                            <div class="col">
+                                <label>Parametre Zorunlu mu?</label>
+                                <select name="param_required" class="form-control">
+                                    <option value="">Seçin</option>
+                                    <option value="1">Evet</option>
+                                    <option value="0">Hayır</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col">
+                        <a href="#" class="btn btn-primary" id="add-value">Yeni Ekle</a>
+                    </div>
+                </div>
+                <hr>
+
+                <h3>Değişiklikler</h3>
+                <div class="changelogs">
+                    <div class="changelog">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Versiyon</label>
+                                    <input type="text" name="changelog_version" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Açıklama</label>
+                                    <input type="text" name="changelog_description" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <a href="#" class="btn btn-primary" id="add-changelog">Yeni Ekle</a>
+                    </div>
+                </div>
+
+                <h3>Örnekler</h3>
+                <div class="examples">
+                    <div class="example">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Başlık</label>
+                                    <input type="text" name="title" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Açıklama</label>
+                                    <input type="text" name="description" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Örnek Kodlar</label>
+                                    <textarea name="code" class="form-control" cols="30" rows="10"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <a href="#" class="btn btn-primary" id="add-example">Yeni Ekle</a>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+        <div class="col-md-5 output">
+            <h3>JSON Çıktı</h3>
+            <pre id="output"></pre>
+        </div>
+
+    </div>
+</div>
+
+<template id="value">
+    <hr>
+    <div class="value mt-3">
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label>Parametre Adı</label>
+                    <input type="text" class="form-control" name="value_name"
+                           placeholder="Örn: $delimiter">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label>Parametre Tipi</label>
+                    <select name="param_type" class="form-control">
+                        <option value="">Seçin</option>
+                        <option value="string">string</option>
+                        <option value="int">int</option>
+                        <option value="array">array</option>
+                        <option value="boolean">boolean</option>
+                        <option value="null">null</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label>Parametre Varsayılan Değeri</label>
+                    <input type="text" class="form-control" name="param_default_value"
+                           placeholder="Örn: $delimiter">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label>Parametre Açıklaması</label>
+                <input type="text" class="form-control" name="param_desc">
+            </div>
+            <div class="col">
+                <label>Parametre Zorunlu mu?</label>
+                <select name="param_required" class="form-control">
+                    <option value="">Seçin</option>
+                    <option value="1">Evet</option>
+                    <option value="0">Hayır</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template id="changelog">
+    <div class="changelog">
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label>Versiyon</label>
+                    <input type="text" name="changelog_version" class="form-control">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label>Açıklama</label>
+                    <input type="text" name="changelog_description" class="form-control">
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template id="example">
+    <div class="example">
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label>Başlık</label>
+                    <input type="text" name="title" class="form-control">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label>Açıklama</label>
+                    <input type="text" name="description" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label>Örnek Kodlar</label>
+                    <textarea name="code" class="form-control" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+    $(function () {
+
+        $("textarea").keydown(function (e) {
+            if (e.keyCode === 9) { // tab was pressed
+                // get caret position/selection
+                var start = this.selectionStart;
+                end = this.selectionEnd;
+
+                var $this = $(this);
+
+                // set textarea value to: text before caret + tab + text after caret
+                $this.val($this.val().substring(0, start)
+                    + "\t"
+                    + $this.val().substring(end));
+
+                // put caret at right position again
+                this.selectionStart = this.selectionEnd = start + 1;
+
+                // prevent the focus lose
+                return false;
+            }
+        });
+
+        $('#add-value').on('click', function (e) {
+            var html = $('#value').html();
+            $('.values').append(html);
+            e.preventDefault();
+        });
+
+        $('#add-example').on('click', function (e) {
+            var html = $('#example').html();
+            $('.examples').append(html);
+            e.preventDefault();
+        });
+
+        $('#add-changelog').on('click', function (e) {
+            var html = $('#changelog').html();
+            $('.changelogs').append(html);
+            e.preventDefault();
+        });
+
+        $(document.body).on('change input click', '.form-control, .form-check-input', function () {
+
+            var json = {};
+
+            var author_name = $('[name=\'author_name\']').val(),
+                author_email = $('[name=\'author_email\']').val(),
+                title = $('[name=\'title\']').val(),
+                name = $('[name=\'name\']').val(),
+                syntax = $('[name=\'syntax\']').val(),
+                js_syntax = $('[name=\'js_syntax\']').val(),
+                description = $('[name=\'description\']').val(),
+                default_value = $('[name=\'default_value\']').val(),
+                return_description = $('[name=\'return_description\']').val(),
+                note = $('[name=\'note\']').val(),
+                return_type = $('[name=\'return_type\'] option:selected').val(),
+                deprecated = $('[name=\'deprecated\'] option:selected').val();
+
+            if (author_name || author_email) json.author = `${author_name} &lt;${author_email }>`;
+            if (title) json.title = title.replace(/</g, '&lt;');
+            if (name) json.name = name.replace(/</g, '&lt;');
+            if (syntax) json.syntax = syntax.replace(/</g, '&lt;');
+            if (js_syntax) json.js_syntax = js_syntax.replace(/</g, '&lt;');
+            if (description) json.description = description.replace(/</g, '&lt;');
+            if (note) json.note = note.replace(/</g, '&lt;');
+
+            $('.version').each(function () {
+                var checked = $(this).is(':checked');
+                if (checked) {
+                    if (!json.version) json.version = [];
+                    json.version.push($(this).val());
+                }
+            });
+
+            $('.value').each(function () {
+                var name = $('[name=\'value_name\']', this).val(),
+                    param_type = $('[name=\'param_type\'] option:selected', this).val(),
+                    param_desc = $('[name=\'param_desc\']', this).val(),
+                    param_default_value = $('[name=\'param_default_value\']', this).val(),
+                    param_required = $('[name=\'param_required\']', this).val();
+                if (name || param_type || param_desc || param_default_value || param_required) {
+                    if (!json.params) json.params = [];
+                    var param = {};
+                    if (name) param.name = name.replace(/</g, '&lt;');
+                    if (param_type) param.type = param_type;
+                    if (param_desc) param.description = param_desc.replace(/</g, '&lt;');
+                    if (param_default_value) param.default = param_default_value.replace(/</g, '&lt;');
+                    if (param_required) param.required = (param_required === '1' ? true : false);
+                    json.params.push(param);
+                }
+            });
+
+            $('.changelog').each(function () {
+                var version = $('[name=\'changelog_version\']', this).val(),
+                    desc = $('[name=\'changelog_description\']', this).val();
+                if (version || desc) {
+                    if (!json.changelogs) json.changelogs = [];
+                    var changelog = {};
+                    if (version) changelog.version = version;
+                    if (desc) changelog.description = desc.replace(/</g, '&lt;');
+                    json.changelogs.push(changelog);
+                }
+            });
+
+            $('.example').each(function () {
+                var title = $('[name=\'title\']', this).val(),
+                    desc = $('[name=\'description\']', this).val(),
+                    code = $('[name=\'code\']', this).val();
+                if (code) {
+                    if (!json.examples) json.examples = [];
+                    var example = {
+                        code: code.replace(/</g, '&lt;')
+                    };
+                    if (desc) example.description = desc.replace(/</g, '&lt;');
+                    if (title) example.title = title.replace(/</g, '&lt;');
+                    json.examples.push(example);
+                }
+            });
+
+            if (default_value) json.default_value = default_value.replace(/</g, '&lt;');
+            if (return_type || return_description) {
+                json.return = {};
+                if (return_type) json.return.type = return_type;
+                if (return_description) json.return.description = return_description.replace(/</g, '&lt;');
+            }
+            if (deprecated) json.deprecated = deprecated === '1' ? true : false;
+
+            if (Object.keys(json).length)
+                $('#output').html(JSON.stringify(json, null, 2));
+            else
+                $('#output').html('');
+        });
+    })
+</script>
+
+</body>
+</html>
