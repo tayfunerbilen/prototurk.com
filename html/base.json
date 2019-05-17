@@ -1,0 +1,44 @@
+
+{
+  "author": "mrpeker <maps6134@gmail.com>",
+  "title": "<base> Etiketi",
+  "tag": base",
+  "lang": "html",
+  "compatibilities": [
+    "HTML",
+    "HTML4",
+    "HTML5"
+  ],
+  "closing_tag": false,
+  "syntax": "<base href=\"..\">",
+  "display": "görüntülenmez",
+  "usage": "metaveri",
+  "default_css": "a {\n\tcolor: -webkit-link;\n\tcursor: pointer;\n\ttext-decoration: underline;\n}",
+  "description": "Web sayfalarında bulunan göreceli linkler için baz url adresi tanımlamak için <code>&lt;base></code> etiketi kullanılır. <code>&lt;base></code> etiketi içerisinde çocuk elementler bulunamaz. &lt;head&gt; elementi içerisinde tanımlanır.",
+  "examples": [
+    {
+      "description": "En basit haliyle kullanımı",
+      "code": "<base href=\"https://prototurk.com\">"
+    },
+    {
+      "description": "Sayfa içerisindeki tüm bağlantıları yeni sekmede açar",
+      "code": "<base target=\"_blank\" href=\"https://prototurk.com\">"
+    },
+    {
+      "description": "Sayfa içerisindeki (örneğin prototurk.com) tüm bağlantıları erbilen.net'de ve yeni sekmede açar.",
+      "code": "<base target=\"_blank\" href=\"https://erbilen.net\">"
+    },
+  ],
+  "attributes": [
+    {
+      "name": "href",
+      "value": "URL",
+      "description": "Sayfa içerisindeki göreceli bağlantıların baz adresleri"
+    },
+    {
+      "name": "target",
+      "value": "_blank\n_parent\n_self\n_top\nframe_adı",
+      "description": "Bağlantının nerede nasıl açılacağını belirtir"
+    },
+  ]
+}
