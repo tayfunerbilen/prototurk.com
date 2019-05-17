@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CSS Özellik Oluşturucu</title>
+    <title>HTML Etiket Oluşturucu</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -46,7 +46,7 @@
         <div class="col-md-7">
 
             <div class="alert alert-primary">
-                Bu bölümde CSS'de özellikler için JSON formatında dosya oluşturabilirsiniz. Lütfen tam olarak
+                Bu bölümde HTML'de etiketler için JSON formatında dosya oluşturabilirsiniz. Lütfen tam olarak
                 doldurduğunuzdan emin olun.
             </div>
 
@@ -67,73 +67,63 @@
                 </div>
                 <div class="form-group">
                     <label>Makale Başlığı</label>
-                    <input type="text" class="form-control" name="title" placeholder="Örn: CSS'de font-size Özelliği">
+                    <input type="text" class="form-control" name="title" placeholder="Örn: &lt;strong> Etiketi">
                 </div>
                 <div class="form-group">
-                    <label>Özellik Adı</label>
-                    <input type="text" class="form-control" name="name" placeholder="Örn: font-size">
+                    <label>Etiket Adı</label>
+                    <input type="text" class="form-control" name="name" placeholder="Örn: strong">
                 </div>
                 <div class="form-group">
-                    <label>Özellik Yapısı (Syntax)</label>
+                    <label>Etiket Yapısı (Syntax)</label>
                     <input type="text" class="form-control" name="syntax" placeholder="Örn: &lt;a> .. &lt;/a>">
                 </div>
                 <div class="form-group">
-                    <label>Özellik JS Yapısı (Syntax) <span class="required">*</span></label>
-                    <input type="text" class="form-control" name="js_syntax"
-                           placeholder='Örn: object.style.color="RENK"'>
-                </div>
-                <div class="form-group">
-                    <label>CSS Versiyonu</label>
+                    <label>Etiket Versiyonu</label>
                     <div class="form-check">
-                        <input class="form-check-input version" type="radio" name="version" value="CSS1" id="css1">
-                        <label class="form-check-label" for="css1">
-                            CSS1
+                        <input class="form-check-input version" type="radio" name="version" value="HTML" id="html">
+                        <label class="form-check-label" for="html">
+                            HTML
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input version" type="radio" name="version" value="CSS3" id="css3">
-                        <label class="form-check-label" for="css3">
-                            CSS3
+                        <input class="form-check-input version" type="radio" name="version" value="HTML5" id="html5">
+                        <label class="form-check-label" for="html5">
+                            HTML5
                         </label>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label>Animasyon Özellikleri Uygulanabilir mi?</label>
-                    <select name="animatable" class="form-control">
+                    <label>Kapanan Etiket mi?</label>
+                    <select name="closing_tag" class="form-control">
                         <option value="">Seçin</option>
                         <option value="1">Evet</option>
                         <option value="0">Hayır</option>
                     </select>
+                    <small>Örneğin <code>&lt;p>&lt;/p></code> şeklinde.</small>
                 </div>
                 <div class="form-group">
-                    <label>Varsayılan Değeri</label>
-                    <input type="text" class="form-control" name="default_value" placeholder="Örn: inherit">
+                    <label>Etiket Görünümü</label>
+                    <select name="display" class="form-control">
+                        <option value="">Seçin</option>
+                        <option value="blok">blok</option>
+                        <option value="satıriçi">satıriçi</option>
+                    </select>
                 </div>
                 <div class="form-group">
-                    <label>Özellik Açıklaması</label>
+                    <label>Etiket Kullanımı</label>
+                    <select name="usage" class="form-control">
+                        <option value="">Seçin</option>
+                        <option value="Yapısal">Yapısal</option>
+                        <option value="Metinsel">Metinsel</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Varsayılan CSS Değerleri</label>
+                    <textarea name="default_css" class="form-control" id="default_css" cols="30" rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Etiket Açıklaması</label>
                     <textarea name="description" cols="30" rows="6" class="form-control"></textarea>
-                </div>
-                <h3>Değerler</h3>
-                <div class="values">
-                    <div class="row value">
-                        <div class="col">
-                            <div class="form-group">
-                                <label>Değer</label>
-                                <input type="text" class="form-control" name="value_name" placeholder="Örn: cover">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="form-group">
-                                <label>Açıklama</label>
-                                <input type="text" class="form-control" name="value_description">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <div class="col">
-                        <a href="#" class="btn btn-primary" id="add-value">Yeni Ekle</a>
-                    </div>
                 </div>
                 <h3>Örnekler</h3>
                 <div class="examples">
@@ -271,7 +261,12 @@
                 js_syntax = $('[name=\'js_syntax\']').val(),
                 description = $('[name=\'description\']').val(),
                 animatable = $('[name=\'animatable\'] option:selected').val(),
-                default_value = $('[name=\'default_value\']').val();
+                default_value = $('[name=\'default_value\']').val(),
+                version = $('[name=\'version\']:checked').val(),
+                closing_tag = $('[name=\'closing_tag\'] option:selected').val(),
+                display = $('[name=\'display\'] option:selected').val(),
+                usage = $('[name=\'usage\'] option:selected').val(),
+                default_css = $('[name=\'default_css\']').val();
 
             if (author_name || author_email) json.author = `${author_name} &lt;${author_email }>`;
             if (title) json.title = title.replace(/</g, '&lt;');
@@ -279,23 +274,16 @@
             if (syntax) json.syntax = syntax.replace(/</g, '&lt;');
             if (js_syntax) json.js_syntax = js_syntax.replace(/</g, '&lt;');
             if (description) json.description = description.replace(/</g, '&lt;');
-
-            /*
-            $('.version').each(function () {
-                var checked = $(this).is(':checked');
-                if (checked) {
-                    if (!json.version) json.version = [];
-                    json.version.push($(this).val());
-                }
-            }); */
-
-            var version = $('[name=\'version\']:checked').val();
             if (version) json.version = version.replace(/</g, '&lt;');
+            if (closing_tag) json.closing_tag = closing_tag === "1" ? true : false;
+            if (display) json.display = display;
+            if (usage) json.usage = usage;
+            if (default_css) json.default_css = default_css.replace(/</g, '&lt;');
 
-            $('.value').each(function(){
+            $('.value').each(function () {
                 var name = $('[name=\'value_name\']', this).val(),
                     desc = $('[name=\'value_description\']', this).val();
-                if (name && desc){
+                if (name && desc) {
                     if (!json.values) json.values = [];
                     json.values.push({
                         value: name,
@@ -304,11 +292,11 @@
                 }
             });
 
-            $('.example').each(function(){
+            $('.example').each(function () {
                 var title = $('[name=\'title\']', this).val(),
                     desc = $('[name=\'description\']', this).val(),
                     code = $('[name=\'code\']', this).val();
-                if (code){
+                if (code) {
                     if (!json.examples) json.examples = [];
                     var example = {
                         code: code
