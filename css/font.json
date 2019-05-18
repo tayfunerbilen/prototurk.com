@@ -1,0 +1,47 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "CSS'de font Özelliği",
+  "name": "font",
+  "syntax": "font: font-style font-variant font-weight font-size/line-height font-family",
+  "js_syntax": "object.style.font=\"italic small-caps bold 15px Arial, 'sans-serif'\"",
+  "description": "<code>font</code> özelliği, tüm diğer font özelliklerinin kısa yoldan kullanımıdır. Bu font özellikleri ise şunlardır;\n\n- font-style\n- font-variant\n- font-weight\n- font-size/line-height\n- font-family\n\n<code>font-size</code> ve <code>font-family</code> tanımları mutlaka olmak zorundadır. Diğerleri isteğe bağlı kullanılabilir.",
+  "version": "CSS1",
+  "values": [
+    {
+      "value": "font-style",
+      "description": "Yazı için font stilini belirler. Varsayılan değeri \"normal\"."
+    },
+    {
+      "value": "font-variant",
+      "description": "Yazının küçük harfli fontta görünüp görünmeyeceğini belirler. Varsayılan değeri \"normal\"."
+    },
+    {
+      "value": "font-weight",
+      "description": "Yazı tipi kalınlığını belirler. Varsayılan değeri \"normal\"."
+    },
+    {
+      "value": "font-size",
+      "description": "Yazı tipini belirler. Varsayılan değeri \"normal\"."
+    },
+    {
+      "value": "line-height",
+      "description": "Yazının satır yüksekliğini belirler. Varsayılan değeri \"100%\""
+    },
+    {
+      "value": "font-family",
+      "description": "Yazının fontunu belirler. Varsayılan değer tarayıcıya göre değişir."
+    }
+  ],
+  "examples": [
+    {
+      "code": "p {\n\tfont: oblique small-caps bold 20px/140% Arial, 'sans-serif';\n}",
+      "description": "Aşağıdaki örnek tüm özelliklerin kullanımını içeriyor. Burada sırasıyla eğik, küçük harfli büyük gösterimi, kalın, 20px yazı boyutu, %140 satır yüksekliği ve arial fontu belirtiliyor."
+    },
+    {
+      "code": "body {\n\tfont: 14px/20px 'Open Sans';\n}",
+      "description": "Sıkça font-size/line-height şeklinde kullanılır."
+    }
+  ],
+  "animatable": true,
+  "default_value": "16px Arial"
+}
