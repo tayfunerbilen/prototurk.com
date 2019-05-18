@@ -1,0 +1,32 @@
+{
+  "author": "orcuntuna <turboindirblog@gmail.com>",
+  "title": "PHP'de MD5 Fonksiyonu ile Şifreleme",
+  "name": "md5",
+  "syntax": "md5 ( string $dizge [, bool $ham_çıktı = false ] ) : string",
+  "note": "MD5 Hash çıktısı veren fonksiyon.",
+  "version": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "$text",
+      "type": "string",
+      "description": "Hashlenecek metin",
+      "required": true
+    }
+  ],
+  "examples": [
+    {
+      "code": "$parola = \"123456\";\n$sifreli_parola = md5($parola);",
+      "description": "Örnek md5 kullanımı",
+      "title": "Md5 Kullanımı"
+    }
+  ],
+  "return": {
+    "type": "string",
+    "description": "Md5 ifrelenmiş string ifadesi"
+  },
+  "deprecated": false
+}
