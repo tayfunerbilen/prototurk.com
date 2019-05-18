@@ -3,11 +3,7 @@
   "title": "<base> Etiketi",
   "tag": "base",
   "lang": "html",
-  "compatibilities": [
-    "HTML",
-    "HTML4",
-    "HTML5"
-  ],
+  "version": "HTML",
   "closing_tag": false,
   "syntax": "<base href=\"..\">",
   "display": "görünmez",

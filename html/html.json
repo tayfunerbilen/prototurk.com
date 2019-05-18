@@ -3,10 +3,7 @@
   "title": "<html> Etiketi",
   "tag": "html",
   "lang": "html",
-  "compatibilities": [
-    "HTML",
-    "HTML5"
-  ],
+  "version": "HTML",
   "closing_tag": true,
   "syntax": "<html> ... </html>",
   "display": "blok",
