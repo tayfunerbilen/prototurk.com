@@ -3,10 +3,7 @@
   "title": "<img> Etiketi",
   "tag": "img",
   "lang": "html",
-  "compatibilities": [
-    "HTML",
-    "HTML5"
-  ],
+  "version": "HTML",
   "closing_tag": false,
   "syntax": "<img src=\"..\">",
   "display": "satır içi",
