@@ -1,0 +1,31 @@
+{
+  "author": "orcuntuna <turboindirblog@gmail.com>",
+  "title": "PHP'de strtoupper Fonksiyonu",
+  "name": "strtoupper",
+  "syntax": "strtoupper ( string $dizge ) : string",
+  "description": "Metinde bulunan küçük harfleri, büyük harfe çeviren php fonksiyonudur.\n\nÖrneğin:\nham metin: bana masal anlatma\nfonksiyon çıktısı: BANA MASAL ANLATMA\n\nNot: Türkçe karakterlerinde büyütme işlemleri yapılmamaktadır. Türkçe karakterleri de kullanabilmek için mb_strtoupper fonksiyonu kullanılmalıdır.",
+  "note": "Girilen stringin tüm karakterlerini büyük harfe çeviren fonksiyon.",
+  "version": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "$metin",
+      "type": "string",
+      "description": "Çevrilecek metin",
+      "required": true
+    }
+  ],
+  "examples": [
+    {
+      "code": "<?php\n\n$metin = \"Ben kimim?\";\n$yeni_metin = strtoupper($metin);\n\necho $yeni_metin;\n\n// çıktı: BEN KIMIM?",
+      "title": "Örnek kullanım"
+    }
+  ],
+  "return": {
+    "type": "string"
+  },
+  "deprecated": false
+}
