@@ -1,0 +1,35 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "CSS'de font-variant Özelliği",
+  "name": "font-variant",
+  "syntax": "font-variant: normal | small-caps | initial | inherit;",
+  "js_syntax": "object.style.fontVariant=\"small-caps\"",
+  "description": "Bu özellik tüm küçük yazı tiplerini büyüğe çeviriyor ancak boyutları aynı kalacak şekilde ayarlıyor.",
+  "version": "CSS1",
+  "values": [
+    {
+      "value": "normal",
+      "description": "Yazı tipi normal şekilde görünür."
+    },
+    {
+      "value": "small-caps",
+      "description": "Yazı tipi büyük harfli ama küçük gözükür."
+    },
+    {
+      "value": "initial",
+      "description": "Özelliği varsayılan değerine getirir. Buda \"normal\" değerine döner demek oluyor."
+    },
+    {
+      "value": "inherit",
+      "description": "Özelliğin değerini ana öğesinden miras alır."
+    }
+  ],
+  "examples": [
+    {
+      "code": "p span {\n\tfont-variant: small-caps;\n}",
+      "description": "Kısaca örneği;"
+    }
+  ],
+  "animatable": false,
+  "default_value": "normal"
+}
