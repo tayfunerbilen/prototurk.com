@@ -1,8 +1,7 @@
-
 {
   "author": "Mehmet Ali Peker <maps6134@gmail.com>",
   "title": "<base> Etiketi",
-  "tag": base",
+  "tag": "base",
   "lang": "html",
   "compatibilities": [
     "HTML",
@@ -26,7 +25,7 @@
     {
       "description": "Sayfa içerisindeki (örneğin prototurk.com) tüm bağlantıları erbilen.net'de ve yeni sekmede açar.",
       "code": "<base target=\"_blank\" href=\"https://erbilen.net\">"
-    },
+    }
   ],
   "attributes": [
     {
@@ -38,6 +37,6 @@
       "name": "target",
       "value": "_blank\n_parent\n_self\n_top\nframe_adı",
       "description": "Bağlantının nerede nasıl açılacağını belirtir"
-    },
+    }
   ]
 }
