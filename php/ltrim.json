@@ -1,0 +1,44 @@
+{
+  "author": "zeybekserdar <serdarzeybek@outlook.com>",
+  "title": "PHP ltrim() Fonksiyonu",
+  "name": "ltrim",
+  "syntax": "ltrim ( string $str[, string $karakterler ] ) : string",
+  "description": "Bu işlev ifadenin başındaki boşlukları temizler.",
+  "note": "Eğer <b>$karakterler</b> değişkeni kullanılmazsa ltrim() sadece aşağıdaki karakterleri temizleyecektir:\n\n\" \" (ASCII=32 (0x20)) \tsıradan boşluk.\n\"\\t\"(ASCII=9 (0x09))\t\tsekme.\n\"\\n\"(ASCII=10 (0x0A))\tsatırsonu.\n\"\\r\"(ASCII=13 (0x0D))\tsatırbaşı.\n\"\\0\" (ASCII 0 (0x00)), NUL-bayt.\n\"\\x0B\" (ASCII 11 (0x0B)), dikey sekme.",
+  "version": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "$str",
+      "type": "string",
+      "description": "Üzerinde işlem yapılacak olan değişken",
+      "required": true
+    },
+    {
+      "name": "$karakterler",
+      "type": "string",
+      "description": "<b>$karakterler</b> değişkeni kullanılarak metin içerisinden silinmek istenen karakter seçilebilir.Bir karakter aralığını .. kullanarak belirtebilirsiniz.",
+      "required": false
+    }
+  ],
+  "changelogs": [
+    {
+      "version": "4.1.0",
+      "description": "İsteğe bağlı <b>karakterler</b> değişkeni eklendi."
+    }
+  ],
+  "examples": [
+    {
+      "code": "<?php\n\n$metin1   = \"\\t\\tMerhaba...\";\n$metin2\t= \"\\x09Dünya\\x0A\"; \n\n$temizleme1\t= ltrim($metin1);\necho $temizleme1;\t//Çıktı : Merhaba...\n$temizleme2\t= ltrim($metin2, \"\\x00..\\x1F\"); // başındaki ve sonundaki ASCII denetim karakterlerini temizler. 0'dan 31'e kadar, 0 ve 31 dahil.\necho $temizleme2;\t//Çıktı : Dünya\n$temizleme3\t=ltrim($metin1,\" \\t.\");\necho $temizleme3;\t//Çıktı : Merhaba\n\n?>",
+      "title": "Basit ltrim() kullanımları şu şekildedir;"
+    }
+  ],
+  "return": {
+    "type": "string",
+    "description": "<b>$karakterler</b> değişkeni ile belirlenmiş karakterlerden temizlenmiş hali döner."
+  },
+  "deprecated": false
+}
