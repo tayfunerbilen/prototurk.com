@@ -1,0 +1,58 @@
+{
+    "author": "onuralpkaratas <onuralpkaratasme@gmail.com>",
+    "title": "CSS border Özelliği",
+    "name": "border",
+    "lang": "css",
+    "description": "<code>border</code> özelliği, elementlerimize kenarlık vermek için kullanılır.",
+    "syntax": "border: width | style | color;",
+    "version": "CSS1",
+    "animatable": true,
+    "inherited": false,
+    "default_value": "medium, none, color",
+    "js_syntax": "object.style.border=\"1px solid red\"",
+    "values": [
+        {
+            "value": "width",
+            "description": "Kenarlığın genişliğini belirtir. Varsayılan değer, 'medium'"
+        },
+        {
+            "value": "style",
+            "description": "Kenarlığın stilini belirtir. Varsayılan değer, 'none'"
+        },
+        {
+            "value": "color",
+            "description": "Kenarlığın rengini belirtir. Varsayılan değer, metnin rengidir."
+        }
+    ],
+    "examples": [
+        {
+            "description": "h1 başlığına 7px genişliğinde düz kırmızı çizgi şeklinde kenarlık oluşturur.",
+            "code": "h1 { border: 7px solid red; }"
+        },
+        {
+            "description": "h2 başlığına 4px genişliğinde noktalı mavi çizgi şeklinde kenarlık oluşturur.",
+            "code": "h2 { border: 4px dotted blue; }"
+        },
+        {
+            "description": "h3 başlığına 2px genişliğinde kesik mavi çizgi şeklinde kenarlık oluşturur.",
+            "code": "h3 { border: 2px dashed orange; }"
+        }
+    ],
+    "related": [
+        {
+            "title": "border-width",
+            "url": "css/border-width",
+            "description": "Bir elemanın dört kenarının genişliğini ayarlar."
+        },
+        {
+            "title": "border-style",
+            "url": "css/border-style",
+            "description": "Bir elemanın dört kenarının stilini ayarlar."
+        },
+        {
+            "title": "border-color",
+            "url": "css/border-color",
+            "description": "Bir elemanın dört kenarının rengini ayarlar."
+        }
+    ]
+}
