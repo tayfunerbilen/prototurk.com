@@ -299,7 +299,7 @@
                     if (!json.values) json.values = [];
                     json.values.push({
                         value: name,
-                        description: desc
+                        description: desc.replace(/</g, '&lt;')
                     });
                 }
             });
