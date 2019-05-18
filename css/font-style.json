@@ -1,0 +1,39 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "CSS'de font-style Özelliği",
+  "name": "font-style",
+  "syntax": "font-style: normal|italic|oblique|initial|inherit;",
+  "js_syntax": "object.style.fontStyle=\"italic\"",
+  "description": "Bu özellik yazı tipinin stilini belirler. Yani kısaca yazı normal mi gözüksün eğik mi gözüksün bunu tanımlıyoruz.",
+  "version": "CSS1",
+  "values": [
+    {
+      "value": "normal",
+      "description": "Yazı tipi normal şekilde görünür."
+    },
+    {
+      "value": "italic",
+      "description": "Mevcut yazı tipini eğik gösterir."
+    },
+    {
+      "value": "oblique",
+      "description": "Font'un eğik versiyonunu gösterir. Bu yüzden italic değerinden farklıdır."
+    },
+    {
+      "value": "initial",
+      "description": "Özelliği varsayılan değerine getirir. Buda \"normal\" değerine döner demek oluyor."
+    },
+    {
+      "value": "inherit",
+      "description": "Özelliğin değerini ana öğesinden miras alır. Yani örneğin üst öğesine siz <code>italic</code> değerini verdiniz, o zaman <code>normal</code> değeri işlevini yitiriyor çünkü normal yazdırmaya çalışır işte bu gibi durumlarda inherit derseniz üst öğesinde varsayılan değer uygulanır. Bu aslında bütün inherit'lerde aynıdır."
+    }
+  ],
+  "examples": [
+    {
+      "code": "p {\n\tfont-style: italic;\n}\n\nabbr {\n\tfont-style: oblique;\n}",
+      "description": "Yazının tipini eğik yapalım;"
+    }
+  ],
+  "animatable": false,
+  "default_value": "normal"
+}
