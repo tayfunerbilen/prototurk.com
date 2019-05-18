@@ -1,0 +1,32 @@
+{
+  "author": "orcuntuna <turboindirblog@gmail.com>",
+  "title": "PHP'de strtolower Fonksiyonu",
+  "name": "strtolower",
+  "syntax": "strtolower ( string $dizge ) : string",
+  "description": "Mevcut bir string ifadede bulunan tüm büyük harfleri küçük harflere çevirmektedir.\n\nÖrneğin:\nHam metin: Amerika başkanı Donald Trump'dır.\nFonksiyondan dönen cevap: amerika başkanı donald trump'dır.",
+  "note": "String ifadedeki tüm karakterleri küçük harfe çevirir.",
+  "version": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "$metin",
+      "type": "string",
+      "description": "Küçültülmek istenen metin",
+      "required": true
+    }
+  ],
+  "examples": [
+    {
+      "code": "<?php\n\n$metin = \"Dün Ahmet yeni bir MESAJ gönderdi.\";\n$yeni_metin = strtolower($metin);\n\necho $yeni_metin;\n\n// çıktı: dün ahmet yeni bir mesaj gönderdi.\n\n?>",
+      "title": "strtolower kullanımı"
+    }
+  ],
+  "return": {
+    "type": "string",
+    "description": "Küçük harflere çevrilmiş metin"
+  },
+  "deprecated": false
+}
