@@ -1,0 +1,44 @@
+{
+  "author": "zeybekserdar <serdarzeybek@outlook.com>",
+  "title": "PHP substr() Fonksiyonu",
+  "name": "substr",
+  "lang": "PHP",
+  "description": "Metin içerisinde bulunanan belirli bir kısmı almamızı sağlar.",
+  "syntax": "substr ( string $str , int $başlangıç [, integer $uzunluk ] ) : string",
+  "params": [
+    {
+      "name": "$str",
+      "type": "string",
+      "description": "Kırpılma işleminin yapılacağı ifade",
+      "required": true
+    },
+    {
+      "name": "$başlangıç",
+      "type": "int",
+      "description": "Kırpılacak metinin başlangıç indisi\n\nMesela <code>$str ='abcd'</code> metininin 0. inidisi <code>a</code> 2. indisi <code>c</code> olur.\n\nEğer başlangıç değeri negatif ise, dönen değer ifadenin sonundan başlayarak döner.\n<code>$str='abcd'</code> metininin -1. indisi <code>f</code> değeridir.",
+      "required": true
+    },
+    {
+      "name": "$uzunluk",
+      "type": "int",
+      "description": "Kırpılacak ifadenin uzunluğu\n\nİfadenin uzunluğuna göre başlangıç'tan itibaren uzunluk'ta belirtilen karakter sayısı kadar karakter içerir.",
+      "required": true
+    }
+  ],
+  "return": {
+    "type": "string",
+    "text": "İşlemin sonucunda geriye metinden kırpılmış bir string ifade döner.\nBaşarısızlık durumunda <b>FALSE</b> döner."
+  },
+  "note": "Metin uzunluğu başlangıç değerinden küçükse ya da eşitse <b>False</b> değeri döndürülür.\nUzunluk verilmiş ve 0 ise <b>FALSE</b>, <b>NULL</b> ise boş bir ifade döndürülür.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "examples": [
+    {
+      "description": "Basit substr() kullanımları şu şekildedir;",
+      "code": "<?php\n\necho = substr('abcdef',1);    // Çıktı: bcdef\necho = substr('abcdef',1,3);    // Çıktı: bcd\necho = substr('abcdef',-1,2);    // Çıktı: ef\n\n?>"
+    }
+  ]
+}
