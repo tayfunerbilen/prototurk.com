@@ -21,8 +21,7 @@
     {
       "name": "$uzunluk",
       "type": "int",
-      "description": "Kırpılacak ifadenin uzunluğu\n\nİfadenin uzunluğuna göre başlangıç'tan itibaren uzunluk'ta belirtilen karakter sayısı kadar karakter içerir.",
-      "required": true
+      "description": "Kırpılacak ifadenin uzunluğu\n\nİfadenin uzunluğuna göre başlangıç'tan itibaren uzunluk'ta belirtilen karakter sayısı kadar karakter içerir."
     }
   ],
   "return": {
@@ -39,6 +38,10 @@
     {
       "description": "Basit substr() kullanımları şu şekildedir;",
       "code": "<?php\n\necho = substr('abcdef',1);    // Çıktı: bcdef\necho = substr('abcdef',1,3);    // Çıktı: bcd\necho = substr('abcdef',-1,2);    // Çıktı: ef\n\n?>"
+    },
+    {
+      "code": "$dizge = 'abcdef';\necho $dizge[0]; // a\necho $dizge[3]; // d\necho $dizge[strlen($dizge)-1];  // f",
+      "description": "Ayrıca ifade içinde tek bir karaktere ulaşmak istenirse köşeli parantezler kullanılabilir. 0 ilk harfi temsil etmektedir."
     }
   ]
 }
