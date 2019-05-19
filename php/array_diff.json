@@ -1,0 +1,48 @@
+{
+    "author": "Bayramito <britneylover403@gmail.com>",
+    "title": "PHP'de \"array_diff\" fonksiyonu",
+    "name": "array_diff",
+    "syntax": "array_diff( array $dizi1, $dizi2 [ ... array]);",
+    "description": "array_diff fonksiyonu bir dizi ile başka bir dizi veya birden fazla dizilerin değerlerini karşılaştırmamıza olanak sağlar, ve $dizi1 de olupta diğerlerinde olmayan değerleri yine $dizi1 içinde döndürür.\n\n",
+    "note": "NOT 1  = Bu fonksiyon sadece dizilerin ilk basamaklarını karşılaştırır.\nÖrn:\n array $dizi1 ('elma', 'armut','üzüm', array $yazMeyveleri['karpuz','kiraz' ...]);\nYukarıda gördüğümüz dizi de  1,2 ve 3.eleman'ın yanısıra 4.eleman bir dizi olarak karşımıza çıkıyor,  fakat array_diff fonksiyonumuz bu elemanın alt elemanları arasında karşılaştırma yapmaz. \n\nNOT 2 = Karşılaştırılan elemanların tipleri de aynı olmak zorundadır. Yani $dizi1 deki 'elma' bir string ifade olarak karşımıza çıkarken, $dizi2 de veya diğerlerinde de bu koşul yine string olarak sağlanmalıdır ki, fonksiyon bunu aynı olarak tanımlasın.",
+    "version": [
+        "php 4",
+        "php 5",
+        "php 7"
+    ],
+    "params": [{
+            "name": "$dizi1",
+            "type": "array",
+            "description": "karşılaştırma yapacak dizi",
+            "required": true
+        },
+        {
+            "name": "$dizi2",
+            "type": "array",
+            "description": "karşılaştırma yapılacak dizi",
+            "required": true
+        },
+        {
+            "name": "$dizi3",
+            "type": "array",
+            "description": "fonksiyona 2.parametre olarak diz içerisinde birdenf azla dizi de verilebilir",
+            "default": "$dizi2",
+            "required": false
+        }
+    ],
+    "examples": [{
+            "code": "Örnek kullanım:\n array_diff($dizi1 ('elma', 'armut','üzüm', array $yazMeyveleri['karpuz','kiraz'], $dizi2 ('elma','mandalina','üzüm') );\n\nÇıktı:\narray (\n\t[1] => armut,\n\t[2] => array()\n)\n\n",
+            "title": "Normal Kullanım"
+        },
+        {
+            "code": "\nNOT 1'de karşılaştırma'nın sadece dizilerin birinci blok'larında yapıldığını söylemiştik, daha derin arama yapmak için  array_diff ( $dizi1[1] , $dizi2[2]); şeklinde daha derin bir arama yapılabilir ya da bunun yerine  şu şekilde bir recursive fonksiyon yardımıyla karşılaştırma da yapılabilir.\n\nfunction arrayRecursiveDiff($aArray1, $aArray2) {\n  $aReturn = array();\n\n  foreach ($aArray1 as $mKey => $mValue) {\n    if (array_key_exists($mKey, $aArray2)) {\n      if (is_array($mValue)) {\n        $aRecursiveDiff = arrayRecursiveDiff($mValue, $aArray2[$mKey]);\n        if (count($aRecursiveDiff)) { $aReturn[$mKey] = $aRecursiveDiff; }\n      } else {\n        if ($mValue != $aArray2[$mKey]) {\n          $aReturn[$mKey] = $mValue;\n        }\n      }\n    } else {\n      $aReturn[$mKey] = $mValue;\n    }\n  }\n  return $aReturn;\n}\n\nKaynak: https://stackoverflow.com/questions/3876435/recursive-array-diff",
+            "description": "Çözüm önerisi",
+            "title": "NOT 1 "
+        }
+    ],
+    "return": {
+        "type": "array",
+        "description": "$dizi1 içinde dönen $dizi2 veya daha fazlasında bulunmayan değerleri döndürür."
+    },
+    "deprecated": false
+}
