@@ -2,9 +2,9 @@
   "author": "ahmetkorkmaz3 <ahmetkorkmaz3453@gmail.com>",
   "title": "PHP'de str_replace fonksiyon",
   "name": "str_replace",
-  "syntax": "str_replace ( mixed $eski , mixed $yeni , mixed $konu [, int &$sayı ] ) : mixed",
+  "syntax": "str_replace ( mixed $eski , mixed $yeni , mixed $metin [, int &$sayı ] ) : mixed",
   "description": "str_replace fonksiyonu metin (<code>string</code>) veya dizi (<code>array</code>) tipindeki değişkenleri alıp bu değişkenlerde yapılmak istenen değişiklikleri uygulayarak geriye metin (<code>string</code>) veya dizi (<code>array</code>) tipinde veri döndürür.",
-  "note": "str_replace fonksiyonu geriye dönen değer tipinden biri de <code>array</code>'dir.",
+  "note": "Bu fonksiyon büyük-küçük harfe duyarlıdır. Duyarsız işlem yaptırmak için <code>str_ireplace()</code> fonksiyonu kullanılabilir.",
   "version": [
     "php 4",
     "php 5",
@@ -13,52 +13,56 @@
   "params": [
     {
       "name": "$eski",
-      "type": "string",
-      "description": "Değiştirilecek değerler girilir.",
+      "type": "string|array",
+      "description": "Değiştirilecek değerler.",
       "required": true
     },
     {
       "name": "$yeni",
-      "type": "string",
-      "description": "<code>$eski</code> metin yerine koyulacak değerler girilir.",
+      "type": "string|array",
+      "description": "Yeni değerler.",
       "required": true
     },
     {
-      "name": "$konu",
+      "name": "$metin",
       "type": "string",
-      "description": "İşlem yapılacak metin girilir.",
+      "description": "Değişiklik yapılacak metin.",
       "required": true
     },
     {
-      "name": "$sayı",
+      "name": "$toplam",
       "type": "int",
-      "description": "Yer değiştirilecek metin sayısı belirtilir.",
+      "description": "Değiştirilenlerin toplamı.",
       "required": false
     }
   ],
   "changelogs": [
     {
       "version": "5.0.0",
-      "description": "<code>$sayı</code> değeri eklendi."
+      "description": "<code>$toplam</code> parametresi eklendi."
     }
   ],
   "examples": [
     {
       "code": "$ornek = str_replace(\"html\", \"php\", \"Bu bir html sayfasıdır.\");",
-      "description": "En basit hali ile kullanımı.\\n\"Bu bir html sayfasıdır.\" metnindeki \"html\" metinini \"php\" olarak değiştirme işlemini gerçekleştirecek."
+      "description": "Aşağıdaki örnekte metin içerisinde geçen tüm <code>html</code> kelimesi <code>php</code> kelimesi ile değiştirilir."
     },
     {
       "code": "$phrase  = \"Her gün 2 litre kola, gazoz, meyve suyu içmelisin.\";\n$healthy = array(\"kola\", \"gazoz\", \"meyve suyu\");\n$yummy   = array(\"su\", \"süt\", \"maden suyu\");\n\n$newphrase = str_replace($healthy, $yummy, $phrase);",
-      "description": "Birden fazla değişiklik yapmak için dizi (<code>array</array>) kullanarak işlemi gerçekleştirdik."
+      "description": "Birden fazla değer değiştirileceğinde <code>$eski</code> ve <code>$yeni</code> parametreleri dizi olarak tanımlanır."
     },
     {
-      "code": "$str = str_replace(\"ll\", \"\", \"good golly miss molly!\", $count);",
-      "description": "<code>$count</code> değişkeninin değeri yapılan değişiklik kadardır. Yani <code>$count</code> değişkeninin değeri 2 dir."
+      "code": "$str = str_replace(\"o\", \"a\", \"prototurk.com\", $count);\necho $count; // Çıktı: 3",
+      "description": "Toplam kaç kelime ya da harfin etkilendiği döner."
+    },
+    {
+      "code": "$str = \"bu bir testttir.\";\n$str = str_replace([\" \", \".\"], null, $str);\necho $str; // boşlukları ve nokta işaretlerini kaldırdık.",
+      "description": "Ayrıca bazen birden fazla değeri tek bir değere dönüştürmek isteriz. Bu durumda 2. parametreyi string olarak belirleyebiliriz."
     }
   ],
   "return": {
     "type": "string",
-    "description": "Değiştirilmiş metin geri döndürülür."
+    "description": "İşlem sonucunda değişiklik yapılmış metin geriye döner."
   },
   "deprecated": false
 }
