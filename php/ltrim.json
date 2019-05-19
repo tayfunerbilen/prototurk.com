@@ -1,10 +1,13 @@
 {
   "author": "zeybekserdar <serdarzeybek@outlook.com>",
+  "edit": [
+    "tayfunerbilen <tayfunerbilen@gmail.com>"
+  ],
   "title": "PHP ltrim() Fonksiyonu",
   "name": "ltrim",
   "syntax": "ltrim ( string $str[, string $karakterler ] ) : string",
-  "description": "Bu işlev ifadenin başındaki boşlukları temizler.",
-  "note": "Eğer <b>$karakterler</b> değişkeni kullanılmazsa ltrim() sadece aşağıdaki karakterleri temizleyecektir:\n\n\" \" (ASCII=32 (0x20)) \tsıradan boşluk.\n\"\\t\"(ASCII=9 (0x09))\t\tsekme.\n\"\\n\"(ASCII=10 (0x0A))\tsatırsonu.\n\"\\r\"(ASCII=13 (0x0D))\tsatırbaşı.\n\"\\0\" (ASCII 0 (0x00)), NUL-bayt.\n\"\\x0B\" (ASCII 11 (0x0B)), dikey sekme.",
+  "description": "İfadelerin sol tarafındaki belirli karakterleri silmek için kullanılır.",
+  "note": "Eğer <b>$karakterler</b> değişkeni kullanılmazsa <code>ltrim()</code> sadece aşağıdaki karakterleri temizleyecektir:\n\n\" \" (ASCII=32 (0x20)) \tsıradan boşluk.\n\"\\t\"(ASCII=9 (0x09))\t\tsekme.\n\"\\n\"(ASCII=10 (0x0A))\tsatırsonu.\n\"\\r\"(ASCII=13 (0x0D))\tsatırbaşı.\n\"\\0\" (ASCII 0 (0x00)), NUL-bayt.\n\"\\x0B\" (ASCII 11 (0x0B)), dikey sekme.",
   "version": [
     "php 4",
     "php 5",
@@ -14,13 +17,13 @@
     {
       "name": "$str",
       "type": "string",
-      "description": "Üzerinde işlem yapılacak olan değişken",
+      "description": "Üzerinde işlem yapılacak olan ifade",
       "required": true
     },
     {
       "name": "$karakterler",
       "type": "string",
-      "description": "<b>$karakterler</b> değişkeni kullanılarak metin içerisinden silinmek istenen karakter seçilebilir.Bir karakter aralığını .. kullanarak belirtebilirsiniz.",
+      "description": "<b>$karakterler</b> değişkeni kullanılarak metin içerisinden silinmek istenen karakter seçilebilir. Birden fazla karakteri art arda yazarak temizlenmesini sağlayabilirsiniz.",
       "required": false
     }
   ],
@@ -32,13 +35,13 @@
   ],
   "examples": [
     {
-      "code": "<?php\n\n$metin1   = \"\\t\\tMerhaba...\";\n$metin2\t= \"\\x09Dünya\\x0A\"; \n\n$temizleme1\t= ltrim($metin1);\necho $temizleme1;\t//Çıktı : Merhaba...\n$temizleme2\t= ltrim($metin2, \"\\x00..\\x1F\"); // başındaki ve sonundaki ASCII denetim karakterlerini temizler. 0'dan 31'e kadar, 0 ve 31 dahil.\necho $temizleme2;\t//Çıktı : Dünya\n$temizleme3\t=ltrim($metin1,\" \\t.\");\necho $temizleme3;\t//Çıktı : Merhaba\n\n?>",
+      "code": "<?php\n\n$metin1   = \"\\t\\tMerhaba...\";\n$metin2\t= \"\\x09Dünya\\x0A\"; \n\n$temizleme1\t= ltrim($metin1);\necho $temizleme1;\t//Çıktı : Merhaba...\n$temizleme2\t= ltrim($metin2, \"\\x00..\\x1F\"); // sol tarafındaki ASCII denetim karakterlerini temizler. 0'dan 31'e kadar, 0 ve 31 dahil.\necho $temizleme2;\t//Çıktı : Dünya\n$temizleme3\t=ltrim($metin1,\" \\t.\");\necho $temizleme3;\t//Çıktı : Merhaba\n\n?>",
       "title": "Basit ltrim() kullanımları şu şekildedir;"
     }
   ],
   "return": {
     "type": "string",
-    "description": "<b>$karakterler</b> değişkeni ile belirlenmiş karakterlerden temizlenmiş hali döner."
+    "description": "Belirli karakterleri soldan silinmiş ifade geriye döner."
   },
   "deprecated": false
 }
