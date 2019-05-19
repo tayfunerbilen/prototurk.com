@@ -15,7 +15,7 @@
   ],
   "return": {
     "type": "array",
-    'text': "<code>Dizi(array)</code>nin son elemanı eksik şekilde geriye <code>dizi</code> değerini döndürür. Eğer <code>dizi(array)</code> boş (veya dizi değil) ise , <code>NULL(boş)</code> değer döndürür.",
+    "text": "<code>Dizi(array)</code>nin son elemanı eksik şekilde geriye <code>dizi</code> değerini döndürür. Eğer <code>dizi(array)</code> boş (veya dizi değil) ise , <code>NULL(boş)</code> değer döndürür.",
   },
   "note": "Bu işlev diziyi kullandıktan sonra girdi dizisinin dahili göstericisini <a href='https://www.php.net/manual/tr/function.reset.php'>ilk elemana konumlandırır.</a>",
   "compatibilities": [
