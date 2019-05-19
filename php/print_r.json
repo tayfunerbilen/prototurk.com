@@ -40,7 +40,7 @@
     ],
     "return": {
       "type": "mixed",
-      "description": "<code>$return</code> parametresi boş bırakılması veya false olarak ayarlanması durumunda geriye true döner. <code>$return</code> true parametresi girilmesi durumunda geriye girilen verinin içeriği döner."
+      "text": "<code>$return</code> parametresi boş bırakılması veya false olarak ayarlanması durumunda geriye true döner. <code>$return</code> true parametresi girilmesi durumunda geriye girilen verinin içeriği döner."
     },
     "deprecated": false
   }
