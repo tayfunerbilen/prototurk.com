@@ -29,11 +29,11 @@
   "examples": [
     {
       "description": "Aşağıdaki örnekte dizinin son elemanını çıkartıyoruz.",
-      "code": "<?php $depo = array('portakal','muz','elma','ahududu'); $meyve = array_pop($depo); print_r($depo); ?>"
+      "code": "<?php\n\n$depo = array('portakal','muz','elma','ahududu');\n$meyve = array_pop($depo);\nprint_r($depo);\n\n?>"
     },
     {
       "description": "Ayrıca <code>array_pop()</code> geriye son elemanın değerinide döndürür.",
-      "code": "<?php $depo = array('portakal','muz','elma','ahududu'); $meyve = array_pop($depo); echo $meyve; ?>"
+      "code": "<?php\n\n$depo = array('portakal','muz','elma','ahududu');\n$meyve = array_pop($depo);\necho $meyve;\n\n?>"
     }
   ]
 }
