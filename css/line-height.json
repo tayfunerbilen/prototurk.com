@@ -1,0 +1,51 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "CSS'de line-height Özelliği",
+  "name": "line-height",
+  "syntax": "line-height: normal | sayı | uzunluk | yüzde | initial | inherit;",
+  "js_syntax": "object.style.fontWeight=\"bold\"",
+  "description": "Yazı tipinin ne kadar kalın ya da ince görüneceği belirlenir. Belli başlı değerleri olmakla birlikte, font'ların tanımlanma şekline göre, 100, 300, 400, 500, 600, 700, 800, 900 gibi değerler kullanılır. 100 genelde en ince tip için belirlenir, 400 normal boyut olanıdır, 900 ise en kalınıdır.",
+  "version": "CSS1",
+  "values": [
+    {
+      "value": "normal",
+      "description": "Varsayılan satır yüksekliğidir."
+    },
+    {
+      "value": "sayı",
+      "description": "Mevcut yazı boyutu belirlenen değer ile çarpılır. Örneğin <code>line-height: 2;</code> ve <code>font-size: 14px;</code> ise 14 * 2 yani 24px olarak belirlenecektir."
+    },
+    {
+      "value": "uzunluk",
+      "description": "Sabit bir satır yüksekliği verilir. Örn. px, pt, cm vb."
+    },
+    {
+      "value": "yüzde",
+      "description": "Mevcut yazı boyutunun yüzdesi olarak satır yüksekliğini ayarlar. Örneğin 1 buçuk kat satır yüksekliği için %150 değeri yazılır."
+    },
+    {
+      "value": "initial",
+      "description": "Varsayılan değerine geri döndürür. Yani  \"normal\" değerine döner."
+    },
+    {
+      "value": "inherit",
+      "description": "Değerini üst öğesinden miras alır."
+    }
+  ],
+  "examples": [
+    {
+      "code": "p {\n\tline-height: 3; // 3 * yazı boyutu büyüklüğü\n}",
+      "description": "Mesela bir sayı olarak belirlemek istersek;"
+    },
+    {
+      "code": "textarea {\n\tline-height: 20px;\n}",
+      "description": "Ya da sabit bir satır yüksekliği ayarlamak istersek;"
+    },
+    {
+      "code": "div {\n\tline-height:150%; // yazı boyutunun %50 daha büyüğü\n}",
+      "description": "Ya da yazı boyutuna göre yüzdelik bir satır yüksekliği için;"
+    }
+  ],
+  "animatable": true,
+  "default_value": "normal"
+}

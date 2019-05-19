@@ -1,0 +1,77 @@
+{
+  "author": "onuralpkaratas <onuralpkaratasme@gmail.com>",
+  "edit": [
+    "tayfunerbilen <tayfunerbilen@gmail.com>"
+  ],
+  "title": "CSS border-width Özelliği",
+  "name": "border-width",
+  "lang": "css",
+  "description": "Etiketlerin çerçeve kalınlığını belirlemek için kullanılır. Saat yönünde 4 değer alır, yukarı-sağ-aşağı-sol şeklinde. Değerler px, pt, em, cm, % vb. olarak tanımlanır.\n\nEğer ilk iki değer girilmişse, ilk değer yukarısı ve aşağısı için, ikinci değer sağ ve sol için geçerli olur. Eğer ilk üç değer girilmişse, ilk değer yukarısı, ikinci değer sağ ve sol, üçüncü değer aşağısı için geçerlidir.",
+  "syntax": "border-width: <uzunluk> | thin | medium | thick | initial | inherit",
+  "version": "CSS1",
+  "animatable": true,
+  "inherited": false,
+  "default_value": "medium",
+  "js_syntax": "object.style.borderWidth=\"2px 4px\"",
+  "values": [
+    {
+      "value": "uzunluk",
+      "description": "px, pt, em, cm. gibi birimlerle kenarlık tanımlanır."
+    },
+    {
+      "value": "thin",
+      "description": "İnce boyutta kenarlık tanımlanır."
+    },
+    {
+      "value": "medium",
+      "description": "Orta boyutta kenarlık tanımlanır. (Varsayılan)"
+    },
+    {
+      "value": "thick",
+      "description": "Kalın boyutta kenarlık tanımlanır."
+    },
+    {
+      "value": "initial",
+      "description": "Varsayılan değerine geri döndürür. Yani  \"normal\" değerine döner."
+    },
+    {
+      "value": "inherit",
+      "description": "Değerini üst öğesinden miras alır."
+    }
+  ],
+  "examples": [
+    {
+      "description": "h1 başlığının 4 kenarına ince bir kenarlık oluşturur.",
+      "code": "h1 { border-style: solid; border-width: thin; }"
+    },
+    {
+      "description": "h2 başlığının 4 kenarına 7px değerinde kenarlık oluşturur.",
+      "code": "h2 { border-style: solid; border-width: 7px; }"
+    },
+    {
+      "description": "h3 başlığının üst ve alt kenarına 7px, sol ve sağ kenarına 4px değerinde kenarlık oluşturur.",
+      "code": "h3 { border-style: solid; border-width: 7px 4px; }"
+    },
+    {
+      "description": "h4 başlığının üst kenarına kalın, sağ kenarına ince, alt kenarına orta ve sol kenarına 4px değerinde kenarlık oluşturur.",
+      "code": "h4 { border-style: solid; border-width: thick thin medium 4px; }"
+    }
+  ],
+  "related": [
+    {
+      "title": "border",
+      "url": "css/border",
+      "description": "Elementlere kenarlık vermek için kullanılır."
+    },
+    {
+      "title": "border-style",
+      "url": "css/border-style",
+      "description": "Bir elemanın dört kenarının stilini ayarlar."
+    },
+    {
+      "title": "border-color",
+      "url": "css/border-color",
+      "description": "Bir elemanın dört kenarının rengini ayarlar."
+    }
+  ]
+}

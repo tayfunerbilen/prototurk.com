@@ -1,0 +1,39 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "CSS'de font-family Özelliği",
+  "name": "font-family",
+  "syntax": "font-family: yazı tipi adı | initial | inherit;",
+  "js_syntax": "object.style.fontFamily=\"Arial,sans-serif\"",
+  "description": "Yazı tipini belirtmek için kullanılır. Birden fazla yazı tipi adı belirlenebilir, eğer ilki desteklenmiyorsa ikincisini yüklemeye çalışır ve bu böyle devam eder.",
+  "version": "CSS1",
+  "values": [
+    {
+      "value": "yazı tipi adı",
+      "description": "Belirlenen sistem fontları ya da sonradan eklenen fontlardan birisinin adı belirlenir."
+    },
+    {
+      "value": "initial",
+      "description": "Varsayılan değerine geri döndürür."
+    },
+    {
+      "value": "inherit",
+      "description": "Değerini üst öğesinden miras alır."
+    }
+  ],
+  "examples": [
+    {
+      "code": "p {\n\tfont-family: Arial;\n}",
+      "description": "Paragrafların tümünün yazı tipini Arial yapalım."
+    },
+    {
+      "code": "p {\n\tfont-family: Roboto, Arial;\n}",
+      "description": "Paragrafların tümünü Roboto yapalım, eğer Roboto yoksa Arial olarak belirlensin."
+    },
+    {
+      "code": "p {\n\tfont-family: Roboto, \"Open Sans\", Arial;\n}",
+      "description": "Boşluklu yazı tipi isimleri tanımlanırken tırnaklar içinde tanımlanmalıdır. Örneğin;"
+    }
+  ],
+  "animatable": true,
+  "default_value": "Tarayıcıya göre değişir."
+}
