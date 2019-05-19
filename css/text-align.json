@@ -1,0 +1,65 @@
+{
+    "author": "onuralpkaratas <onuralpkaratasme@gmail.com>",
+    "title": "CSS text-align Özelliği",
+    "name": "text-align",
+    "lang": "css",
+    "description": "<code>text-align</code> özelliği, Metinleri sayfa içinde veya kullanıldığı element içinde hizalamak için kullanılır.",
+    "syntax": "text-align: left | right | center | justify | initial | inherit;",
+    "version": "CSS1",
+    "animatable": false,
+    "inherited": true,
+    "default_value": "left",
+    "js_syntax": "object.style.textAlign=\"Değer\"",
+    "values": [
+        {
+            "value": "left",
+            "description": "Metni sola hizalar."
+        },
+        {
+            "value": "right",
+            "description": "Metni sağa hizalar."
+        },
+        {
+            "value": "center",
+            "description": "Metni ortalar."
+        },
+        {
+            "value": "justify",
+            "description": "Metni her iki yanına yaslar."
+        },
+        {
+            "value": "initial",
+            "description": "Varsayılan değerine geri döndürür."
+        },
+        {
+            "value": "inherit",
+            "description": "Değerini üst öğesinden miras alır."
+        }
+    ],
+    "examples": [
+        {
+            "code": "p { text-align: left; }",
+            "description": "p elementi içerisindeki yazımızı sola doğru hizaladık."
+        },
+        {
+            "code": "p { text-align: right; }",
+            "description": "p elementi içerisindeki yazımızı sağa doğru hizalamak istersek,"
+        },
+        {
+            "code": "p { text-align: center; }",
+            "description": "p elementi içerisindeki yazımızı ortalamak istersek,"
+        },
+        {
+            "code": "p { text-align: justify; }",
+            "description": "p elementi içerisindeki yazımızı her iki tarafada (sağ ve sola) yaslanmış şekilde istersek,"
+        },
+        {
+            "code": "p { text-align: initial; }",
+            "description": "Önceden verilmiş olan değeri varsayılan değerine geri döndürmek istersek,"
+        },
+        {
+            "code": "p { text-align: inherit; }",
+            "description": "Değerini üst öğesinden miras almak istersek. Daha açık olmak gerekirse p elementimizin bir div elementi içerisinde olduğunu düşünürsek ve div elementinde text-align: center; olduğunu düşünürsek p elementinin text-align değerine inherit verdiğimiz için div elementindeki center değerini almış oluyoruz."
+        }
+    ]
+}
