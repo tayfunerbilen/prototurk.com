@@ -26,7 +26,7 @@
   ],
   "examples": [
     {
-      "code": "a {\n  white-space: nowrap;\n}\n\nb {\n  white-space: normal;\n}\n\nc {\n  white-space: pre;\n}",
+      "code": "pre {\n  white-space: nowrap;\n}\n\ndiv {\n  white-space: normal;\n}\n\n.test {\n  white-space: pre;\n}",
       "description": "Örneğin;"
     }
   ],
