@@ -30,7 +30,7 @@
   "changelogs": [
     {
       "version": "4.1.0",
-      "description": "İsteğe bağlı <b>karakterler</b> değişkeni eklendi."
+      "text": "İsteğe bağlı <b>karakterler</b> değişkeni eklendi."
     }
   ],
   "examples": [
