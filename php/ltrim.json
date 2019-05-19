@@ -30,7 +30,7 @@
   "changelogs": [
     {
       "version": "4.1.0",
-      "text": "İsteğe bağlı <b>karakterler</b> değişkeni eklendi."
+      "description": "İsteğe bağlı <b>karakterler</b> değişkeni eklendi."
     }
   ],
   "examples": [
@@ -45,7 +45,7 @@
   ],
   "return": {
     "type": "string",
-    "description": "Belirli karakterleri soldan silinmiş ifade geriye döner."
+    "text": "Belirli karakterleri soldan silinmiş ifade geriye döner."
   },
   "deprecated": false
 }
