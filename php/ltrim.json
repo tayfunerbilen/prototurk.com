@@ -39,7 +39,7 @@
       "description": "Örneğin ifadenin soldaki boşluklarını silmek için;"
     },
     {
-      "code": "<?php\n\n$metin1   = \"\\t\\tMerhaba...\";\n$metin2\t= \"\\x09Dünya\\x0A\"; \n\n$temizleme1\t= ltrim($metin1);\necho $temizleme1;\t//Çıktı : Merhaba...\n$temizleme2\t= ltrim($metin2, \"\\x00..\\x1F\"); // sol tarafındaki ASCII denetim karakterlerini temizler. 0'dan 31'e kadar, 0 ve 31 dahil.\necho $temizleme2;\t//Çıktı : Dünya\n$temizleme3\t=ltrim($metin1,\" \\t.\");\necho $temizleme3;\t//Çıktı : Merhaba\n\n?>",,
+      "code": "<?php\n\n$metin1   = \"\\t\\tMerhaba...\";\n$metin2\t= \"\\x09Dünya\\x0A\"; \n\n$temizleme1\t= ltrim($metin1);\necho $temizleme1;\t//Çıktı : Merhaba...\n$temizleme2\t= ltrim($metin2, \"\\x00..\\x1F\"); // sol tarafındaki ASCII denetim karakterlerini temizler. 0'dan 31'e kadar, 0 ve 31 dahil.\necho $temizleme2;\t//Çıktı : Dünya\n$temizleme3\t=ltrim($metin1,\" \\t.\");\necho $temizleme3;\t//Çıktı : Merhaba\n\n?>",
       "description": "Diğer bazı örnekleri ise;"
     }
   ],
