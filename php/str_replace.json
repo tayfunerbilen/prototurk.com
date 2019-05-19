@@ -1,0 +1,64 @@
+{
+  "author": "ahmetkorkmaz3 <ahmetkorkmaz3453@gmail.com>",
+  "title": "PHP'de str_replace fonksiyon",
+  "name": "str_replace",
+  "syntax": "str_replace ( mixed $eski , mixed $yeni , mixed $konu [, int &$sayı ] ) : mixed",
+  "description": "str_replace fonksiyonu metin (<code>string</code>) veya dizi (<code>array</code>) tipindeki değişkenleri alıp bu değişkenlerde yapılmak istenen değişiklikleri uygulayarak geriye metin (<code>string</code>) veya dizi (<code>array</code>) tipinde veri döndürür.",
+  "note": "str_replace fonksiyonu geriye dönen değer tipinden biri de <code>array</code>'dir.",
+  "version": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "$eski",
+      "type": "string",
+      "description": "Değiştirilecek değerler girilir.",
+      "required": true
+    },
+    {
+      "name": "$yeni",
+      "type": "string",
+      "description": "<code>$eski</code> metin yerine koyulacak değerler girilir.",
+      "required": true
+    },
+    {
+      "name": "$konu",
+      "type": "string",
+      "description": "İşlem yapılacak metin girilir.",
+      "required": true
+    },
+    {
+      "name": "$sayı",
+      "type": "int",
+      "description": "Yer değiştirilecek metin sayısı belirtilir.",
+      "required": false
+    }
+  ],
+  "changelogs": [
+    {
+      "version": "5.0.0",
+      "description": "<code>$sayı</code> değeri eklendi."
+    }
+  ],
+  "examples": [
+    {
+      "code": "$ornek = str_replace(\"html\", \"php\", \"Bu bir html sayfasıdır.\");",
+      "description": "En basit hali ile kullanımı.\\n\"Bu bir html sayfasıdır.\" metnindeki \"html\" metinini \"php\" olarak değiştirme işlemini gerçekleştirecek."
+    },
+    {
+      "code": "$phrase  = \"Her gün 2 litre kola, gazoz, meyve suyu içmelisin.\";\n$healthy = array(\"kola\", \"gazoz\", \"meyve suyu\");\n$yummy   = array(\"su\", \"süt\", \"maden suyu\");\n\n$newphrase = str_replace($healthy, $yummy, $phrase);",
+      "description": "Birden fazla değişiklik yapmak için dizi (<code>array</array>) kullanarak işlemi gerçekleştirdik."
+    },
+    {
+      "code": "$str = str_replace(\"ll\", \"\", \"good golly miss molly!\", $count);",
+      "description": "<code>$count</code> değişkeninin değeri yapılan değişiklik kadardır. Yani <code>$count</code> değişkeninin değeri 2 dir."
+    }
+  ],
+  "return": {
+    "type": "string",
+    "description": "Değiştirilmiş metin geri döndürülür."
+  },
+  "deprecated": false
+}
