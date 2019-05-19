@@ -1,0 +1,18 @@
+{
+  "author": "servetsevimli <servetsevimli@gmail.com>",
+  "title": "<b> Etiketi",
+  "name": "b",
+  "syntax": "<b> .. </b>",
+  "description": "İşaretlenen etiketin yazıları kalın olarak gözükür.",
+  "version": "HTML",
+  "closing_tag": true,
+  "display": "satıriçi",
+  "usage": "Metinsel",
+  "default_css": "b {\n\tfont-weight: bold;\n}",
+  "examples": [
+    {
+      "code": "Burası hariç <b>buralar hep kalın gözükecek.</b>",
+      "description": "Kısa bir örnekle anlatmak gerekirse;"
+    }
+  ]
+}
