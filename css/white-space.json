@@ -13,11 +13,11 @@
     },
     {
       "value": "nowrap",
-      "description": "Metin <br> etiketi ile karşılaşana kadar aynı satırda devam eder."
+      "description": "Metin &lt;br> etiketi ile karşılaşana kadar aynı satırda devam eder."
     },
     {
       "value": "pre",
-      "description": "HTML'deki <pre> etiketi gibi davranır. Yalnızca kaynaktaki yeni satır etiketinde ve <br> etiketi ile alt satıra iner."
+      "description": "HTML'deki &lt;pre> etiketi gibi davranır. Yalnızca kaynaktaki yeni satır etiketinde ve <br> etiketi ile alt satıra iner."
     },
     {
       "value": "pre-wrap",
