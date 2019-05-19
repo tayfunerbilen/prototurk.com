@@ -1,0 +1,53 @@
+{
+    "author": "onuralpkaratas <onuralpkaratasme@gmail.com>",
+    "title": "CSS width Özelliği",
+    "name": "width",
+    "lang": "css",
+    "description": "<code>width</code> özelliği, bir elemanın genişliğini ayarlamak için kullanılır.",
+    "syntax": "width: auto | <uzunluk> | <%> | initial | inherit;",
+    "version": "CSS1",
+    "animatable": true,
+    "inherited": false,
+    "default_value": "auto",
+    "js_syntax": "object.style.width=\"Değer\"",
+    "values": [
+        {
+            "value": "auto",
+            "description": "Varsayılan değer. Tarayıcı, belirtilen öğe için bir genişlik hesaplar ve seçer."
+        },
+        {
+            "value": "uzunluk",
+            "description": "px, pt, em, cm gibi birimlerle genişlik tanımlanır."
+        },
+        {
+            "value": "%",
+            "description": "Bloğun yüzdesel (%) genişliğini tanımlar."
+        },
+        {
+            "value": "initial",
+            "description": "Varsayılan değerine geri döndürür."
+        },
+        {
+            "value": "inherit",
+            "description": "Değerini üst öğesinden miras alır."
+        }
+    ],
+    "examples": [
+        {
+            "code": "div { width: 200px }",
+            "description": "div elementinin genişliği 200px olacak şekilde ayarlanacak."
+        },
+        {
+            "code": "img { width: 50% }",
+            "description": "img elementinin genişliği sayfanın yarısını (50%) kapsayacak şekilde ayarlanacak."
+        },
+        {
+            "code": "div { width: initial }",
+            "description": "div elementinin genişliğini varsayılan değerine geri döndürmek istersek,"
+        },
+        {
+            "code": "div { width: inherit }",
+            "description": "div elementinin genişliğini üst öğesinden miras almak istersek,"
+        }
+    ]
+}
