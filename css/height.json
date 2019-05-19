@@ -1,0 +1,53 @@
+{
+    "author": "onuralpkaratas <onuralpkaratasme@gmail.com>",
+    "title": "CSS height Özelliği",
+    "name": "height",
+    "lang": "css",
+    "description": "<code>height</code> özelliği, bir elemanın yüksekliğini ayarlamak için kullanılır.",
+    "syntax": "height: auto | <uzunluk> | <%> | initial | inherit;",
+    "version": "CSS1",
+    "animatable": true,
+    "inherited": false,
+    "default_value": "auto",
+    "js_syntax": "object.style.height=\"Değer\"",
+    "values": [
+        {
+            "value": "auto",
+            "description": "Varsayılan değer. Tarayıcı, belirtilen öğe için bir yükseklik hesaplar ve seçer."
+        },
+        {
+            "value": "uzunluk",
+            "description": "px, pt, em, cm gibi birimlerle yükseklik tanımlanır."
+        },
+        {
+            "value": "%",
+            "description": "Bloğun yüzdesel (%) yüksekliğini tanımlar."
+        },
+        {
+            "value": "initial",
+            "description": "Varsayılan değerine geri döndürür."
+        },
+        {
+            "value": "inherit",
+            "description": "Değerini üst öğesinden miras alır."
+        }
+    ],
+    "examples": [
+        {
+            "code": ".element { height: 100px }",
+            "description": "element sınıfının yüksekliği 100px olacak şekilde ayarlanacak."
+        },
+        {
+            "code": ".element { height: 50% }",
+            "description": "element sınıfının yüksekliği sayfanın yarısını (50%) kapsayacak şekilde ayarlanacak."
+        },
+        {
+            "code": ".element { height: initial }",
+            "description": "element sınıfının yüksekliğini varsayılan değerine geri döndürmek istersek,"
+        },
+        {
+            "code": ".element { height: inherit }",
+            "description": "element sınıfının yüksekliğini üst öğesinden miras almak istersek,"
+        }
+    ]
+}
