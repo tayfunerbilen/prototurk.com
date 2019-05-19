@@ -1,0 +1,35 @@
+{
+  "author": "darkwintergrup <darkwintergrup@gmail.com>",
+  "title": "CSS white-space özelliği",
+  "name": "white-space",
+  "syntax": "white-space: normal | nowrap | pre | pre-line | pre-wrap | initial | inherit ;",
+  "js_syntax": "object.style.whiteSpace=\"nowrap\"",
+  "description": "<code>white-space</code> özelliği, bir öğenin içindeki boş alanların nasıl kullanılacağını belirtir.",
+  "version": "CSS1",
+  "values": [
+    {
+      "value": "normal",
+      "description": "Birden fazla boşluğu tek bir boşluk gibi ele alır. Satırlar içinde bulunduğu elementin gerektirdiği şekilde kesilir."
+    },
+    {
+      "value": "nowrap",
+      "description": "Metin <br> etiketi ile karşılaşana kadar aynı satırda devam eder."
+    },
+    {
+      "value": "pre",
+      "description": "HTML'deki <pre> etiketi gibi davranır. Yalnızca kaynaktaki yeni satır etiketinde ve <br> etiketi ile alt satıra iner."
+    },
+    {
+      "value": "pre-wrap",
+      "description": "Satırlar içinde bulunduğu elementin şekli itibariyle ve <br> etiketi ile bir alt satıra iner."
+    }
+  ],
+  "examples": [
+    {
+      "code": "a {\n  white-space: nowrap;\n}\n\nb {\n  white-space: normal;\n}\n\nc {\n  white-space: pre;\n}",
+      "description": "Örneğin;"
+    }
+  ],
+  "animatable": false,
+  "default_value": "normal"
+}
