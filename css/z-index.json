@@ -4,7 +4,7 @@
   "name": "z-index",
   "syntax": "z-index: auto | sayı | initial | inherit ;",
   "js_syntax": "object.style.zIndex=\"sayı\"",
-  "description": "<code>z-index</code>, konumlandırma elementleri uygulanmış katmanların z-eksenindeki konumu belirlemek için kullanılır. <code>z-index</code> tüm elementlere uygulanamaz sadece konumlandırma değeri (position) atanmış elementlere uygulanır. Bunun anlamı eğer bir elementi aynı z-ekseni üzerinde üste veya alt sıraya atmak istiyorsanız ilk olarak konumlandırma değeri atamalısınız. z-indeks değeri en yüksek olan öğe en üstte yer alır, z-index değeri en küçük olan öğe ise en altta yer alır.",
+  "description": "<code>z-index</code>, konumlandırma elementleri uygulanmış katmanların z-eksenindeki konumu belirlemek için kullanılır. <code>z-index</code> tüm elementlere uygulanamaz sadece konumlandırma değeri (position) atanmış elementlere uygulanır. Bunun anlamı eğer bir elementi aynı z-ekseni üzerinde üste veya alt sıraya atmak istiyorsanız ilk olarak konumlandırma değeri atamalısınız. <code>z-index</code> değeri en yüksek olan öğe en üstte, değeri en küçük olan öğe ise en altta yer alır.",
   "values": [
     {
       "value": "auto",
