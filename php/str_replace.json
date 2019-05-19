@@ -63,7 +63,7 @@
   ],
   "return": {
     "type": "string",
-    "description": "İşlem sonucunda değişiklik yapılmış metin geriye döner."
+    "text": "İşlem sonucunda değişiklik yapılmış metin geriye döner."
   },
   "deprecated": false
 }
