@@ -1,0 +1,18 @@
+{
+    "author": "servetsevimli <servetsevimli@gmail.com>",
+    "title": "<i> Etiketi",
+    "name": "i",
+    "syntax": "<i> .. </i>",
+    "description": "İşaretlenen yazıları eğik gösterir.",
+    "version": "HTML",
+    "closing_tag": true,
+    "display": "satıriçi",
+    "usage": "Metinsel",
+    "default_css": "i {\n\tfont-style: italic;\n}",
+    "examples": [
+      {
+        "code": "Buradan sonrası <i>eğik yazı olarak görünecek</i>",
+        "description": "Basit bir örnekle açıklayalım."
+      }
+    ]
+  }
