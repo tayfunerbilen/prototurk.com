@@ -1,0 +1,39 @@
+{
+  "author": "darkwintergrup <darkwintergrup@gmail.com>",
+  "title": "CSS margin Özelliği",
+  "name": "margin",
+  "syntax": "margin: uzunluk | auto | initial | inherit ;",
+  "js_syntax": "object.style.margin=\"100px 50px\"",
+  "description": "<code>Margin</code> özelliği bir elementin dört kenarının kenar boşluğunu düzenler.",
+  "version": "CSS1",
+  "values": [
+    {
+      "value": "uzunluk",
+      "description": "px, pt, em. gibi birimlerle değer alır. Varsayılan olarak 0 'dır. Eksi değerler alabilir."
+    },
+    {
+      "value": "auto",
+      "description": "Bu değer kullanıldığında değerler otomatik tarayıcı tarafından atanır. Blok elementleri merkeze konumlandırmada kullanılır."
+    },
+    {
+      "value": "initial",
+      "description": "Varsayılan değerlerine göre ayarlar."
+    },
+    {
+      "value": "inherit",
+      "description": "Üst öğesi ile aynı değeri alır."
+    }
+  ],
+  "examples": [
+    {
+      "code": "/* Her dört kenara uygulanır */\nmargin: 1em;\n\n/* dikey | yatay */\nmargin: 5% auto;\n\n/* üst | yatay | alt */\nmargin: 1em auto 2em; \n\n/* üst | sağ | alt | sol */\nmargin: 2em 1px 0 auto;\n\n/* Genel değerler */\nmargin: inherit;\nmargin: initial;\nmargin: unset;",
+      "description": "Uzunluk değerlerini örneklendirmek gerekirse;"
+    },
+    {
+      "code": "margin: 5px;                /* tüm kenarlar 5px margin değerini alır */\n\nmargin: 10%;              /* tüm kenarlar 10% margin değerini alır */\n\nmargin: 1.6em 20px;        /* üst ve alt 1.6em, sağ ve sol 20px margin değerini alır */\n\nmargin: 10px 3% 1em;       /* üst 10px, sağ ve sol 3%, alt 1em margin değerini alır */\n\nmargin: 10px 3px 30px 5px; /* üst 10px, sağ 3px, alt 30px, sol 5px margin değerini alır */",
+      "description": "Bir diğer örnek;"
+    }
+  ],
+  "animatable": true,
+  "default_value": "0"
+}
