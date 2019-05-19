@@ -1,0 +1,53 @@
+{
+    "author": "onuralpkaratas <onuralpkaratasme@gmail.com>",
+    "title": "CSS overflow Özelliği",
+    "name": "overflow",
+    "lang": "css",
+    "description": "<code>overflow</code> özelliği, bir öğenin içeriğinin belirtilen bir alana sığmayacak kadar büyük olması durumunda içeriğin kırpılıp kırpılmayacağını veya kaydırma çubukları eklenip eklenmeyeceğini belirler. Yalnızca belirli bir yüksekliğe sahip blok elemanları için çalışır.",
+    "syntax": "overflow: visible | hidden | scroll | auto | initial | inherit;",
+    "version": "CSS2",
+    "animatable": false,
+    "inherited": false,
+    "default_value": "visible",
+    "js_syntax": "object.style.overflow=\"Değer\"",
+    "values": [
+        {
+            "value": "visible",
+            "description": "Varsayılan değer."
+        },
+        {
+            "value": "hidden",
+            "description": "İçeriğin geri kalanını görünmez yapar."
+        },
+        {
+            "value": "scroll",
+            "description": "Taşma kırpılır, ancak içeriğin geri kalanını görmek için bir kaydırma çubuğu eklenir."
+        },
+        {
+            "value": "auto",
+            "description": "Taşma kırpılırsa, içeriğin geri kalanını görmek için kaydırma çubuğu eklenmelidir."
+        },
+        {
+            "value": "initial",
+            "description": "Varsayılan değerine geri döndürür."
+        },
+        {
+            "value": "inherit",
+            "description": "Değerini üst öğesinden miras alır."
+        }
+    ],
+    "examples": [
+        {
+            "code": ".element {\n\twidth: 500px;\n\theight: 100px;\n\toverflow: scroll;\n\tbackground: #f00;\n}",
+            "description": "100px değerinde yükseklik belirledik, belirlediğimiz yüksekliği geçen yazılar için hem dikey, hem de yatay kaydırma çubuğu çıkmış olacak. overflow: auto; dan farkı ise yatay çubuğunda çıkmasıdır."
+        },
+        {
+            "code": ".element {\n\twidth: 500px;\n\theight: 100px;\n\toverflow: hidden;\n\tbackground: #f00;\n}",
+            "description": "100px değerinde yükseklik belirledik, belirlediğimiz yüksekliği geçen yazılar element sınıfının içerisinde kaldığı için belirlediğimiz yükseklikten sonraki yazılar görünmeyecek."
+        },
+        {
+            "code": ".element {\n\twidth: 500px;\n\theight: 100px;\n\toverflow: auto;\n\tbackground: #f00;\n}",
+            "description": "100px değerinde yükseklik belirledik, yazımız bu yüksekliği geçer ise kaydırma çubuğu çıkar ve o yükseklik doğrultusunda, kaydırma çubuğu ile kaydırılarak yazı görünür."
+        }
+    ]
+}
