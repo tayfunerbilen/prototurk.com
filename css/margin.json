@@ -8,16 +8,16 @@
     "version": "CSS1",
     "values": [
       {
-        "value": "Uzunluğu \"px\"",
-        "description": "Sabit bir değer alır"
+        "value": "uzunluk",
+        "description": "Sabit bir değer kullanılarak (Örn: pt, px, cm, em vb.) dış boşluk verilir."
       },
       {
-        "value": "Yüzde \"%\"",
-        "description": "Bulunduğu bloğun genişliğine göre boyutu"
+        "value": "yüzde",
+        "description": "Bulunduğu bloğun genişliğini baz alarak dış boşluk verilir."
       },
       {
-        "value": "Auto",
-        "description": "auto kullanıldığında değerleri otomatik atanır. Blok elementleri merkeze konumlandırmada kullanılır. div { width:50%;  margin:0 auto; } div bloğunu yatay olarak merkeze konumlandırır."
+        "value": "auto",
+        "description": "Tarayıcı dış boşluğu otomatik hesaplar."
       },
       {
         "value": "initial",
