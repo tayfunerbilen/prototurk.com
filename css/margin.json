@@ -2,7 +2,7 @@
     "author": "Hayrettin DAL <hayroxgitar47@gmail.com>",
     "title": "CSS'de Margin Özelliği",
     "name": "margin",
-    "syntax": "margin: 10px; | uzunluk",
+    "syntax": "margin: uzunluk | yüzde | auto | initial | inherit",
     "js_syntax": "object.style.margin=\"değer\"",
     "description": "Margin özelliği kendi başına kullanıldığında dört kenarın dış boşluklarını düzenler.\n<code>margin-top</code> üst kenarın boşluğu düzenler\n<code>margin-bottom</code> alt kenar boşluğu düzenler\n<code>margin-left</code> sol kenar boşluğu düzenler\n<code>margin-right</code> sağ kenar boşluğunu düzenleyip değer atamamıza olanak sağlar",
     "version": "CSS1",
@@ -18,6 +18,14 @@
       {
         "value": "Auto",
         "description": "auto kullanıldığında değerleri otomatik atanır. Blok elementleri merkeze konumlandırmada kullanılır. div { width:50%;  margin:0 auto; } div bloğunu yatay olarak merkeze konumlandırır."
+      },
+      {
+        "value": "initial",
+        "description": "Varsayılan değerine geri döndürür."
+      },
+      {
+        "value": "inherit",
+        "description": "Değerini üst öğesinden miras alır."
       }
     ],
     "examples": [
@@ -27,11 +35,14 @@
         "title": "Dış boşluk ekleme"
       },
       {
-        "code": ".kutu{\n      margin: 0px Auto;\n}",
-        "description": "Dikkat:Modern tarayıcılarda yatay merkezde konumlandırmak için display: flex;, justify-content: center;kullanınız.  Bununla birlikte, eski tarayıcılarda IE8-9 gibi,  bu tanımlama kullanılamaz. Yatay merkez konumlama için elementi kapsayan elemente  margin: 0 auto; kullanınız.",
-        "title": "Kutuyu Ortalama"
+        "code": ".container {\n\twidth: 500px;\n\tmargin: 0 auto;\n}",
+        "description": "Belli bir genişliği olan etiketleri ortalamak için yukarı ve aşağıdan 0 sağ ve soltan auto değeri kullanılır. Böylece yatak eksende ortalanmış olur. Dikey eksende ortalama işlemleri için modern yöntemler mevcut, bunlar flex ile kolayca yapılabilmektedir."
+      },
+      {
+        "code": "p {\n\tmargin: 5% 15%;\n}",
+        "description": "Ayrıca yüzdeli olarakta margin değeri verilebilir."
       }
     ],
     "animatable": true,
-    "default_value": "margin:0px;"
+    "default_value": "0"
   }
