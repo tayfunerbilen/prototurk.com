@@ -24,7 +24,7 @@
       "description": "İnce karakterleri tanımlar."
     },
     {
-      "value": "100, 200, 300, 400, 500, 600, 700, 800, 900",
+      "value": "100\n200\n300\n400\n500\n600\n700\n800\n900",
       "description": "Bu numaralar değişebilir ancak varsayılan olarak genelde bu şekilde kullanılır. 400 normal'e, 700 ise bold'a eşittir. Diğerleri ise 100 en inceyi, 900 en kalını temsil eder."
     },
     {
