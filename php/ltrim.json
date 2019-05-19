@@ -8,7 +8,7 @@
   "syntax": "ltrim ( string $str[, string $karakterler ] ) : string",
   "description": "İfadelerin sol tarafındaki belirli karakterleri silmek için kullanılır.",
   "note": "Eğer <b>$karakterler</b> değişkeni kullanılmazsa <code>ltrim()</code> sadece aşağıdaki karakterleri temizleyecektir:\n\n\" \" (ASCII=32 (0x20)) \tsıradan boşluk.\n\"\\t\"(ASCII=9 (0x09))\t\tsekme.\n\"\\n\"(ASCII=10 (0x0A))\tsatırsonu.\n\"\\r\"(ASCII=13 (0x0D))\tsatırbaşı.\n\"\\0\" (ASCII 0 (0x00)), NUL-bayt.\n\"\\x0B\" (ASCII 11 (0x0B)), dikey sekme.",
-  "version": [
+  "compatibilities": [
     "php 4",
     "php 5",
     "php 7"

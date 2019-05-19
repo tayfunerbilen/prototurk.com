@@ -442,8 +442,8 @@
             $('.version').each(function () {
                 var checked = $(this).is(':checked');
                 if (checked) {
-                    if (!json.version) json.version = [];
-                    json.version.push($(this).val());
+                    if (!json.compatibilities) json.compatibilities = [];
+                    json.compatibilities.push($(this).val());
                 }
             });
 
