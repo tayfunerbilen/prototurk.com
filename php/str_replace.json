@@ -1,5 +1,6 @@
 {
   "author": "ahmetkorkmaz3 <ahmetkorkmaz3453@gmail.com>",
+  "edit": ["tayfunerbilen <tayfunerbilen@gmail.com>"],
   "title": "PHP'de str_replace fonksiyon",
   "name": "str_replace",
   "syntax": "str_replace ( mixed $eski , mixed $yeni , mixed $metin [, int &$sayı ] ) : mixed",
