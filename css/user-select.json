@@ -1,0 +1,35 @@
+{
+  "author": "darkwintergrup <darkwintergrup@gmail.com>",
+  "title": "CSS user-select Özelliği",
+  "name": "user-select",
+  "syntax": "user-select: auto | none | text | all ;",
+  "js_syntax": "object.style.userSelect=\"değer\"",
+  "description": "<code>user-select</code> özelliği, bir öğenin metninin seçilip seçilemeyeceğini belirler. Tarayıcılar da, bir metni çift tıklarsanız, seçili hale gelecek ve metin vurgulanacaktır. Bu özellik bunu önlemek için kullanılabilir.",
+  "version": "CSS3",
+  "values": [
+    {
+      "value": "auto",
+      "description": "Varsayılan değerdir. Tarayıcı izin veriyorsa metin seçilebilir."
+    },
+    {
+      "value": "none",
+      "description": "Metin ve alt öğelerin seçimi önlenir."
+    },
+    {
+      "value": "text",
+      "description": "Metin kullanıcı tarafından seçilebilir."
+    },
+    {
+      "value": "all",
+      "description": "Metin seçimi, çift tıklatma yerine tek tıklama ile yapılır."
+    }
+  ],
+  "examples": [
+    {
+      "code": "div {\n  -webkit-user-select: none; /* Safari 3.1+ */\n  -moz-user-select: none; /* Firefox 2+ */\n  -ms-user-select: none; /* IE 10+ */\n  user-select: none; /* Standart yazım */\n}",
+      "description": "Örnek olarak seçimi kapatmak istersek ;"
+    }
+  ],
+  "animatable": false,
+  "default_value": "auto"
+}
