@@ -1,0 +1,43 @@
+{
+  "author": "darkwintergrup <darkwintergrup@gmail.com>",
+  "title": "CSS'de Ölçü Birimleri",
+  "name": "units",
+  "syntax": "<özellik> : <sayı><birim>;",
+  "description": "CSS, bir uzunluğu ifade etmek için birkaç farklı birime sahiptir. <code>width</code>, <code>margin</code>, <code>padding</code>, <code>font-size</code>, vb. gibi birçok CSS özellikleri uzunluk birimleri ile değer alır. Uzunluk birimleri bir sayıdan hemen sonra eklenir ve sayı ile birim arasında boşluk bırakılamaz. Verilen sayı değeri 0 ise, birim önemsizdir. Bazı CSS özellikleri için uzunluklarda negatif sayılara izin verilir. Birimler mutlak ve göreceli olarak ikiye ayrılır.\n\nMutlak uzunluk birimleri sabittir ve bunlardan herhangi birinde ifade edilen bir uzunluk, tam olarak bu boyutta görünecektir. Mutlak uzunluk birimlerinin kullanılması önerilmez, çünkü ekran boyutları çok fazla değişiklik gösterir. Bunlar; cm, mm, in, px, pt, pc\n\nGöreceli uzunluk birimleri ise değişkendir. Başka bir uzunluğun değerine göre belirlenir. Bunlar; em, ex, ch, rem, vw, vh, vmin, vmax, %",
+  "values": [
+    {
+      "value": "cm",
+      "description": "santimetre"
+    },
+    {
+      "value": "mm",
+      "description": "milimetre"
+    },
+    {
+      "value": "in",
+      "description": "inc (1in = 96px = 2.54cm)"
+    },
+    {
+      "value": "px",
+      "description": "piksel"
+    },
+    {
+      "value": "pt",
+      "description": "point"
+    },
+    {
+      "value": "em",
+      "description": "Varsayılan yazı tipi boyutuna göre ayarlanır (Örneğin 3em geçerli yazı tipinin 3 katı anlamına gelir)"
+    },
+    {
+      "value": "ex",
+      "description": "Varsayılan yazı tipinin yüksekliğine göre ayarlanır."
+    }
+  ],
+  "examples": [
+    {
+      "code": ".div {\n\twidth: 25pt;\n\tpadding: 10px;\n\tfont-size: 0.75em;\n\tmargin: 2%;\t/* gibi örnekler türetilebilir */\n}",
+      "description": "Bir örnek vermek gerekirse ;"
+    }
+  ]
+}
