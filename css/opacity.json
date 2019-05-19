@@ -1,0 +1,47 @@
+{
+  "author": "darkwintergrup <darkwintergrup@gmail.com>",
+  "title": "CSS opacity Özelliği",
+  "name": "opacity",
+  "syntax": "opacity: sayı | initial | inherit ;",
+  "js_syntax": "object.style.opacity=\"sayı\"",
+  "description": "<code>Opacity</code> özelliği, bir öğenin opaklığını / saydamlığını belirtir. Ayrıca içeriği gizlemek içinde kullanılır.",
+  "version": "CSS3",
+  "values": [
+    {
+      "value": "sayı",
+      "description": "Opacity özelliği 0 ile 1 arasında bir değer alabilir. Değer azaldıkça şeffaflık artar."
+    },
+    {
+      "value": "0",
+      "description": "Öğe tamamen saydamdır (görünmez)."
+    },
+    {
+      "value": "1",
+      "description": "Varsayılan değerdir. Öğe normal bir şekilde görünür."
+    },
+    {
+      "value": "initial",
+      "description": "Varsayılan değerine geri döndürür."
+    },
+    {
+      "value": "inherit",
+      "description": "Değerini üst öğesinden miras alır."
+    }
+  ],
+  "examples": [
+    {
+      "code": "img {\n  opacity: 0.5;\n  filter: alpha(opacity=50); /* IE8 ve önceki sürümler için filter özelliği kullanılır.  */\n}",
+      "description": "Bir resim öğesini yarı saydam hale getirelim ;"
+    },
+    {
+      "code": ".div {\n  opacity: 0;\n  filter: alpha(opacity=0); /* IE8 ve önceki sürümler için filter özelliği kullanılır.  */\n}",
+      "description": "Bir elementi tamamen saydam hale getirelim ;"
+    },
+    {
+      "code": "div {\n  background: rgba(9, 0, 255, 0.5) /* Yarı saydam mavi renkli bir arkaplan */\n}",
+      "description": "Ayrıca bir elementin RGB kodunun sonuna opacity değerini ekleyerek de saydamlığını ayarlayabiliriz."
+    }
+  ],
+  "animatable": true,
+  "default_value": "1"
+}
