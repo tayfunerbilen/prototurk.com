@@ -6,7 +6,7 @@
   "syntax": "str_replace ( mixed $eski , mixed $yeni , mixed $metin [, int &$sayı ] ) : mixed",
   "description": "str_replace fonksiyonu metin (<code>string</code>) veya dizi (<code>array</code>) tipindeki değişkenleri alıp bu değişkenlerde yapılmak istenen değişiklikleri uygulayarak geriye metin (<code>string</code>) veya dizi (<code>array</code>) tipinde veri döndürür.",
   "note": "Bu fonksiyon büyük-küçük harfe duyarlıdır. Duyarsız işlem yaptırmak için <code>str_ireplace()</code> fonksiyonu kullanılabilir.",
-  "version": [
+  "compatibilities": [
     "php 4",
     "php 5",
     "php 7"
