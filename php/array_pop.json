@@ -1,5 +1,8 @@
 {
   "author": "muhammetikizek <ikizekmuhammet@gmail.com>",
+  "edit": [
+    "tayfunerbilen <tayfunerbilen@gmail.com>"
+  ],
   "title": "PHP array_pop() Fonksiyonu",
   "name": "array_pop",
   "lang": "PHP",
@@ -14,30 +17,23 @@
     }
   ],
   "return": {
-    "type": "array",
-    "text": "<code>Dizi(array)</code>nin son elemanı eksik şekilde geriye <code>dizi</code> değerini döndürür. Eğer <code>dizi(array)</code> boş (veya dizi değil) ise , <code>NULL(boş)</code> değer döndürür.",
+    "type": "mixed",
+    "text": "Dizideki son elemanın tipine bağlı olarak geriye son elemanın değerini döndürür."
   },
-  "note": "Bu işlev diziyi kullandıktan sonra girdi dizisinin dahili göstericisini <a href='https://www.php.net/manual/tr/function.reset.php'>ilk elemana konumlandırır.</a>",
   "compatibilities": [
     "php 4",
     "php 5",
     "php 7"
   ],
   "deprecated": false,
-  "changelogs": [
-    
-  ],
   "examples": [
     {
-      "title": "Örnek Kullanımı",
-      "description": "Bundan sonra, $depo üç elemana sahip olacaktır.",
+      "description": "Aşağıdaki örnekte dizinin son elemanını çıkartıyoruz.",
       "code": "<?php $depo = array('portakal','muz','elma','ahududu'); $meyve = array_pop($depo); print_r($depo); ?>"
-    }
-  ],
-  "see_also": [
+    },
     {
-      "title": "array_pop()",
-      "url": "php/array_pop"
+      "description": "Ayrıca <code>array_pop()</code> geriye son elemanın değerinide döndürür.",
+      "code": "<?php $depo = array('portakal','muz','elma','ahududu'); $meyve = array_pop($depo); echo $meyve; ?>"
     }
   ]
 }
