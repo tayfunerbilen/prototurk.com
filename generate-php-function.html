@@ -496,7 +496,7 @@
             if (return_type || return_description) {
                 json.return = {};
                 if (return_type) json.return.type = return_type;
-                if (return_description) json.return.description = return_description.replace(/</g, '&lt;');
+                if (return_description) json.return.text = return_description.replace(/</g, '&lt;');
             }
             if (deprecated) json.deprecated = deprecated === '1' ? true : false;
 
