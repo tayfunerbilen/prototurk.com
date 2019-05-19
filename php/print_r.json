@@ -1,0 +1,46 @@
+{
+    "author": "Abdulbaki Zırıh <abdulbaki3999@gmail.com>",
+    "title": "PHP print_r() Fonksiyonu",
+    "name": "print_r",
+    "lang": "PHP",
+    "syntax": "print_r ( mixed $expression, boolean $return = false ) : mixed",
+    "description": "Girilen verinin okunabilir çıktısını verir.",
+    "note": "<code>$return</code> parametresi kullanıldığında, bu fonksiyon çıktı tamponlamayı kullanır. Yani ob_start(); geri çağırma işlevinde kullanılamaz.",
+    "version": [
+      "php 4",
+      "php 5",
+      "php 7"
+    ],
+    "params": [
+      {
+        "name": "$mixed",
+        "type": "mixed",
+        "description": "Düzenli çıktısı verilecek verinin türü genellikle dizi olur.",
+        "required": true
+      },
+      {
+        "name": "$return",
+        "type": "boolean",
+        "description": "<code>False</code> normal çalışmayı sürdürür. <code>True</code> çıktıyı ekrana basmak yerine geriye döndürür.",
+        "default": "false",
+        "required": false
+      }
+    ],
+    "examples": [
+      {
+        "code": "<?php\n\n$array = [1, 2, 3, 4, 5];\nprint_r($array);\n/*\nArray\n(\n    [0] => 1\n    [1] => 2\n    [2] => 3\n    [3] => 4\n    [4] => 5\n)\n*/\n\n?>",
+        "description": "Genellikle dizileri düzenli olarak ekrana basarız.",
+        "title": "Temel Kullanım"
+      },
+      {
+        "code": "<?php\n\n$array = [1, 2, 3, 4, 5];\n$result = print_r($array, true);\n\necho $result;\n\n/*\n\nArray\n(\n    [0] => 1\n    [1] => 2\n    [2] => 3\n    [3] => 4\n    [4] => 5\n)\n\n*/\n\n?>",
+        "description": "Geriye içeriği döndürür ve değişkene atarız.",
+        "title": "Opsiyonel Kullanım"
+      }
+    ],
+    "return": {
+      "type": "mixed",
+      "description": "<code>$return</code> parametresi boş bırakılması veya false olarak ayarlanması durumunda geriye true döner. <code>$return</code> true parametresi girilmesi durumunda geriye girilen verinin içeriği döner."
+    },
+    "deprecated": false
+  }
