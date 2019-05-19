@@ -15,7 +15,7 @@
     {
       "name": "$başlangıç",
       "type": "int",
-      "description": "Kırpılacak metinin başlangıç indisi\n\nMesela <code>$str ='abcd'</code> metininin 0. inidisi <code>a</code> 2. indisi <code>c</code> olur.\n\nEğer başlangıç değeri negatif ise, dönen değer ifadenin sonundan başlayarak döner.\n<code>$str='abcd'</code> metininin -1. indisi <code>f</code> değeridir.",
+      "description": "Kırpılacak metinin başlangıç indisi\n\nMesela <code>$str ='abcd'</code> metininin 0. inidisi <code>a</code> 2. indisi <code>c</code> olur.\n\nEğer başlangıç değeri negatif ise, dönen değer ifadenin sonundan başlayarak döner.\n<code>$str='abcdef'</code> metininin -1. indisi <code>f</code> değeridir.",
       "required": true
     },
     {
