@@ -1,0 +1,37 @@
+{
+    "author": "Hayrettin DAL <hayroxgitar47@gmail.com>",
+    "title": "CSS'de Margin Özelliği",
+    "name": "margin",
+    "syntax": "margin: 10px; | uzunluk",
+    "js_syntax": "object.style.margin=\"değer\"",
+    "description": "Margin özelliği kendi başına kullanıldığında dört kenarın dış boşluklarını düzenler.\n<code>margin-top</code> üst kenarın boşluğu düzenler\n<code>margin-bottom</code> alt kenar boşluğu düzenler\n<code>margin-left</code> sol kenar boşluğu düzenler\n<code>margin-right</code> sağ kenar boşluğunu düzenleyip değer atamamıza olanak sağlar",
+    "version": "CSS1",
+    "values": [
+      {
+        "value": "Uzunluğu \"px\"",
+        "description": "Sabit bir değer alır"
+      },
+      {
+        "value": "Yüzde \"%\"",
+        "description": "Bulunduğu bloğun genişliğine göre boyutu"
+      },
+      {
+        "value": "Auto",
+        "description": "auto kullanıldığında değerleri otomatik atanır. Blok elementleri merkeze konumlandırmada kullanılır. div { width:50%;  margin:0 auto; } div bloğunu yatay olarak merkeze konumlandırır."
+      }
+    ],
+    "examples": [
+      {
+        "code": ".kutu1{\n\tmargin:10px;\t\t/*ben kutunun 4 kenarına 10 pixel değerinde boşluk atarım*/\n}\n\n.kutu2{\n\tmargin:10px 5px;\t\t/*ben kutunun üst ve alt kenara 10 pixel değerinde sağ ve sol kenara 5px boşluk atarım*/\n}\n\n.kutu3{\n\tmargin:20px 10px 5px;\t\t/*ben kutunun üst kenarına 20 pixel değerinde, sağ ve sol kenarına 10 pixel ve alt kenarına 5 pixel değerinde boşluk atarım*/\n}\n\n.kutu4{\n\tmargin:5px 10px 15px 20px; \t\t/*ben kutunun üst kenarına 5, sağ kenarına 10, alt kenarına 15 ve sol kenarına 20 pixel değerinde boşluk atarım*/ \n}",
+        "description": "Uzunluk(pxiel) değerini kullanarak farklı sözdizimleriyle(syntax) boşluklar ekledik.",
+        "title": "Dış boşluk ekleme"
+      },
+      {
+        "code": ".kutu{\n      margin: 0px Auto;\n}",
+        "description": "Dikkat:Modern tarayıcılarda yatay merkezde konumlandırmak için display: flex;, justify-content: center;kullanınız.  Bununla birlikte, eski tarayıcılarda IE8-9 gibi,  bu tanımlama kullanılamaz. Yatay merkez konumlama için elementi kapsayan elemente  margin: 0 auto; kullanınız.",
+        "title": "Kutuyu Ortalama"
+      }
+    ],
+    "animatable": true,
+    "default_value": "margin:0px;"
+  }
