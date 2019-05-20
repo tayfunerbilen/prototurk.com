@@ -5,6 +5,7 @@
   ],
   "title": "CSS z-index Özelliği",
   "name": "z-index",
+  "version": "CSS1",
   "syntax": "z-index: auto | sayı | initial | inherit ;",
   "js_syntax": "object.style.zIndex=\"sayı\"",
   "description": "Position uygulanan etiketlerin z konumundaki yerini ayarlamak için kullanılır. Photoshop'taki layer mantığı gibi düşünebilirsiniz, büyük değerlerli etiketler küçük değerlerli etiketlerin üstünde kalırlar.",

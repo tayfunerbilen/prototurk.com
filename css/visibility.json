@@ -4,7 +4,8 @@
   "name": "visibility",
   "syntax": "visibility: visible | hidden | collapse | initial | inherit ;",
   "js_syntax": "object.style.visibility=\"değer\"",
-  "description": "<code>visible</code> özelliği, bir belgenin düzenini değiştirmeden bir öğeyi gösterir veya gizler. Ayrıca <table> içindeki satırları veya sütunları da gizleyebilir veya gösterebilir. Gizleme değeri öğenizi sadece görünmez kılar ve öğeniz hala oradadır. Öğeyi tamamen içerikten kaldırmak istiyorsanız <code>display</code> özelliğine none değeri vererek kullanmalısınız.",
+  "version": "CSS1",
+  "description": "<code>visible</code> özelliği, bir belgenin düzenini değiştirmeden bir öğeyi gösterir veya gizler. Ayrıca &lt;table> içindeki satırları veya sütunları da gizleyebilir veya gösterebilir. Gizleme değeri öğenizi sadece görünmez kılar ve öğeniz hala oradadır. Öğeyi tamamen içerikten kaldırmak istiyorsanız <code>display</code> özelliğine none değeri vererek kullanmalısınız.",
   "values": [
     {
       "value": "visible",
