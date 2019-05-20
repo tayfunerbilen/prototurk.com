@@ -127,6 +127,10 @@
                     <label>Etiket Açıklaması</label>
                     <textarea name="description" cols="30" rows="6" class="form-control"></textarea>
                 </div>
+                <div class="form-group">
+                    <label>Etiket Notu</label>
+                    <textarea name="note" cols="30" rows="6" class="form-control"></textarea>
+                </div>
                 <hr>
                 <h3>Nitelikler</h3>
                 <div class="attributes">
@@ -332,7 +336,8 @@
                 closing_tag = $('[name=\'closing_tag\'] option:selected').val(),
                 display = $('[name=\'display\'] option:selected').val(),
                 usage = $('[name=\'usage\'] option:selected').val(),
-                default_css = $('[name=\'default_css\']').val();
+                default_css = $('[name=\'default_css\']').val(),
+                note = $('[name=\'note\']').val();
 
             if (author_name || author_email) json.author = `${author_name} &lt;${author_email }>`;
             if (title) json.title = title.replace(/</g, '&lt;');
@@ -345,6 +350,7 @@
             if (display) json.display = display;
             if (usage) json.usage = usage;
             if (default_css) json.default_css = default_css.replace(/</g, '&lt;');
+            if (note) json.note = note.replace(/</g, '&lt;');
 
             $('.attribute').each(function () {
                 var name = $('[name=\'attr_name\']', this).val(),

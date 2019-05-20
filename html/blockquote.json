@@ -15,6 +15,7 @@
       "description": "Örneğin Wikipedia'dan bir alıntı yapalım;"
     }
   ],
+  "note": "Kısa alıntılar için &lt;q> etiketini kullanabilirsiniz.",
   "attributes": [
     {
       "name": "cite",
