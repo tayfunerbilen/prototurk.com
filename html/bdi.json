@@ -1,0 +1,17 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "<bdi> Etiketi",
+  "name": "bdi",
+  "syntax": "<bdi> .. </bdi>",
+  "description": "Bu etiket mevcut metnin dışında farklı bir yönde biçimlendirilen metinleri işaretlemek için kullanılır. Örneğin arapçanın latin alfabesine göre tersten yazılması gibi.",
+  "version": "HTML",
+  "closing_tag": true,
+  "display": "satıriçi",
+  "usage": "Metinsel",
+  "examples": [
+    {
+      "code": "<p>Kullanıcı: <bdi>Ahmet</bdi>: 85 puan</p>\n<p>Kullanıcı: <bdi>Xosé</bdi>: 70 puan</p>\n<p>Kullanıcı: <bdi>إيان</bdi>: 60 puan</p>",
+      "description": "Aşağıdaki örnekte  etiketi içerisinde farklı dillerden metinler yer almaktadır.  Eğer etiket kullanılmazsa örneğin arapçadaki görüntü bir karmaşa içine girer. Editörde deneyerek örneği görebilirsiniz."
+    }
+  ]
+}
