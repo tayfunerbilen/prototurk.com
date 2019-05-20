@@ -3,7 +3,7 @@
   "title": "<bdi> Etiketi",
   "name": "bdi",
   "syntax": "<bdi> .. </bdi>",
-  "description": "Bu etiket mevcut metnin dışında farklı bir yönde biçimlendirilen metinleri işaretlemek için kullanılır. Örneğin arapçanın latin alfabesine göre tersten yazılması gibi.",
+  "description": "İşaretlenen metni çift yönlü izole etmek için kullanılır. Örneğin Arapça ya da Farsça gibi sağdan sola yazılan diller, soldan sağa doğru bir satırda kullanıldığında bu etiket kullanılabilir. <bdi> etiketi işaretlenen metnin yönünü çevirmez, yalnızca tarayıcıya metnin ters yönde okunması gerektiğini belirtir.",
   "version": "HTML",
   "closing_tag": true,
   "display": "satıriçi",
