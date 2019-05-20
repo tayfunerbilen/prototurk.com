@@ -7,7 +7,7 @@
   "version": "HTML",
   "closing_tag": true,
   "display": "satıriçi",
-  "usage": "Metinsel",
+  "usage": "Anlamsal|Metinsel",
   "examples": [
     {
       "code": "<p>Kullanıcı: <bdi>Ahmet</bdi>: 85 puan</p>\n<p>Kullanıcı: <bdi>Xosé</bdi>: 70 puan</p>\n<p>Kullanıcı: <bdi>إيان</bdi>: 60 puan</p>",
