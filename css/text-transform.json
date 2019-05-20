@@ -1,0 +1,53 @@
+{
+    "author": "onuralpkaratas <onuralpkaratasme@gmail.com>",
+    "title": "CSS text-transform Özelliği",
+    "name": "text-transform",
+    "lang": "css",
+    "description": "<code>text-transform</code> özelliği, metnin büyük veya küçük harf olarak görünmesini sağlamak veya her kelimenin büyük harfle yazılması için kullanılır.",
+    "syntax": "text-transform: none | capitalize | uppercase | lowercase | initial | inherit;",
+    "version": "CSS1",
+    "animatable": false,
+    "inherited": true,
+    "default_value": "none",
+    "js_syntax": "object.style.textTransform=\"Değer\"",
+    "values": [
+        {
+            "value": "none",
+            "description": "Metin olduğu gibi işler."
+        },
+        {
+            "value": "capitalize",
+            "description": "Her kelimenin ilk karakterini büyük harfe dönüştürür."
+        },
+        {
+            "value": "uppercase",
+            "description": "Tüm karakterleri büyük harfe dönüştürür."
+        },
+        {
+            "value": "lowercase",
+            "description": "Tüm karakterleri küçük harfe dönüştürür."
+        },
+        {
+            "value": "initial",
+            "description": "Varsayılan değerine geri döndürür."
+        },
+        {
+            "value": "inherit",
+            "description": "Değerini üst öğesinden miras alır."
+        }
+    ],
+    "examples": [
+        {
+            "code": "h1 { text-transform: uppercase; }",
+            "description": "h1 elementi içerisindeki yazımızın tüm karakterlerini büyük harfe dönüştürmek istersek;"
+        },
+        {
+            "code": "h2 { text-transform: lowercase; }",
+            "description": "h2 elementi içerisindeki yazımızın tüm karakterlerini küçük harfe dönüştürmek istersek;"
+        },
+        {
+            "code": "h3 { text-transform: capitalize; }",
+            "description": "h3 elementi içerisindeki her kelimenin ilk karakterini büyük harfe dönüştürmek istersek; Fakat burada yazımızın tüm karakterleri büyük ise herhangi bir dönüştürme işlemi yapamayız."
+        }
+    ]
+}
