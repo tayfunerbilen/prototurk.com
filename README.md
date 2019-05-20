@@ -33,7 +33,7 @@ Artık son halini çekmek istediğinizde şu şekilde kullanabilirsiniz.
 git pull upstream master
 ```
 
-Eğer repoyu klonlamak ile uğraşmak istemiyorsanız tarayıcınızdan [JSON oluşturucuları](https://prototurk.surge.sh) kullanarak oluşturduğunuz JSON verisini GitHub üzerinden ilgili yere yapıştırabilirsiniz.
+Eğer repoyu klonlamak ile uğraşmak istemiyorsanız tarayıcınızdan [JSON oluşturucuları](https://prototurk.com/api/index.html) kullanarak oluşturduğunuz JSON verisini GitHub üzerinden ilgili yere yapıştırabilirsiniz.
 
 Ya da bunların hiçbirini yapmayın, github.com üzerinden bu repoda değişiklik ve yenilikleri yapıp direk "pull request" yapın size kalmış :)
 
