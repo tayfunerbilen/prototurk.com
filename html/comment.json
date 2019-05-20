@@ -1,0 +1,17 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "<!-- ... -->",
+  "name": "Açıklama Satırı",
+  "syntax": "<!-- ... -->",
+  "description": "Web sayfası hazırlarken kendinize not almak adına yorum satırlarını kullanabilirsiniz. Bu yorum satırları sadece sayfanın kaynak kodunda gözükür. Web sayfasını görüntüleyenlere gözükmez ancak kaynağı görüntüle diyerek görebilirler. O yüzden önemsiz notlarınızı bu satırlara yazmaya çalışın.",
+  "version": "HTML",
+  "closing_tag": true,
+  "display": "görünmez",
+  "usage": "Metinsel",
+  "examples": [
+    {
+      "code": "<!--\n\tbu bir\n\tyorum satırıdır\n\tve sadece\n\tkaynakta görünür.\n-->",
+      "description": "Mesela çok satırlı bir açıklama yazalım;"
+    }
+  ]
+}
