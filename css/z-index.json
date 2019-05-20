@@ -1,0 +1,34 @@
+{
+  "author": "darkwintergrup <darkwintergrup@gmail.com>",
+  "title": "CSS z-index Özelliği",
+  "name": "z-index",
+  "syntax": "z-index: auto | sayı | initial | inherit ;",
+  "js_syntax": "object.style.zIndex=\"sayı\"",
+  "description": "<code>z-index</code>, konumlandırma elementleri uygulanmış katmanların z-eksenindeki konumu belirlemek için kullanılır. <code>z-index</code> tüm elementlere uygulanamaz sadece konumlandırma değeri (position) atanmış elementlere uygulanır. Bunun anlamı eğer bir elementi aynı z-ekseni üzerinde üste veya alt sıraya atmak istiyorsanız ilk olarak konumlandırma değeri atamalısınız. <code>z-index</code> değeri en yüksek olan öğe en üstte, değeri en küçük olan öğe ise en altta yer alır.",
+  "values": [
+    {
+      "value": "auto",
+      "description": "Varsayılan değerdir. Bir üst element ile aynı değeri alır."
+    },
+    {
+      "value": "sayı",
+      "description": "Öğenin sırasını belirler. Negatif sayılara izin verilir."
+    },
+    {
+      "value": "initial",
+      "description": "Varsayılan değerine geri döndürür."
+    },
+    {
+      "value": "inherit",
+      "description": "Değerini üst öğesinden miras alır."
+    }
+  ],
+  "examples": [
+    {
+      "code": ".kutu1 {\n\tposition: absolute;\n\tz-index: 1;\n}\n.kutu2 {\n\tposition: absolute;\n\tz-index: 2;\n}",
+      "description": "Örneğin kutu1 öğesinin kutu2 öğesinin altında kalmasını sağlayalım."
+    }
+  ],
+  "animatable": true,
+  "default_value": "auto"
+}

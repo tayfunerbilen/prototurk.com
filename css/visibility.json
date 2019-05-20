@@ -1,0 +1,42 @@
+{
+  "author": "darkwintergrup <darkwintergrup@gmail.com>",
+  "title": "CSS visibility Özelliği",
+  "name": "visibility",
+  "syntax": "visibility: visible | hidden | collapse | initial | inherit ;",
+  "js_syntax": "object.style.visibility=\"değer\"",
+  "description": "<code>visible</code> özelliği, bir belgenin düzenini değiştirmeden bir öğeyi gösterir veya gizler. Ayrıca <table> içindeki satırları veya sütunları da gizleyebilir veya gösterebilir. Gizleme değeri öğenizi sadece görünmez kılar ve öğeniz hala oradadır. Öğeyi tamamen içerikten kaldırmak istiyorsanız <code>display</code> özelliğine none değeri vererek kullanmalısınız.",
+  "values": [
+    {
+      "value": "visible",
+      "description": "Varsayılan değerdir. Öğe görünür."
+    },
+    {
+      "value": "hidden",
+      "description": "Öğe gizlidir ancak yinede yer kaplar."
+    },
+    {
+      "value": "collapse",
+      "description": "Yalnızca tablo satır ve sütunları için kullanılır. Bir satır veya sütunu gizler ve kaldırır, tablo düzenini etkilemez."
+    },
+    {
+      "value": "initial",
+      "description": "Varsayılan değerine geri döndürür."
+    },
+    {
+      "value": "inherit",
+      "description": "Değerini üst öğesinden miras alır."
+    }
+  ],
+  "examples": [
+    {
+      "code": "h1 {\n  visibility: visible;\n}\n\nh2 {\n  visibility: hidden;\n}",
+      "description": "Örneğin h1 etiketini gösterirken, h2 etiketini gizli yapalım;"
+    },
+    {
+      "code": "tr.daralt {\n  visibility: collapse;\n}",
+      "description": "Bu örnekte ise, bir tablodaki .daralt öğesinin nasıl gizleneceğini gösterir."
+    }
+  ],
+  "animatable": true,
+  "default_value": "visible"
+}
