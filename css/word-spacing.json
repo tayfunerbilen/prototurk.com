@@ -1,0 +1,45 @@
+{
+    "author": "onuralpkaratas <onuralpkaratasme@gmail.com>",
+    "title": "CSS word-spacing Özelliği",
+    "name": "word-spacing",
+    "lang": "css",
+    "description": "<code>word-spacing</code> özelliği, kelimeler arasındaki boşluğu arttırmak veya azaltmak için kullanılır.",
+    "syntax": "word-spacing: normal | uzunluk | initial | inherit;",
+    "version": "CSS1",
+    "animatable": true,
+    "inherited": true,
+    "default_value": "normal",
+    "js_syntax": "object.style.wordSpacing=\"Değer\"",
+    "values": [
+        {
+            "value": "normal",
+            "description": "Kelimeler arasındaki boşluk normaldir."
+        },
+        {
+            "value": "uzunluk",
+            "description": "px, pt, cm, em gibi değerler kullanılabilir. Negatif değerlere izin verilir."
+        },
+        {
+            "value": "initial",
+            "description": "Varsayılan değerine geri döndürür."
+        },
+        {
+            "value": "inherit",
+            "description": "Değerini üst öğesinden miras alır."
+        }
+    ],
+    "examples": [
+        {
+            "code": "p { word-spacing: 20px; }",
+            "description": "p elementi içerisindeki kelimelerin arasına 30px değerinde boşluk vermek istersek;"
+        },
+        {
+            "code": "p { word-spacing: normal; }",
+            "description": "p elementi içerisindeki kelimelerin arasındaki boşluğu normal değerine almak istersek;"
+        },
+        {
+            "code": "p { word-spacing: -20px; }",
+            "description": "p elementi içerisindeki kelimelerin arasına -30px değerinde boşluk vermek istersek; Burada kelimelerimiz içe doğru gelecek."
+        }
+    ]
+}
