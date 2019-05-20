@@ -1,0 +1,45 @@
+{
+    "author": "onuralpkaratas <onuralpkaratasme@gmail.com>",
+    "title": "CSS text-indent Özelliği",
+    "name": "text-indent",
+    "lang": "css",
+    "description": "<code>text-indent</code> özelliği, metindeki ilk satırın girinti miktarını belirtir. Girinti miktarı, metni içeren blok elemanının sol kenarına göre belirlenir. Negatif değerlere izin verilir. Değer negatifse, ilk satır sola doğru girintili olacaktır.",
+    "syntax": "text-indent: uzunluk | <%> | initial | inherit;",
+    "version": "CSS1",
+    "animatable": true,
+    "inherited": true,
+    "default_value": "0",
+    "js_syntax": "object.style.textIndent=\"Değer\"",
+    "values": [
+        {
+            "value": "uzunluk",
+            "description": "Sabit bir girintiyi px, pt, cm, em, vb. olarak tanımlar. Varsayılan değer 0'dır."
+        },
+        {
+            "value": "%",
+            "description": "Girinti, ana öğenin genişliğinin %'si olarak tanımlanır."
+        },
+        {
+            "value": "initial",
+            "description": "Varsayılan değerine geri döndürür."
+        },
+        {
+            "value": "inherit",
+            "description": "Değerini üst öğesinden miras alır."
+        }
+    ],
+    "examples": [
+        {
+            "code": "p { text-indent: 40px; }",
+            "description": "p elementi içerisindeki yazımızın sol kenarından 40px değerinde içeri girintili olmasını istersek;"
+        },
+        {
+            "code": "p { text-indent: -70px; }",
+            "description": "p elementi içerisindeki yazımızın sol kenarından -70px değerinde dışarı (sola doğru) girintili olmasını istersek;"
+        },
+        {
+            "code": "p { text-indent: 30%; }",
+            "description": "p elementi içerisindeki yazımızın sol kenarından 30% değerinde içeri girintili olmasını istersek;"
+        }
+    ]
+}
