@@ -1,0 +1,27 @@
+{
+  "author": "Faruk YILDIRIM <faruk.yildirim@outlook.com.tr>",
+  "title": "autoload fonksiyonu",
+  "name": "__autoload()",
+  "syntax": "__autoload ( string $class ) : void",
+  "description": "Sınıf isimlerinizi projenizde belirli bir hiyerarşi sağlayarak oluşturursanız autoload fonksiyonunu kullanabilirsiniz. Ör: Projenizde classes diye bir klasör olduğunu ve klasörün içinde a.class.php, b.class.php, c.class.php vb... olduğunu  varsayalım.",
+  "note": "PHP 5 ile birlikte hayatımıza girmiştir. Sınıf çağırma fonksiyonudur. Projenize bir kere dahil ettikten sonra sınıflarınızı otomatik olarak çağırabilirsiniz bu sayede her eklediğiniz yeni sınıfı projenize dahil etme zahmetinden kurtulmuş olursunuz.\nNOT: PHP 7 ile birlikte bu fonksiyonun yerine <b> spl_autoload_register </b> kullanılması önerilmektedir.\n",
+  "compatibilities": [
+    "php 5"
+  ],
+  "changelogs": [
+    {
+      "version": "PHP 7",
+      "description": "spl_autoload_register"
+    }
+  ],
+  "examples": [
+    {
+      "code": "function __autoload($className) {\n\n    $includeFile = \"/classes/{$className}.class.php\";\n    if (file_exists($includeFile))\n\trequire_once($includeFile);\n   else\n\tthrow new Exception (\"{$className}.class.php sınıfı bulunamadı.\");\n\n}\n\n",
+      "title": "Fonksiyon kullanımı."
+    }
+  ],
+  "return": {
+    "type": "string"
+  },
+  "deprecated": false
+}
