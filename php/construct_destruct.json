@@ -1,0 +1,28 @@
+{
+  "author": "Faruk YILDIRIM <faruk.yildirim@outloook.com.tr>",
+  "title": "construct ve destruct metotları",
+  "name": "__construct() __destruct()",
+  "syntax": "public function __construct(){  ... }  public function __destruct(){  ... }",
+  "description": "<b> construct </b> metodu sınıfların ana işlemlerinde kullanılabilir. Ör: Dışarıdan parametre almak veya türetilmiş sınıflardan referans almak vb...  <b> destruct </b> metodu sınıftaki işlemler bittiğinde kullanılılabilir. Ör: Aktif bir bağlantıyı kapatmak veya cache temizlemek vb... ",
+  "note": "OOP programlamanın ana metotları olan construct ve destruct, PHP 5 ile birlikte  hayatımıza girmiştir. <b> __construct() </b> metodu sınıf ilk yüklendiğinde çağırılan metottur. <b>  __destruct() </b> metodu ise işlem bittiğinde otomatik çağırılan metottur. PHP 4 'de  construct metodu sınıfın ismi ile oluşturuluyordu.",
+  "compatibilities": [
+    "php 5",
+    "php 7"
+  ],
+  "examples": [
+    {
+      "code": "class prototurk {\n\t\n\tpublic function __construct(){\n\t\techo \"Sınıf Başladı\";\n\t}\n\t\n\tpublic function __destruct(){\n\t\techo \"Sınıf Bitti\";\n\t}\n\n}\n\n$code = new prototurk();\necho \"Selamlar\";\n\n/*\n\nÇıktı: Sınıf Başladı Selamlar Sınıf Bitti\n\n*/",
+      "title": "Örnek #1"
+    },
+    {
+      "code": "class prototurk {\n\t\n        public function prototurk(){\n\t\techo \"Eski kullanım\";\n\t}\n\n\tpublic function __construct(){\n\t\techo \"Yeni kullanım\";\n\t}\n\t\n\t\n\n}\n\n$code = new prototurk();\n\n",
+      "description": "Eğer kodları PHP 4 ile çalıştırırsanız ekrana <b> Eski kullanım </b> yazacaktır. Ama PHP 5 ile çalıştırırsanız <b> Yeni kullanım </b> yazacaktır. PHP 5'in önceliği bulunmaktadır.",
+      "title": "Örnek #2"
+    }
+  ],
+  "return": {
+    "type": "mixed",
+    "text": "Yapacağınız işleme göre değer döndürebilirsiniz."
+  },
+  "deprecated": false
+}
