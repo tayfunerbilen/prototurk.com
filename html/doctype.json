@@ -1,0 +1,46 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "<!DOCTYPE>",
+  "name": "<!DOCTYPE>",
+  "syntax": "<!DOCTYPE>",
+  "description": "Öncelikle bu bir etiket değil tarayıcıya HTML'in hangi sürümle yazıldığını beyan eden bir ifadedir.  Yazılması sorunludur ve her zaman tüm etiketlerin en üstünde yer alır.  Bu şekilde kullanıldığında tarayıcı sayfanın HTML5 sürümüne göre yorumlanması gerektiğini bilecektir.",
+  "version": "HTML",
+  "closing_tag": false,
+  "display": "görünmez",
+  "usage": "Yapısal",
+  "examples": [
+    {
+      "code": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Başlık</title>\n</head>\n<body>\n\n</body>\n</html>",
+      "description": "Sayfanın HTML5 ile yazıldığını bildirmek için bunu kullanıyoruz. Büyük ya da küçük harflere duyarlı değildir ancak ya büyük ya da küçük olarak yazmayı tercih edin."
+    },
+    {
+      "code": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">",
+      "description": "Ayrıca diğer sürümlere göre tanımları şu şekildedir;",
+      "title": "HTML 4.01 Strict"
+    },
+    {
+      "code": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">",
+      "title": "HTML 4.01 Transitional"
+    },
+    {
+      "code": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Frameset//EN\" \"http://www.w3.org/TR/html4/frameset.dtd\">",
+      "title": "HTML 4.01 Frameset"
+    },
+    {
+      "code": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">",
+      "title": "XHTML 1.0 Strict"
+    },
+    {
+      "code": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">",
+      "title": "XHTML 1.0 Transitional"
+    },
+    {
+      "code": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Frameset//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd\">",
+      "title": "XHTML 1.0 Frameset"
+    },
+    {
+      "code": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.1//EN\" \"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd\">",
+      "title": "XHTML 1.1"
+    }
+  ]
+}
