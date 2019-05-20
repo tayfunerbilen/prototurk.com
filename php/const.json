@@ -1,0 +1,22 @@
+{
+  "author": "Faruk YILDIRIM <faruk.yildirim@outlook.com.tr>",
+  "title": "const sabiti",
+  "name": "const",
+  "syntax": "const name = value;",
+  "description": "const ile tanımlaya yaparken dolar işareti kullanılmaz kelime olarak Türkçe karakter bulundurmaksızın tanımlama yapılır. const değerini sınıf içerisinden çağırmak için <b> self </b> komutu kullanılır.\n",
+  "note": "PHP 5 ile birlikte hayatımıza girmiştir. Eğer sınıfların içerisinde sabit bir değer tanımlayacaksak define yerine const kullanmanız gerekir.\n",
+  "compatibilities": [
+    "php 5",
+    "php 7"
+  ],
+  "examples": [
+    {
+      "code": "class prototurk{\n\n\tconst classVersion = \"1.0\";\n\tpublic function getVersion(){\n\t\treturn self::classVersion;\n\t}\n}\n\necho prototurk::classVersion;\n\n$prototurk = new prototurk();\necho $prototurk->getVersion();",
+      "title": "Örnek"
+    }
+  ],
+  "return": {
+    "type": "mixed"
+  },
+  "deprecated": false
+}
