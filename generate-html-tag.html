@@ -127,6 +127,39 @@
                     <label>Etiket Açıklaması</label>
                     <textarea name="description" cols="30" rows="6" class="form-control"></textarea>
                 </div>
+                <hr>
+                <h3>Nitelikler</h3>
+                <div class="attributes">
+                    <div class="attribute">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Nitelik Adı</label>
+                                    <input type="text" name="attr_name" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Değer</label>
+                                    <input type="text" name="attr_value" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Açıklama</label>
+                                    <input type="text" name="attr_desc" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <a href="#" class="btn btn-primary" id="add-attribute">Yeni Ekle</a>
+                    </div>
+                </div>
+
+                <hr>
                 <h3>Örnekler</h3>
                 <div class="examples">
                     <div class="example">
@@ -170,6 +203,31 @@
 
     </div>
 </div>
+
+<template id="attribute">
+    <div class="attribute">
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label>Nitelik Adı</label>
+                    <input type="text" name="attr_name" class="form-control">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label>Değer</label>
+                    <input type="text" name="attr_value" class="form-control">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label>Açıklama</label>
+                    <input type="text" name="attr_desc" class="form-control">
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
 
 <template id="value">
     <div class="row value">
@@ -251,6 +309,12 @@
             e.preventDefault();
         });
 
+        $('#add-attribute').on('click', function (e) {
+            var html = $('#attribute').html();
+            $('.attributes').append(html);
+            e.preventDefault();
+        });
+
         $(document.body).on('change input click', '.form-control, .form-check-input', function () {
 
             var json = {};
@@ -281,6 +345,20 @@
             if (display) json.display = display;
             if (usage) json.usage = usage;
             if (default_css) json.default_css = default_css.replace(/</g, '&lt;');
+
+            $('.attribute').each(function () {
+                var name = $('[name=\'attr_name\']', this).val(),
+                    val = $('[name=\'attr_value\']', this).val(),
+                    desc = $('[name=\'attr_desc\']', this).val();
+                if (name && desc) {
+                    if (!json.attributes) json.attributes = [];
+                    json.attributes.push({
+                        name: name,
+                        value: val,
+                        description: desc.replace(/</g, '&lt;')
+                    });
+                }
+            });
 
             $('.value').each(function () {
                 var name = $('[name=\'value_name\']', this).val(),

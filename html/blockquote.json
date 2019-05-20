@@ -1,0 +1,25 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "<blockquote> Etiketi",
+  "name": "blockquote",
+  "syntax": "<blockquote cite=\"..\"> .. </blockquote>",
+  "description": "HTML sayfasında başka bir kaynaktan alıntılanan bir içeriği işaretlemek için kullanılır. Kaynağın yolunu belirtmek içinse <code>cite</code> niteliği kullanılır.",
+  "version": "HTML",
+  "closing_tag": true,
+  "display": "blok",
+  "usage": "Metinsel",
+  "default_css": "blockquote {\n    display: block;\n    margin-top: 1em;\n    margin-bottom: 1em;\n    margin-left: 40px;\n    margin-right: 40px;\n}",
+  "examples": [
+    {
+      "code": "<blockquote cite=\"https://tr.wikipedia.org/wiki/World_Wide_Web_Consortium\">\nDünya Çapında Ağ Konsorsiyumu, Ekim 1994'te Ağ'ın mucidi Tim Berners-Lee tarafından MIT ve CERN bünyesinde kurulmuş olan uluslararası Dünya Çapında Ağ standartlarını belirleyen örgüttür.\n</blockquote>",
+      "description": "Örneğin Wikipedia'dan bir alıntı yapalım;"
+    }
+  ],
+  "attributes": [
+    {
+      "name": "cite",
+      "value": "Web Adresi",
+      "description": "Alıntı yapılan web adresi belirtilir."
+    }
+  ]
+}
