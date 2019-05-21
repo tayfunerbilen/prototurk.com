@@ -1,0 +1,33 @@
+{
+  "author": "Volkan Yıldız <siryildiz@gmail.com>",
+  "title": "PHP'de var_dump() Fonksiyonu",
+  "name": "var_dump",
+  "syntax": "var_dump ( mixed $expression [, mixed $... ] ) : void",
+  "description": "Bir değişkenin depoladığı ifadeleri detaylıca tür ve karakter uzunluklarıyla birlikte çıktısını sağlar.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "$degisken",
+      "type": "mixed",
+      "description": "Türünü ve karakter uzunluğunu almak istediğiniz parametre",
+      "default": "$degisken",
+      "required": true
+    }
+  ],
+  "examples": [
+    {
+      "code": "<?php\n\t$dizi = [\n\t\t'ad' => 'Volkan',\n\t\t'soyad' => 'Yıldız',\n\t\t'skor' => 7\n\t];\n\n\tvar_dump($dizi);\n\n?>",
+      "description": "Bir dizinin depoladığı ifadelerin türleri",
+      "title": "Dizi"
+    }
+  ],
+  "return": {
+    "type": "null",
+    "text": "Hiçbir değer dönmez."
+  },
+  "deprecated": false
+}
