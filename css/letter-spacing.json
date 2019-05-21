@@ -1,0 +1,45 @@
+{
+    "author": "onuralpkaratas <onuralpkaratasme@gmail.com>",
+    "title": "CSS letter-spacing Özelliği",
+    "name": "letter-spacing",
+    "lang": "css",
+    "description": "<code>letter-spacing</code> özelliği, bir metin bloğunun karakterleri arasındaki boşluğu arttırmak veya azaltmak için kullanılır.",
+    "syntax": "letter-spacing: normal | uzunluk | initial | inherit;",
+    "version": "CSS1",
+    "animatable": true,
+    "inherited": true,
+    "default_value": "normal",
+    "js_syntax": "object.style.letterSpacing=\"Değer\"",
+    "values": [
+        {
+            "value": "normal",
+            "description": "Karakterler arasındaki boşluk normaldir."
+        },
+        {
+            "value": "uzunluk",
+            "description": "px, pt, cm, em gibi değerler kullanılabilir. Negatif değerlere izin verilir."
+        },
+        {
+            "value": "initial",
+            "description": "Varsayılan değerine geri döndürür."
+        },
+        {
+            "value": "inherit",
+            "description": "Değerini üst öğesinden miras alır."
+        }
+    ],
+    "examples": [
+        {
+            "code": "p { letter-spacing: 4px; }",
+            "description": "p elementi içerisindeki metnin karakterlerinin arasına 4px değerinde boşluk vermek istersek;"
+        },
+        {
+            "code": "p { letter-spacing: normal; }",
+            "description": "p elementi içerisindeki metnin karakterlerinin arasındaki boşluğu normal değerine almak istersek;"
+        },
+        {
+            "code": "p { letter-spacing: -2px; }",
+            "description": "p elementi içerisindeki metnin karakterlerinin arasına -2px değerinde boşluk vermek istersek; Burada karakterlerimiz içe doğru gelmiş olacak."
+        }
+    ]
+}
