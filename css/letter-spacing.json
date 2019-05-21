@@ -3,7 +3,7 @@
     "title": "CSS letter-spacing Özelliği",
     "name": "letter-spacing",
     "lang": "css",
-    "description": "<code>letter-spacing</code> özelliği, bir metin bloğunun karakterleri arasındaki boşluğu arttırmak veya azaltmak için kullanılır.",
+    "description": "Harfler arası mesafeyi ayarlamak için kullanılır. Negatif ya da ondalık sayılar değer olarak belirlenebilir.,
     "syntax": "letter-spacing: normal | uzunluk | initial | inherit;",
     "version": "CSS1",
     "animatable": true,
