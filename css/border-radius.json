@@ -47,7 +47,7 @@
         },
         {
             "code": "img {\n\twidth: 50px;\nheight:50px;\n\border-radius: 50%;}",
-            "description": "Ayrıca 50% ya da 100% değer vermek tam bir yuvarlak oluşturmanızı sağlar. Yüzdeli vermedende yükseklik kadar radius belirtilirse yine tam bir oval oluşturulur.
+            "description": "Ayrıca 50% ya da 100% değer vermek tam bir yuvarlak oluşturmanızı sağlar. Yüzdeli vermedende yükseklik kadar radius belirtilirse yine tam bir oval oluşturulur."
         }
     ]
 }
