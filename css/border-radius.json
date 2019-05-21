@@ -3,7 +3,7 @@
     "title": "CSS border-radius Özelliği",
     "name": "border-radius",
     "lang": "css",
-    "description": "<code>border-radius</code> özelliği, bir elemanın köşelerinin yarıçapını tanımlar. Elemanlara yuvarlatılmış köşeler eklememizi sağlayan bu özellik bir ila dört değere sahip olabilir. (sol üst, sağ üst, sağ alt, sol alt) sol alt eklenmezse, sağ üstteki aynı olur. Sağ alt eklenmezse, sol üst aynıdır. Sağ üst eklenmezse, sol üst aynıdır.",
+    "description": "Kenarların ovalliğini ayarlamak için kullanılır. Dört değere sahip olabilir ancak tek tekte kullanılabilir. Örneklerde detayları anlatılmıştır.",
     "syntax": "border-radius: uzunluk | <%> | initial | inherit;",
     "version": "CSS3",
     "animatable": true,
@@ -44,6 +44,10 @@
         {
             "code": "div { border-radius: 10px; }",
             "description": "Bir değer kullanmak istersek: (10px) olan değer dört köşeyede uygulanmış olur."
+        },
+        {
+            "code": "img {\n\twidth: 50px;\nheight:50px;\n\border-radius: 50%;}",
+            "description": "Ayrıca 50% ya da 100% değer vermek tam bir yuvarlak oluşturmanızı sağlar. Yüzdeli vermedende yükseklik kadar radius belirtilirse yine tam bir oval oluşturulur.
         }
     ]
 }
