@@ -1,0 +1,18 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "<body> Etiketi",
+  "name": "body",
+  "syntax": "<body> .. </body>",
+  "description": "HTML sayfasının içeriği bu etiket içerisinde tanımlanır. Temel HTML etiketlerinden birisidir.",
+  "version": "HTML",
+  "closing_tag": true,
+  "display": "blok",
+  "usage": "Yapısal",
+  "default_css": "body { \n  display: block;\n  margin: 8px;\n}\n\nbody:focus { \n  outline: none;\n}",
+  "examples": [
+    {
+      "code": "<!doctype html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Document</title>\n</head>\n<body>\n\n</body>\n</html>",
+      "description": "Temel kullanımı ise şu şekildedir;"
+    }
+  ]
+}
