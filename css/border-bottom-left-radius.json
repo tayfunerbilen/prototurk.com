@@ -1,0 +1,35 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "CSS'de border-bottom-left-radius Özelliği",
+  "name": "border-bottom-left-radius",
+  "syntax": "border-bottom-left-radius: uzunluk | % | initial | inherit;",
+  "js_syntax": "object.style.borderBottomLeftRadius=\"DEĞER\"",
+  "description": "Sol alt köşenin ovalliğini ayarlar.",
+  "version": "CSS3",
+  "values": [
+    {
+      "value": "uzunluk",
+      "description": "Ölçü birimlerini kullanarak ovallik belirlenir. Örn. cm, pt, em, px, vb."
+    },
+    {
+      "value": "%",
+      "description": "Yüzdelik olarak ovallik belirlenir."
+    },
+    {
+      "value": "initial",
+      "description": "Varsayılan değerine geri döndürür. Yani \"0\" değerine döner."
+    },
+    {
+      "value": "inherit",
+      "description": "Değerini üst öğesinden miras alır."
+    }
+  ],
+  "examples": [
+    {
+      "code": "#box {\n\tborder-bottom-left-radius: 30px;\n}",
+      "description": "Sol alt köşeyi ovalleştirelim."
+    }
+  ],
+  "animatable": true,
+  "default_value": "0"
+}

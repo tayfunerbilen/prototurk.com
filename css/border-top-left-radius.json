@@ -1,0 +1,35 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "CSS'de border-top-left-radius Özelliği",
+  "name": "border-top-left-radius",
+  "syntax": "border-top-left-radius: uzunluk | % | initial | inherit;",
+  "js_syntax": "object.style.borderTopLeftRadius=\"DEĞER\"",
+  "description": "Sol üst köşenin ovalliğini ayarlar.",
+  "version": "CSS3",
+  "values": [
+    {
+      "value": "uzunluk",
+      "description": "Ölçü birimlerini kullanarak ovallik belirlenir. Örn. cm, pt, em, px, vb."
+    },
+    {
+      "value": "%",
+      "description": "Yüzdelik olarak ovallik belirlenir."
+    },
+    {
+      "value": "initial",
+      "description": "Varsayılan değerine geri döndürür. Yani \"0\" değerine döner."
+    },
+    {
+      "value": "inherit",
+      "description": "Değerini üst öğesinden miras alır."
+    }
+  ],
+  "examples": [
+    {
+      "code": "#box {\n\tborder-top-left-radius: 20px;\n}",
+      "description": "Sol üst köşeyi ovalleştirelim."
+    }
+  ],
+  "animatable": true,
+  "default_value": "0"
+}
