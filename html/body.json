@@ -8,6 +8,7 @@
   "closing_tag": true,
   "display": "blok",
   "usage": "Yapısal",
+  "note": "Bu etiket resimler, linkler, tablolar, listeler vb. tüm HTML içeriklerini kapsar.",
   "default_css": "body { \n  display: block;\n  margin: 8px;\n}\n\nbody:focus { \n  outline: none;\n}",
   "examples": [
     {
