@@ -1,0 +1,53 @@
+{
+    "author": "onuralpkaratas <onuralpkaratasme@gmail.com>",
+    "title": "CSS border-radius Özelliği",
+    "name": "border-radius",
+    "lang": "css",
+    "description": "Kenarların ovalliğini ayarlamak için kullanılır. Dört değere sahip olabilir ancak tek tekte kullanılabilir. Örneklerde detayları anlatılmıştır.",
+    "syntax": "border-radius: uzunluk | <%> | initial | inherit;",
+    "version": "CSS3",
+    "animatable": true,
+    "inherited": false,
+    "default_value": "0",
+    "js_syntax": "object.style.borderRadius=\"Değer\"",
+    "values": [
+        {
+            "value": "uzunluk",
+            "description": "Köşeleri yuvarlatırken px, pt, cm, em gibi değerler kullanılabilir."
+        },
+        {
+            "value": "%",
+            "description": "Yüzde (%) değeri kullanarak köşeler yuvarlatılabilinir."
+        },
+        {
+            "value": "initial",
+            "description": "Varsayılan değerine geri döndürür."
+        },
+        {
+            "value": "inherit",
+            "description": "Değerini üst öğesinden miras alır."
+        }
+    ],
+    "examples": [
+        {
+            "code": "div { border-radius: 10px 40px 20px 7px; }",
+            "description": "Dört değer kullanmak istersek: İlk değer olan (10px) sol üst köşeye uygulanır, ikinci değer olan (40px) sağ üst köşeye uygulanır, üçüncü değer olan (20px) sağ alt köşeye uygulanır ve dördüncü değer olan (7px) sol alt köşeye uygulanmış olur."
+        },
+        {
+            "code": "div { border-radius: 10px 40px 20px; }",
+            "description": "Üç değer kullanmak istersek: İlk değer olan (10px) sol üst köşeye uygulanır, ikinci değer olan (40px) sağ üst ve sol alt köşelere uygulanır ve üçüncü değer olan (20px) sağ alt köşeye uygulanmış olur."
+        },
+        {
+            "code": "div { border-radius: 10px 40px; }",
+            "description": "İki değer kullanmak istersek: İlk değer olan (10px), sol üst ve sağ alt köşelere uygulanır, ikinci değer olan (40px) sağ üst ve sol alt köşelere uygulanmış olur."
+        },
+        {
+            "code": "div { border-radius: 10px; }",
+            "description": "Bir değer kullanmak istersek: (10px) olan değer dört köşeyede uygulanmış olur."
+        },
+        {
+            "code": "img {\n\twidth: 50px;\nheight:50px;\n\border-radius: 50%;}",
+            "description": "Ayrıca 50% ya da 100% değer vermek tam bir yuvarlak oluşturmanızı sağlar. Yüzdeli vermedende yükseklik kadar radius belirtilirse yine tam bir oval oluşturulur.
+        }
+    ]
+}
