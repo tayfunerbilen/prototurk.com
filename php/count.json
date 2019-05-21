@@ -1,0 +1,44 @@
+{
+  "author": "Volkan Yıldız <siryildiz@gmail.com>",
+  "title": "PHP'de count() fonksiyonu",
+  "name": "count",
+  "syntax": "count ( mixed $array_or_countable [, int $mode = COUNT_NORMAL ] ) : int",
+  "description": "Bir dizide veya bir nesnede kaç eleman veya özellik sayısını döndürür.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "$dizi",
+      "type": "mixed",
+      "description": "Eleman sayısı alınacak dizi",
+      "required": true
+    },
+    {
+      "name": "$mod",
+      "type": "boolean",
+      "description": "Dizideki iç içe diziler veya elemanlarında sayılıp sayılmayacağı",
+      "default": "false",
+      "required": false
+    }
+  ],
+  "examples": [
+    {
+      "code": "<?php\n\t$dizi = [\n\t\t\"bir\",\n\t\t\"iki\",\n\t\t\"üç\",\n\t\t\"dört\"\n\t];\n\n\techo count($dizi); // Çıktı: 4\n?>",
+      "description": "İç içe olmayan bir dizinin eleman sayısı",
+      "title": "Örnek 1"
+    },
+    {
+      "code": "<?php\n\t$dizi = [\n\t\t\"bir\",\n\t\t\"iki\",\n\t\t\"üç\",\n\t\t\"dört\" => [1,2,3]\n\t];\n\n\techo count($dizi, true); // Çıktı: 7\n?>",
+      "description": "İç içe olan bir dizinin eleman sayısı",
+      "title": "Örnek 2"
+    }
+  ],
+  "return": {
+    "type": "int",
+    "text": "Bir dizideki eleman sayısını veya bir nesnedeki özellik sayısını döndürür."
+  },
+  "deprecated": false
+}
