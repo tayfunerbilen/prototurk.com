@@ -1,0 +1,39 @@
+{
+    "author": "S. Kağan Cin <kaannc7@gmail.com>",
+    "title": "CSS'de background-attachment Özelliği",
+    "name": "background-attachment",
+    "syntax": "background-attachment: scroll | fixed | local | initial | inherit;",
+    "description": "Css de arkaplan görsel işlemleri için (örneğin parallax efekt)",
+    "version": "CSS3",
+    "values": [
+      {
+        "value": "scroll",
+        "description": "Arka plandaki resim sayfa ile birlikte ilerler. Varsayılan Değer "
+      },
+      {
+        "value": "fixed",
+        "description": "Arka plandaki resmi sayfa ile birlikte kaydırmaz"
+      },
+      {
+        "value": "local",
+        "description": "Arka plandaki resmi, öğenin içeriğiyle birlikte kaydırılır"
+      },
+      {
+        "value": "initial",
+        "description": "Varsayılan değere ayarlar"
+      },
+      {
+        "value": "inherit",
+        "description": "Üst öğeden miras alır"
+      }
+    ],
+    "examples": [
+      {
+        "code": "body {\n  background-image: url(\"image_url\");\n  background-attachment: fixed;\n}",
+        "description": "Basit bir parallax efekt vermek için kullanılan kod",
+        "title": "Parallax"
+      }
+    ],
+    "animatable": false,
+    "default_value": "scroll"
+  }
