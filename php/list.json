@@ -1,0 +1,72 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "PHP'de list() Fonksiyonu",
+  "name": "list",
+  "syntax": "list ( mixed $var1 [, mixed $varN... ] ) : array",
+  "description": "Tanımlanan bir diziden istenilen isimde değişken(ler) oluşturarak kullanmamızı sağlar. Genelde anahtarı olmayan anlamsız dizileri daha anlamlı kılmak adına bu işlemi yaparız.",
+  "note": "Tıpkı array() gibi buda gerçek bir fonksiyon değil, dilin işlevlerinden birisidir. Ancak fonksiyon şeklinde kullanılır.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "$var1",
+      "type": "mixed",
+      "description": "Değişene atanmış ilk değeri temsil eder.",
+      "required": true
+    },
+    {
+      "name": "$varN..",
+      "type": "mixed",
+      "description": "Sırasıyla atanmış değeri temsil etmeye devam eder.",
+      "required": false
+    }
+  ],
+  "changelogs": [
+    {
+      "version": "7.0.0",
+      "description": "<code>list()</code> artık string ifadeler için kullanılamaz."
+    },
+    {
+      "version": "7.0.0",
+      "description": "<code>list()</code> ifadesi tamamen boş olamaz. Yani mutlaka en az 1 tanım yapılmalı."
+    },
+    {
+      "version": "7.0.0",
+      "description": "Atama işlemlerinin gerçekleştirilme sırası değişti."
+    },
+    {
+      "version": "7.1.0",
+      "description": "Spesifik olarak anahtar ismi belirtilerek kullanılabilir. Örnekler kısmından örneğini görebilirsiniz."
+    }
+  ],
+  "examples": [
+    {
+      "code": "<?php\n\n// Tüm değerleri değişene atayalım\nlist($ad, $soyad, $yas) = array('Tayfun', 'Erbilen', 26);\necho $ad; // Çıktı: Tayfun\n\n// Bazı değerleri es geçerek değişene atayalım\nlist(, , $yas) = array('Tayfun', 'Erbilen', 26);\necho $yas; // Çıktı: 26\n\n// list() artık stringler ile çalışmamaktadır! Aşağıdaki örnek hatalıdır.\nlist($bar) = \"abcde\";\nvar_dump($bar); // Çıktı: NULL\n\n// Farklı bir örnek\nlist($kategori, $altKategoriler) = array('CSS', array('SASS', 'LESS', 'Stylus'));\nprint_r($altKategoriler);\n\n?>",
+      "description": "Basit bir örnekle anlamaya çalışalım."
+    },
+    {
+      "code": "<?php\n\nlist($deger1, list($deger2, $deger3)) = array('Değer 1', array('Değer 2', 'Değer 3'));\necho $deger2; // Çıktı: Değer 2\n\n?>",
+      "description": "İç içe (nested) lkullanımı ise şöyledir;"
+    },
+    {
+      "code": "<?php\n\n$foo = array(\n    1 => '1. Değer',\n    2 => '2. Değer',\n    0 => '0. Değer'\n);\nlist($x, $y, $z) = $foo;\n\necho $x; // Çıktı: 0. Değer\necho $z; // Çıktı: 2. Değer\n\n?>",
+      "description": "Dizi indexleriyle çalışmasını anlamak adına aşağıdaki örnek verilebilir. Burada önemli olan index değerleridir, dizideki sırası değil."
+    },
+    {
+      "code": "<?php\n\n$uyeler = [\n    ['ad' => 'Tayfun', 'soyad' => 'Erbilen'],\n    ['ad' => 'Servet', 'soyad' => 'Sevimli']\n];\n\nforeach ($uyeler as ['ad' => $uye_adi, 'soyad' => $uye_soyadi]) {\n    echo \"<p>Merhaba ben {$uye_adi} {$uye_soyadi}</p>\";\n}\n\n# YA DA ŞU ŞEKİLDE KULLANABİLİRİZ\n\nlist(0 => $tayfun, 2 => $servet) = [0 => 'Tayfun Erbilen', 1 => 'Mehmet Seven', 2 => 'Servet Sevimli'];\necho $servet; // Çıktı: Servet Sevimli\n\n?>",
+      "description": "PHP 7.1.0'dan itibaren ise spesifik olarak anahtar ismi belirtilebilir. Bu örnekler PHP'nin 7.1.0 versiyonundan itibaren çalışır halde kullanılabilir aksi taktirde hata alırsınız."
+    },
+    {
+      "code": "<?php\n\n[$ad, $soyad] = ['Tayfun', 'Erbilen'];\necho $ad;\n\n?>",
+      "description": "PHP 7.1'de artık şu şekilde kısa olarak kullanabiliriz;"
+    }
+  ],
+  "return": {
+    "type": "array",
+    "text": "Geriye atanmış bir dizi döner."
+  },
+  "deprecated": false
+}
