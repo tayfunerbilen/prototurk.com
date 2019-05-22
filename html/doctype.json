@@ -3,7 +3,7 @@
   "title": "<!DOCTYPE>",
   "name": "<!DOCTYPE>",
   "syntax": "<!DOCTYPE>",
-  "description": "Öncelikle bu bir etiket değil tarayıcıya HTML'in hangi sürümle yazıldığını beyan eden bir ifadedir.  Yazılması sorunludur ve her zaman tüm etiketlerin en üstünde yer alır.  Bu şekilde kullanıldığında tarayıcı sayfanın HTML5 sürümüne göre yorumlanması gerektiğini bilecektir.",
+  "description": "Öncelikle bu bir etiket değil tarayıcıya HTML'in hangi sürümle yazıldığını beyan eden bir ifadedir.  Yazılması zorunludur ve her zaman tüm etiketlerin en üstünde yer alır.  Bu şekilde kullanıldığında tarayıcı, sayfanın HTML5 sürümüne göre yorumlanması gerektiğini bilecektir.",
   "version": "HTML",
   "closing_tag": false,
   "display": "görünmez",
