@@ -3,7 +3,7 @@
   "title": "<!-- ... -->",
   "name": "Açıklama Satırı",
   "syntax": "<!-- ... -->",
-  "description": "Web sayfası hazırlarken kendinize not almak adına yorum satırlarını kullanabilirsiniz. Bu yorum satırları sadece sayfanın kaynak kodunda gözükür. Web sayfasını görüntüleyenlere gözükmez ancak kaynağı görüntüle diyerek görebilirler. O yüzden önemsiz notlarınızı bu satırlara yazmaya çalışın.",
+  "description": "Web sayfası hazırlarken kendinize not almak adına yorum satırlarını kullanabilirsiniz. Bu yorum satırları sadece sayfanın kaynak kodunda gözükür. Web sayfasını görüntüleyenlere gözükmez ancak kaynağı görüntüle diyerek görebilirler. O yüzden geçici olarak sayfada görünmesini istemediğiniz kodları, önemsiz notlarınızı veya daha sonra yapılacak şeyleri hatırlatması adına not almak için bu satırlara yazmaya çalışın.",
   "version": "HTML",
   "closing_tag": true,
   "display": "görünmez",
