@@ -49,7 +49,7 @@
     },
     {
       "code": "<?php\n\nlist($deger1, list($deger2, $deger3)) = array('Değer 1', array('Değer 2', 'Değer 3'));\necho $deger2; // Çıktı: Değer 2\n\n?>",
-      "description": "İç içe (nested) lkullanımı ise şöyledir;"
+      "description": "İç içe (nested) kullanımı ise şöyledir;"
     },
     {
       "code": "<?php\n\n$foo = array(\n    1 => '1. Değer',\n    2 => '2. Değer',\n    0 => '0. Değer'\n);\nlist($x, $y, $z) = $foo;\n\necho $x; // Çıktı: 0. Değer\necho $z; // Çıktı: 2. Değer\n\n?>",
@@ -61,7 +61,7 @@
     },
     {
       "code": "<?php\n\n[$ad, $soyad] = ['Tayfun', 'Erbilen'];\necho $ad;\n\n?>",
-      "description": "PHP 7.1'de artık şu şekilde kısa olarak kullanabiliriz;"
+      "description": "PHP 7.1'den itibaren şu şekilde kısaltılarakta kullanılabilir;"
     }
   ],
   "return": {
