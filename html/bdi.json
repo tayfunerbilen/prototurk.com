@@ -6,7 +6,7 @@
   "description": "İşaretlenen metni çift yönlü izole etmek için kullanılır. Örneğin Arapça ya da Farsça gibi sağdan sola yazılan diller, soldan sağa doğru bir satırda kullanıldığında bu etiket kullanılabilir. &lt;bdi> etiketi işaretlenen metnin yönünü çevirmez, yalnızca tarayıcıya metnin ters yönde okunması gerektiğini belirtir.",
   "version": "HTML",
   "closing_tag": true,
-  "display": "satıriçi",
+  "display": "satır içi",
   "usage": "Anlamsal|Metinsel",
   "examples": [
     {
