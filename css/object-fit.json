@@ -1,0 +1,23 @@
+{
+    "author": "S. Kağan Cin <kaannc7@gmail.com>",
+    "title": "CSS'de object-fit Özelliği",
+    "name": "object-fit",
+    "syntax": "object-fit: cover | contain | fill ;",
+    "description": "Css de img boyutlandırma işlemi",
+    "version": "CSS3",
+    "values": [
+      {
+        "value": "cover",
+        "description": "En boy oranını koruyarak, element içerisine imajı boyutlandırır"
+      },
+      {
+        "value": "contain",
+        "description": "İmajın tamamını göstermek için genişlik ve yüksekliğine göre boyutlandırır"
+      },
+      {
+        "value": "fill",
+        "description": "Oran korunmadan element içerisine doldurur"
+      }
+    ],
+    "animatable": false
+  }
