@@ -1,0 +1,8 @@
+{
+  "author": "Mustafa Altinmese <altinmese_m@yahoo.com>",
+  "title": "<span> Etiketi",
+  "name": "span",
+  "syntax": "<span>Bu bir </span>",
+  "description": "DIV ve SPAN elemanları anlamsız etiketlerdir; Yani \"p\" veya \"h1\" gibi diğer etiketlerin aksine, onlar ile ilgili herhangi bir görsel özelliğe sahip olmadığı için Style ve CSS özelliklerinin ayrıca belirtilmesi gerekir. CSS ile Sahip oldukları tüm özellikler genellikle \"sınıf\" ve \"id\" nitelikleri ile, geliştirici tarafından kendilerine tahsis edilmelidir.",
+  "version": "HTML5",
+  "closing_tag": true
