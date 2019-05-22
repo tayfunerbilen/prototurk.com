@@ -6,7 +6,7 @@
   "version": "HTML",
   "closing_tag": true,
   "syntax": "<a href=\"..\">..</a>",
-  "display": "satıriçi",
+  "display": "satır içi",
   "usage": "metinsel",
   "default_css": "a {\n\tcursor: pointer;\n\ttext-decoration: underline;\n}",
   "description": "Web sayfaları arasında geçişi sağlamak yani link vermek için <code>&lt;a></code> etiket kullanılır. <code>&lt;a></code> etiketi içerisinde metin, resim ya da diğer <b>HTML</b> etiketleri bulunabilir. ",
@@ -50,7 +50,7 @@
     {
       "name": "href",
       "value": "URL",
-      "description": "Bağlantıya tıkladığında gideceği adres"
+      "description": "Bağlantıya tıklandığında gidilecek adres"
     },
     {
       "name": "hreflang",
