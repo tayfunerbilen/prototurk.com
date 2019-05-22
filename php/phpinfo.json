@@ -3,7 +3,7 @@
   "title": "PHP'de phpinfo() fonksiyonu",
   "name": "phpinfo",
   "syntax": "phpinfo ([ int $ne = INFO_ALL ] ) : bool",
-  "description": "Sunucunuz da bulunan PHP'nin o anki tüm ayarlarını gösterir. Bu bilgilerde php derleme seçenekleri, sunucunuza yüklenmiş eklentiler, PHP'nin sürümünü ve sunucu bilgisi gibi bir çok bilgiye bu fonksiyon sayesinde ulaşabilirsiniz.",
+    "description": "Sunucunuzda bulunan PHP'nin o anki tüm ayarlarını gösterir. Bu bilgilerde PHP derleme seçenekleri, sunucunuza yüklenmiş eklentiler, PHP'nin sürümünü ve sunucu bilgisi gibi birçok bilgiye bu fonksiyon sayesinde ulaşabilirsiniz.",
   "compatibilities": [
     "php 4",
     "php 5",
