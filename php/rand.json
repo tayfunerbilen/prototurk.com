@@ -1,0 +1,45 @@
+{
+  "author": "mustafakucuk <devmustafakucuk@gmail.com>",
+  "title": "PHP'de rand() Fonksiyonu",
+  "name": "rand",
+  "syntax": "rand ( int $min , int $max ) : int",
+  "description": "Belirttiğiniz değerler aralığında rastgele tam sayı üretir.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "min",
+      "type": "int",
+      "description": "Üretilecek en düşük tam sayı",
+      "default": "0",
+      "required": false
+    },
+    {
+      "name": "max",
+      "type": "int",
+      "description": "Üretilecek en yüksek tam sayı - min parametresi girmeniz durumunda max parametreside girilmesi gerekmektedir.",
+      "default": "getrandmax()",
+      "required": true
+    }
+  ],
+  "examples": [
+    {
+      "code": "<?php\n\necho rand(10, 100); // Çıktı: 78\n\n?>",
+      "description": "10 ile 100 arasında bir sayı üretelim.",
+      "title": "#1"
+    },
+    {
+      "code": "<?php\n\necho rand(); // Çıktı: 1130777104\n\n?>",
+      "description": "0 ile alabileceği en yüksek tam sayı arasında bir sayı üretelim.",
+      "title": "#2"
+    }
+  ],
+  "return": {
+    "type": "int",
+    "text": "İşlemin sonucunda geriye int olarak belirttiğiniz aralıklarda tam sayı değer dönecektir."
+  },
+  "deprecated": false
+}
