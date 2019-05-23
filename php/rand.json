@@ -38,7 +38,7 @@
       "description": "0 ile alabileceği en yüksek tam sayı arasında bir sayı üretelim."
     }
   ],
-  "note": "Bazı platformlarda (özellikle <code>Windows</code>), <code>getrnadmax()</code> fonksiyonu en fazla <code>32767</code> olabilir. Eğer bu değerden daha yüksek bir değere ihtiyacınız olursa, <code>$min ve <code>$max</code> değerlerini belirterek üretebilirsiniz ya da <code>mt_rand()</code> fonksiyonunu kullanabilirsiniz.\n\nPHP 7.1.0'dan itibaren <code>rand()</code> fonksiyonu <code>mt_rand()</code> ile aynı sayı üreticisini kullanmaktadır. Ancak geriye dönük uyumluluğunu korumak için <code>rand()</code> fonksiyonu, <<code>mt_rand()</code> fonksiyonunun aksine <code>$max</code> değerini <code>$min</code> değerinden küçük olabilirken <code>mt_rand()</code> fonksiyonunda ise hata verecektir.",
+  "note": "Bazı platformlarda (özellikle <code>Windows</code>), <code>getrnadmax()</code> fonksiyonu en fazla <code>32767</code> olabilir. Eğer bu değerden daha yüksek bir değere ihtiyacınız olursa, <code>$min</code> ve <code>$max</code> değerlerini belirterek üretebilirsiniz ya da <code>mt_rand()</code> fonksiyonunu kullanabilirsiniz.\n\nPHP 7.1.0'dan itibaren <code>rand()</code> fonksiyonu <code>mt_rand()</code> ile aynı sayı üreticisini kullanmaktadır. Ancak geriye dönük uyumluluğunu korumak için <code>rand()</code> fonksiyonu, <<code>mt_rand()</code> fonksiyonunun aksine <code>$max</code> değerini <code>$min</code> değerinden küçük olabilirken <code>mt_rand()</code> fonksiyonunda ise hata verecektir.",
   "changelogs": [
     {
       "version": "7.1.0",
