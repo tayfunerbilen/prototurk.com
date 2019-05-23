@@ -15,7 +15,7 @@
               --main-color: hotpink;
               --pane-padding: 5px 42px;
              },
-            ".test": "{background-color: var(--main-bg-color);}"
+            ".test": "{background-color: var(--main-color);}"
               
         }
     ],
