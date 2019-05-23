@@ -1,0 +1,23 @@
+{
+    "author": "denizbalcı <sea-97@hotmail.com>",
+    "title": "CSS root özelliği",
+    "name": ":root",
+    "lang": "css",
+    "description": "Özel css sınıfı,global değişkenler tanımlamak için kullanılır",
+    "syntax": ":root{: --degisken ismi:özellik; ...}",
+    
+
+    "examples": [
+   
+        {    
+
+            ":root":{"
+              --main-color: hotpink;
+              --pane-padding: 5px 42px;
+             },
+            ".test": "{background-color: var(--main-bg-color);}"
+              
+        }
+    ],
+    
+}
