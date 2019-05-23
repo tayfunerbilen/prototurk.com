@@ -22,7 +22,7 @@
       "type": "int",
       "description": "Üretilecek en yüksek tam sayı - min parametresi girmeniz durumunda max parametreside girilmesi gerekmektedir.",
       "default": "getrandmax()",
-      "required": true
+      "required": false
     }
   ],
   "examples": [
