@@ -1,0 +1,79 @@
+{
+  "author": "Ahmet CAN <email.ahmetcan@gmail.com>",
+  "title": "PHP'de phpinfo() fonksiyonu",
+  "name": "phpinfo",
+  "syntax": "phpinfo ([ int $ne = INFO_ALL ] ) : bool",
+    "description": "Sunucunuzda bulunan PHP'nin o anki tüm ayarlarını gösterir. Bu bilgilerde PHP derleme seçenekleri, sunucunuza yüklenmiş eklentiler, PHP'nin sürümünü ve sunucu bilgisi gibi birçok bilgiye bu fonksiyon sayesinde ulaşabilirsiniz.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "INFO_GENERAL",
+      "type": "int",
+      "description": "Yapılandırma satırı, php.ini dosyasının yeri, derleme tarihi, HTTP Sunucusu, Sistem gibi bilgileri verir.",
+      "default": "1",
+      "required": false
+    },
+    {
+      "name": "INFO_CREDITS",
+      "type": "int",
+      "description": "PHP'ye katkıda bulunanları verir.",
+      "default": "2",
+      "required": false
+    },
+    {
+      "name": "INFO_CONFIGURATION",
+      "type": "int",
+      "description": "Yüklü modülleri ve ayarları verir.",
+      "default": "4",
+      "required": false
+    },
+    {
+      "name": "INFO_ENVIRONMENT",
+      "type": "int",
+      "description": "$_ENV dizisi ile de edinilebilen ortam değişkenleri bilgilerini verir.",
+      "default": "16",
+      "required": false
+    },
+    {
+      "name": "INFO_VARIABLES",
+      "type": "int",
+      "description": "EGPCS (Environment, GET, POST, Cookie, Server) verisinden elde edilen tüm önt anımlı değişkenleri verir.",
+      "default": "32",
+      "required": false
+    },
+    {
+      "name": "INFO_LICENSE",
+      "type": "int",
+      "description": "PHP Lisans bilgilerini verir.",
+      "default": "64",
+      "required": false
+    },
+    {
+      "name": "INFO_ALL",
+      "type": "int",
+      "description": "Tüm bilgileri verir.",
+      "default": "-1",
+      "required": false
+    }
+  ],
+  "changelogs": [
+    {
+      "version": "5.2.2",
+      "description": "\"Loaded Configuration File\" başlığı altında yüklü yapılandırma dosyası bilgi eklendi."
+    }
+  ],
+  "examples": [
+    {
+      "code": "<?php\n\n// Tüm bilgiyi gösterelim (INFO_ALL sabitine eşdeğer)\nphpinfo();\n\n// Sadece modül bilgisini gösterelim.\n// phpinfo(8) de aynı sonucu verir.\nphpinfo(INFO_MODULES);\n\n?>"
+    }
+  ],
+  "return": {
+    "type": "boolean",
+    "text": "Başarı durumunda true başarısız durumda false döner. "
+  },
+  "deprecated": false
+}
