@@ -36,7 +36,7 @@
     },
     {
       "name": "formmethod",
-      "value": "GET\\nPOST",
+      "value": "GET\nPOST",
       "description": "Form  bilgilerinin hangi metod ile gönderileceğini belirler."
     },
     {
