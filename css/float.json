@@ -1,0 +1,43 @@
+{
+  "author": "Phoique <official.phoique@gmail.com>",
+  "title": "CSS'de Float Özelliği",
+  "name": "float",
+  "syntax": "float: left | right | none | inherit",
+  "js_syntax": "object.style.cssFloat = \"left | right | none | initial | inherit\"",
+  "description": "<code>float</code> Nesneyi sağa, sola taşımak için kullanılır.",
+  "version": "CSS1",
+  "values": [
+    {
+      "value": "none",
+      "description": "bulunduğu konumda kalır. Varsayılan değerdir."
+    },
+    {
+      "value": "right",
+      "description": "Nesneyi veya elementi sağa taşır."
+    },
+    {
+      "value": "left",
+      "description": "Nesneyi veya elementi sola taşır."
+    },
+    {
+      "value": "initial",
+      "description": "Varsayılan değerine geri döndürür."
+    },
+    {
+      "value": "inherit",
+      "description": "Değerini üst öğesinden miras alır."
+    }
+  ],
+  "examples": [
+    {
+      "code": ".text {\n\tfloat: right;\n}",
+      "description": "Bir yazıyı sağ kısma taşıyalım. "
+    },
+    {
+      "code": ".mydiv {\n\tfloat: none;\n}",
+      "description": "Bir elementi/nesneyi varsayılan değerine taşıyalım. "
+    }
+  ],
+  "animatable": true,
+  "default_value": "none"
+}
