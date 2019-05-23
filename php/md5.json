@@ -1,9 +1,10 @@
 {
   "author": "mustafakucuk <devmustafakucuk@gmail.com>",
+  "edit": ["tayfunerbilen <tayfunerbilen@gmail.com>"],
   "title": "PHP'de md5() Fonksiyonu",
   "name": "md5",
   "syntax": "md5 ( string $str [, bool $raw_output = FALSE ] ) : string",
-  "description": "Belirtilen dizgenin md5 değerini döndürür.",
+  "description": "RSA Data Security, Inc. MD5 Message-Digest algoritmasını kullanarak belirtilen değerin MD5 hash değerini döndürür. Tek taraflı şifreleme işlemleri için kullanılır.",
   "note": "Şifreleri saklamak için bu fonksiyonu kullanmanız önerilmez. ",
   "compatibilities": [
     "php 4",
@@ -39,7 +40,7 @@
   ],
   "return": {
     "type": "string",
-    "text": "Eğer işlem başarılıysa MD5 değerini döndürür, bir hata olması durumunda FALSE döndürür."
+    "text": "şifrelenen md5 hash değerini 32 karakterlik onaltılık bir sayı olarak döndürür."
   },
   "deprecated": false
 }
