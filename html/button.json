@@ -1,0 +1,73 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "<button> Etiketi",
+  "name": "button",
+  "syntax": "<button> .. </button>",
+  "description": "Tıklanabilir bir düğme (buton) tanımlar. Button içerisine yazı ya da resim koyabilirsiniz. Genelde <code>&lt;form></code> etiketi içerisinde formu gönderme işlemini yerine getirmek için <code>type=\"submit\"</code> ile birlikte kullanılır.",
+  "version": "HTML",
+  "closing_tag": true,
+  "display": "satıriçi",
+  "note": "HTML5 ile birlikte bazı yeni nitelikler (autofocus, form, formaction, formenctype, formmethod, formnovalidate, formtarget) eklenmiştir.",
+  "attributes": [
+    {
+      "name": "autofocus",
+      "value": "autofocus",
+      "description": "Sayfa yüklendiğinde otomatik olarak düğmeye odaklanır."
+    },
+    {
+      "name": "disabled",
+      "value": "disabled",
+      "description": "Düğmenin işlevini geçersiz kılar."
+    },
+    {
+      "name": "form",
+      "value": "form_id",
+      "description": "Bağlı olduğu formu belirtir. Button etiketi formun dışında bile olsa, ilgili formu göndermek için kullanılabilir."
+    },
+    {
+      "name": "formaction",
+      "value": "URL",
+      "description": "Formun bilgilerinin nereye gönderileceğini belirler."
+    },
+    {
+      "name": "formenctype",
+      "value": "application/x-www-form-urlencoded\nmultipart/form-data\ntext/plain",
+      "description": "Form bilgilerini sunucuya hangi yöntemle göndereceğini belirler."
+    },
+    {
+      "name": "formmethod",
+      "value": "GET\\nPOST",
+      "description": "Form  bilgilerinin hangi metod ile gönderileceğini belirler."
+    },
+    {
+      "name": "formnovalidate",
+      "value": "formnovalidate",
+      "description": "Form etiketlerinin doğrulanmadan gönderileceğini belirler."
+    },
+    {
+      "name": "formtarget",
+      "value": "_blank\n_self\n_parent\n_top\nframename",
+      "description": "Form gönderildiğinde hangi şekilde açılacağını belirler. Örn. yeni sayfada açmak için _blank kullanılır."
+    },
+    {
+      "name": "name",
+      "value": "isim",
+      "description": "Form gönderildiğinde değerin hangi isimle gönderileceğini belirler."
+    },
+    {
+      "name": "type",
+      "value": "button\nreset\nsubmit",
+      "description": "Butonun tipini belirler."
+    }
+  ],
+  "examples": [
+    {
+      "code": "<button type=\"button\"> Normal buton örneği </button>\n<button type=\"submit\"> Formu gönderen buton örneği </button>\n<button type=\"reset\"> Formun değerlerini sıfırlayan buton örneği </button>",
+      "description": "En basit haliyle kullanımları;"
+    },
+    {
+      "code": "<button type=\"submit\" form=\"form1\">Form1'i gönder</button>\n<button type=\"submit\" form=\"form2\">Form2'yi gönder</button>\n\n<form action=\"\" id=\"form1\">\n    <input type=\"text\" name=\"deger\">\n</form>\n<form action=\"\" method=\"get\" id=\"form2\">\n    <input type=\"text\" name=\"deger\">\n</form>",
+      "description": "form niteliği kullanılarak button etiketi form içerisinde olmasa bile o formu gönderme işlemi yapabiliriz."
+    }
+  ]
+}
