@@ -1,0 +1,39 @@
+{
+  "author": "fatihmert <fmdogancan95@gmail.com>",
+  "title": "min-height",
+  "name": "min-height",
+  "syntax": "min-height: <uzunluk değeri > | [<yüzde>]<uzunluk değeri > | inherit",
+  "js_syntax": "object.style.minHeight = \"Değer\"",
+  "description": "// CSS1 seçtim fakat CSS2'den sonra gelmiş olup IE7'den sonra eklenmiştir.\n\nBelirlenin elementin yükseklik değerini minimum değer ile sınırlandırmaya yarar. Hiç içerik eklemeseniz bile belirlediğiniz genişlikte görünecektir. Genellikle @media elementleri ile kullanılır.",
+  "version": "CSS1",
+  "values": [
+    {
+      "value": "uzunluk",
+      "description": "px, pt, em, cm gibi birimlerle genişlik tanımlanır."
+    },
+    {
+      "value": "%",
+      "description": "Elementin yüzdesel (%) genişliğini tanımlar."
+    },
+    {
+      "value": "inherit",
+      "description": "Değerini üst öğesinden miras alır."
+    },
+    {
+      "value": "auto",
+      "description": "Varsayılan değer. Bu değer 0'dır."
+    }
+  ],
+  "examples": [
+    {
+      "code": "div { min-height: 200px }",
+      "description": "div elementinin minimum yüksekliği 200px'dir."
+    },
+    {
+      "code": "@media (min-height: 1000px) {\n    body{\n        min-height: 900px;\n    }\n}",
+      "description": "Tarayıcı ekranının yüksekliği en az 1000px ve/veya daha yüksek olduğunda body elementinin minimum yüksekliğini 900px yap."
+    }
+  ],
+  "animatable": true,
+  "default_value": "0"
+}

@@ -1,0 +1,39 @@
+{
+  "author": "fatihmert <fmdogancan95@gmail.com>",
+  "title": "min-width",
+  "name": "min-width",
+  "syntax": "min-width: <uzunluk değeri > | [<yüzde>]<uzunluk değeri > | inherit",
+  "js_syntax": "object.style.minWidth = \"Değer\"",
+  "description": "// CSS1 seçtim fakat CSS2'den sonra gelmiş olup IE7'den sonra eklenmiştir.\n\nBelirlenin elementin genişlik değerini minimum değer ile sınırlandırmaya yarar. Hiç içerik eklemeseniz bile belirlediğiniz genişlikte görünecektir. Genellikle @media elementleri ile kullanılır.",
+  "version": "CSS1",
+  "values": [
+    {
+      "value": "uzunluk",
+      "description": "px, pt, em, cm gibi birimlerle genişlik tanımlanır."
+    },
+    {
+      "value": "%",
+      "description": "Elementin yüzdesel (%) genişliğini tanımlar."
+    },
+    {
+      "value": "inherit",
+      "description": "Değerini üst öğesinden miras alır."
+    },
+    {
+      "value": "auto",
+      "description": "Varsayılan değer. Bu değer 0'dır."
+    }
+  ],
+  "examples": [
+    {
+      "code": "div { min-width: 200px }",
+      "description": "div elementinin minimum genişliği 200px'dir."
+    },
+    {
+      "code": "@media (min-width: 1000px) {\n    body{\n        min-width: 900px;\n    }\n}",
+      "description": "Tarayıcı ekranının genişliği en 1000px ve/veya daha büyük olduğunda body elementinin minimum genişliğini 900px yap."
+    }
+  ],
+  "animatable": true,
+  "default_value": "0"
+}

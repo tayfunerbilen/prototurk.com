@@ -1,0 +1,39 @@
+{
+  "author": "fatihmert <fmdogancan95@gmail.com>",
+  "title": "max-height",
+  "name": "max-height",
+  "syntax": "min-width: <uzunluk değeri > | [<yüzde>]<uzunluk değeri > | inherit",
+  "js_syntax": "object.style.maxHeight = \"Değer\"",
+  "description": "// CSS1 seçtim fakat CSS2'den sonra gelmiş olup IE7'den sonra eklenmiştir.\n\nBelirlenin elementin yükseklik değerini maksimum değer ile sınırlandırmaya yarar. Ne kadar içerik eklerseniz ekleyin belirlediğiniz yükseklikte kalacaktır, eklediğiniz veriler elementin sınırlarını aşacaktır.",
+  "version": "CSS1",
+  "values": [
+    {
+      "value": "uzunluk",
+      "description": "px, pt, em, cm gibi birimlerle genişlik tanımlanır."
+    },
+    {
+      "value": "%",
+      "description": "Elementin yüzdesel (%) genişliğini tanımlar."
+    },
+    {
+      "value": "inherit",
+      "description": "Değerini üst öğesinden miras alır."
+    },
+    {
+      "value": "auto",
+      "description": "Varsayılan değer. Bu değer 0'dır."
+    }
+  ],
+  "examples": [
+    {
+      "code": "div { max-height: 200px }",
+      "description": "div elementinin maksimum yüksekliği 200px'dir."
+    },
+    {
+      "code": "@media (max-height: 1000px) {\n    body{\n        max-height: 900px;\n    }\n}",
+      "description": "Tarayıcı ekranının yüksekliği 1000px ve/veya daha düşük olduğunda body elementinin maksiumum yüksekliğini 900px yap."
+    }
+  ],
+  "animatable": true,
+  "default_value": "0"
+}

@@ -1,0 +1,39 @@
+{
+  "author": "fatihmert <fmdogancan95@gmail.com>",
+  "title": "max-width",
+  "name": "max-width",
+  "syntax": "min-width: <uzunluk değeri > | [<yüzde>]<uzunluk değeri > | inherit",
+  "js_syntax": "object.style.maxWidth = \"Değer\"",
+  "description": "// CSS1 seçtim fakat CSS2'den sonra gelmiş olup IE7'den sonra eklenmiştir.\n\nBelirlenin elementin genişlik değerini maksimum değer ile sınırlandırmaya yarar. Ne kadar içerik eklerseniz ekleyin belirlediğiniz genişlikte kalacaktır eğer taşmalara (wrap) izin verdiyseniz belirttiğiniz ölçüyü geçen boyutta olursa içeriğiniz maksimum genişlik değerini aşacaktır.",
+  "version": "CSS1",
+  "values": [
+    {
+      "value": "uzunluk",
+      "description": "px, pt, em, cm gibi birimlerle genişlik tanımlanır."
+    },
+    {
+      "value": "%",
+      "description": "Elementin yüzdesel (%) genişliğini tanımlar."
+    },
+    {
+      "value": "inherit",
+      "description": "Değerini üst öğesinden miras alır."
+    },
+    {
+      "value": "auto",
+      "description": "Varsayılan değer. Bu değer 0'dır."
+    }
+  ],
+  "examples": [
+    {
+      "code": "div { max-width: 200px }",
+      "description": "div elementinin maksimum genişliği 200px'dir."
+    },
+    {
+      "code": "@media (max-width: 1000px) {\n    body{\n        max-width: 900px;\n    }\n}",
+      "description": "Tarayıcı ekranının genişliği 1000px ve/veya daha düşük olduğunda body elementinin maksiumum genişliğini 900px yap."
+    }
+  ],
+  "animatable": true,
+  "default_value": "0"
+}
