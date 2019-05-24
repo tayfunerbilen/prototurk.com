@@ -1,0 +1,34 @@
+{
+  "author": "serkanosna <serkan.osna@gmail.com>",
+  "title": "PHP'de is_array() Fonksiyonu",
+  "name": "is_array",
+  "syntax": "is_array ( mixed $değişken ) : bool",
+  "description": "Değişkenin bir dizi içerip içermediğine bakar",
+  "note": "Belirtilen değişken bir dizi içeriyorsa TRUE döner.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "$degisken",
+      "type": "array",
+      "description": "Sınanacak değişken",
+      "default": "$degisken",
+      "required": true
+    }
+  ],
+  "examples": [
+    {
+      "code": "$arr= array('bu', 'bir', 'dizidir');\necho is_array($arr) ? 'Dizi' : 'Dizi Değil';\n// Çıktı : Dizi\n\n$arr_2= 'bu bir dizgedir';\necho is_array($arr_2) ? 'Dizi' : 'Dizi Değil';\n// Çıktı : Dizi Değil",
+      "description": "Değişken içeriğinin bir dizi olup olmadığının sınanması",
+      "title": "Örnek - 1"
+    }
+  ],
+  "return": {
+    "type": "boolean",
+    "text": "Belirtilen değişken bir dizi içeriyorsa TRUE, aksi takdirde FALSE döner."
+  },
+  "deprecated": false
+}
