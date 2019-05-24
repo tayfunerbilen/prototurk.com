@@ -1,0 +1,45 @@
+{
+  "author": "serkanosna <serkan.osna@gmail.com>",
+  "title": "PHP'de count() Fonksiyonu",
+  "name": "count",
+  "syntax": "count ( mixed $girdi [, int $kip = COUNT_NORMAL ] ) : int",
+  "description": "Bir dizideki eleman sayısını veya bir nesnedeki özellik sayısını döndürür.\nNesneler için, eğer SPL kuruluysa Countable tarafından gerçeklenen count() yöntemini sonucu almak için kullanabilirsiniz. Nesne arayüzü sadece bir yönteme, count() işlevinden dönen değeri döndüren count() yöntemine sahiptir.",
+  "note": "Bir dizideki eleman sayısını veya bir nesnedeki özellik sayısını döndürür",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "$girdi",
+      "type": "array",
+      "description": "Dizi veya nesne",
+      "default": "$girdi",
+      "required": true
+    }
+  ],
+  "changelogs": [
+    {
+      "version": "4.2.0",
+      "description": "İsteğe bağlı kip değiştirgesi eklendi."
+    }
+  ],
+  "examples": [
+    {
+      "code": "$arr = [\"proto\",\"turk\", \"turkiye\"];\necho count($arr); \n// Çıktı: 3\n\necho count(null);\n// Çıktı : 0\n\necho count(false);\n// Çıktı : 1",
+      "description": "count() Örneği",
+      "title": "Örnek - 1"
+    },
+    {
+      "code": "$arr = array('meyveler' => array('portakal', 'muz', 'elma'),\n              'vejeteryan' => array('havuc', 'karalahana', 'bezelye'));\n\n// ardışık sayım\necho count($arr , COUNT_RECURSIVE); // 8\n\n// normal sayım\necho count($arr ); // 2",
+      "description": "Ardışık count() Örneği",
+      "title": "Örnek - 2"
+    }
+  ],
+  "return": {
+    "type": "int",
+    "text": "Bir dizi dışında her şey tek elemanlı bir dizi kabul edilebileceğinden işlev daima girdi'deki eleman sayısını döndürür.  Eğer girdi array veya object türünde değilse Countable arayüzü, 1 döndürür. Tek istisnası girdi'nin NULL olması durumu olup böyle bir durumda 0 döner."
+  },
+  "deprecated": false
+}
