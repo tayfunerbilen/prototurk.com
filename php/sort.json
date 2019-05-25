@@ -1,0 +1,35 @@
+{
+  "author": "ahmetkorkmaz3 <ahmetkorkmaz3453@gmail.com>",
+  "title": "PHP'de sort fonksiyonu",
+  "name": "sort",
+  "syntax": "sort ( array &$dizi [, int $seçenekler = SORT_REGULAR ] ) : bool",
+  "description": "<code>sort</code> fonksiyonu bir dizinin ( array ) sıralanması için kullanılan fonksiyondur.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "$dizi",
+      "type": "array",
+      "description": "Sıralanması istenen dizi eklenir.",
+      "required": true
+    }
+  ],
+  "examples": [
+    {
+      "code": "<?php \n\n$dizi = array(\"elma\", \"armut\", \"kiraz\", \"erik\");\nsort($dizi);\n\nprint_r($dizi); /* çıktı : Array ( [0] => armut [1] => elma [2] => erik [3] => kiraz ) */",
+      "description": "<code>$dizi</code> değişkenin içerindeki değerleri alfabetik olarak sıraladık."
+    },
+    {
+      "code": "<?php\n\n$sayilar = array(5, 2, 3, 8, 7, 6);\nsort($sayilar);\n\nprint_r($sayilar); /* çıktı : Array ( [0] => 2 [1] => 3 [2] => 5 [3] => 6 [4] => 7 [5] => 8 ) */",
+      "description": "<code>$sayilar</code> değişkenin içerisindeki verileri küçükten büyüğe sıraladık."
+    }
+  ],
+  "return": {
+    "type": "boolean",
+    "text": "İşlem gerçekleşir ise true, işlem gerçekleştirilemezse false değeri geriye döner."
+  },
+  "deprecated": false
+}
