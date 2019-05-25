@@ -1,0 +1,30 @@
+{
+  "author": "serkanosna <serkan.osna@gmail.com>",
+  "title": "PHP'de end() Fonksiyonu",
+  "name": "end",
+  "syntax": "end ( array &$dizi ) : mixed",
+  "description": "Dizinin son elemanını seçmek için kullanılır",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "$girdi",
+      "type": "mixed",
+      "default": "$girdi"
+    }
+  ],
+  "examples": [
+    {
+      "code": "$sehirler= array('ankara', 'istanbul', 'eskisehir');\necho end($sehirler); \n// Çıktı : eskisehir",
+      "description": "end() Fonksiyon Örneği"
+    }
+  ],
+  "return": {
+    "type": "mixed",
+    "text": "Dizi boşsa false döner, yoksa son elemanın değerini döndürür."
+  },
+  "deprecated": false
+}

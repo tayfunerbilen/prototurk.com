@@ -1,0 +1,32 @@
+{
+  "author": "serkanosna <serkan.osna@gmail.com>",
+  "title": "PHP'de next() Fonksiyonu",
+  "name": "next",
+  "syntax": "next ( array &$dizi ) : mixed",
+  "description": "Dizide  sonraki elemanını bulmak için kullanılır.",
+  "note": "Bu işlev mantıksal false değeriyle dönebileceği gibi false olarak değerlendirilebilecek mantıksal olmayan bir değerle de dönebilir. Bu işlevden dönen değeri sınamak için === işlecini kullanınız.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "$girdi",
+      "type": "array",
+      "default": "$girdi",
+      "required": true
+    }
+  ],
+  "examples": [
+    {
+      "code": "$sehirler= array('ankara', 'istanbul', 'mugla', 'eskisehir');\n\n$sonuc = current($sehirler);  // $sonuc = 'ankara';\n$sonuc = next($sehirler);      // $sonuc = 'istanbul';\n$sonuc = next($sehirler);      // $sonuc = 'mugla';",
+      "description": "next() Fonksiyon Örneği"
+    }
+  ],
+  "return": {
+    "type": "mixed",
+    "text": "Dizinin bulunduğu konumun bir sonrasında eleman varsa o elemanın değerini döndürür, yoksa false döner."
+  },
+  "deprecated": false
+}

@@ -1,0 +1,33 @@
+{
+  "author": "serkanosna <serkan.osna@gmail.com>",
+  "title": "PHP'de current() Fonksiyonu",
+  "name": "current",
+  "syntax": "current ( array &$dizi ) : mixed",
+  "description": "Dizinin ilk elemanı bulmak için kullanılır",
+  "note": "Bu işlev mantıksal FALSE değeriyle dönebileceği gibi FALSE olarak değerlendirilebilecek mantıksal olmayan bir değerle de dönebilir. Bu işlevden dönen değeri sınamak için === işlecini kullanınız.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "$girdi",
+      "type": "array",
+      "description": "Üzerinde işlem yapılacak dizi.",
+      "default": "$girdi",
+      "required": true
+    }
+  ],
+  "examples": [
+    {
+      "code": "$araçlar = array('tabanvay', 'bisiklet', 'otomobil', 'uçak');\n\n$sonuc = current($araçlar); \t// $sonuc = 'tabanvay';\n$sonuc = next($araçlar);    \t// $sonuc= 'bisiklet';\n$sonuc = current($araçlar); \t// $sonuc= 'bisiklet';\n$sonuc = next($araçlar);    \t// $sonuc= 'otomobil';\n$sonuc = prev($araçlar);    \t// $sonuc= 'bisiklet';\n$sonuc = end($araçlar);     \t// $sonuc= 'uçak';\n$sonuc = current($araçlar); \t// $sonuc= 'uçak';\n",
+      "description": "current() Fonksiyonu Örneği"
+    }
+  ],
+  "return": {
+    "type": "mixed",
+    "text": "Her dizinin, ilklendirme anında ilk elemanıı gösteren fonksiyondur."
+  },
+  "deprecated": false
+}
