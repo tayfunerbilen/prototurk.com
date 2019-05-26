@@ -1,0 +1,24 @@
+{
+  "author": "Ömer ŞERAN <minernetwork7@gmail.com>",
+  "title": "PHP'de foreach fonksiyonu",
+  "name": "foreach",
+  "syntax": "foreach($dizi as $deger)",
+  "description": "Bir dizi içerisindeki elemenları döngüye alarak string şeklinde döndürür.\t",
+  "note": "Değişken isimlerinde Türkçe karakter kullanamazsınız.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "examples": [
+    {
+      "code": "<?php\n\n$dizi = array(\"Merhaba\", \"Ahmet\", \"Ne yapıyorsun?\", \"İyi misin?\");\n\nforeach ($dizi as $deger){\n\necho \"\".$deger.\"<br>\";\n}\n\n?>",
+      "description": "Kısaca şöyle kullanırız;"
+    }
+  ],
+  "return": {
+    "type": "string",
+    "text": "Geriye dizi içerisinde bulunan değerleri döndürür"
+  },
+  "deprecated": false
+}
