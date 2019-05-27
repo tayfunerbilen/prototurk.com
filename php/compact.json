@@ -1,0 +1,32 @@
+{
+  "author": "serkanosna <serkan.osna@gmail.com>",
+  "title": "PHP'de compact() Fonksiyonu",
+  "name": "compact",
+  "syntax": "compact ( mixed $değişken [, mixed $... ] ) : array",
+  "description": "compact() işlevi, değişken ile belirtilen değişkenlerden ismi simge tablosunda yer alanları, değerleriyle birlikte çıktılayacağı diziye ekler; değişken isimleri anahtar olarak kullanılır. Özetle, extract() işlevinin yaptığının tersini yapar.",
+  "note": "Değişken değişkenler işlevlerin içinde PHP'nin süper küresel dizileri ile kullanılamayacağından süper küresel diziler compact() işlevine değiştirge olarak aktarılamaz.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "$degisken",
+      "type": "mixed",
+      "default": "$degisken",
+      "required": true
+    }
+  ],
+  "examples": [
+    {
+      "code": "$il  \t\t= \"Eskişehir\";\n$ilçe \t= \"Tepebaşı\";\n$mahalle = \"Batıkent Mahallesi\";\n\n$sonuç = compact(\"il\", \"ilce\");\nprint_r($sonuç);\n\n/* Çıktı */\nArray\n(\n    [il] \t=> Eskişehir\n    [ilçe] \t=> Tepebaşı\n)",
+      "description": "compact() Fonksiyonu Örneği"
+    }
+  ],
+  "return": {
+    "type": "array",
+    "text": "Belirtilen değişkenlerin tanımlı olanlarını içeren bir dizi ile döner"
+  },
+  "deprecated": false
+}
