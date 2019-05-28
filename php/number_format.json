@@ -1,0 +1,51 @@
+{
+  "author": "inanc <inanc.cakil@gmail.com>",
+  "title": "PHP number_format() Fonksiyonu",
+  "name": "number_format",
+  "syntax": "number_format ( float $sayi, int $ondalık_sayisi= 0 , string $ondalık_ayıracı= \".\" , string $binlik_ayıracı = \",\" ) : string",
+  "description": "Verilen sayının istenilen ondalık gösterimde yazılmasını sağlar.Ondalık ve binlik gösterimde kullanılan ayıraç degiştirilebilir.",
+  "note": "Fonksiyon bir,iki yada dört parametre kabul ediyor.\nSadece ilk parametre verilir ise ondalık gösterim kısmı olmayacak şekilde ve binlik ayıracı \",\" kabul edilerek formatlanır.\nİlk iki parametre verilir ise ondalık ayıracıda \".\" kabul edilerek formatlanır.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "sayi",
+      "type": "int",
+      "description": "Formatlanacak sati",
+      "required": true
+    },
+    {
+      "name": "ondalık_sayisi",
+      "type": "int",
+      "description": "İstenilen ondalık gösterim rakam sayısı",
+      "required": false
+    },
+    {
+      "name": "ondalık_ayıracı",
+      "type": "string",
+      "description": "Ondalık gösterimde kullanılan ayıraç",
+      "default": " \".\"",
+      "required": false
+    },
+    {
+      "name": "binlik_ayıracı ",
+      "type": "string",
+      "description": "Binlik gösterimde kullanılan ayıraç",
+      "default": ",",
+      "required": false
+    }
+  ],
+  "examples": [
+    {
+      "code": "$sayi= 1234.56;\n$yeni_sayi= number_format($sayi);\n// 1,235\n\n$sayi= 4.123;\necho number_format($sayi, 2);\n // 4.12\n\n$yeni_sayi= number_format($sayi, 2, ',', ' ');\n// 1 234,56\n\n$sayi= 1234.5678;\n$yeni_sayi= number_format($sayi, 2, '.', '');\n// 1234.57"
+    }
+  ],
+  "return": {
+    "type": "int",
+    "text": "Formatlanmış deger"
+  },
+  "deprecated": false
+}
