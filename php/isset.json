@@ -1,0 +1,29 @@
+{
+  "author": "abdullahzubeyiryildiz <zubeyir_55@hotmail.com>",
+  "title": "Php'de İsset İşlemi",
+  "name": "isset()",
+  "syntax": "isset ( mixed $değişken [, mixed $değişken [, $... ]] ) : bool",
+  "description": "Değişken tanımlı mı diye bakar.",
+  "note": "Bir değişken unset() ile yok edilmişse artık tanımlı değildir. isset() değişkene NULL atanmış olduğunu saptarsa FALSE döndürür. Bir NULL baytın (\"\\0\") PHP'nin NULL sabitine eşdeğer olmadığına dikkat ediniz.\n\nİşleve çok sayıda değiştirge aktarılmışsa sadece tüm değiştirgeler NULL'dan farklı bir değer içerdiği takdirde işlev TRUE döndürecektir. Değerlendirme soldan sağa ilerler ve NULL atanmış ilk değişkende işlem durdurulur.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "examples": [
+    {
+      "code": "<?php\n$text= \"merhaba\"; \nif(isset($text)) {   \n\techo \"değişken tanımlanmış\";  \n}else{  \n\techo \"tanımlı değişken bulunamadı.\";\n }\n\n\n?>",
+      "description": "En temel kullanımı aşağıdaki gibidir.",
+      "title": "İsset kullanımı"
+    },
+    {
+      "code": "$ad=$_POST['ad']; //html form post edilmediyse NULL değeri alır\nif (isset($ad)){\n\techo \"Gelen ad verisi var burdaki kodları uygula\";\n}else{\n\techo \"Gelen değer boş hata dönder\";\n}",
+      "title": "Gelen Post Değeri Olup Olmadığını Kontrol Etme"
+    }
+  ],
+  "return": {
+    "type": "true",
+    "text": "Belirtilen değişken tanımlıysa ve NULL değilse TRUE döner."
+  },
+  "deprecated": false
+}
