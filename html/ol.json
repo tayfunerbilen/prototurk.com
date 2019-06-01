@@ -3,7 +3,7 @@
   "title": "<ol> etiketi",
   "name": "ol",
   "syntax": "<ol> .. </ol>",
-  "description": "<strong> <ol> </strong> etiketi düzenli bir liste oluşturmak için kullanılır. Açılan ve kapanan <ol> etiketleri arasına bir veya daha fazla <li> öğesi yerleştirilerek sıralı bir liste oluşturulur.",
+  "description": "<strong>&lt;ol></strong> etiketi düzenli bir liste oluşturmak için kullanılır. Açılan ve kapanan &lt;ol> etiketleri arasına bir veya daha fazla <li> öğesi yerleştirilerek sıralı bir liste oluşturulur.",
   "closing_tag": true,
   "display": "satıriçi",
   "usage": "Metinsel",
