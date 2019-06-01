@@ -1,0 +1,52 @@
+{
+  "author": "Emre JILTA <jilta.e@gmail.com>",
+  "title": "PHP'de strtr() Fonksiyonu",
+  "name": "strtr",
+  "syntax": "strtr (string $string , string $once , string $sonra) : string",
+  "description": "Girilen bir string ifadesindeki belirli ifadeleri, yeni değerlerle değiştirmeyi sağlar.",
+  "note": "strtr (string $str, array $arr) : string şeklinde de yazılabilir. \n",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [{
+      "name": "$str",
+      "type": "string",
+      "description": "Girilen string ifade",
+      "required": true
+    },
+    {
+      "name": "$once",
+      "type": "string",
+      "description": "Önceki değer",
+      "required": true
+    },
+    {
+      "name": "$sonra",
+      "type": "string",
+      "description": "Sonraki değer",
+      "required": true
+    },
+    {
+      "name": "$arr",
+      "type": "array",
+      "description": "Eski ve yeni değerlerin bulunduğu ilişkili dizi",
+      "required": true
+    }
+  ],
+  "examples": [{
+      "code": "<?\n\t$str = \"Zirve noktası\";\n    \t$once = \"Zirve\";\n    \t$sonra = \"Doruk\";\n    \techo strtr($str, $once, $sonra);\n?>",
+      "title": "Örnek Kullanım 1"
+    },
+    {
+      "code": "<?\n\t$str = \"Yurtta Sulh, Cihanda Sulh!\";\n        $dizi = [\"Sulh\" => \"Barış\", \"Cihan\" => \"Dünya\"];\n        echo strtr($str, $dizi);\n?>",
+      "title": "Örnek Kullanım 2"
+    }
+  ],
+  "return": {
+    "type": "string",
+    "text": "Girilen string ifadede belirli ibareleri başka değerlere dönüştürür"
+  },
+  "deprecated": false
+}

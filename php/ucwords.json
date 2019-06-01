@@ -1,0 +1,27 @@
+{
+  "author": "Emre JILTA <jilta.e@gmail.com>",
+  "title": "PHP'de ucwords() Fonksiyonu",
+  "name": "ucwords",
+  "syntax": "ucwords (string $str) : string",
+  "description": "Girilen bir string ifadesinde yer alan tüm sözcüklerin ilk harfleri büyük harfe dönüştürülür.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [{
+    "name": "$str",
+    "type": "string",
+    "description": "Girilen string ifade",
+    "required": true
+  }],
+  "examples": [{
+    "code": "<?\n\t$deger = \"bilgisayar mühendisliğine giriş\";\n\techo ucwords($deger);\n?>",
+    "title": "Örnek Kullanım"
+  }],
+  "return": {
+    "type": "string",
+    "text": "Girilen string ifadede tüm sözcüklerin ilk harfleri büyük harf yapılır"
+  },
+  "deprecated": false
+}

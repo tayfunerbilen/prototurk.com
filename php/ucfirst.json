@@ -1,0 +1,27 @@
+{
+  "author": "Emre JILTA <jilta.e@gmail.com>",
+  "title": "PHP'de ucfirst() Fonksiyonu",
+  "name": "ucfirst",
+  "syntax": "ucfirst (string $str) : string",
+  "description": "Girilen bir string ifadesinde yer alan ilk karakteri büyük harfe dönüştürür.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [{
+    "name": "$str",
+    "type": "string",
+    "description": "Girilen string ifade",
+    "required": true
+  }],
+  "examples": [{
+    "code": "<?\n\t$deger = \"türkçe'de 29 harf bulunmaktadır.\";\n\techo ucfirst($deger);\n?>",
+    "title": "Örnek Kullanım"
+  }],
+  "return": {
+    "type": "string",
+    "text": "Girilen string ifadenin ilk karakteri büyük harf yapılır"
+  },
+  "deprecated": false
+}
