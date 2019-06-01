@@ -1,0 +1,17 @@
+{
+  "author": "orazsahedowmaksat <maksadio261@gmail.com>",
+  "title": "<ol> etiketi",
+  "name": "ol",
+  "syntax": "<ol> .. </ol>",
+  "description": "<strong> <ol> </strong> etiketi düzenli bir liste oluşturmak için kullanılır. Açılan ve kapanan <ol> etiketleri arasına bir veya daha fazla <li> öğesi yerleştirilerek sıralı bir liste oluşturulur.",
+  "closing_tag": true,
+  "display": "satıriçi",
+  "usage": "Metinsel",
+  "default_css": "ol {\n    display: block;\n    list-style-type: decimal;\n}",
+  "examples": [
+    {
+      "code": "<ol>\n  <li>Turkmenistan</li>\n  <li>Turkey</li>\n  <li>Azerbaijan</li>\n  <li>Tajikistan</li>\n  <li>Uzbekistan</li>\n  <li>Kazakhstan</li>\n</ol>",
+      "description": "Liste elemenlarini numarali bir şekilde düzenlemek"
+    }
+  ]
+}
