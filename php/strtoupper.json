@@ -1,0 +1,27 @@
+{
+  "author": "Emre JILTA <jilta.e@gmail.com>",
+  "title": "PHP'de strtoupper() Fonksiyonu",
+  "name": "strtoupper",
+  "syntax": "strtoupper(string $str) : string",
+  "description": "Bir string içindeki tüm karakterleri büyük harfe çevirerek elde edilen string değeri döndürür.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [{
+    "name": "$str",
+    "type": "string",
+    "description": "Girilen string değer",
+    "required": true
+  }],
+  "examples": [{
+    "code": "<?\n\t$deger = \"PHP ile Programlama\";\n\techo strtoupper($deger);\n?>",
+    "title": "Örnek Kullanım"
+  }],
+  "return": {
+    "type": "string",
+    "text": "Büyük harfli string değer döndürülür"
+  },
+  "deprecated": false
+}
