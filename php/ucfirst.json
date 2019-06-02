@@ -3,7 +3,7 @@
   "title": "PHP'de ucfirst() Fonksiyonu",
   "name": "ucfirst",
   "syntax": "ucfirst (string $str) : string",
-  "description": "Girilen değerin ilk karakterini büyük harfe dönüştürür.",
+  "description": "Girilen değerin ilk kelimesinin baş harfini büyük harfe dönüştürür.",
   "compatibilities": [
     "php 4",
     "php 5",
@@ -20,7 +20,7 @@
   }],
   "return": {
     "type": "string",
-    "text": "Büyük harfli string bir ifade geriye döner."
+    "text": "Cümlesinin baş harfi büyük string ifade döner."
   },
   "deprecated": false
 }
