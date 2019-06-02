@@ -1,16 +1,17 @@
 {
   "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "edit": ["volkany <siryildiz@gmail.com>"],
   "title": "<bdi> Etiketi",
   "name": "bdi",
   "syntax": "<bdi> .. </bdi>",
   "description": "İşaretlenen metni çift yönlü izole etmek için kullanılır. Örneğin Arapça ya da Farsça gibi sağdan sola yazılan diller, soldan sağa doğru bir satırda kullanıldığında bu etiket kullanılabilir. &lt;bdi> etiketi işaretlenen metnin yönünü çevirmez, yalnızca tarayıcıya metnin ters yönde okunması gerektiğini belirtir.",
   "version": "HTML",
   "closing_tag": true,
-  "display": "satıriçi",
+  "display": "satır içi",
   "usage": "Anlamsal|Metinsel",
   "examples": [
     {
-      "code": "<p>Burada soldan sağa giden bir metin içerisinde bdi etiketi sayesinde <bdi>موقع الكتروني</bdi> soldaki arapçta yazı düzgün gözüktü.</p>",
+      "code": "<p>Burada soldan sağa giden bir metin içerisinde bdi etiketi sayesinde <bdi>موقع الكتروني</bdi> soldaki Arapça yazı düzgün gözüktü.</p>",
       "description": "Bir örneğine bakacak olursak;"
     }
   ]

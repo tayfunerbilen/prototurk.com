@@ -1,12 +1,13 @@
 {
   "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "edit": ["volkany <siryildiz@gmail.com>"],
   "title": "HTML'de <abbr> Etiketi",
   "name": "abbr",
   "syntax": "<abbr title=\"..\"> ... </abbr>",
-  "description": "Sayfada kısaltmaları işaretlemek için bu etiket kullanılır. Bu kısaltmalara örneğin TBMM, HTML, W3C vb. olabilir. Etiketi kullanırken <code>title</code> niteliği ile kullanmak gerekir, çünkü title etiketi kısaltmanın uzun halini içermektedir.\n\nBu etiketi kısaltmalar için kullanmak, arama motorlarının sitenizi tararken anlamasını ve yorumlamasını kolaylaştırır.",
+  "description": "Sayfada kısaltmaları işaretlemek için bu etiket kullanılır. Bu kısaltmalara örneğin TBMM, HTML, W3C vb. olabilir. Etiketi kullanırken <code>title</code> niteliği ile kullanmak gerekir, çünkü <code>title</code> niteliği kısaltmanın uzun halini içermektedir.\n\nBu etiketi kısaltmalar için kullanmak, arama motorlarının sitenizi tararken anlamasını ve yorumlamasını kolaylaştırır.",
   "version": "HTML",
   "closing_tag": true,
-  "display": "satıriçi",
+  "display": "satır içi",
   "usage": "Metinsel",
   "default_css": "abbr[title] {\n\ttext-decoration: underline dotted;\n}",
   "examples": [

@@ -1,12 +1,13 @@
 {
   "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "edit": ["volkany <siryildiz@gmail.com>"],
   "title": "<br> Etiketi",
   "name": "br",
   "syntax": "<br>",
   "description": "Satır sonunu belirtmek için bu etiket kullanılır. Örneğin bir sonraki paragrafı 2 satır aşağıdan başlatmak isterseniz <code>&lt;br>&lt;br></code> eklemeniz yeterli olacaktır.",
   "version": "HTML",
   "closing_tag": false,
-  "display": "satıriçi",
+  "display": "satır içi",
   "usage": "Metinsel",
   "examples": [
     {
