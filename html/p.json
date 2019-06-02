@@ -1,5 +1,8 @@
 {
   "author": "ahmetkorkmaz3 <ahmetkorkmaz3453@gmail.com>",
+  "edit": [
+    "volkany <siryildiz@gmail.com>"
+  ],
   "title": "<p> Etiketi",
   "tag": "p",
   "lang": "html",
@@ -15,7 +18,7 @@
       "code": "<p>Bu bir paragraftır.</p>"
     },
     {
-      "code": "<p>Buda\nçok satırlı\nparagraf\nörneğidir.</p>"
+      "code": "<p>Bu da\nçok satırlı\nparagraf\nörneğidir.</p>"
     }
   ]
 }
