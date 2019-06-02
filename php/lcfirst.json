@@ -1,0 +1,26 @@
+{
+  "author": "Emre JILTA <jilta.e@gmail.com>",
+  "title": "PHP'de lcfirst() Fonksiyonu",
+  "name": "lcfirst",
+  "syntax": "lcfirst (string $str) : string",
+  "description": "Girilen bir string ifadesinde yer alan ilk karakteri küçük harfe dönüştürür.",
+  "compatibilities": [
+    "php 5",
+    "php 7"
+  ],
+  "params": [{
+    "name": "$str",
+    "type": "string",
+    "description": "Girilen string ifade",
+    "required": true
+  }],
+  "examples": [{
+    "code": "<?\n\t$deger = \"Eski defterler\";\n\techo lcfirst($deger);\n?>",
+    "title": "Örnek Kullanım"
+  }],
+  "return": {
+    "type": "string",
+    "text": "Girilen string ifadenin ilk karakteri küçük harf yapılır"
+  },
+  "deprecated": false
+}

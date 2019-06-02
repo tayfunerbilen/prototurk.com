@@ -1,0 +1,27 @@
+{
+  "author": "Emre JILTA <jilta.e@gmail.com>",
+  "title": "PHP'de strlen() Fonksiyonu",
+  "name": "strlen",
+  "syntax": "strlen ( string $str ) : int",
+  "description": "Girilen bir string ifadesinde karakter uzunluğunu döndürür.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [{
+    "name": "$str",
+    "type": "string",
+    "description": "Uzunluğu hesaplanan string ifade",
+    "required": true
+  }],
+  "examples": [{
+    "code": "<?\n\t$deger = \"Siz Çekoslovaklaştıramadıklarımızdan mısınız?\";\n\techo strlen($deger);\n?>",
+    "title": "Örnek Kullanım"
+  }],
+  "return": {
+    "type": "int",
+    "text": "String boş ise 0, değilse karakter sayısını belirtir."
+  },
+  "deprecated": false
+}

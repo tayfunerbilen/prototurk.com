@@ -1,0 +1,27 @@
+{
+  "author": "Emre JILTA <jilta.e@gmail.com>",
+  "title": "PHP'de strrev() Fonksiyonu",
+  "name": "strrev",
+  "syntax": "strrev ( string $str ) : string",
+  "description": "Girilen bir string ifadeyi ters döndürür.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [{
+    "name": "$str",
+    "type": "string",
+    "description": "Ters çevrilecek string ifade",
+    "required": true
+  }],
+  "examples": [{
+    "code": "<?\n\t$deger = \"Kartal kalkar dal sarkar, dal sarkar kartal kalkar.\";\n\techo strrev($deger);\n?>",
+    "title": "Örnek Kullanım"
+  }],
+  "return": {
+    "type": "string",
+    "text": "Ters çevrilmiş string değer döndürülür"
+  },
+  "deprecated": false
+}
