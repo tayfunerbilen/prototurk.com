@@ -3,7 +3,7 @@
   "title": "PHP'de ucwords() Fonksiyonu",
   "name": "ucwords",
   "syntax": "ucwords (string $str) : string",
-  "description": "Girilen bir string ifadede yer alan tüm kelimelerin ilk harflerini büyük harfe dönüştürür.",
+  "description": "Bir string ifadede yer alan tüm kelimelerin ilk harflerini büyük harfe dönüştürür.",
   "compatibilities": [
     "php 4",
     "php 5",
