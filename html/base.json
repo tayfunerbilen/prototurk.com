@@ -1,5 +1,8 @@
 {
   "author": "Mehmet Ali Peker <maps6134@gmail.com>",
+  "edit": [
+    "volkany <siryildiz@gmail.com>"
+  ],
   "title": "<base> Etiketi",
   "tag": "base",
   "lang": "html",
@@ -8,7 +11,7 @@
   "syntax": "<base href=\"..\">",
   "display": "görünmez",
   "usage": "yapısal",
-  "description": "Web sayfalarında bulunan göreceli linkler için baz url adresi tanımlamak için <code>&lt;base></code> etiketi kullanılır. <code>&lt;base></code> etiketi içerisinde çocuk elementler bulunamaz. &lt;head&gt; elementi içerisinde tanımlanır.",
+  "description": "Web sayfalarında bulunan göreceli linkler için baz URL adresi tanımlamak için <code>&lt;base></code> etiketi kullanılır. <code>&lt;base></code> etiketi içerisinde çocuk elementler bulunamaz. <code>&lt;head&gt;</code> elementi içerisinde tanımlanır.",
   "examples": [
     {
       "description": "En basit haliyle kullanımı",
@@ -32,7 +35,7 @@
     {
       "name": "target",
       "value": "_blank\n_parent\n_self\n_top\nframe_adı",
-      "description": "Bağlantının nerede nasıl açılacağını belirtir"
+      "description": "Bağlantının nerede, nasıl açılacağını belirtir"
     }
   ]
 }
