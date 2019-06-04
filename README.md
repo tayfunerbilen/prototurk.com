@@ -1,10 +1,10 @@
 # prototurk.com
-Prototürk'te yer alan, web dilleriyle ilgili referans JSON dosyalarının yer aldığı repodur. Sizde bu reponun gelişmesine katkı sağlayarak Türkçe kaynağın yayılmasında etkili rol oynayabilirsiniz.
+Prototürk'te yer alan, web dilleriyle ilgili referans JSON dosyalarının yer aldığı repodur. Siz de bu reponun gelişmesine katkı sağlayarak Türkçe kaynağın yayılmasında etkili bir rol oynayabilirsiniz.
 
 # Nasıl Katkıda Bulunurum?
 Katkı sağlamak için aşağıdaki adımları takip edebilirsiniz.
 
-Öncelikle github hesabınızla giriş yaptıktan sonra projeyi "fork" edin yani çatallandırın. Daha sonra sırasıyla;
+Öncelikle GitHub hesabınızla giriş yaptıktan sonra projeyi "fork" edin yani çatallandırın. Daha sonra sırasıyla;
 ```
 mkdir prototurk.com
 cd prototurk.com
@@ -19,7 +19,7 @@ git commit -m 'strong etiketi eklendi'
 git push origin yeni-prototurk.com
 ```
 
-Artık orjinal repoya geldiğinizde "pull request" atıp katkınızı repoya ekleyebilirsiniz. Onay sürecinden sonra repoda gözükecektir.
+Artık orijinal repoya geldiğinizde "pull request" atıp katkınızı repoya ekleyebilirsiniz. Onay sürecinden sonra repoda gözükecektir.
 
 Mevcut reponuzu güncel tutmak için ise remote ekleyin.
 
@@ -37,7 +37,7 @@ Eğer repoyu klonlamak ile uğraşmak istemiyorsanız tarayıcınızdan [JSON ol
 
 Ya da bunların hiçbirini yapmayın, github.com üzerinden bu repoda değişiklik ve yenilikleri yapıp direk "pull request" yapın size kalmış :)
 
-Hiçbir şey olmaz ise, o zaman JSON dosyalarını hazırlayıp tayfun@erbilen.net adresine gönderirseniz bende ekleyebilirim. Maksat gönüller bir olsun <3
+Hiçbir şey olmaz ise, o zaman JSON dosyalarını hazırlayıp tayfun@erbilen.net adresine gönderirseniz ben de ekleyebilirim. Maksat gönüller bir olsun. <3
 
 Ayrıca nasıl yapılacağını Videolu olarak izleyip görmek isterseniz;
 

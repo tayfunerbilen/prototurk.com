@@ -1,12 +1,13 @@
 {
   "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "edit": ["volkany <siryildiz@gmail.com>"],
   "title": "<s> Etiketi",
   "name": "s",
   "syntax": "<s> .. </s>",
-  "description": "Metinlerin üstünü çizmek için bu etiket kullanılır. Benzer bir etiket <code><del></code> ile karıştırılmamalıdır. Silinen yazılar için<code><del></code> etiketini, sadece üstünü çizmek için ise bu etiket kullanabilirsiniz.",
+  "description": "Metinlerin üstünü çizmek için bu etiket kullanılır. Benzer bir etiket <code>&lt;del&Gt;</code> ile karıştırılmamalıdır. Silinen yazılar için <code>&lt;del&Gt;</code> etiketini, sadece üstünü çizmek için ise bu etiket kullanabilirsiniz.",
   "version": "HTML",
   "closing_tag": true,
-  "display": "satıriçi",
+  "display": "satır içi",
   "usage": "Metinsel",
   "default_css": "s { \n\ttext-decoration: line-through;\n}",
   "examples": [

@@ -1,17 +1,18 @@
 {
     "author": "servetsevimli <servetsevimli@gmail.com>",
+    "edit": ["volkany <siryildiz@gmail.com>"],
     "title": "<b> Etiketi",
     "name": "b",
     "syntax": "<b> .. </b>",
     "description": "İşaretlenen yazıları kalın gösterir.",
     "version": "HTML",
     "closing_tag": true,
-    "display": "satıriçi",
+    "display": "satır içi",
     "usage": "Metinsel",
     "default_css": "b {\n\tfont-weight: bold;\n}",
     "examples": [
       {
-        "code": "Burasu hariç <b>diğer her yer kalın gözükecektir.</b>",
+        "code": "Burası hariç <b>diğer her yer kalın gözükecektir.</b>",
         "description": "Bir örnekle açıklamak gerekirse;"
       }
     ]

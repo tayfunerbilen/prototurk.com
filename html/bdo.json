@@ -1,12 +1,13 @@
 {
   "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "edit": ["volkany <siryildiz@gmail.com>"],
   "title": "<bdo> Etiketi",
   "name": "bdo",
   "syntax": "<bdo> .. </bdo>",
   "description": "bdo etiketi, metni iki yönlü geçersiz kılmak için kullanılır. Kısaca geçerli metin yönünü geçersiz kılar. <code>dir</code> niteliği ile birlikte yönü belirtilir.",
   "version": "HTML",
   "closing_tag": true,
-  "display": "satıriçi",
+  "display": "satır içi",
   "usage": "Metinsel",
   "default_css": "q { \n  display: inline;\n}\n\nq:before { \n  content: open-quote;\n}\n\nq:after { \n  content: close-quote;\n}",
   "attributes": [

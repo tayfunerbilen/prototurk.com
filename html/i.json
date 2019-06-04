@@ -1,13 +1,13 @@
 {
     "author": "servetsevimli <servetsevimli@gmail.com>",
-    "edit": ["tayfunerbilen <tayfunerbilen@gmail.com>"],
+    "edit": ["tayfunerbilen <tayfunerbilen@gmail.com>", "volkany <siryildiz@gmail.com>"],
     "title": "<i> Etiketi",
     "name": "i",
     "syntax": "<i> .. </i>",
     "description": "İşaretlenen yazıları eğik gösterir.",
     "version": "HTML",
     "closing_tag": true,
-    "display": "satıriçi",
+    "display": "satır içi",
     "usage": "Metinsel",
     "default_css": "i {\n\tfont-style: italic;\n}",
     "examples": [
