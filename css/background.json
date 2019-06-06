@@ -1,0 +1,68 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "CSS'de background Özelliği",
+  "name": "background",
+  "syntax": "background: bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment initial | inherit;",
+  "js_syntax": "object.style.background=\"red url(ataturk.jpg) top left no-repeat\"",
+  "description": "<code>background</code> özelliği aşağıdaki background özelliklerinin kısa halde kullanımıdır.\n\nbackground-color\nbackground-image\nbackground-position\nbackground-size\nbackground-repeat\nbackground-origin\nbackground-clip\nbackground-attachment\n\nKullanılırken background özelliklerini sırasına göre tam şekilde yazmak zorunda değiliz yani <code>background: #fff url(test.png) fixed;</code> şeklinde bir kullanımda geçerli olacaktır.",
+  "version": "CSS1",
+  "version_added": ["CSS3"],
+  "values": [
+    {
+      "value": "background-color",
+      "description": "Arkaplan rengini belirler"
+    },
+    {
+      "value": "background-image",
+      "description": "Arkaplan görselini belirler"
+    },
+    {
+      "value": "background-position",
+      "description": "Arkaplan görselinin konumunu belirler"
+    },
+    {
+      "value": "background-size",
+      "description": "Arkaplan görselinin boyutunu belirler",
+      "version": "CSS3"
+    },
+    {
+      "value": "background-repeat",
+      "description": "Arkaplan görselinin nasıl tekrarlanacağını belirler"
+    },
+    {
+      "value": "background-origin",
+      "description": "Arkaplan görselinin başlangıç konumunu belirler",
+      "version": "CSS3"
+    },
+    {
+      "value": "background-clip",
+      "description": "Arkaplan görseli ya da arkaplan renginin başlangıç konumunu belirler",
+      "version": "CSS3"
+    },
+    {
+      "value": "background-attachment",
+      "description": "Arkaplan görselinin sabitlenip sabitlenmeyeceği ya da içerikler ile birlikte kaydırılabilir olup olmayacağını belirler"
+    },
+    {
+      "value": "initial",
+      "description": "Değerleri varsayılana döndürür",
+      "version": "CSS3"
+    },
+    {
+      "value": "inherit",
+      "description": "Özelliği üst öğesinden miras alır.",
+      "version": "CSS2"
+    }
+  ],
+  "examples": [
+    {
+      "code": ".box {\n    width: 400px;\n    height: 400px;\n    padding: 25px;\n    border: 6px dotted #222;\n    background: yellow url(https://prototurk.com/public/img/logo.png) center no-repeat/450px content-box fixed;\n}",
+      "description": "Tüm özelliklerin bir arada kullanıldığı bir örneğe bakalım;"
+    },
+    {
+      "code": ".box {\n    width: 200px;\n    height: 100px;\n    background: #fa6585 url(hello.gif) center;\n}",
+      "description": "Bazı özelliklerini bir arada kullanıldığı örnek ise;"
+    }
+  ],
+  "animatable": true
+}
