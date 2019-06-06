@@ -1,0 +1,59 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "CSS'de background-color Özelliği",
+  "name": "background-color",
+  "syntax": "background-color: renk| transparent | initial | inherit;",
+  "js_syntax": "object.style.backgroundColor=\"#00FF00\"",
+  "description": "Arkplan rengi belirlemek için kullanılır.",
+  "version": "CSS1",
+  "values": [
+    {
+      "value": "renk",
+      "description": "Arkplan rengini tanımlamak için kullanılır. Bu renk türleri yazı olarak belirtildiği gibi, HEX, RGB, RGBA, HSL ve HSLA formatlarında da belirtilebilir."
+    },
+    {
+      "value": "transparent",
+      "description": "Arkaplan rengini transparan yapmak için kullanılır."
+    },
+    {
+      "value": "inital",
+      "description": "Varsayılan ayarlarına geri döndürür."
+    },
+    {
+      "value": "inherit",
+      "description": "Özellik üst öğesinden miras alınır."
+    },
+    {
+      "value": "inherit",
+      "description": "Özelliği üst öğesinden miras alır."
+    }
+  ],
+  "examples": [
+    {
+      "code": "div {\n\tbackground-color: #fa6585;\n}",
+      "description": "HEX değeri ile arkaplan rengi belirlemek için;"
+    },
+    {
+      "code": "div {\n\tbackground-color: rgb(0, 0, 0);\n}",
+      "description": "RGB değeri ile arkaplan rengi belirlemek için;"
+    },
+    {
+      "code": "div {\n\tbackground-color: rgba(0, 0, 0, .55);\n}",
+      "description": "RGBA değeri ile arkaplan rengi belirlemek için;"
+    },
+    {
+      "code": "div {\n\tbackground-color: hsl(89, 43%, 51%);\n}",
+      "description": "HSL değeri ile arkaplan rengi belirlemek için;"
+    },
+    {
+      "code": "div {\n\tbackground-color: hsla(89, 43%, 51%, .4);\n}",
+      "description": "HSLA değeri ile arkaplan rengi belirlemek için;"
+    },
+    {
+      "code": "div {\n\tbackground-color: red;\n}",
+      "description": "Renk ismiyle arkaplan rengi belirlemek için;"
+    }
+  ],
+  "animatable": true,
+  "default_value": "transparent"
+}
