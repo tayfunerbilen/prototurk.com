@@ -12,6 +12,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
             crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
             integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
             crossorigin="anonymous"></script>
@@ -34,6 +35,17 @@
             line-height: 140%;
             background: rgba(255, 255, 255, .04);
             padding: 20px;
+        }
+
+        .functions-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .functions-list li {
+            background-color: #eeeeee;
+            padding: 10px;
+            margin-bottom: 10px;
         }
     </style>
 
@@ -71,7 +83,12 @@
                 </div>
                 <div class="form-group">
                     <label>Fonksiyon Adı</label>
-                    <input type="text" class="form-control" name="name" placeholder="Örn: explode">
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Örn: explode">
+                    <div class="alert-message" style="display: none">
+                        <div class="text-muted">Fonksiyon daha önce eklenmiş olabilir.</div>
+                        <ul class="functions-list">
+                        </ul>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label>Fonksiyon Yapısı (Syntax)</label>
@@ -376,6 +393,7 @@
 
 <script>
     $(function () {
+        var url = 'https://prototurk.com/php/';
 
         $("textarea").keydown(function (e) {
             if (e.keyCode === 9) { // tab was pressed
@@ -507,6 +525,49 @@
             else
                 $('#output').html('');
         });
+
+        // Check if the function already exists.
+        $('#name').keyup(function(e){
+            var name = $('#name').val();
+            name = name.toLowerCase();
+            check_function(name);
+        });
+
+        function check_function(search_string = '') {
+            var functions_container = $('.functions-list');
+            
+            functions_container.html('');
+            
+            if(search_string.length >= 3) {
+                $.get("php",function(response){
+                    var files = [];
+                    
+                    $(response).find("li > a").each(function(index, value){
+                        files.push(value.textContent.trim());
+                    });
+
+                    var searchFiles = files.filter((str)=>{
+                        return str.indexOf(search_string) >= 0; 
+                    });
+
+                    if(searchFiles.length > 0) {
+                        $('.alert-message').show();
+                    } else {
+                        $('.alert-message').hide();
+                    }
+                    
+                    $.each(searchFiles, function(index, value) {
+                        value = value.split('.')[0];
+                        var value_for_url = value.replace('_', '-');
+                        functions_container.append('<li><a href="' + url + value_for_url + '-fonksiyonu" target="_blank">' + value + '</li>')
+                    })
+                });
+            } else {
+                $('.alert-message').hide();
+                functions_container.html('');                
+            }
+            
+        }
     })
 </script>
 
