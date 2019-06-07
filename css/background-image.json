@@ -1,0 +1,63 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "CSS'de background-image Özelliği",
+  "name": "background-image",
+  "syntax": "background-image: url | none | initial | inherit;",
+  "js_syntax": "object.style.backgroundImage=\"url('test.jpg')\"",
+  "description": "Bu özellik ile bir ve ya birden fazla arkaplan görseli ayarlanabilir.\n\nVarsayılan olarak, bir arkaplan resmi sol üst köşeden başlayıp kendisini genişlik ve yükseklik kadar tekrar eder.",
+  "version": "CSS1",
+  "version_added": ["CSS3"],
+  "values": [
+    {
+      "value": "URL",
+      "description": "Görselin adresini belirtilir."
+    },
+    {
+      "value": "none",
+      "description": "Arkaplan görseli kaldırılır."
+    },
+    {
+      "value": "linear-gradient()",
+      "description": "Yukarıdan aşağıda en az 2 renk tanımlayarak doğrusal gradyan oluşturur.",
+      "version": "CSS3"
+    },
+    {
+      "value": "radial-gradient()",
+      "description": "Merkezden kenarlara en az 2 renk tanımlayarak radyal gradyan oluşturur.",
+      "version": "CSS3"
+    },
+    {
+      "value": "repeating-linear-gradient()",
+      "description": "Tekrar eden doğrusal gradyan oluşturur.",
+      "version": "CSS3"
+    },
+    {
+      "value": "repeating-radial-gradient()",
+      "description": "Tekrar eden radyal gradyan oluşturur.",
+      "version": "CSS3"
+    },
+    {
+      "value": "initial",
+      "description": "Varsayılan ayarlarına geri döndürür."
+    },
+    {
+      "value": "inherit",
+      "description": "Özelliği üst öğesinden miras alır."
+    }
+  ],
+  "examples": [
+    {
+      "code": ".box {\n\tbackground-image: url(../img/test.jpg);\n\tbackground-repeat: no-repeat;\n\tbackground-position: center;\n}",
+      "description": "En basitinden bir görsel belirleyerek başlayalım."
+    },
+    {
+      "code": ".box {\n\tbackground-image: url(img/logo.png), url(img/bg.png);\n\tbackground-repeat: no-repeat, repeat;\n}",
+      "description": "Birden fazla görsel belirlemek istersek;"
+    },
+    {
+      "code": ".box {\n\tbackground-image: linear-gradient(red, yellow, blue);\n}\n\n.box2 {\n\tbackground-image: radial-gradient(red, yellow);\n}",
+      "description": "Gradientlere örnek vermek gerekirse;"
+    }
+  ],
+  "animatable": false
+}
