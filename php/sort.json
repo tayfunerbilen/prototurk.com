@@ -1,8 +1,9 @@
 {
   "author": "ahmetkorkmaz3 <ahmetkorkmaz3453@gmail.com>",
-  "title": "PHP'de sort fonksiyonu",
+  "edit": ["tayfunerbilen <tayfunerbilen@gmail.com>"],
+  "title": "PHP'de sort() Fonksiyonu",
   "name": "sort",
-  "syntax": "sort ( array &$dizi [, int $seçenekler = SORT_REGULAR ] ) : bool",
+  "syntax": "sort ( array &$array [, int $sort_flags = SORT_REGULAR ] ) : bool",
   "description": "<code>sort</code> fonksiyonu bir dizinin ( array ) sıralanması için kullanılan fonksiyondur.",
   "compatibilities": [
     "php 4",
@@ -11,25 +12,35 @@
   ],
   "params": [
     {
-      "name": "$dizi",
+      "name": "$array",
       "type": "array",
-      "description": "Sıralanması istenen dizi eklenir.",
+      "description": "Sıralama işlemi yapılacak olan dizi.",
       "required": true
+    },
+    {
+      "name": "$sort_flags",
+      "type": "int",
+      "description": "İsteğe bağlı olarak aşağıdaki değerler kullanılarak sıralama işlemi gerçekleştirilebilir.\n\n<b>SORT_REGULAR</b> - Elemanlar normal olarak sıralanır (varsayılan)\n<b>SORT_NUMERIC</b> - Elemanlar sayısal olarak sıralar\n<b>SORT_STRING</b> - Elemanlar karaktere göre sıralar"
     }
   ],
   "examples": [
     {
       "code": "<?php \n\n$dizi = array(\"elma\", \"armut\", \"kiraz\", \"erik\");\nsort($dizi);\n\nprint_r($dizi); /* çıktı : Array ( [0] => armut [1] => elma [2] => erik [3] => kiraz ) */",
-      "description": "<code>$dizi</code> değişkenin içerindeki değerleri alfabetik olarak sıraladık."
+      "description": "Dizi değerlerini alfabetik olarak a'dan z'ye doğru sıralamak için;"
     },
     {
       "code": "<?php\n\n$sayilar = array(5, 2, 3, 8, 7, 6);\nsort($sayilar);\n\nprint_r($sayilar); /* çıktı : Array ( [0] => 2 [1] => 3 [2] => 5 [3] => 6 [4] => 7 [5] => 8 ) */",
-      "description": "<code>$sayilar</code> değişkenin içerisindeki verileri küçükten büyüğe sıraladık."
+      "description": "Dizi değerlerini küçükten büyüğe sıralamak için;"
+    },
+    {
+      "code": "<?php\n\n$arr = [\n    0 => 'z',\n    5 => 'c',\n    2 => 'm',\n    7 => 'a',\n    15 => 'f',\n    24 => 't',\n    11 => 'A'\n];\nsort($arr, SORT_NUMERIC); // anahtarları sayısal olarak küçükten büyüğe sıralar\nprint_r($arr);\n\nsort($arr, SORT_STRING); // değerleri a'dan z'ye doğru küçükten büyüğe doğru sıralar\nprint_r($arr);\n\n?>",
+      "description": "İkinic parametre belirlenerek sıralama işlemi yapıldığında sonuçları;"
     }
   ],
   "return": {
     "type": "boolean",
-    "text": "İşlem gerçekleşir ise true, işlem gerçekleştirilemezse false değeri geriye döner."
+    "text": "Başarılı bir şekilde sıralanırsa TRUE, sıralanamaz ise FALSE değeri döner."
   },
+  "note": "Bu işlem uygulandığında mevcut dizinin anahtarları yeniden atanacaktır. Yani anahtarlar silinip yerine yenileri gelecektir.\nFarkı türden değerleri sıralarken <code>sort()</code> fonksiyonu yeterli olmayabilir. Mümkün olduğunca aynı türden değerleri sıralamak için kullanın.",
   "deprecated": false
 }
