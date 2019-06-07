@@ -15,13 +15,13 @@
     {
       "name": "$değişken",
       "type": "mixed",
-      "default": "Kontrol edilecek değişken",
+      "description": "Kontrol edilecek değişken",
       "required": true
     },
     {
       "name": "$değişken",
       "type": "mixed",
-      "default": "Kontrol edilecek bir başka değişken"
+      "description": "Kontrol edilecek bir başka değişken"
     }
   ],
   "examples": [
