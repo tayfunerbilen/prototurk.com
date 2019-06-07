@@ -20,7 +20,7 @@
     {
       "name": "$sort_flags",
       "type": "int",
-      "description": "İsteğe bağlı olarak aşağıdaki değerler kullanılarak sıralama işlemi gerçekleştirilebilir.\n\n<b>SORT_REGULAR</b> - Elemanlar normal olarak sıralanır (varsayılan)\n<b>SORT_NUMERIC</b> - Elemanlar sayısal olarak sıralar\n<b>SORT_STRING</b> - Elemanlar karaktere göre sıralar"
+      "description": "İsteğe bağlı olarak aşağıdaki değerler kullanılarak sıralama işlemi gerçekleştirilebilir.\n\n<b>SORT_REGULAR</b> - Elemanlar normal olarak sıralanır (varsayılan)\n<b>SORT_NUMERIC</b> - Elemanları sayısal olarak sıralar\n<b>SORT_STRING</b> - Elemanları karaktere göre sıralar"
     }
   ],
   "examples": [
@@ -41,6 +41,6 @@
     "type": "boolean",
     "text": "Başarılı bir şekilde sıralanırsa TRUE, sıralanamaz ise FALSE değeri döner."
   },
-  "note": "Bu işlem uygulandığında mevcut dizinin anahtarları yeniden atanacaktır. Yani anahtarlar silinip yerine yenileri gelecektir.\nFarkı türden değerleri sıralarken <code>sort()</code> fonksiyonu yeterli olmayabilir. Mümkün olduğunca aynı türden değerleri sıralamak için kullanın.",
+  "note": "Bu işlem uygulandığında mevcut dizinin anahtarları sıfırlanır.\nFarkı türden değerleri sıralarken <code>sort()</code> fonksiyonu yeterli olmayabilir. Mümkün olduğunca aynı türden değerleri sıralamak için kullanın.",
   "deprecated": false
 }
