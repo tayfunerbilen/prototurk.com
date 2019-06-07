@@ -1,0 +1,61 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "CSS'de background-repeat Özelliği",
+  "name": "background-repeat",
+  "description": "Arkaplan görselinin tekrarlanıp tekrarlanmayacağını, tekrarlanacak ise nasıl tekrarlanacağını belirlemek için kullanılır.",
+  "version": "CSS1",
+  "values": [
+    {
+      "value": "repeat",
+      "description": "Görseli yatay ve dikey olarak tekrarlar."
+    },
+    {
+      "value": "repeat-x",
+      "description": "Görseli sadece yatak olarak tekrarlar."
+    },
+    {
+      "value": "repeat-y",
+      "description": "Görseli sadece dikey olarak tekrarlar."
+    },
+    {
+      "value": "no-repeat",
+      "description": "Görseli tekrarlamaz."
+    },
+    {
+      "value": "space",
+      "description": "Görsel kırpmaya uğramadan mümkün olduğu şekilde tekrarlanır. Tekrarlanan ilk ve son görsel iki köşeye tutturulur ve eğer kırpılmadan tekrarlanabilecek alan var ise ilgili boşlukları kırpılmadan doldurmaya devam eder."
+    },
+    {
+      "value": "round",
+      "description": "<code>space</code> değeriyle aynıdır tek farkı tekrarlanan görsel araları boşluksuz olarak tekrarlanır."
+    },
+    {
+      "value": "initial",
+      "description": "Varsayılan ayarlarına geri döndürür."
+    },
+    {
+      "value": "inherit",
+      "description": "Özelliği üst öğesinden miras alır."
+    }
+  ],
+  "examples": [
+    {
+      "code": ".box {\n\twidth: 300px;\n\theight: 300px;\n\tbackground-image: url(img/logo.png);\n\tbackground-repeat: repeat-x;\n}",
+      "description": "Dikey eksende tekrarlanan görsel örneği;"
+    },
+    {
+      "code": ".box {\n\twidth: 300px;\n\theight: 300px;\n\tbackground-image: url(img/logo.png);\n\tbackground-repeat: no-repeat;\n}",
+      "description": "Hiçbir şekilde kendini tekrar etmeyen görsel örneği;"
+    },
+    {
+      "code": ".box {\n\twidth: 300px;\n\theight: 300px;\n\tbackground-image: url(img/logo.png);\n\tbackground-size: 40px;\n\tbackground-repeat: space;\n}",
+      "description": "Görselin boyutunu ayarlayarak kırpma işlemi olmadan mümkün olduğunca kendini tekrar ettirme örneği;"
+    },
+    {
+      "code": ".box {\n\twidth: 300px;\n\theight: 300px;\n\tbackground: url(img/logo.png) no-repeat;\n}",
+      "description": "background özelliğinde ki kısa kullanım örneği;"
+    }
+  ],
+  "animatable": false,
+  "default_value": "repeat"
+}
