@@ -1,0 +1,18 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "HTML'de <title> Etiketi",
+  "name": "<title>",
+  "syntax": "<title> .. </title>",
+  "description": "HTML sayfasının başlığını belirlemek için kullanılır.",
+  "version": "HTML",
+  "closing_tag": true,
+  "display": "görünmez",
+  "usage": "Yapısal",
+  "note": "Temel html etiketlerinden birisidir ve mutlaka tanımlanmak zorundadır.",
+  "examples": [
+    {
+      "code": "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>PROTOTÜRK.COM</title>\n\t\t<meta charset=\"utf-8\">\n\t</head>\n\t<body>\n\t\t.. içerik ..\n\t</body>\n</html>",
+      "description": "Sayfa başlığını ayarlayalım."
+    }
+  ]
+}
