@@ -2,6 +2,8 @@
   "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
   "title": "CSS'de background-repeat Özelliği",
   "name": "background-repeat",
+  "syntax": "background-repeat: repeat | repeat-x | repeat-y | no-repeat | initial | inherit;",
+  "js_syntax": "object.style.backgroundRepeat=\"repeat-x\"",
   "description": "Arkaplan görselinin tekrarlanıp tekrarlanmayacağını, tekrarlanacak ise nasıl tekrarlanacağını belirlemek için kullanılır.",
   "version": "CSS1",
   "values": [
