@@ -15,7 +15,8 @@
     {
       "name": "$değişken",
       "type": "mixed",
-      "default": "Kontrol edilecek değişken"
+      "default": "Kontrol edilecek değişken",
+      "required": true
     },
     {
       "name": "$değişken",
