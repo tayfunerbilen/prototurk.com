@@ -21,10 +21,6 @@
     },
     {
       "value": "inherit",
-      "description": "Özellik üst öğesinden miras alınır."
-    },
-    {
-      "value": "inherit",
       "description": "Özelliği üst öğesinden miras alır."
     }
   ],
