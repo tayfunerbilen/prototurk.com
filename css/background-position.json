@@ -1,0 +1,51 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "CSS'de background-position Özelliği",
+  "name": "background-position",
+  "syntax": "background-position: değer;",
+  "js_syntax": "object.style.backgroundPosition=\"center\"",
+  "description": "Arkaplan görselinin nereden başlayacağını belirler. Arkaplan varsayılan olarak sol üst köşeye dayalı bir şekilde görünecektir. ",
+  "version": "CSS1",
+  "values": [
+    {
+      "value": "left top\nleft center\nleft bottom\nright top\nright center\nright bottom\ncenter top\ncenter center\ncenter bottom",
+      "description": "Eğer sadece bir değer tanımlarsanız 2. değer otomatik olarak center değerine eşit olacaktır."
+    },
+    {
+      "value": "x% y%",
+      "description": "İlk değer yatay, ikinci değer dikey eksende konumunu ayarlar. Sol üst köşe için 0% 0%, sağ alt köşe için 100% 100% şeklinde değer girilmelidir. Eğer sadece ilk değer girildiyse, ikinci değer varsayılan olarak 50% şeklinde belirlenir. Varsayılan değeri ise 0% 0% dir."
+    },
+    {
+      "value": "Xpoz Ypoz",
+      "description": "İlk değer yatay, ikinci değer dikey eksende konumunu ayarlar. Sol üst köşe 0 0 olarak belirlenir. Uzunluk birimi olarak CSS'de kullanılan tüm uzunluk birimleri verilebilir. (Örn: px, cm, em vb.) Sadece ilk değer belirtilirse ikinci değer varsayılan olarak 50% şeklinde tanımlanır. Ayrıca %'li değerleri diğer uzunluk birimleriyle karıştırarak kullanabilirsiniz."
+    },
+    {
+      "value": "initial",
+      "description": "Varsayılan ayarlarına geri döndürür."
+    },
+    {
+      "value": "inherit",
+      "description": "Özelliği üst öğesinden miras alır."
+    }
+  ],
+  "examples": [
+    {
+      "code": ".box {\n\twidth: 400px;\n\theight: 400px;\n\tbackground-image: url(img/logo.png);\n\tbackground-position: center; /* center center 'a eşit */\n}",
+      "description": "Arkaplan görselini yatay ve dikey ortalamak için;"
+    },
+    {
+      "code": ".box {\n\twidth: 400px;\n\theight: 400px;\n\tbackground-image: url(img/logo.png);\n\tbackground-position: top right;\n}",
+      "description": "Arkaplan görselini sağ üste ayarlamak için;"
+    },
+    {
+      "code": ".box {\n\twidth: 400px;\n\theight: 400px;\n\tbackground-image: url(img/logo.png);\n\tbackground-position: right;\n}",
+      "description": "Arkaplan görselini dikey eksende sağa doğru ayarlamak için;"
+    },
+    {
+      "code": ".box {\n\twidth: 400px;\n\theight: 400px;\n\tbackground-image: url(img/logo.png);\n\tbackground-position: 50% 20px; /* Dikey eksende %50, yatay eksende 20px başlangıç konumu */\n}",
+      "description": "Arkaplan görselini %'li ayarlamak için;"
+    }
+  ],
+  "animatable": true,
+  "default_value": "0% 0%"
+}
