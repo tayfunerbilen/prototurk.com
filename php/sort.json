@@ -20,6 +20,7 @@
     {
       "name": "$sort_flags",
       "type": "int",
+      "default:" "SORT_REGULAR",
       "description": "İsteğe bağlı olarak aşağıdaki değerler kullanılarak sıralama işlemi gerçekleştirilebilir.\n\n<b>SORT_REGULAR</b> - Elemanlar normal olarak sıralanır (varsayılan)\n<b>SORT_NUMERIC</b> - Elemanları sayısal olarak sıralar\n<b>SORT_STRING</b> - Elemanları karaktere göre sıralar"
     }
   ],
