@@ -1,0 +1,49 @@
+{
+  "author": "abdullahzubeyiryildiz <zubeyir_55@hotmail.com>",
+  "edit": ["tayfunerbilen <tayfunerbilen@gmail.com>"],
+  "title": "Php'de İsset İşlemi",
+  "name": "isset()",
+  "syntax": "isset ( mixed $değişken [, mixed $değişken [, $... ]] ) : bool",
+  "description": "Değişkenin tanımlı olup olmadığını kontrol eder.",
+  "note": "Eğer bir değişken <code>unset()</code> ile yok edilmiş ise, <code>isset()</code> ile kontrolü mümkün değildir.\n\nAyrıca <code>isset()</code> içerisinde birden fazla değer kontrol ediliyorsa soldan sağa doğru kontrol etmeye başlar ve ilk NULL değerde işlemi durdurur.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "$değişken",
+      "type": "mixed",
+      "default": "Kontrol edilecek değişken"
+    },
+    {
+      "name": "$değişken",
+      "type": "mixed",
+      "default": "Kontrol edilecek bir başka değişken"
+    }
+  ],
+  "examples": [
+    {
+      "code": "<?php\n\n\t$text= \"merhaba\";\n\tif( isset($text) ) {\n\t\techo \"değişken tanımlanmış\";\n\t} else {\n\t\techo \"tanımlı değişken bulunamadı.\";\n\t}\n\n?>",
+      "description": "if-else ifadesi ile değişken kontrol örneği;"
+    },
+    {
+      "code": "<?php\n\n$a = 1;\n$b = 2;\n\n$d = 4;\n\nvar_dump(isset($a, $b, $c, $d)); // Çıktı: bool(false)\n\n?>",
+      "description": "Birden fazla değişkenin isset() ile kontrolü örneği;"
+    },
+    {
+      "code": "<?php\n\necho isset($test) ? 'tanımlı' : 'tanımlı değil';\n\n?>",
+      "description": "Ternary operatörü ile isset() örneği;"
+    },
+    {
+      "code": "<?php\n\nif (isset($_POST['ad'])){\n\techo 'Girilen değer: ' . $_POST['ad'];\n}  else {\n\techo 'Lütfen bir değer girin.';\n}",
+      "description": "Form değerlerinin isset() ile kontrolü örneği;"
+    }
+  ],
+  "return": {
+    "type": "boolean",
+    "text": "Eğer değişken tanımlıysa ve değeri NULL değil ise geriye TRUE döner."
+  },
+  "deprecated": false
+}
