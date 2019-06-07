@@ -1,0 +1,29 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "PHP'de get_defined_vars() Fonksiyonu",
+  "name": "get_defined_vars",
+  "syntax": "get_defined_vars ( void ) : array",
+  "description": "Adındanda anlaşılacağı üzere, tanımlı tüm değişkenleri içeren bir dizi döndürür. ",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "changelogs": [
+    {
+      "version": "5.0.0",
+      "description": "Artık $GLOBALS değişkeninin sakladığı değerlerde bu fonksiyonda görüntülenebilir."
+    }
+  ],
+  "examples": [
+    {
+      "code": "<?php\n\n\t$dizi = [1, 2, 3, 4, 5];\n\t$ad = 'Tayfun';\n\t$web = 'prototurk.com';\n\n\t$arg = get_defined_vars();\n\tprint_r($arg);\n\n\techo $arg['dizi'][2]; // Çıktı: 3\n\techo $arg['web']; // Çıktı: prototurk.com\n\n?>",
+      "description": "Birkaç değişken tanımlayıp test etmek gerekirse;"
+    }
+  ],
+  "return": {
+    "type": "array",
+    "text": "Tüm tanımlı değişkenleri içeren çok boyutlu bir dizi döne"
+  },
+  "deprecated": true
+}
