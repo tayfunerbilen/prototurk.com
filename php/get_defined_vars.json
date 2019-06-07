@@ -23,7 +23,7 @@
   ],
   "return": {
     "type": "array",
-    "text": "Tüm tanımlı değişkenleri içeren çok boyutlu bir dizi döne"
+    "text": "Tüm tanımlı değişkenleri içeren çok boyutlu bir dizi döner."
   },
   "deprecated": true
 }
