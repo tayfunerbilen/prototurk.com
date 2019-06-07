@@ -34,7 +34,7 @@
   ],
   "examples": [
     {
-      "code": "p {\n\tline-height: 3; // 3 * yazı boyutu büyüklüğü\n}",
+      "code": "p {\n\tline-height: 3; /* 3 * yazı boyutu büyüklüğü */\n}",
       "description": "Mesela bir sayı olarak belirlemek istersek;"
     },
     {
