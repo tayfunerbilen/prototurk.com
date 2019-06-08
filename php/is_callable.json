@@ -42,6 +42,10 @@
     {
       "code": "<?php\n\n$degisken = 'test';\n\nvar_dump(is_callable($degisken, false, $funcName)); // Çıktı: bool(false)\n// Çünkü test adında çağırılabilir bir fonksiyon ya da metod yok\n\necho $funcName; // Çıktı: test\n// Burada sadece ilgili değişkenin içerdiği değeri döndürür.\n\n?>\n",
       "description": "Şimdide 3. parametre için bir örnek verelim."
+    },
+    {
+      "code": "<?php\n\nclass testSinif {\n  function testMetod(){}\n}\n\n$degisken = [new testSinif(), 'testMetod'];\n\nvar_dump(is_callable($degisken)); // Çıktı: bool(true)\n// testSinif sınıfı içerisinde testMetod çağırılabilir bir metod olduğu için true döndü.\n\nis_callable($degisken, false, $metodAdi);\necho $metodAdi; // Çıktı: testSinif::testMetod\n\n?>",
+      "description": "Sınıf içerisindeki metodlarda kullanımı ise şöyledir."
     }
   ],
   "return": {
