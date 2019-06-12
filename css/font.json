@@ -4,7 +4,7 @@
   "name": "font",
   "syntax": "font: font-style font-variant font-weight font-size/line-height font-family",
   "js_syntax": "object.style.font=\"italic small-caps bold 15px Arial, 'sans-serif'\"",
-  "description": "<code>font</code> özelliği, tüm diğer font özelliklerinin kısa yoldan kullanımıdır. Bu font özellikleri ise şunlardır;\n\n<ul class=\"list\"><li><a href=\"css/font-style-ozelligi\">font-style</a></li><li><a href=\"/css/font-variant-ozelligi\">font-variant</a></li><li><a href=\"/css/font-weight-ozelligi\">font-weight</a></li><li><a href=\"/css/font-size-ozelligi\">font-size</a></li><li><a href=\"/css/line-height-ozelligi\">line-height</a></li><li><a href=\"/css/font-family-ozelligi\">font-family</a></li></ul><code>font-size</code> ve <code>font-family</code> tanımları mutlaka olmak zorundadır. Diğerleri isteğe bağlı kullanılabilir.",
+  "description": "<code>font</code> özelliği, tüm diğer font özelliklerinin kısa yoldan kullanımıdır. Bu font özellikleri ise şunlardır;\n<ul class=\"ul\"><li><a href=\"css/font-style-ozelligi\">font-style</a></li><li><a href=\"/css/font-variant-ozelligi\">font-variant</a></li><li><a href=\"/css/font-weight-ozelligi\">font-weight</a></li><li><a href=\"/css/font-size-ozelligi\">font-size</a></li><li><a href=\"/css/line-height-ozelligi\">line-height</a></li><li><a href=\"/css/font-family-ozelligi\">font-family</a></li></ul><code>font-size</code> ve <code>font-family</code> tanımları mutlaka olmak zorundadır. Diğerleri isteğe bağlı kullanılabilir.",
   "version": "CSS1",
   "values": [
     {
