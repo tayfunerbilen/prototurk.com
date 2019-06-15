@@ -26,6 +26,10 @@
     {
       "code": "<?php\n\nif ( !function_exists('test') ){\n\n\tfunction test($str){\n\t\treturn $str;\n\t}\n\n}",
       "description": "Bir fonksiyonu tanımlamadan önce kontrol edelim, eğer yoksa fonksiyonu tanımlayalım."
+    },
+    {
+      "code": "<?php\n\nfunction Database(){\n\tfunction Connect(){\n\n\t}\n}\n\nvar_export(function_exists('Database')); // true\nvar_export(function_exists('Connect')); // false\n\n?>",
+      "description": "İç içe (nested) fonksiyonu ne yazık ki desteklemiyor. Örnek vermek gerekirse;"
     }
   ],
   "return": {
