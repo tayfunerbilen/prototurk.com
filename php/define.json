@@ -51,7 +51,7 @@
       "description": "Büyük-küçük harfe duyarsız bir sabit tanımlayalım."
     },
     {
-      "code": "<?php\n\ndefine('MEYVELER', [\n    'Armut',\n    'Elma',\n    'Ayva'\n]);\n\necho MEYVELER[1]; // Çıktı: Elma\n\n// Dizi içeriği formatlı bir şekilde gösterilebilir\nprint_r(MEYVELER);\n/*\nArray\n(\n    [0] => Armut\n    [1] => Elma\n    [2] => Ayva\n)\n*/\n\n// Dizi değeri taşıdığı için döngüye girebilir\nforeach (MEYVELER as $meyve){\n    echo $meyve;\n}\n\n// Tüm dizi fonksiyonu kullanılabilir.\necho count(MEYVELER);\n\n?>",
+      "code": "<?php\n\ndefine('MEYVELER', [\n    'Armut',\n    'Elma',\n    'Ayva'\n]);\n\necho MEYVELER[1]; // Çıktı: Elma\n\n// Dizi içeriği formatlı bir şekilde gösterilebilir\nprint_r(MEYVELER);\n/*\nArray\n(\n    [0] => Armut\n    [1] => Elma\n    [2] => Ayva\n)\n*/\n\n// Dizi değeri taşıdığı için döngüye girebilir\nforeach (MEYVELER as $meyve){\n    echo $meyve;\n}\n\n// Tüm dizi fonksiyonları kullanılabilir.\necho count(MEYVELER);\n\n?>",
       "description": "PHP7 ile birlikte gelen array tipli bir sabit tanımlayalım."
     }
   ],
