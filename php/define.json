@@ -1,0 +1,62 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "PHP'de define() Fonksiyonu",
+  "name": "define()",
+  "syntax": "define ( string $name , mixed $value [, bool $case_insensitive = FALSE ] ) : bool",
+  "description": "Bir sabit tanımlamak için kullanılır. Tanımlanan sabit değişkenlerin adındanda anlaşılacağı üzere değerleri değiştirilemez.",
+  "note": "Bir php dosyasını sayfaya dahil ettiğinizde, sadece dahil etmeden önceki sabitler kullanılabilir. Yani sayfaya dahil ettikten sonra altta tanımlanan sabitler dahil edilen sayfada kullanılamazlar.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "$name",
+      "type": "string",
+      "description": "Sabitin adı",
+      "required": true
+    },
+    {
+      "name": "$value",
+      "type": "mixed",
+      "description": "Sabitin taşıyacağı değer. PHP5'de integer, float, string, boolean tiplerini alırken, PHP7 ile birlikte array tipinde değerlerde depolanabilir."
+    },
+    {
+      "name": "$case_insensitive",
+      "type": "boolean",
+      "description": "<b>TRUE</b> olarak belirlenirse, sabit büyük-küçük harfe duyarsız olarak tanımlanır. Varsayılan olarak büyük-küçük harfe duyarlıdır. Yani Path ile PATH birbirinden farklıdır.",
+      "default": "FALSE",
+      "required": false
+    }
+  ],
+  "changelogs": [
+    {
+      "version": "7.0.0",
+      "description": "<b>array</b> tipi depolayabilir."
+    },
+    {
+      "version": "7.3.0",
+      "description": "<code>$case_insensitive</code> parametresi kullanımdan kaldırıldı. 8.0.0 versiyonunda ise silineceği duyuruldu."
+    }
+  ],
+  "examples": [
+    {
+      "code": "<?php\n\ndefine('Path', '/usr/var/www');\ndefine('PATH', '/home');\ndefine('PaTh', realpath('.'));\n\necho Path; // Çıktı: /usr/var/www\necho PATH; // Çıktı: /home\necho PaTh; // Çıktı: /xfiddlec/public_html/main (değişkenlik gösterebilir)\n\n?>",
+      "description": "Büyük-küçük harfe duyarlı sabitler tanımlayalım."
+    },
+    {
+      "code": "<?php\n\ndefine(\"URL\", \"https://prototurk.com\", true);\necho URL; // Çıktı: https://prototurk.com\necho Url; // Çıktı: https://prototurk.com\n\n?>",
+      "description": "Büyük-küçük harfe duyarsız bir sabit tanımlayalım."
+    },
+    {
+      "code": "<?php\n\ndefine('MEYVELER', [\n    'Armut',\n    'Elma',\n    'Ayva'\n]);\n\necho MEYVELER[1]; // Çıktı: Elma\n\n// Dizi içeriği formatlı bir şekilde gösterilebilir\nprint_r(MEYVELER);\n/*\nArray\n(\n    [0] => Armut\n    [1] => Elma\n    [2] => Ayva\n)\n*/\n\n// Dizi değeri taşıdığı için döngüye girebilir\nforeach (MEYVELER as $meyve){\n    echo $meyve;\n}\n\n// Tüm dizi fonksiyonu kullanılabilir.\necho count(MEYVELER);\n\n?>",
+      "description": "PHP7 ile birlikte gelen array tipli bir sabit tanımlayalım."
+    }
+  ],
+  "return": {
+    "type": "boolean",
+    "text": "Tanımlama başarılı olursa <b>TRUE</b> başarısız olursa <b>FALSE</b> değeri döner."
+  },
+  "deprecated": false
+}
