@@ -4,7 +4,7 @@
   "name": "define()",
   "syntax": "define ( string $name , mixed $value [, bool $case_insensitive = FALSE ] ) : bool",
   "description": "Bir sabit tanımlamak için kullanılır. Tanımlanan sabit değişkenlerin adındanda anlaşılacağı üzere değerleri değiştirilemez.",
-  "note": "Bir php dosyasını sayfaya dahil ettiğinizde, sadece dahil etmeden önceki sabitler kullanılabilir. Yani sayfaya dahil ettikten sonra altta tanımlanan sabitler dahil edilen sayfada kullanılamazlar.",
+  "note": "Bir php dosyasını sayfaya dahil ettiğinizde, sadece dahil etmeden önceki sabitler kullanılabilir. Yani sayfaya dahil ettikten sonra altta tanımlanan sabitler dahil edilen sayfada kullanılamazlar.\nAyrıca unutmayın, sabitler isimleri genelde tamamı büyük olacak şekilde tanımlanır. Böylece ayırt etmesi sizin için daha kolay olacaktır.",
   "compatibilities": [
     "php 4",
     "php 5",
@@ -20,7 +20,8 @@
     {
       "name": "$value",
       "type": "mixed",
-      "description": "Sabitin taşıyacağı değer. PHP5'de integer, float, string, boolean tiplerini alırken, PHP7 ile birlikte array tipinde değerlerde depolanabilir."
+      "description": "Sabitin taşıyacağı değer. PHP5'de integer, float, string, boolean tiplerini alırken, PHP7 ile birlikte array tipinde değerlerde depolanabilir.",
+      "required": true
     },
     {
       "name": "$case_insensitive",
