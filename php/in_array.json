@@ -1,0 +1,53 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "PHP'de in_array() Fonksiyonu",
+  "name": "in_array",
+  "syntax": "in_array ( mixed $needle , array $haystack [, bool $strict = FALSE ] ) : bool",
+  "description": "Belirtilen değerin dizide olup olmadığını kontrol eder.",
+  "note": "İşin aslı samanlıkta iğne aramanın yazılım versiyonudur :) Samanlık burada dizimiz, iğne ise dizi içinde aradığımız elemandır. Ve değer aranırken büyük-küçük harfe duyarlı olarak arayacaktır.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "$needle",
+      "type": "mixed",
+      "description": "Aranacak değer",
+      "required": true
+    },
+    {
+      "name": "$haystack",
+      "type": "array",
+      "description": "Arama yapılacak dizi",
+      "required": true
+    },
+    {
+      "name": "$strict",
+      "type": "boolean",
+      "description": "Eğer <b>TRUE</b> olarak belirlenirse, tip dayatması yapılacaktır. Yani 1.15 ile \"1.15\" aynı olarak değerlendirilmeyecektir.",
+      "default": "FALSE",
+      "required": false
+    }
+  ],
+  "examples": [
+    {
+      "code": "<?php\n\n$dizi = ['istanbul', 'ankara', 'eskişehir'];\n\nif ( in_array('eskişehir', $dizi) ){\n    echo 'eskişehir dizi içerisinde yer alıyor.';\n}\n\n?>",
+      "description": "Dizinin içinde belirlediğimiz değerin olup olmadığını kontrol edelim."
+    },
+    {
+      "code": "<?php\n\n$dizi = [1, 3, 1.12, 1.18];\n\n// tip dayatması olmadığında tipine bakmadığı için dizide yer aldığını varsayıyor.\nvar_export(in_array('1.18', $dizi)); // Çıktı: true\n\n// tip dayatmasını aktif ettiğimizde biz string bir değer arıyoruz, oysa dizide bulunan değer double\nvar_export(in_array('1.18', $dizi, true)); // Çıktı: false\n\n// tip dayatmasına göre doğru şekilde arama yaparsak sonuç true olacaktır.\nvar_export(in_array(1.18, $dizi, true)); // Çıktı: true\n\n?>",
+      "description": "Tip dayatması yaparak dizi içinde değer arayalım."
+    },
+    {
+      "code": "<?php\n\n$dizi = ['Tayfun', 'Ahmet', 'Durmuş'];\n\nfunction in_arrayi($needle, $haystack) {\n    return in_array(strtolower($needle), array_map('strtolower', $haystack));\n}\n\nvar_export(in_arrayi('tayfun', $dizi)); // Çıktı: true\n\n?>",
+      "description": "Büyük-küçük harfe duyarsız şekilde aratmak istersek, kendimiz bir fonksiyon yazıp kullanabiliriz."
+    }
+  ],
+  "return": {
+    "type": "boolean",
+    "text": "Dizide bulunuyorsa <b>TRUE</b>, bulunmuyorsa <b>FALSE</b> değerini döndürür."
+  },
+  "deprecated": false
+}
