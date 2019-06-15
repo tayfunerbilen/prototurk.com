@@ -1,27 +1,32 @@
 {
   "author": "Emre JILTA <jilta.e@gmail.com>",
+  "edit": ["tayfunerbilen <tayfunerbilen@gmail.com>"],
   "title": "PHP'de strtolower() Fonksiyonu",
   "name": "strtolower",
-  "syntax": "strtolower(string $str) : string",
-  "description": "Bir string içindeki tüm karakterleri küçük harfe çevirerek elde edilen string değeri döndürür.",
+  "syntax": "strtolower ( string $string ) : string",
+  "description": "Bir ifadenin tüm harflerini küçük harfe dönüştürür.",
   "compatibilities": [
     "php 4",
     "php 5",
     "php 7"
   ],
-  "params": [{
-    "name": "$str",
-    "type": "string",
-    "description": "Girilen string değer",
-    "required": true
-  }],
-  "examples": [{
-    "code": "<?\n\t$deger = \"PHP ile Programlama\";\n\techo strtolower($deger);\n?>",
-    "title": "Örnek Kullanım"
-  }],
+  "params": [
+    {
+      "name": "$str",
+      "type": "string",
+      "description": "Küçük harfe döndürülecek string değer",
+      "required": true
+    }
+  ],
+  "examples": [
+    {
+      "code": "<?php\n\t$deger = \"PHP ile Programlama\";\n\techo strtolower($deger); // Çıktı: php ile programlama\n?>",
+      "description": "Belirlenen ifadenin tüm harflerini küçük harfe dönüştürelim."
+    }
+  ],
   "return": {
     "type": "string",
-    "text": "Küçük harfli string değer döndürülür"
+    "text": "Tüm harfleri küçük harfe dönüştürülmüş string değer döner."
   },
   "deprecated": false
 }
