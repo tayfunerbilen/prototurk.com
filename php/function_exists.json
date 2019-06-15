@@ -25,7 +25,7 @@
     },
     {
       "code": "<?php\n\nif ( !function_exists('test') ){\n\n\tfunction test($str){\n\t\treturn $str;\n\t}\n\n}",
-      "description": "Bir fonksiyon tanımladan önce kontrol edelim, eğer yoksa fonksiyonu tanımlayalım."
+      "description": "Bir fonksiyonu tanımlamadan önce kontrol edelim, eğer yoksa fonksiyonu tanımlayalım."
     }
   ],
   "return": {
