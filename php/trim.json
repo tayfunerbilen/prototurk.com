@@ -1,0 +1,53 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "PHP'de trim() Fonksiyonu",
+  "name": "trim",
+  "syntax": "trim ( string $str [, string $character_mask = \" \\t\\n\\r\\0\\x0B\" ] ) : string",
+  "description": "İfadenin başındaki ve sonundaki boşlukları (ve belirtilen diğer karakterleri) siler.",
+  "note": "Eğer <code>$character_mask</code> parametresi belirtilmez ise varsayılan olarak şu karakterler silinecektir;\n\n\" \" (ASCII 32 (0x20)), boşluk\n\"\\t\" (ASCII 9 (0x09)), tab karakteri\n\"\\n\" (ASCII 10 (0x0A)), satır sonu karakteri\n\"\\r\" (ASCII 13 (0x0D)), satır başı karakteri\n\"\\0\" (ASCII 0 (0x00)), NUL-bayt.\n\"\\x0B\" (ASCII 11 (0x0B)), dikey sekme\n\nAyrıca unutmayın, \\ ile başlayan (Örn: \\t, \\r, \\n) karakterlerini temizleyebilmek için <code>trim()</code> fonksiyonunda 2. parametreyi çift tırnak içinde tanımlamanız gerekiyor.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "$str",
+      "type": "string",
+      "description": "İşlem yapılacak değer",
+      "required": true
+    },
+    {
+      "name": "$character_mask",
+      "type": "string",
+      "description": "Silme işlemi yapılacak karakterler",
+      "default": " \\t\\n\\r\\0\\x0B",
+      "required": false
+    }
+  ],
+  "changelogs": [
+    {
+      "version": "4.1.0",
+      "description": "<code>$character_mask</code> isteğe bağlı olarak eklendi."
+    }
+  ],
+  "examples": [
+    {
+      "code": "<?php\n\n$str = '   prototurk   ';\n\nvar_dump($str); // boşluklarla birlikte 15 karakter\nvar_dump(trim($str)); // boşlukları kaldırdık artık olması gerektiği 9 karakter\n\n?>",
+      "description": "Sadece string değeri vererek ilgili karakterleri temizleyelim."
+    },
+    {
+      "code": "<?php\n\n$str = 'www.prototurk.com/';\n\n// w, . ve / karakterlerini başında ve sonunda varsa kaldırdık.\necho trim($str, 'w./'); // Çıktı: prototurk.com\n\n?>",
+      "description": "Özel olarak başında ve sonunda silmek istediğimiz karakterleri belirtelim."
+    },
+    {
+      "code": "<?php\n\n$meyve = array('elma','muz ', ' muşmula ');\nvar_dump($meyve);\n/*\narray(3) {\n  [0]=>\n  string(4) \"elma\"\n  [1]=>\n  string(4) \"muz \"\n  [2]=>\n  string(10) \" muşmula \"\n}\n*/\n\n$meyve = array_map('trim', $meyve);\nvar_dump($meyve);\n/*\narray(3) {\n  [0]=>\n  string(4) \"elma\"\n  [1]=>\n  string(3) \"muz\"\n  [2]=>\n  string(8) \"muşmula\"\n}\n*/\n\n?>",
+      "description": "Dizi değerlerine <code>trim</code> uygulamak için ise;"
+    }
+  ],
+  "return": {
+    "type": "string",
+    "text": "Başındaki ve sonundaki belirtilen karakterleri temizlenmiş string değer geriye döner."
+  },
+  "deprecated": false
+}
