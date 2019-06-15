@@ -1,0 +1,36 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "PHP'de function_exists() Fonksiyonu",
+  "name": "function_exists",
+  "syntax": "function_exists ( string $function_name ) : bool",
+  "description": "Belirtilen değere göre bir fonksiyonun var olup olmadığını kontrol eder.",
+  "note": "Ayarlarda kapalı dahi olsa, kullanılmayan ancak tanımlı fonksiyonlar bulunabilir. \"image\" fonksiyonları buna bir örnektir.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "$function_name",
+      "type": "string",
+      "description": "Kontrol edilecek fonksiyonun adı",
+      "required": true
+    }
+  ],
+  "examples": [
+    {
+      "code": "<?php\n\nif ( function_exists('curl_init') ){\n\techo 'CURL işlemlerini kullanabilirsiniz.';\n} else {\n\techo 'CURL kullanılamaz';\n}\n\n?>",
+      "description": "Bir fonksiyonun tanımlı olup olmadığını kontrol edelim."
+    },
+    {
+      "code": "<?php\n\nif ( !function_exists('test') ){\n\n\tfunction test($str){\n\t\treturn $str;\n\t}\n\n}",
+      "description": "Bir fonksiyon tanımladan önce kontrol edelim, eğer yoksa fonksiyonu tanımlayalım."
+    }
+  ],
+  "return": {
+    "type": "boolean",
+    "text": "Kontrol edilen değer fonksiyon olarak tanımlıysa <b>TRUE</b> değil ise <b>FALSE</b> döner."
+  },
+  "deprecated": false
+}
