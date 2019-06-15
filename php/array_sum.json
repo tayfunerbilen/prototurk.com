@@ -1,0 +1,30 @@
+{
+  "author": "Abdullah Bozdağ <abdullah@radkod.com>",
+  "title": "PHP'de array_sum() fonksiyonu",
+  "name": "array_sum",
+  "syntax": "array_sum ( array $array ) : number",
+  "description": "array_sum - Bir dizideki değerlerin toplamını hesapla",
+  "note": "array_sum(), bir dizideki değerlerin toplamını döndürür.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "type": "array",
+      "required": true
+    }
+  ],
+  "examples": [
+    {
+      "code": "<?php\n$a = array(2, 4, 6, 8);\necho \"sum(a) = \" . array_sum($a) . \"\\n\";\n\n$b = array(\"a\" => 1.2, \"b\" => 2.3, \"c\" => 3.4);\necho \"sum(b) = \" . array_sum($b) . \"\\n\";\n?>\n\n// çıktı\n\nsum(a) = 20\nsum(b) = 6.9",
+      "title": "array_sum() örneği"
+    }
+  ],
+  "return": {
+    "type": "int",
+    "text": "Değerlerin toplamını bir tamsayı veya değişken olarak döndürür; Dizi boşsa 0."
+  },
+  "deprecated": false
+}
