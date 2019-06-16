@@ -23,7 +23,7 @@
       "description": "En basit olarak bir değişkenin tipinin string olup olmadığını kontrol edelim."
     },
     {
-      "code": "<?php\n\n$dizi = [null, false, 'test', 15, 2.15, '2.15'];\nforeach ($dizi as $eleman){\n    echo var_export($eleman) . ' = ';\n    echo var_dump(is_string($eleman)) . '<br>';\n}\n/*\nNULL = bool(false)\nfalse = bool(false)\n'test' = bool(true)\n15 = bool(false)\n2.149999999999999911182158029987476766109466552734375 = bool(false)\n'2.15' = bool(true)\n*/\n\n?>",
+      "code": "<?php\n\n$dizi = [null, false, 'test', 15, 2.15, '2.15', '', ' ', '0', 0];\nforeach ($dizi as $eleman){\n    echo var_export($eleman) . ' = ';\n    echo var_dump(is_string($eleman)) . '<br>';\n}\n/*\nNULL = bool(false) \nfalse = bool(false) \n'test' = bool(true) \n15 = bool(false) \n2.149999999999999911182158029987476766109466552734375 = bool(false) \n'2.15' = bool(true) \n'' = bool(true) \n' ' = bool(true) \n'0' = bool(true) \n0 = bool(false) \n*/\n\n?>",
       "description": "Diğer tiplerde fonksiyon davranışını sınayalım."
     }
   ],
