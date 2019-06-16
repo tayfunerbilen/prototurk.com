@@ -1,0 +1,56 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "PHP'de array_keys() Fonksiyonu",
+  "name": "array_keys",
+  "syntax": "array_keys ( array $array , mixed $search_value [, bool $strict = FALSE ] ) : array",
+  "description": "Belirtilen diziye ait tüm anahtarları geriye döndürür.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "$array",
+      "type": "array",
+      "description": "Anahtarların döndürüleceği dizi",
+      "required": true
+    },
+    {
+      "name": "$search_value",
+      "type": "mixed",
+      "description": "Değerler içerisinde arama yapılacak kelime",
+      "required": false
+    },
+    {
+      "name": "$strict",
+      "type": "boolean",
+      "description": "Arama yaparken eşittir yerine denktir ifadesiyle arama yapacaktır.",
+      "default": "FALSE",
+      "required": false
+    }
+  ],
+  "examples": [
+    {
+      "code": "<?php\n\n$dizi = [\n    'ad' => 'Tayfun',\n    'soyad' => 'Erbilen',\n    'site' => 'https://prototurk.com',\n    19,\n    'PROTOTURK'\n];\n\necho '<pre>';\nprint_r(array_keys($dizi));\n/*\nArray\n(\n    [0] => ad\n    [1] => soyad\n    [2] => site\n    [3] => 0\n    [4] => 1\n)\n*/\n\n?>",
+      "description": "Bir dizinin tüm anahtarlarını bir dizi halinde görelim."
+    },
+    {
+      "code": "<?php\n\nfunction all_array_keys($arr)\n{\n    static $keys = [];\n    foreach ($arr as $key => $val){\n        $keys[] = $key;\n        if (is_array($val))\n            return all_array_keys($val);\n    }\n    return $keys;\n}\n\n$arr = [\n    'ad' => 'tayfun',\n    'soyad' => 'erbilen',\n    'a' => [\n        'b' => 'c',\n        'd' => [\n            'e' => 'f'\n        ]\n    ]\n];\n\n$keys = all_array_keys($arr);\nprint_r($keys);\n/*\nArray\n(\n    [0] => ad\n    [1] => soyad\n    [2] => a\n    [3] => b\n    [4] => d\n    [5] => e\n)\n*/\n\n?>",
+      "description": "İç içe dizilerde tüm anahtarlar için fonksiyon işe yaramamaktadır. Onun yerine aşağıdaki gibi bir alternatif yazılabilir."
+    },
+    {
+      "code": "<?php\n\n$dizi = [\n    'Tayfun',\n    'Güner',\n    'Hakan',\n    'Tayfun',\n    'Burak',\n    'ad' => 'Tayfun',\n    'Tayfun'\n];\n\nprint_r(array_keys($dizi));\n/*\nArray\n(\n    [0] => 0\n    [1] => 1\n    [2] => 2\n    [3] => 3\n    [4] => 4\n    [5] => ad\n    [6] => 5\n)\n*/\n\n?>",
+      "description": "Değeri eşleşen anahtarları döndürmeye bir örnek verecek olursak;"
+    },
+    {
+      "code": "<?php\n\n$dizi = [\n    1,\n    'yas' => '1',\n    'yasi' => 1\n];\n\nprint_r(array_keys($dizi, 1));\n/*\nArray\n(\n    [0] => 0\n    [1] => yas\n    [2] => yasi\n)\n*/\n\nprint_r(array_keys($dizi, 1, true));\n/*\nArray\n(\n    [0] => 0\n    [1] => yasi\n)\n*/\n\n?>",
+      "description": "3. parametreyi kullanarak aranan değeri denkse olarak kontrol edilecek bir örnek vermek gerekirse;"
+    }
+  ],
+  "return": {
+    "type": "array",
+    "text": "Belirtilen dizilerin anahtarları bir dizi olarak geriye döner."
+  },
+  "deprecated": false
+}
