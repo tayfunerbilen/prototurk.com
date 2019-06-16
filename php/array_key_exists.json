@@ -38,7 +38,7 @@
       "description": "Ayrıca objelerinde kontrolünü yapabiliyorsunuz. Sınıf içinde private ya da protected olarak tanımlanmadığı sürece kontrolü yapılabilir ancak php tarafından 2. parametrenin her zaman array olması öneriliyor. Bu gibi durumlarda en doğru sonuç için <code>property_exists()</code> fonksiyonunu kullanın."
     },
     {
-      "code": "<?php\n\nfunction _array_key_exists($cur_key, $arr){\n    if ( array_key_exists($cur_key, $arr) ) return true;\n    else {\n        foreach ($arr as $key => $val){\n            if (is_array($val)) return _array_key_exists($cur_key, $val);\n        }\n    }\n}\n\n$arr = [\n    'ad' => 'tayfun',\n    'soyad' => 'erbilen',\n    'a' => [\n        'b' => [\n            'c' => 'd'\n        ]\n    ]\n];\n\necho _array_key_exists('c', $arr); // Çıktı: 1",
+      "code": "<?php\n\nfunction _array_key_exists($cur_key, $arr){\n    if ( array_key_exists($cur_key, $arr) )\n        return true;\n    else\n        foreach ($arr as $key => $val)\n            if (is_array($val)) return _array_key_exists($cur_key, $val);\n}\n\n$arr = [\n    'ad' => 'tayfun',\n    'soyad' => 'erbilen',\n    'a' => [\n        'b' => [\n            'c' => 'd'\n        ]\n    ]\n];\n\necho _array_key_exists('c', $arr); // Çıktı: 1",
       "description": "İç içe dizilerde fonksiyon işlevini yerine getirmemektedir. Bunun için kendiniz aşağıdaki gibi bir alternatif fonksiyon yazabilirsiniz."
     }
   ],
