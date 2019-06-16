@@ -1,0 +1,35 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "PHP'de file_exists() Fonksiyonu",
+  "name": "file_exists",
+  "syntax": "file_exists ( string $filename ) : bool",
+  "description": "Dosya ya da dizinin var olup olmadığını kontrol eder.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "$filename",
+      "type": "string",
+      "description": "Kontrol edilecek dosya ya da dizinin yolu",
+      "required": true
+    }
+  ],
+  "examples": [
+    {
+      "code": "<?php\n\n$path = 'cache/test.json';\n\nif ( file_exists($path) ){\n    echo 'Dosya mevcut';\n} else {\n    echo 'Dosya bulunamadı';\n}\n\n?>",
+      "description": "Bir dosyanın var olup olmadığını kontrol edelim."
+    },
+    {
+      "code": "<?php\n\n$path = 'upload/slider';\n\nif ( file_exists($path) ){\n    echo 'Dosya mevcut';\n} else {\n    echo 'Dosya bulunamadı';\n}\n\n?>",
+      "description": "Bir dizinin var olup olmadığını kontrol edelim."
+    }
+  ],
+  "return": {
+    "type": "boolean",
+    "text": "Kontrol edilen dosya/dizin var ise <b>TRUE</b> yok ise <b>FALSE</b> değeri döner."
+  },
+  "deprecated": false
+}
