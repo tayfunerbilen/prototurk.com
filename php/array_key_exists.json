@@ -1,0 +1,50 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "PHP'de array_key_exists() Fonksiyonu",
+  "name": "array_key_exists",
+  "syntax": "array_key_exists ( mixed $key , array $array ) : bool",
+  "description": "Dizi içerisinde belirtilen anahtarın olup olmadığını kontrol eder.",
+  "note": "İç içe dizilerde bu fonksiyon işe yaramamaktadır.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "$key",
+      "type": "mixed",
+      "description": "Kontrol edilecek anahtarın adı",
+      "required": true
+    },
+    {
+      "name": "$array",
+      "type": "array",
+      "description": "Kontrol edilecek dizi",
+      "required": true
+    }
+  ],
+  "examples": [
+    {
+      "code": "<?php\n\n$dizi = [\n    'ad' => 'Tayfun',\n    'soyad' => 'Erbilen'\n];\n\nif ( array_key_exists('soyad', $dizi) ){\n    echo '$dizi içerisinde \"soyad\" anahtarı bulunuyor';\n}\n\n?>",
+      "description": "En basit haliyle örnek vermek gerekirse;"
+    },
+    {
+      "code": "<?php\n\n$dizi = [\n    'ad' => 'Tayfun',\n    'soyad' => 'Erbilen',\n    'yas' => NULL\n];\n\nvar_dump(isset($dizi['yas'])); // Çıktı: bool(false)\nvar_dump(array_key_exists('yas', $dizi)); // Çıktı: bool(true)\n\n?>",
+      "description": "Eğer dizi değeri NULL ise <code>isset()</code> ile kontrol etmek doğru bir kontrol olmaz, zira NULL değerli kontrollerde <code>isset()</code> <b>FALSE</b> değeri döndürecektir."
+    },
+    {
+      "code": "<?php\n\nclass Test\n{\n\n    private $test1;\n    protected $test2;\n    public $test3;\n    public $test4 = \"Linux\";\n    \n}\n\n$php = new Test();\n\nvar_dump(array_key_exists('test1', $php)); // Çıktı: bool(false)\nvar_dump(array_key_exists('test2', $php)); // Çıktı: bool(false)\nvar_dump(array_key_exists('test3', $php)); // Çıktı: bool(true)\nvar_dump(array_key_exists('test4', $php)); // Çıktı: bool(true)\n\n?>",
+      "description": "Ayrıca objelerinde kontrolünü yapabiliyorsunuz. Sınıf içinde private ya da protected olarak tanımlanmadığı sürece kontrolü yapılabilir ancak php tarafından 2. parametrenin her zaman array olması öneriliyor. Bu gibi durumlarda en doğru sonuç için <code>property_exists()</code> fonksiyonunu kullanın."
+    },
+    {
+      "code": "<?php\n\nfunction _array_key_exists($cur_key, $arr){\n    foreach ($arr as $key => $val){\n        if ($key == $cur_key){\n            return true;\n        }\n        if (is_array($val)){\n            return _array_key_exists($cur_key, $val);\n        }\n    }\n    return false;\n}\n\n$arr = [\n    'ad' => 'tayfun',\n    'soyad' => 'erbilen',\n    'a' => [\n        'b' => [\n            'c' => 'd'\n        ]\n    ]\n];\n\necho _array_key_exists('c', $arr); // Çıktı: 1",
+      "description": "İç içe dizilerde fonksiyon işlevini yerine getirmemektedir. Bunun için kendiniz aşağıdaki gibi bir alternatif fonksiyon yazabilirsiniz."
+    }
+  ],
+  "return": {
+    "type": "boolean",
+    "text": "Kontrol edilen anahtar dizi içerisinde var ise <b>TRUE</b> yok ise <b>FALSE</b> döner."
+  },
+  "deprecated": false
+}
