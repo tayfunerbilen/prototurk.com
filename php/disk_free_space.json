@@ -1,0 +1,40 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "PHP'de disk_free_space() Fonksiyonu",
+  "name": "disk_free_space",
+  "syntax": "disk_free_space ( string $directory ) : float",
+  "description": "Belirtilen dizinin kullanılabilir boyutunu bayt cinsinden verir.",
+  "note": "Dizin yerine dosya belirtilirse fonksiyon işlevini işletim sistemine ve PHP sürümüne bağlı olarak doğru yerine getiremeyebilir.\nAyrıca uzak dizinlerde kontrol işlemi gerçekleştirilemez.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "$directory",
+      "type": "string",
+      "description": "Dizin ya da disk bölümünün adı",
+      "required": true
+    }
+  ],
+  "examples": [
+    {
+      "code": "<?php\n\necho disk_free_space('.'); // Örn çıktı: 6764466176\n\n?>",
+      "description": "Örnek olarak kullanılabilir dizin boyutunu bayt cinsinden görelim."
+    },
+    {
+      "code": "<?php\n\necho disk_free_space('C:') . '<br>';\necho disk_free_space('D:');\n\n?>",
+      "description": "Windows disk bölümlerinin kullanılabilir dizin boyutunu bayt cinsinden görelim."
+    },
+    {
+      "code": "<?php\n\n$bytes = disk_free_space('.'); \n$si_prefix = array( 'B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB' );\n$base = 1024;\n$class = min((int)log($bytes , $base) , count($si_prefix) - 1);\necho $bytes . '<br />';\necho sprintf('%1.2f' , $bytes / pow($base,$class)) . ' ' . $si_prefix[$class] . '<br />';\n\n?>",
+      "description": "Bayt cinsini daha okunabilir bir şekilde gösterecek yardımcı bir dizi kod yazalım."
+    }
+  ],
+  "return": {
+    "type": "int",
+    "text": "Hata var ise <b>FALSE</b> yok ise belirtilen dizinin kullanılabilir boyutunu bayt cinsinden döndürür."
+  },
+  "deprecated": false
+}
