@@ -33,7 +33,7 @@
     }
   ],
   "return": {
-    "type": "int",
+    "type": "float",
     "text": "Hata var ise <b>FALSE</b> yok ise belirtilen dizinin kullanılabilir boyutunu bayt cinsinden döndürür."
   },
   "deprecated": false
