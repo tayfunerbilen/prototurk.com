@@ -1,0 +1,40 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "PHP'de disk_total_space() Fonksiyonu",
+  "name": "disk_total_space",
+  "syntax": "disk_total_space ( string $directory ) : float",
+  "description": "Belirtilen dizinin toplam boyutunu bayt cinsinden verir.",
+  "note": "Uzak dizinlerde kontrol işlemi gerçekleştirilemez.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "$directory",
+      "type": "string",
+      "description": "Dizin ya da disk bölümünün adı",
+      "required": true
+    }
+  ],
+  "examples": [
+    {
+      "code": "<?php\n\necho disk_total_space('.'); // Örn çıktı: 121123069952\n\n?>",
+      "description": "Örnek olarak toplam dizin boyutunu bayt cinsinden görelim."
+    },
+    {
+      "code": "<?php\n\necho disk_total_space('C:') . '<br>';\necho disk_total_space('D:');\n\n?>",
+      "description": "Windows disk bölümlerinin toplam dizin boyutunu bayt cinsinden görelim."
+    },
+    {
+      "code": "<?php\n\n$bytes = disk_total_space('.'); \n$si_prefix = array( 'B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB' );\n$base = 1024;\n$class = min((int)log($bytes , $base) , count($si_prefix) - 1);\necho $bytes . '<br />';\necho sprintf('%1.2f' , $bytes / pow($base,$class)) . ' ' . $si_prefix[$class] . '<br />';\n\n?>",
+      "description": "Bayt cinsini daha okunabilir bir şekilde gösterecek yardımcı bir dizi kod yazalım."
+    }
+  ],
+  "return": {
+    "type": "float",
+    "text": "Hata var ise <b>FALSE</b> yok ise belirtilen dizinin toplam boyutunu bayt cinsinden döndürür."
+  },
+  "deprecated": false
+}
