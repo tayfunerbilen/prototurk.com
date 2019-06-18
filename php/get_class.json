@@ -1,0 +1,39 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "PHP'de get_class() Fonksiyonu",
+  "name": "get_class",
+  "syntax": "get_class ([ object $object ] ) : string",
+  "description": "Belirtilen nesnenin ait olduğu sınıf adını döndürür.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "$object",
+      "type": "mixed",
+      "description": "Test edilen nesne",
+      "required": true
+    }
+  ],
+  "examples": [
+    {
+      "code": "<?php\n\nclass Test {\n    public function getClassName()\n    {\n        return 'Çağırılan sınıf = ' . get_class($this);\n    }\n}\n\n$test = new Test;\n\necho get_class($test); // Çıktı: Test\necho $test->getClassName(); // Çıktı: Çağırılan sınıf = Test\n\n?>",
+      "description": "Örnek bir kullanımını inceleyelim."
+    },
+    {
+      "code": "<?php\n\nabstract class TestAbstractClass {\n    public function __construct()\n    {\n        var_dump(get_class($this)); // çıktı: string(9) \"TestClass\"\n        var_dump(get_class()); // çıktı: string(17) \"TestAbstractClass\"\n    }\n}\n\nclass TestClass extends TestAbstractClass {\n}\n\nnew TestClass;\n\n?>",
+      "description": "Soyut sınıflarda bir örneğini inceleyelim."
+    },
+    {
+      "code": "<?php\n\nnamespace Prototurk\\Helper;\n\nclass Template {\n}\n\n$baz = new \\Prototurk\\Helper\\Template;\n\necho get_class($baz); // Çıktı: Prototurk\\Helper\\Template\n\n?>",
+      "description": "Namespace kullanımında bir örneğini inceleyelim."
+    }
+  ],
+  "return": {
+    "type": "string",
+    "text": "Belirtilen nesnenin sınıf adı döner. Eğer belirtilen nesne bir nesne değilse <b>FALSE</b> değeri döner. Eğer namespace kullanılmış ise namespace ile birlikte sınıf adı döner. Sınıf içerisinde kullanılıyorsa boş bırakıldığı taktirde sınıfın adı döner."
+  },
+  "deprecated": false
+}
