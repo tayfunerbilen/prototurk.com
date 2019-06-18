@@ -12,7 +12,7 @@
   "params": [
     {
       "name": "$object",
-      "type": "mixed",
+      "type": "object",
       "description": "Test edilen nesne",
       "required": true
     }
