@@ -1,0 +1,48 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "PHP'de class_exists() Fonksiyonu",
+  "name": "class_exists",
+  "syntax": "class_exists ( string $class_name [, bool $autoload = TRUE ] ) : bool",
+  "description": "Belirlenen sınıf adının tanımlı olup olmadığını kontrol eder.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "$class_name",
+      "type": "string",
+      "description": "Kontrol edilecek sınıfın adı. Büyük-küçük harfe duyarlı değildir.",
+      "required": true
+    },
+    {
+      "name": "$autoload",
+      "type": "boolean",
+      "description": "Sınıfların otomatik yüklenip yüklenmeyeceği belirlenir. Varsayılan olarak otomatik yüklenecektir.",
+      "default": "TRUE",
+      "required": false
+    }
+  ],
+  "changelogs": [
+    {
+      "version": "5.0.2",
+      "description": "Interface'leri kontrol etmek için artık kullanılmamaktadır. Bunun yerine <code>interface_exists()</code> fonksiyonu kullanılabilir."
+    }
+  ],
+  "examples": [
+    {
+      "code": "<?php\n\nclass Test {}\n\nvar_dump(class_exists('test')); // Çıktı: bool(true)\nvar_dump(class_exists('prototurk')); // Çıktı: bool(false)\n\n?>",
+      "description": "Örnek bir sınıfın olup olmadığını kontrol edelim."
+    },
+    {
+      "code": "<?php\n\nspl_autoload_register(function ($className) {\n    $classFile = \"classes/\" . strtolower($className) . '.php';\n    if (file_exists($classFile))\n        include $classFile;\n});\n\n// Çıktı: bool(true)\n// Çünkü 2. parametresi varsayılan olarak true ve kontrol işleminde\n// yukarıdaki otomatik sınıf yükleme fonksiyonu yardımı ile sınıfın olduğunu biliyor\n// tabi bu örnekte \"classes/test.php\" dosyanız olduğunu ve içinde Test sınıfının olduğunu varsayıyoruz.\nvar_dump(class_exists('test'));\n\n// Çıktı: bool(false)\n// Çünkü autoload olayını kapattık, dolayısı ile sınıfı yükleyemediği için\n// ve sınıf otomatik çağırıldığı için bulamıyor.\nvar_dump(class_exists('test', false));\n\n?>",
+      "description": "Otomatik yüklenen sınıflar ile kullanım örneği."
+    }
+  ],
+  "return": {
+    "type": "boolean",
+    "text": "Sınıf tanımlı ise <b>TRUE</b> değil ise <b>FALSE</b> değerini döndürür."
+  },
+  "deprecated": false
+}
