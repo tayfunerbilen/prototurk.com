@@ -23,7 +23,7 @@
       "description": "Örnek bir kullanımını inceleyelim."
     },
     {
-      "code": "<?php\n\nabstract class TestAbstractClass {\n    public function __construct()\n    {\n        var_dump(get_class($this)); // çıktı: string(9) \"TestClass\"\n        var_dump(get_class()); // çıktı: string(17) \"TestAbstractClass\"\n    }\n}\n\nclass TestClass extends TestAbstractClass {\n}\n\nnew TestClass;\n\n?>",
+      "code": "<?php\n\nclass TestParentClass {\n    public function __construct()\n    {\n        var_dump(get_class($this)); // çıktı: string(9) \"TestClass\"\n        var_dump(get_class()); // çıktı: string(17) \"TestParentClass\"\n    }\n}\n\nclass TestClass extends TestParentClass {\n}\n\nnew TestClass;\n\n?>",
       "description": "Soyut sınıflarda bir örneğini inceleyelim."
     },
     {
