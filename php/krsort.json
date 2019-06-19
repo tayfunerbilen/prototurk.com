@@ -1,0 +1,39 @@
+{
+  "author": "muaz742 <742muaz@gmail.com>",
+  "title": "PHP'de krsort() Fonksiyonu",
+  "name": "krsort()",
+  "syntax": "krsort ( array &$dizi [, int $seçenekler = SORT_REGULAR ] ) : bool",
+  "description": "Bir diziyi anahtarlarına göre tersine sıralar",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "SORT_REGULAR ",
+      "description": "Elemanlar normal olarak sıralanır.",
+      "default": "SORT_REGULAR "
+    },
+    {
+      "name": "SORT_NUMERIC ",
+      "description": "Elemanlar sayısal olarak sıralanır."
+    },
+    {
+      "name": "SORT_STRING ",
+      "description": "Elemanlar dizgesel olarak sıralanır."
+    }
+  ],
+  "examples": [
+    {
+      "code": "<?php\n$meyveler = array(\"d\" => \"limon\", \"a\" => \"portakal\", \"b\" => \"muz\", \"c\" => \"elma\");\narsort($meyveler);\nforeach ($meyveleras $indis => $deger) {\n    echo \"$indis = $deger\\n\";\n}\n\n/* yukarıdaki örneğin çıktısı\nd = limon\nc = elma\nb = muz\na = portakal\n*/\n?>",
+      "description": "fonksiyon, dizi anahtarlarına göre tersine sıralama yapar.",
+      "title": "krsort() örneği"
+    }
+  ],
+  "return": {
+    "type": "boolean",
+    "text": "Başarı durumunda TRUE, başarısızlık durumunda FALSE döner."
+  },
+  "deprecated": false
+}
