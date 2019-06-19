@@ -3,6 +3,7 @@
   "title": "PHP'de arsort() Fonksiyonu",
   "name": "arsort()",
   "syntax": "arsort ( array &$dizi [, int $seçenekler = SORT_REGULAR ] ) : bool",
+  "description": "Bir dizinin değerlerini anahtarlarıyla ilişkilerini bozmadan tersine sıralar.",
   "compatibilities": [
     "php 4",
     "php 5",
