@@ -1,0 +1,39 @@
+{
+  "author": "muaz742 <742muaz@gmail.com>",
+  "title": "PHP'de ksort() Fonksiyonu",
+  "name": "ksort()",
+  "syntax": "ksort ( array &$dizi [, int $seçenekler = SORT_REGULAR ] ) : bool",
+  "description": "Bir diziyi anahtarlarına göre sıralar.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "SORT_REGULAR ",
+      "description": "Elemanlar normal olarak sıralanır.",
+      "default": "SORT_REGULAR "
+    },
+    {
+      "name": "SORT_NUMERIC ",
+      "description": "Elemanlar sayısal olarak sıralanır."
+    },
+    {
+      "name": "SORT_STRING ",
+      "description": "Elemanlar dizgesel olarak sıralanır."
+    }
+  ],
+  "examples": [
+    {
+      "code": "<?php\n$meyveler = array(\"d\" => \"limon\", \"a\" => \"portakal\", \"b\" => \"muz\", \"c\" => \"elma\");\narsort($meyveler);\nforeach ($meyveleras $indis => $deger) {\n    echo \"$indis = $deger\\n\";\n}\n\n/* yukarıdaki örneğin çıktısı\na = portakal\nb = muz\nc = elma\nd = limon\n*/\n?>",
+      "description": "fonksiyon, dizi anahtarlarına göre sıralama yapar.",
+      "title": "ksort() örneği"
+    }
+  ],
+  "return": {
+    "type": "boolean",
+    "text": "Başarı durumunda TRUE, başarısızlık durumunda FALSE döner."
+  },
+  "deprecated": false
+}
