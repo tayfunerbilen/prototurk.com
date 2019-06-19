@@ -1,0 +1,39 @@
+{
+    "author": "muaz742 <742muaz@gmail.com>",
+    "title": "PHP'de asort() Fonksiyonu",
+    "name": "asort()",
+    "syntax": "asort ( array &$dizi [, int $seçenekler = SORT_REGULAR ] ) : bool",
+    "description": "Bu işlev bir dizinin değerlerini anahtarlarıyla ilişkilerini bozmadan sıralar. Esas olarak, asıl eleman sırasının önemli olduğu ilişkisel dizilerin sıralanmasında kullanılır.",
+    "compatibilities": [
+      "php 4",
+      "php 5",
+      "php 7"
+    ],
+    "params": [
+      {
+        "name": "SORT_REGULAR",
+        "description": "Elemanlar normal olarak sıralanır",
+        "default": "SORT_REGULAR"
+      },
+      {
+        "name": "SORT_NUMERIC",
+        "description": "Elemanlar sayısal olarak sıralanır"
+      },
+      {
+        "name": "SORT_STRING",
+        "description": "Elemanlar dizgesel olarak sıralanır"
+      }
+    ],
+    "examples": [
+      {
+        "code": "<?php\n$meyveler = array(\"d\" => \"limon\", \"a\" => \"portakal\", \"b\" => \"muz\", \"c\" => \"elma\");\nasort($meyveler);\nforeach ($meyveleras $indis=> $deger) {\n    echo \"$indis = $deger\\n\";\n}\n/* yukarıdaki örneğin çıktısı; \nc = elma\nd = limon\nb = muz\na = portakal\n*/\n?>",
+        "description": "basit hatlarıyla fonksiyon, dizideki \"anahtar=>değer\" ilişkisi bozulmadan bu şekilde sıralama yapar.",
+        "title": "asort() örneği"
+      }
+    ],
+    "return": {
+      "type": "boolean",
+      "text": "Başarılı bir şekilde sıralanırsa TRUE, sıralanamaz ise FALSE değeri döner."
+    },
+    "deprecated": false
+  }
