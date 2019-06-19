@@ -1,0 +1,32 @@
+{
+  "author": "muaz742 <742muaz@gmail.com>",
+  "title": "PHP'de shuffle() Fonksiyonu",
+  "name": "shuffle()",
+  "syntax": "shuffle ( array &$dizi ) : bool",
+  "description": "Bu işlev belirtilen diziyi karar (elemanları rasgele sıralar).",
+  "note": "Bu işlev dizi elemanlarına yeni anahtarlar atar. Anahtarları yeniden düzenlemek yerine evvelce atanmış anahtarları silecektir.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "$dizi",
+      "type": "array",
+      "description": "Karılacak dizi."
+    }
+  ],
+  "examples": [
+    {
+      "code": "<?php\n// sayılar değişkenine 1 den 20 ye kadar sayı oluştur\n$sayılar = range(1, 20);\n// sayılar dizisi elemanlarını karıştır\nshuffle($sayılar);\n// sayılar dizisi elemanlarını sırayla ekrana yazdır\nforeach ($sayılar as $sayı) {\n    echo \"$sayı \";\n}\n?>",
+      "description": "range() fonksiyonu ile oluşturulan 1 den 20 ye kadar olan sayıların bulunduğu dizide sayıların sırasını karıştırır",
+      "title": "shuffle() örneği"
+    }
+  ],
+  "return": {
+    "type": "boolean",
+    "text": "Başarı durumunda TRUE, başarısızlık durumunda FALSE döner."
+  },
+  "deprecated": false
+}
