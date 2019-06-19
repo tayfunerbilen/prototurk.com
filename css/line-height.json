@@ -3,8 +3,8 @@
   "title": "CSS'de line-height Özelliği",
   "name": "line-height",
   "syntax": "line-height: normal | sayı | uzunluk | yüzde | initial | inherit;",
-  "js_syntax": "object.style.fontWeight=\"bold\"",
-  "description": "Yazı tipinin ne kadar kalın ya da ince görüneceği belirlenir. Belli başlı değerleri olmakla birlikte, font'ların tanımlanma şekline göre, 100, 300, 400, 500, 600, 700, 800, 900 gibi değerler kullanılır. 100 genelde en ince tip için belirlenir, 400 normal boyut olanıdır, 900 ise en kalınıdır.",
+  "js_syntax": "object.style.lineHeight=\"değer\"",
+  "description": "Satırlar arasındaki boşluğun ne kadar olacağını ayarlamamızı sağlar.",
   "version": "CSS1",
   "values": [
     {
