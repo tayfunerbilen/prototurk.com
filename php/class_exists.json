@@ -44,5 +44,6 @@
     "type": "boolean",
     "text": "Sınıf tanımlı ise <b>TRUE</b> değil ise <b>FALSE</b> değerini döndürür."
   },
-  "deprecated": false
+  "deprecated": false,
+  "video": "https://www.youtube.com/watch?v=FD_YajAR7WQ"
 }
