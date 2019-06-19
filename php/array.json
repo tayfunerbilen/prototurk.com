@@ -1,0 +1,39 @@
+{
+  "author": "muaz742 <742muaz@gmail.com>",
+  "title": "PHP'de array() Fonksiyonu",
+  "name": "array()",
+  "syntax": "array ([ mixed $... ] ) : array",
+  "description": "array() fonksiyonu içerisine tanımlanan değerler dizi içerisinde birleştirilir. tanımlandığı değişkene atanır.\ndeğerler dizi içerisinde \"anahtar=>değer\" ilişkisi ile tanımlanır. değer içerisine değişkene tanımlanabilen bütün değerler tanımlanabilir.",
+  "note": "Değiştirgelerle tanımlanan diziyi döndürür. Değiştirgelerde => işleci ile bir indis belirtilebilir. ",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "examples": [
+    {
+      "code": "<?php\n// meyveler dizisini tanımla\n$meyveler = array (\"muaz\",\"portakal\",\"elma\");\n\n/*\n \"anahtar=>değer\" ilişkisi tanımlanmamışsa;\nvarsayılan olarak fonksiyona tanımlanma sırasına göre \nanahtar değerler \"0,1,2,..\" şeklinde tanımlanacaktır\n*/\n?>",
+      "description": "fonksiyon içerisine tanımlanan değerler diziye atanır.",
+      "title": "array() örneği"
+    },
+    {
+      "code": "<?php\n// araba dizisini tanımla\n$araba = array(\"renk\"=>\"yeşil\",\"kapı\"=>2,\"model\"=>1970,\"durum\"=>false);\n?>",
+      "description": "dizi içerisindeki indis(anahtar) değer tanımlanabilir alandır. tercihe göre değiştirilebilir.",
+      "title": "diziye anahtar değer atama"
+    },
+    {
+      "code": "<?php \n// sepet dizisini tanımla\n$sepet = array (\n    \"meyveler\"  => array(\"portakal\", \"muz\", \"elma\"),\n    \"sebzeler\" => array(\"barbunya\",\"patlıcan\",\"maydonoz\"),\n    \"sarkuteri\"   => array(\"yumurta\",\"zeytin\",\"reçel\")\n);\n?>",
+      "description": "dizi içerisine tanımlanan değerler değişken olarak işlenir. bu mantıkla değişkenler dizi olabildiği gibi, dizi içerisinde doğrudan dizi tanımı yapılabilir.",
+      "title": "iç içe array tanımlama örneği"
+    },
+    {
+      "code": "<?php\n// indis değeri 3 ten başlayacak şekilde ilkbahar dizisini tanımla\n$ilkbahar = array(3=>\"mart\", \"nisan\", \"mayıs\");\n\n/*\nbu kullanımda fonksiyon tarafından\n\"nisan\" değerinin indisi 4,\n\"mayıs\" değerinin indisi 5 olarak \n\"$ilkbahar\" değişkenine tanımlanacaktır.\n*/\n?>",
+      "description": "indis(anahtar) değer tanımlanmadığında \"0,1,2,..\" sıralamasıyla otomatik indisleme yapılmaktadır. bu başlangıç değeri değiştirilerek indisleme sıralaması değiştirilebilir.",
+      "title": "indis başlangıç değerini değiştirme"
+    }
+  ],
+  "return": {
+    "type": "array"
+  },
+  "deprecated": false
+}
