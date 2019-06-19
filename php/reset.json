@@ -1,0 +1,30 @@
+{
+  "author": "muaz742 <742muaz@gmail.com>",
+  "title": "PHP'de reset() Fonksiyonu",
+  "name": "reset()",
+  "syntax": "reset ( array &$dizi ) : mixed",
+  "description": "Bir dizinin dahili göstericisini ilk elemana konumlar.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "$dizi",
+      "type": "array",
+      "description": "Dahili göstericisi sıfırlanacak dizi."
+    }
+  ],
+  "examples": [
+    {
+      "code": "<?php\n\n$dizi = array('bir adım', 'iki adım', 'üç adım', 'dörtadım');\n\n// Öntanımlı olarak gösterici ilk elemandadır\necho current($dizi) . \"<br />\\n\"; // \"bir adım\"\n\n// İki adım atalım\nnext($dizi);\nnext($dizi);\necho current($dizi) . \"<br />\\n\"; // \"üç adım\"\n\n// Göstericiyi sıfırlayalım\nreset($dizi);\necho current($dizi) . \"<br />\\n\"; // \"bir adım\"\n\n?>",
+      "description": "prev(), next(), end() gibi fonksiyonlar ile dahili göstericisi değişen dizinin dahili göstericisini ilk değer olarak tanımlar.",
+      "title": "reset() örneği"
+    }
+  ],
+  "return": {
+    "text": "Dizi boşsa FALSE, değilse dizinin ilk elemanının değeri."
+  },
+  "deprecated": false
+}
