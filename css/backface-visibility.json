@@ -1,0 +1,36 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "CSS'de backface-visibility özelliği",
+  "name": "backface-visibility",
+  "syntax": "backface-visibility: visible | hidden | initial | inherit;",
+  "js_syntax": "object.style.backfaceVisibility=\"hidden\"",
+  "description": "Etiketin arka yüzünün görünür olup olmadığı belirlenir.",
+  "note": "Etiketin arka yüzünü göstermek için <code>transform</code> özelliğinin <code>rotateY()</code> fonksiyonu kullanılır. Bu gibi durumda arka yüzün gözüküp gözükmeyeceği bu özellik sayesinde belirlenir.",
+  "version": "CSS3",
+  "values": [
+    {
+      "value": "visible",
+      "description": "Varsayılan değerdir. Ve arka yüzü görünür kılar."
+    },
+    {
+      "value": "hidden",
+      "description": "Arka yüzü gizler."
+    },
+    {
+      "value": "initial",
+      "description": "Varsayılan ayarlarına geri döndürür."
+    },
+    {
+      "value": "inherit",
+      "description": "Özelliği üst öğesinden miras alır."
+    }
+  ],
+  "examples": [
+    {
+      "code": "<div class=\"box\"> 1. kutu</div>\n<div class=\"box hide\">2. kutu</div>\n\n<style>\n.box {\n\twidth: 100px;\n\theight: 100px;\n\tbackground-color: blue;\n\ttransform: rotateY(200deg); /* ters yüzüne döndürdük */\n}\n.box.hide {\n\t/* hide sınıfına sahip etiketin arka yüzünü gizledik */\n\tbackface-visibility: hidden;\n}\n</style>",
+      "description": "İki kutu oluşturup birinin arka yüzünü görünür, diğerininkini gizli yapalım."
+    }
+  ],
+  "animatable": false,
+  "default_value": "visible"
+}
