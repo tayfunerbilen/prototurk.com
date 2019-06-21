@@ -113,6 +113,12 @@
                     <label>Özellik Açıklaması</label>
                     <textarea name="description" cols="30" rows="6" class="form-control"></textarea>
                 </div>
+                <div class="form-group">
+                    <label>Özellik Notu (Varsa)</label>
+
+
+                    <textarea name="note" cols="30" rows="3" class="form-control"></textarea>
+                </div>
                 <h3>Değerler</h3>
                 <div class="values">
                     <div class="row value">
@@ -270,6 +276,7 @@
                 syntax = $('[name=\'syntax\']').val(),
                 js_syntax = $('[name=\'js_syntax\']').val(),
                 description = $('[name=\'description\']').val(),
+                note = $('[name=\'note\']').val(),
                 animatable = $('[name=\'animatable\'] option:selected').val(),
                 default_value = $('[name=\'default_value\']').val();
 
@@ -279,6 +286,7 @@
             if (syntax) json.syntax = syntax.replace(/</g, '&lt;');
             if (js_syntax) json.js_syntax = js_syntax.replace(/</g, '&lt;');
             if (description) json.description = description.replace(/</g, '&lt;');
+            if (note) json.note = note.replace(/</g, '&lt;');
 
             /*
             $('.version').each(function () {
@@ -307,7 +315,7 @@
             $('.example').each(function(){
                 var title = $('[name=\'title\']', this).val(),
                     desc = $('[name=\'description\']', this).val(),
-                    code = $('[name=\'code\']', this).val();
+                    code = $('[name=\'code\']', this).val().replace(/</g, '&lt;');
                 if (code){
                     if (!json.examples) json.examples = [];
                     var example = {
