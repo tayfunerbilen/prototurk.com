@@ -1,6 +1,6 @@
 {
   "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
-  "title": "CSS'de backface-visibility özelliği",
+  "title": "CSS'de backface-visibility Özelliği",
   "name": "backface-visibility",
   "syntax": "backface-visibility: visible | hidden | initial | inherit;",
   "js_syntax": "object.style.backfaceVisibility=\"hidden\"",
