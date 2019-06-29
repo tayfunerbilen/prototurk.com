@@ -1,0 +1,37 @@
+{
+    "author": "Mahmut Yüksel Mert <mahmutyukselmert@gmail.com>",
+    "title": "PHP'de array_merge() Fonksiyonu",
+    "name": "array_merge",
+    "syntax": "array_merge ([ array $... ] ) : array",
+    "description": "Bir veya daha fazla dizinin tüm elemanlarını birleştirir, böylece birinin değerleri öncekinin sonuna eklenir. Sonucu dizi olarak döndürür.\n\nEğer dizilerde aynı anahtara sahip elemanlar varsa sonraki dizinin elemanı önceki dizideki elemanın yerine konur. \nAncak, diziler sayısal anahtarlar içeriyorsa(örn. 1,2,3) ve anahtar değerleri birbirleri ile eşleşiyor ise sonraki değer öncekinin üzerine yazılmaz, sona eklenir. Çünkü diziler birleştirilirken anahtar değerleri otomatik olarak yeniden oluşturulur.",
+    "note": "Bu fonksiyon şimdi herhangi bir parametre olmadan çağrılabilir. Daha önce, en az bir parametre gerekliydi.",
+    "params": [
+      {
+        "type": "array",
+        "required": false
+      },
+      {
+        "type": "array",
+        "required": false
+      }
+    ],
+    "examples": [
+      {
+        "code": "<?php \n\t$php_frameworks = ['Laravel','Codeigniter','Symfony'];\n\t$other_php_frameworks = ['Yii','Phalcon','Zend','CakePHP'];\n\t$result = array_merge($php_frameworks, $other_php_frameworks);\n\tprint_r($result);\n\n\t//Buradaki örneğimi dizi fonksiyonunun kısa kullanımını ile yaptım. Php sürümünüz, PHP 5.4.0'dan büyük ise sizler de bu sözdizimini kullanabilirsiniz.\n?>",
+        "description": "İki farklı dizi içerisindeki php çatılarını bir dizi içerisinde birleştirelim."
+      },
+      {
+        "code": "<?php\n\t$php_frameworks = array(\n\t\t1 => 'Laravel',\n\t\t2 => 'Codeigniter',\n\t\t3 => 'Symfony'\n\t);\n\t$other_php_frameworks = array(\n\t\t1 => 'Yii',\n\t\t2 => 'Phalcon',\n\t\t3 => 'CakePHP'\n\t);\n\t$result = array_merge($php_frameworks, $other_php_frameworks);\n\tprint_r($result);\n\n\t// Yukarıdaki örneğin çıktısı:\n\tArray\n\t(\n\t    [0] => Laravel\n\t    [1] => Codeigniter\n\t    [2] => Symfony\n\t    [3] => Yii\n\t    [4] => Phalcon\n\t    [5] => CakePHP\n\t)\n?>",
+        "description": "Sayısal olarak aynı değerlere sahip iki farklı diziyi birleştirelim."
+      },
+      {
+        "code": "<?php\n\t$array1 = array(\n\t\t'name' => 'Mahmut Yüksel Mert',\n\t\t'job' => 'Freelancer',\n\t);\n\t$array2 = array(\n\t\t'age' => '21',\n\t\t'job' => 'Student',\n\t);\n\t$result = array_merge($array1, $array2);\n\tprint_r($result);\n\n\t// Yukarıdaki örneğin çıktısı:\n\tArray\n\t(\n\t    [name] => Mahmut Yüksel Mert\n\t    [job] => Student\n\t    [age] => 21\n\t)\n?>",
+        "description": "İki dizi içerisinde anahtar değerleri harfler ile belirlenmiş aynı anahtar değere sahip elemanların sonucunu gösteren bir örnek yapalım."
+      }
+    ],
+    "return": {
+      "type": "array",
+      "text": "Sonuç olarak birleştirilen diziyi döndürür. Herhangi bir argüman olmadan çağrılırsa, boş bir dizi döndürür."
+    },
+    "deprecated": false
+  }
