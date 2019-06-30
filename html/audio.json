@@ -1,0 +1,54 @@
+{
+    "author": "Mahmut Yüksel Mert <mahmutyukselmert@gmail.com>",
+    "title": "<audio> Etiketi",
+    "name": "<audio>",
+    "syntax": "<audio> </audio>",
+    "description": "Html5 ile birlikte gelen <audio> etiketi sayesinde artık müzik veya ses dosyalarımızı sayfamız içerisinde oynatabiliyoruz. Oysa öncesinde bunu yapabilmek için Flash uygulamalarına ihtiyacımız vardı. \nAyrıca <audio> etiketi tarafından desteklenen dosya biçimleri: MP3, WAV ve OGG\n\n",
+    "version": "HTML5",
+    "closing_tag": true,
+    "display": "blok",
+    "usage": "Yapısal",
+    "note": "Medya kaynağını tanımlamak için <code><source src=\"ses_dosyam.mp3\" type=\"audio/mp3\"></code> niteliğini ayarlamanız ve kullanıcının medyayı oynatıp duraklatabilmesi için bir kontrol niteliği içermesi gerekir.\nKod örneğimizde bunu başarılı bir şekilde gerçekleştirdik.",
+    "attributes": [
+      {
+        "name": "src",
+        "value": "URL",
+        "description": "Ses dosyasının URL'sini belirtir."
+      },
+      {
+        "name": "controls",
+        "value": "controls",
+        "description": "Kullanıcının medyayı oynatıp duraklatabilmesi için bir kontrol niteliği sağlar."
+      },
+      {
+        "name": "autoplay",
+        "value": "autoplay",
+        "description": "Sayfa yüklendiğinde sesin otomatik olarak oynatılmasını sağlar."
+      },
+      {
+        "name": "loop",
+        "value": "loop",
+        "description": "Sesi her bittiğinde başa sararak tekrar oynatır."
+      },
+      {
+        "name": "muted",
+        "value": "muted",
+        "description": "Sesi her bittiğinde başa sararak tekrar oynatır."
+      },
+      {
+          "name": "preload",
+          "value": "auto|metadata|none",
+          "description": "Sayfa yüklendiğinde sesin ön yüklemesinin yapılıp yapılmayacağını seçmenize olanak sağlar."
+      }
+    ],
+    "examples": [
+      {
+        "code": "<audio controls>\n  <source src=\"ses_dosyam.ogg\" type=\"audio/ogg\">\n  <source src=\"ses_dosyam.mp3\" type=\"audio/mpeg\">\n  Web Tarayıcınız bu etiketi desteklemiyor.\n</audio>",
+        "description": "Ses dosyamızın kaynağını  ile audio bloğu içerisine alan bir örnek yapalım."
+      },
+      {
+        "code": "<audio controls src=\"song.mp3\" type=\"audio/mpeg\"></audio>",
+        "description": "Kaynağımızı audio etiketimize nitelik olarak belirten bir örnek yapalım."
+      }
+    ]
+  }
