@@ -1,0 +1,46 @@
+{
+  "author": "HistoryCoders <gormezdengeldim@gmail.com>",
+  "title": "strip_tags() Fonksiyonu",
+  "name": "strip_tags",
+  "syntax": "strip_tags ( string $metin,  string $kalacak_etiketler )",
+  "description": "Yazılımcıların çoğunun işini kolaylaştıran ve php 4`den beri kullanımda olan bir fonksiyon. Bir metinin içindeki html etiketleri kaldırır. \n",
+  "note": "Htmlspecialchars fonksiyonundan farkı metindeki html etiketleri öldürme yerine komple metin içerisinden temizler.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "$metin",
+      "type": "string",
+      "description": "Html etiketlerin temizlenmesini istediğiniz parametre",
+      "default": "$metin",
+      "required": true
+    },
+    {
+      "name": "$etiket",
+      "type": "string",
+      "description": "Eğer kaldırılmasını istemediğiniz bir html etiketi varsa 2. parametre olarak belirte bilirsiniz",
+      "default": "null",
+      "required": false
+    }
+  ],
+  "examples": [
+    {
+      "code": "$metin ='<p><b>Prototürk</b> <i>Yazılım</i> ve <i>Tasarım</i> Dersleri</p>';\necho strip_tags($metin);\n\nEkran çıktısında metinde sanki herhangi bir html etiket kullanılmamış gibi düz metin olarak görünecek. ",
+      "description": "Basit bir kullanım örneği",
+      "title": "Örnek kullanım"
+    },
+    {
+      "code": "$metin ='<p><b>Prototürk</b> <i>Yazılım</i> ve <i>Tasarım</i> Dersleri</p>';\necho strip_tags($metin, '<p><b>');\n\nEkran çıktısında 2. parametre olarak belirttiğimiz etiketleri metinin içinden kaldırmaz. Yan yana birden fazla html etiketi kullanılabilir  ve virgül ile ayırmaya gerek yoktur.\n\nNot: Kaldırılmasını istemediğiniz html etiket eğer kapanan bir etiket ise kapanmış halini belirtilmesine gerek yoktur. </b> veya </p> gibi.",
+      "description": "Bu örnekte ise ikinci parametre kullanımı",
+      "title": "2. parametre kullanımı"
+    }
+  ],
+  "return": {
+    "type": "string",
+    "text": "Metindeki html etiketleri temizler"
+  },
+  "deprecated": false
+}
