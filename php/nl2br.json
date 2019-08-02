@@ -3,7 +3,7 @@
   "title": "PHP'de nl2br() Fonksiyonu",
   "name": "nl2br",
   "syntax": "nl2br ( string $string [, bool $is_xhtml = TRUE ] ) : string",
-  "description": "String ifadede \\n yani yeni satırları &lt;br> ya da HTML türüne göre &lt;br /> etiketine çevirir.",
+  "description": "String ifadede \\n yani yeni satırları <code>&lt;br></code> ya da HTML türüne göre <code>&lt;br /></code> etiketine çevirir.",
   "note": "Eğer string ifade içinde \\n kullanıyorsanız, ifadeyi mutlaka çift tırnak içinde yazmanız gerekir. Aksi halde \\n ifadesi yorumlanmaz.",
   "compatibilities": [
     "php 4",
@@ -20,7 +20,7 @@
     {
       "name": "$is_xhtml",
       "type": "boolean",
-      "description": "Eğer FALSE olarak belirlenirse, HTML5 kurallarına göre &lt;br> olarak ekler. Varsayılan olarak XHTML kurallarına göre &lt;br /> şeklinde ekleyecektir.",
+      "description": "Eğer <code>FALSE</code> olarak belirlenirse, HTML5 kurallarına göre <code>&lt;br></code> olarak ekler. Varsayılan olarak XHTML kurallarına göre <code>&lt;br /></code> şeklinde ekleyecektir.",
       "default": "TRUE",
       "required": false
     }
@@ -28,7 +28,7 @@
   "changelogs": [
     {
       "version": "5.3.0",
-      "description": "$is_xhtml parametresi eklendi. Bundan öncesinde her zaman &lt;br /> olarak değiştiriliyordu."
+      "description": "<code>$is_xhtml</code> parametresi eklendi. Bundan öncesinde her zaman &lt;br /> olarak değiştiriliyordu."
     }
   ],
   "examples": [
