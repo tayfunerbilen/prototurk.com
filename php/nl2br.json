@@ -1,0 +1,49 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "PHP'de nl2br() Fonksiyonu",
+  "name": "nl2br",
+  "syntax": "nl2br ( string $string [, bool $is_xhtml = TRUE ] ) : string",
+  "description": "String ifadede \\n yani yeni satırları &lt;br> ya da HTML türüne göre &lt;br /> etiketine çevirir.",
+  "note": "Eğer string ifade içinde \\n kullanıyorsanız, ifadeyi mutlaka çift tırnak içinde yazmanız gerekir. Aksi halde \\n ifadesi yorumlanmaz.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "$string",
+      "type": "string",
+      "description": "Değiştirilecek değer",
+      "required": true
+    },
+    {
+      "name": "$is_xhtml",
+      "type": "boolean",
+      "description": "Eğer FALSE olarak belirlenirse, HTML5 kurallarına göre &lt;br> olarak ekler. Varsayılan olarak XHTML kurallarına göre &lt;br /> şeklinde ekleyecektir.",
+      "default": "TRUE",
+      "required": false
+    }
+  ],
+  "changelogs": [
+    {
+      "version": "5.3.0",
+      "description": "$is_xhtml parametresi eklendi. Bundan öncesinde her zaman &lt;br /> olarak değiştiriliyordu."
+    }
+  ],
+  "examples": [
+    {
+      "code": "<?php\n\n$string = \"Bu bir\ntesttir\nprototurk.com\";\n\necho nl2br($string);\n/* Çıktı:\nBu bir<br />\ntesttir<br />\nprototurk.com\n*/",
+      "description": "Basit bir örnek ile açıklayalım;"
+    },
+    {
+      "code": "<?php\n\n$string = \"Bu bir\\ntesttir\\nprototurk.com\";\n\necho nl2br($string, false);\n/* Çıktı:\nBu bir<br>\ntesttir<br>\nprototurk.com\n*/",
+      "description": "\\n ile kullanımı ise şöyledir;"
+    }
+  ],
+  "return": {
+    "type": "string",
+    "text": "Değiştirilmiş değer döner."
+  },
+  "deprecated": false
+}
