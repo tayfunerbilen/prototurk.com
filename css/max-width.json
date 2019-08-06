@@ -1,0 +1,30 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "CSS'de max-width Özelliği",
+  "name": "max-width",
+  "syntax": "max-width: uzunluk | initial | inherit;",
+  "js_syntax": "object.style.maxWidth=\"600px\"",
+  "description": " Elemanın maksimum alacağı genişliği belirler.",
+  "version": "CSS1",
+  "values": [
+    {
+      "value": "uzunluk",
+      "description": "Uzunluk birimlerinin tamamı ile değer belirlenir."
+    },
+    {
+      "value": "initial",
+      "description": "Varsayılan değerine geri döndürür."
+    },
+    {
+      "value": "inherit",
+      "description": "Değerini üst öğesinden miras alır."
+    }
+  ],
+  "examples": [
+    {
+      "code": "div {\n\tmax-width: 300px;\n}",
+      "description": "Bir etiketin maksimum genişliğini 300px olarak belirleyelim."
+    }
+  ],
+  "animatable": true
+}
