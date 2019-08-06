@@ -1,0 +1,30 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "CSS'de all Özelliği",
+  "name": "all",
+  "syntax": "all: initial | inherit | unset;",
+  "js_syntax": "object.style.all=\"initial\"",
+  "description": "Elemanın tüm css özelliklerini başlangıçtaki ya da devralınmış özelliklerine geri döndürür.",
+  "version": "CSS3",
+  "values": [
+    {
+      "value": "initial",
+      "description": "Tüm özellikleri başlangıç değerine döndürür yani sıfırlar."
+    },
+    {
+      "value": "inherit",
+      "description": "Tüm özellikleri üst nesnesinden devraldığı değerlere döndürür."
+    },
+    {
+      "value": "unset",
+      "description": "Tüm özellikleri üst nesnesinden devralıyorsa ona, almıyorsa varsayılan değerlerine geri döndürür."
+    }
+  ],
+  "examples": [
+    {
+      "code": "<style>\n    html {\n        color: blue;\n    }\n    .test {\n        background: red;\n        color: yellow;\n        direction: rtl;\n    }\n    .test.initial {\n        all: initial;\n    }\n    .test.inherit {\n        all: inherit;\n    }\n    .test.unset {\n        all: unset;\n    }\n</style>\n\n<div class=\"test\">bu bir testtir.</div>\n<div class=\"test initial\">bu bir testtir.</div>\n<div class=\"test inherit\">bu bir testtir.</div>\n<div class=\"test unset\">bu bir testtir.</div>",
+      "description": "Tüm değerlerini tek bir örnekte açıklamak gerekirse;"
+    }
+  ],
+  "animatable": false
+}
