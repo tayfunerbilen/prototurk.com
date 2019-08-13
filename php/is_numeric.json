@@ -1,0 +1,37 @@
+{
+    "author": "Kemal Mutlu <mutlukemal1717@gmail.com>",
+    "title": "PHP'de  is_numeric()fonksiyonu",
+    "name": " is_numeric ",
+    "syntax": " is_numeric ( mixed $değişken ) : bool",
+    "description": "Belirtilen değişkenin değeri bir sayı ise bu işlev \"TRUE\" döndürür.",
+    "compatibilities": [
+      "php 4",
+      "php 5",
+      "php 7"
+    ],
+    "params": [
+      {
+        "name": "$değişken ",
+        "type": "int",
+        "description": "Sınanacak değişken. ",
+        "required": true
+      }
+    ],
+    "examples": [
+      {
+        "code": "<?php \n\n\t$yas = 24;\n\n\tif(is_numeric($yas)){\n    \t\techo $yas;\n\t}else {\n    \t\techo \"Yaşınızı rakamlarla giriniz.\"\n\t}\n\n?>",
+        "description": "Aşağıdaki örneğimizdiçin be değişkende bulunan değer sayısal bir değer olduğu ize $yas değişkeninde bulunan değeri döndürecektir.",
+        "title": "Örnek Kullanım #1"
+      },
+      {
+        "code": "<?php \n\n$items = [\n    4.2,\n    'Kemal',\n    '24',\n    'we2',\n    17,  \n];\n\nforeach($items as $item) :\n    if(is_numeric($item)):\n        echo \"$item sayısaldır.<br>\";\n    else: \n        echo \"$item sayısal değildir.<br>\";\n    endif;\nendforeach;\n   \n/*\n Çıktı sırasıyla\n     4.2 sayısaldır.\n    Kemal sayısal değildir.\n    24 sayısaldır.\n    we2 sayısal değildir.\n    17 sayısaldır.\n*/\n?>",
+        "description": "Dizide ki elemanlardan türü integer olanları öğrenelim.",
+        "title": "Örnek Kullanım #2"
+      }
+    ],
+    "return": {
+      "type": "true",
+      "text": "Belirtilen değişkenin değeri bir sayı veya sayısal bir dizge ise TRUE aksi takdirde FALSE döndürür. "
+    },
+    "deprecated": false
+  }
