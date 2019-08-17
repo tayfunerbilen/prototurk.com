@@ -1,0 +1,23 @@
+{
+  "author": "Kemal Mutlu <mutlukemal1717@gmail.com>",
+  "title": "PHP'de glob() fonksiyonu",
+  "name": "glob",
+  "syntax": " glob ( string $pattern [, int $flags = 0 ] ) : array",
+  "description": "Dizin içerisinde eşleşen dosyaları bulmamızı sağlar. ",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "examples": [
+    {
+      "code": "<?php \n  \n $files = glob('*.php');\n foreach ($files as $dosya) {\n     echo \"$dosya <br>\";\n }\n\n?>",
+      "description": "Bulunduğumuz dizindeki .php uzantılı tüm dosyaları listeleyelim."
+    }
+  ],
+  "return": {
+    "type": "array",
+    "text": " Eşleşen dosya ve dizinleri içeren bir dizi döndürür. Bir eşleşme bulunamazsa veya hata oluşursa FALSE döndürür. "
+  },
+  "deprecated": false
+}
