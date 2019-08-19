@@ -1,0 +1,31 @@
+{
+  "author": "Kemal MUTLU <mutlukemal1717@gmail.com>",
+  "title": "PHP'de is_dir() fonksiyonu",
+  "name": "is_dir",
+  "syntax": " is_dir ( string $dosyaismi ) : bool",
+  "description": "Belirtilen dosyanın bir dizin olup olmadığını söyler. ",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "$dosyaismi",
+      "type": "string",
+      "description": "Dosyanın yolu. Eğer dosyaismi bir göreli yol belirtiyorsa, çalışma dizinine göreli olduğu varsayılır; bir sembolik veya sabit bağ ise bağ çözümlenip hedefinin bir dizin olup olmadığına bakılır. open_basedir veya safe_mode etkin kılınmışsa ilgili kısıtlamalar uygulanabilir. ",
+      "required": true
+    }
+  ],
+  "examples": [
+    {
+      "code": "<?php\n\nvar_dump(is_dir('bir_dosya.txt'));\nvar_dump(is_dir('bir_dizin/abc'));\n\nvar_dump(is_dir('..')); // bir dizin yukarı\n\n/* \nYukarıdaki örneğin çıktısı\n bool(false)\nbool(false)\nbool(true)\n*/\n?>\n\n",
+      "description": "Bir kaç değeri test ederek hangilerinin dizin olduğunu test edelim."
+    }
+  ],
+  "return": {
+    "type": "boolean",
+    "text": "Dosyaismi ile belirtilen dosya mevcutsa ve bir dizin ise TRUE aksi takdirde FALSE döndürür. "
+  },
+  "deprecated": false
+}
