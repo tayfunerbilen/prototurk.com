@@ -1,0 +1,19 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmai.com>",
+  "title": "HTML <article> Etiketi",
+  "name": "article",
+  "syntax": "<article> .. </article>",
+  "description": "<article> etiketi, bağımsız ve kendi kendine yetebilen içerikleri işaretlemek için kullanılır.",
+  "version": "HTML5",
+  "closing_tag": true,
+  "display": "blok",
+  "usage": "Yapısal",
+  "default_css": "article { \n  display: block;\n}",
+  "note": "Bir makale yani (article), tek başına mantıklı olmalı ve sitenin geri kalanından bağımsız olarak kullanılabilmelidir. \nGenel olarak kullanım alanları ise;\n- Forum konuları\n- Blog konuları\n- Haber\n- Yorum vb. olabilir.",
+  "examples": [
+    {
+      "code": "<article>\n  <h1>Prototürk</h1>\n  <p>2011'den beri kendini web dilleri ve teknolojilerini öğretmeye adamış bir eğitim platformudur.</p>\n</article>",
+      "description": "Örnek bir makale kullanımı;"
+    }
+  ]
+}
