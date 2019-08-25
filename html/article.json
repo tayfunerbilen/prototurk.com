@@ -7,7 +7,7 @@
   "version": "HTML5",
   "closing_tag": true,
   "display": "blok",
-  "usage": "Yapısal",
+  "usage": ["Yapısal", "Anlamsal"],
   "default_css": "article { \n  display: block;\n}",
   "note": "Bir makale yani (article), tek başına mantıklı olmalı ve sitenin geri kalanından bağımsız olarak kullanılabilmelidir. \nGenel olarak kullanım alanları ise;\n- Forum konuları\n- Blog konuları\n- Haber\n- Yorum vb. olabilir.",
   "examples": [
