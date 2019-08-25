@@ -3,7 +3,7 @@
   "title": "HTML <article> Etiketi",
   "name": "article",
   "syntax": "<article> .. </article>",
-  "description": "<article> etiketi, bağımsız ve kendi kendine yetebilen içerikleri işaretlemek için kullanılır.",
+  "description": "&lt;article> etiketi, bağımsız ve kendi kendine yetebilen içerikleri işaretlemek için kullanılır.",
   "version": "HTML5",
   "closing_tag": true,
   "display": "blok",
