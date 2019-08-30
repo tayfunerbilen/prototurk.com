@@ -1,27 +1,40 @@
 {
   "author": "Emre JILTA <jilta.e@gmail.com>",
-  "title": "PHP'de strrev() Fonksiyonu",
+  "edit": [
+    "tayfunerbilen <tayfunerbilen@gmail.com"
+  ],
+  "title": "PHP strrev() Fonksiyonu",
   "name": "strrev",
-  "syntax": "strrev ( string $str ) : string",
-  "description": "Girilen bir string ifadeyi ters döndürür.",
+  "syntax": "strrev ( string string ) : string",
+  "description": "Bir ifadeyi ters çevirmek için kullanılır. Örneğin ters bir yazıyı düze, düz bir yazıyı terse çevirir. Fonksiyonun açılımı ise <b>String Reverse</b>'dür.",
   "compatibilities": [
     "php 4",
     "php 5",
     "php 7"
   ],
   "params": [{
-    "name": "$str",
+    "name": "$string",
     "type": "string",
-    "description": "Ters çevrilecek string ifade",
+    "description": "Ters çevrilecek değer",
     "required": true
   }],
-  "examples": [{
-    "code": "<?\n\t$deger = \"Kartal kalkar dal sarkar, dal sarkar kartal kalkar.\";\n\techo strrev($deger);\n?>",
-    "title": "Örnek Kullanım"
-  }],
+  "examples": [
+    {
+      "code": "<?php\n\necho strrev('prototurk'); // Çıktı: krutotorp",
+      "description": "Düz bür yazıyı terse çevirelim."
+    },
+    {
+      "code": "<?php\n\necho strrev('krutotorp'); // Çıktı: prototurk",
+      "description": "Ters bir yazıyı düze çevirelim."
+    },
+    {
+      "code": "<?php\n\nfunction mb_strrev($str){\n    $r = '';\n    for ($i = mb_strlen($str); $i>=0; $i--) {\n        $r .= mb_substr($str, $i, 1);\n    }\n    return $r;\n}\n\necho mb_strrev(\"☆❤world\"); // echo \"dlrow❤☆\"",
+      "description": "UTF-8 destekli, karakter kodlama destekli tersine çevirme işlemi içinse şöyle bir fonksiyon yazılabilir;"
+    }
+  ],
   "return": {
     "type": "string",
-    "text": "Ters çevrilmiş string değer döndürülür"
+    "text": "Ters çevrilmiş string değer döner."
   },
   "deprecated": false
 }
