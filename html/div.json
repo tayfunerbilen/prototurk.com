@@ -8,7 +8,7 @@
   "closing_tag": true,
   "display": "blok",
   "usage": "Yapısal",
-  "note": "Genel olarak CSS uygulanarak kullanılır. Kendi başına bir anlam ifade etmez. Ayrıca blok görünümlü bir etiket olduğu için, işaretlenen alanın genişliği 100% olur. Ancak CSS ile bunu değiştirmek mümkündür.",
+  "note": "Genel olarak CSS uygulanarak kullanılır. \nKendi başına bir anlam ifade etmez. \nAyrıca blok görünümlü bir etiket olduğu için, işaretlenen alanın genişliği 100% olur. Ancak CSS ile bunu değiştirmek mümkündür.",
   "examples": [
     {
       "code": "<div>\n\t<h3>Başlık</h3>\n\t<p> bu bir paraftır. </p>\n</div>",
