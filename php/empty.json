@@ -1,0 +1,41 @@
+{
+  "author": "Mehmet COŞKUN <bycathlack@hotmail.com>",
+  "title": "PHP'de empty() Fonksiyonu",
+  "name": "empty",
+  "syntax": "empty ( mixed $değişken ) : bool",
+  "description": "empty() fonksiyonu tanımlanmış değişkenin boş olup olmadığını (değişkene değer atanmış mı?) kontrol etmek amacıyla kullanılır.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "var",
+      "type": "mixed",
+      "description": "kontrol edilecek değşiken",
+      "default": "$var",
+      "required": false
+    }
+  ],
+  "changelogs": [
+    {
+      "version": "PHP 5",
+      "description": "PHP 5'ten beri, özellikleri olmayan nesneler boş sayılmamaktadır."
+    },
+    {
+      "version": "PHP 4",
+      "description": "PHP 4'ten beri, dizge değeri olarak \"0\" boş sayılmaktadır."
+    }
+  ],
+  "examples": [
+    {
+      "code": "$a = \"\";\n$b = \"prototurk\";\n\nif (empty($a)) {\n\t//burda true döner $a değişkeninin boş olduğunu belirtir\n}\n\nif (empty($b)) {\n\t//burda false döner $b değişkeninin dolu olduğunu belirtir\n}"
+    }
+  ],
+  "return": {
+    "type": "mixed",
+    "text": "Belirtilen değişken boş ise TRUE değeri döndürür. Bunun dışında belirtilen değişken aşağıdaki tanımlamalarda da TRUE değeri döndürür."
+  },
+  "deprecated": false
+}
