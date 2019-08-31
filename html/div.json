@@ -1,0 +1,22 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "<div> Etiketi",
+  "name": "div",
+  "syntax": "<div> .. </div>",
+  "description": "&lt;div> etiketi HTML sayfada bir bölünmeyi ya da bölümü işaretlemek için kullanılır. HTML'de en çok kullanılan blok görünümlü etikettir. Satır içi görünümlü olanı ise <code>&lt;span></code> etiketidir.",
+  "version": "HTML",
+  "closing_tag": true,
+  "display": "blok",
+  "usage": "Yapısal",
+  "note": "Genel olarak CSS uygulanarak kullanılır. Kendi başına bir anlam ifade etmez. Ayrıca blok görünümlü bir etiket olduğu için, işaretlenen alanın genişliği 100% olur. Ancak CSS ile bunu değiştirmek mümkündür.",
+  "examples": [
+    {
+      "code": "<div>\n\t<h3>Başlık</h3>\n\t<p> bu bir paraftır. </p>\n</div>",
+      "description": "En basit haliyle kullanımı."
+    },
+    {
+      "code": "Bu normal bir yazıdır <div>bu kısım ise 100% olarak görünecek olan yazıdır</div> buradan sonra devam eden yazı altta kalacaktır :)",
+      "description": "Blok görünümünü daha iyi anlamak için bir örnek"
+    }
+  ]
+}
