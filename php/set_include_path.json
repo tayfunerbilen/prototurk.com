@@ -1,0 +1,31 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "PHP set_include_path() Fonksiyonu",
+  "name": "set_include_path",
+  "syntax": "set_include_path ( string $new_include_path ) : string",
+  "description": "<code>include_path</code> ayarını belirlemek için kullanılır. Bu ayar <code>require</code>, <code>include</code>, <code>fopen()</code>, <code>file()</code>, <code>readfile()</code> ve <code>file_get_contents()</code> fonksiyonlarında dosyaların aranacağı dizini belirlemek için kullanılır.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "$new_include_path",
+      "type": "string",
+      "description": "include_path için belirlenecek yeni yol",
+      "required": true
+    }
+  ],
+  "examples": [
+    {
+      "code": "<?php\n\n// Çalışmayacak çünkü yolu belirtmedik, o yüzden olmayan bir dosyayı çağırmaya çalışıyoruz\ninclude 'test.php';\n\n// yolumuzu dosyalarımızın olduğu yer olarak belirledik\nset_include_path('/var/www/html');\n\n// Eğer /var/ww/html atında test.php var ise artık çalışacaktır.\ninclude 'test.php';",
+      "description": "Örnek bir yol ayarı yapalım."
+    }
+  ],
+  "return": {
+    "type": "string",
+    "text": "Başarıyla ayarlandıysa eski include_path değeri döner, başarısız olursa <b>FALSE</b> değeri döner."
+  },
+  "deprecated": false
+}
