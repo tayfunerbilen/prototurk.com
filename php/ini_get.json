@@ -1,0 +1,42 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "PHP ini_get() Fonksiyonu",
+  "name": "ini_get",
+  "syntax": "ini_get ( string $varname ) : string",
+  "description": "Varsayılan <code>include_path</code> değerini almanızı sağlar.",
+  "note": "Eğer ayarın değeri dizi (array) ise, fonksiyon <b>FALSE</b> değerini döndürecektir.\nHazıfa değerlerinde (Örn: upload_max_filesize) değerler geriye kısaltılmış olarak dönüyor. Örneğin <b>50M</b> gibi, bu gibi durumlarda sizin bunu byte cinsine çevirmeniz gerekebilir. Örneklerde bununla ilgili bir fonksiyon belirtilmiştir.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "$varname",
+      "type": "string",
+      "description": "Ayar adı",
+      "required": true
+    }
+  ],
+  "changelogs": [
+    {
+      "version": "5.3.0",
+      "description": "Eskiden olmayan bir değer istendiğinde geriye boş string değer dönüyordu, artık <b>FALSE</b> değeri dönüyor."
+    }
+  ],
+  "examples": [
+    {
+      "code": "<?php\n\necho \"display_errors = \" . ini_get('display_errors') . \"<br>\";\necho \"register_globals = \" . ini_get('register_globals') . \"<br>\";\necho \"post_max_size = \" . ini_get('post_max_size') . \"<br>\";\n\n?>",
+      "description": "Bazı ayarların değerlerini alalım."
+    },
+    {
+      "code": "<?php\n\nfunction return_bytes ($size_str)\n{\n    switch (substr ($size_str, -1))\n    {\n        case 'M': case 'm': return (int)$size_str * 1048576;\n        case 'K': case 'k': return (int)$size_str * 1024;\n        case 'G': case 'g': return (int)$size_str * 1073741824;\n        default: return $size_str;\n    }\n}\n\necho ini_get('upload_max_filesize'); // Örnek Çıktı: 50M\n\necho return_bytes(ini_get('upload_max_filesize')); // Örnek çıktı: 52428800",
+      "description": "Hazıya değerlerini alırken byte cinsine dönüştürmek için bir örnek;"
+    }
+  ],
+  "return": {
+    "type": "string",
+    "text": "Başarılı olursa geriye ayarın değeri ya da boş değer ise <code>null</code> döner. Eğer belirtilen değer yok ise <b>FALSE</b> değeri döner."
+  },
+  "deprecated": false
+}
