@@ -1,0 +1,22 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "PHP get_include_path() Fonksiyonu",
+  "name": "get_include_path",
+  "syntax": "get_include_path ( void ) : string",
+  "description": "Varsayılan <code>include_path</code> değerini almanızı sağlar.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "examples": [
+    {
+      "code": "<?php\n\n// varsayılan yolu döndürür\necho get_include_path();\n\n// ini_get() ile de aynı işlemi yapabilirsiniz\necho ini_get('include_path');\n?>"
+    }
+  ],
+  "return": {
+    "type": "string",
+    "text": "Varsayılan yolu geriye döndürür."
+  },
+  "deprecated": false
+}
