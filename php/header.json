@@ -1,0 +1,42 @@
+{
+  "author": "Mehmet COŞKUN <bycathlack@hotmail.com>",
+  "title": "PHP'de header() Fonksiyonu",
+  "name": "header",
+  "syntax": "header ( string $header [, bool $replace = TRUE [, int $http_response_code ]] ) : void",
+  "description": "header() işlevi, ham bir HTTP üstbilgisi göndermek için kullanılan PHP'de yerleşik bir işlevdir. HTTP işlevleri, istemciye veya tarayıcıya Web sunucusu tarafından gönderilen bilgileri, başka bir çıktı gönderilmeden önce işleyen işlevlerdir. PHP header() işlevi, istemciye veya tarayıcıya ham biçimde bir HTTP başlığı gönderir. HTML, XML, JSON veya başka bir çıktı bir tarayıcıya veya müşteriye gönderilmeden önce, ham veriler sunucu tarafından başlık bilgisi olarak yapılan istekle (özellikle HTTP İsteği) gönderilir. HTTP üstbilgisi, ileti gövdesinde gönderilen nesne hakkında istek ve yanıt hakkında daha kesin bilgi sağlar.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "changelogs": [
+    {
+      "version": "4.4.2 ve 5.1.2",
+      "description": "Başlık yerleştirme saldırılarına karşı bir önlem olarak bu işlev artık bir kerede birden fazla başlık gönderilmesine izin vermemektedir."
+    },
+    {
+      "version": "4.3.0",
+      "description": "$http_response_code değiştirgesi eklendi."
+    },
+    {
+      "version": "PHP 4.0.4",
+      "description": "$replace değiştirgesi eklendi."
+    }
+  ],
+  "examples": [
+    {
+      "code": "header('Location: https://prototurk.com'); //https://prototurk.com sitesine yönlendirme",
+      "title": "Basit bir yönlendirme örneği"
+    },
+    {
+      "code": "header('Cache-Control: no-cache, must-revalidate'); // HTTP/1.1\nheader('Expires: Sat, 26 Jul 1997 05:00:00 GMT'); // Geçmişte bir tarih",
+      "description": "Tarayıcılar genelde web sayfalarını önbelleklerine alırlar, böylece kullanıcının bir sonraki ziyaretinde, sayfanın önbellekten okunmasını sağlayarak hızlı açılmasına yardım ederler. Ancak bu bazen iyi değildir, kullanıcılar eski sayfanın içeriği ile karşılaşabilirler, bu nedenle ön belleğe almayı engellemek isteyebiliriz:",
+      "title": "Ön beleğe alma örneği"
+    }
+  ],
+  "return": {
+    "type": "null",
+    "text": "Hiçbir değer dönmez."
+  },
+  "deprecated": false
+}
