@@ -2,7 +2,7 @@
   "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
   "title": "PHP'de array_keys() Fonksiyonu",
   "name": "array_keys",
-  "syntax": "array_keys ( array $array , mixed $search_value [, bool $strict = FALSE ] ) : array",
+  "syntax": "array_keys ( array $array , mixed $search_value , [ bool $strict = FALSE ] ) : array",
   "description": "Belirtilen diziye ait tüm anahtarları geriye döndürür.",
   "compatibilities": [
     "php 4",
