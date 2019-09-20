@@ -1,0 +1,19 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "<aside> Etiketi",
+  "name": "aside",
+  "syntax": "<aside> .. </aside>",
+  "description": "Web sayfanın içeriği ile alakalı ilişkili içerikleri işaretlemek için kullanılır, ancak sayfanın ana içeriğini oluşturmaz. Örneğin yazar bilgisi, içerik ile ilgili bağlantılar, bağlantılı içerikler, reklamlar ve sidebar olarak tanımladığımız alan için kullanımı uygundur.",
+  "version": "HTML5",
+  "closing_tag": true,
+  "display": "blok",
+  "usage": "Yapısal",
+  "default_css": "aside {\n  display: block;\n}",
+  "note": "Bu etiketin kullanımıyla ilgili bazı anlaşmazıklar olduğu biliniyor. Genel olarak kullanım alanları şöyledir;\n- Kaynak belirtme ya da son notlar\n- Yorumlar\n- Alıntılar\n- Ek bilgiler\n- İçerikten bağımsız kenar alanı (sidebar)",
+  "examples": [
+    {
+      "code": "<main>\n    <article>\n        <header>\n            <!-- makale ile ilgili üst bilgiler -->\n            <h1>Makale Başlığı</h1>\n        </header>\n        <!-- Makale içeriği -->\n        <main>\n            <!-- Alıntılar -->\n            <aside>\n\n            </aside>\n        </main>\n        <!-- Yorum Alanı -->\n        <aside>\n\n        </aside>\n        <!-- Makale alt bilgileri (Tarih, Etiketler, Kategoriler, Menü) -->\n        <footer>\n\n        </footer>\n    </article>\n</main>\n<!-- Web sayfası sidebar alanı: Reklamlar, Benzer İçerikler, İlgili linkler, Giriş formları vb. -->\n<aside>\n    \n</aside>",
+      "description": "Birden fazla kullanım alanıyla ilgili bir örnek vermek gerekirse;"
+    }
+  ]
+}
