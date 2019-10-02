@@ -1,0 +1,56 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "CSS backdrop-filter Özelliği",
+  "name": "backdrop-filter",
+  "syntax": "backdrop-filter: blur() | brightness() | constrast() | grayscale() | hue-rotate() | opacity() | saturate() | sepia()",
+  "js_syntax": "object.style.backdropFilter = \"blur(5px)\"",
+  "description": "Adından da anlaşılacağı üzere, arkaplan görseline/fonuna filtre uygulamak için kullanılır. Filtreler sadece arakafon'a uygulanıyor, içerik alanı bu işlemlerden etkilenmez.",
+  "note": "Şu an için sınırlı sayıda tarayıcı bu özelliği desteklemektedir. Ancak ileriye dönük kullanılması mutlak özellikler arasında yer almaktadır.",
+  "version": "CSS3",
+  "values": [
+    {
+      "value": "blur(değer)",
+      "description": "Bulanıklığını ayarlar."
+    },
+    {
+      "value": "brightness(değer)",
+      "description": "Parlaklığını ayarlar."
+    },
+    {
+      "value": "contrast(değer)",
+      "description": "Kontrastını ayarlar."
+    },
+    {
+      "value": "grayscale(değer)",
+      "description": "Siyah-beyazlık tonunu ayarlar."
+    },
+    {
+      "value": "hue-rotate(değer)",
+      "description": "Renklerin birbiriyle karışımını ayarlar."
+    },
+    {
+      "value": "invert(değer)",
+      "description": "Renk derğerlerini tersine çevirir."
+    },
+    {
+      "value": "opacity(değer)",
+      "description": "Parlaklığı ayarlanır."
+    },
+    {
+      "value": "saturate(değer)",
+      "description": "Doygunluğunu ayarlar."
+    },
+    {
+      "value": "sepia(değer)",
+      "description": "Renk sıcaklığını ayarlar."
+    }
+  ],
+  "examples": [
+    {
+      "code": "<div class=\"wrapper\">\n\t<div class=\"filter-box\">\n\t\t\n\t</div>\n</div>\n\n<style>\n.wrapper {\n\twidth: 400px;\n\theight: 200px;\n\tbackground: url(https://sample-videos.com/img/Sample-jpg-image-200kb.jpg) no-repeat center;\n\tbackground-size: cover;\n}\n.wrapper .filter-box {\n\twidth: 100px;\n\theight: 100px;\n\tbackdrop-filter: blur(2px) sepia(.4) invert(.3) hue-rotate(15deg) contrast(.7);\n\tfloat: right;\n}\n</style>",
+      "description": "Örneğin resmin belli bir bölümüne filtre uygulayalım."
+    }
+  ],
+  "animatable": true,
+  "default_value": "none"
+}
