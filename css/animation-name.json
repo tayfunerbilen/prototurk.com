@@ -1,0 +1,23 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "CSS animation-name Özelliği",
+  "name": "animation-name",
+  "syntax": "animation-name: animasyonAdi",
+  "js_syntax": "object.style.animationName=\"animasyonAdi\"",
+  "description": "Elemana uygulanacak animasyonu belirler. Rasgele bir isim almaz, animasyon için oluşturulan <code>@keyframes</code> adı ne ise aynı isme sahip olmalıdır.",
+  "version": "CSS3",
+  "values": [
+    {
+      "value": "animasyonAdi",
+      "description": "Uygulanacak animasyonun keyframe adı."
+    }
+  ],
+  "examples": [
+    {
+      "code": "<div class=\"box\"></div>\n\n<style>\n    .box {\n        width: 60px;\n        height: 60px;\n        background: blue;\n        position: relative;\n        left: 0;\n        animation-name: boxAnimation;\n        animation-duration: 1s;\n    }\n    @keyframes boxAnimation {\n        to {left: 200px}\n    }\n</style>",
+      "description": "boxAnimation adında bir keyframes oluşturualım ve bu animasyonu elemana uygulayalım."
+    }
+  ],
+  "animatable": false,
+  "default_value": "none"
+}
