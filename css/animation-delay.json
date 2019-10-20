@@ -1,0 +1,28 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "CSS animation-delay Özelliği",
+  "name": "animation-delay",
+  "syntax": "animation-delay: süre",
+  "js_syntax": "object.style.animationDelay = \"1s\"",
+  "description": "Bu özellik, animasyon işleminin ne zaman başlayacağını belirler.",
+  "note": "Negatif değer verildiğinde animasyon ona göre başlangıç yapar. Örneğin 5 saniye sürecek bir animasyon işleminde -2500ms değeri verilirse animasyon işlemi ortadan başlayarak devam eder.",
+  "version": "CSS3",
+  "values": [
+    {
+      "value": "süre",
+      "description": "Saniye ve milisaniye cinsinden değer verilir. Örneğin 1s ya da 500ms gibi."
+    }
+  ],
+  "examples": [
+    {
+      "code": "<div class=\"box\"></div>\n\n<style>\n    .box {\n        width: 60px;\n        height: 60px;\n        border: 1px solid blue;\n        position: relative;\n        animation: boxAnimation 3s infinite;\n        animation-delay:  2s;\n    }\n    @keyframes boxAnimation {\n        from {left: 0}\n        to {left: 200px}\n    }\n</style>",
+      "description": "Örneğin bir kutuyu soldan sağa doğru kaydıralım ancak bu işlem 2 saniye sonra başlasın"
+    },
+    {
+      "code": "<div class=\"box\"></div>\n\n<style>\n    .box {\n        width: 60px;\n        height: 60px;\n        border: 1px solid blue;\n        position: relative;\n        animation: boxAnimation 3s infinite;\n        animation-delay: -500ms;\n    }\n    @keyframes boxAnimation {\n        from {left: 0}\n        to {left: 200px}\n    }\n</style>",
+      "description": "Eğer negatif değer verilirse animasyon başlangıcı ona göre ayarlanır. Yani 3 saniye sürecek bir animasyona -500ms değeri verilirse animasyon 500ms lik başlangıç noktasından başlar."
+    }
+  ],
+  "animatable": false,
+  "default_value": "0s"
+}
