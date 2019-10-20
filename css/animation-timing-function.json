@@ -1,0 +1,48 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "CSS animation-timing-function Özelliği",
+  "name": "animation-timing-function",
+  "syntax": "animation-timing-function: linear | ease | ease-in | ease-out | ease-in-out | step-start | step-end | steps(sayı, start | end) | cubic-bezier(n,n,n,n)",
+  "js_syntax": "object.style.animationTimingFunction=\"linear\"",
+  "description": "Animasyonun hız eğrisini belirler. Bu sayede animasyon oynatılırken nasıl bir akışta oynatılacağı belirlenir, belli başlı zamanlama fonksiyonları hariç kendinizde özel olarak <code>cubic-bezier()</code> kullanarak hız eğrisini oluşturabilirsiniz.",
+  "values": [
+    {
+      "value": "linear",
+      "description": "Animasyon başlangıçtana bitişe kadar aynı hızda oynar."
+    },
+    {
+      "value": "ease",
+      "description": "Varsayılan değerdir. Animasyon yavaş başlar, hızlanır ve yine yavaş biter."
+    },
+    {
+      "value": "ease-in",
+      "description": "Animasyon yavaş başlar."
+    },
+    {
+      "value": "ease-out",
+      "description": "Animasyon yavaş biter."
+    },
+    {
+      "value": "ease-in-out",
+      "description": "Animasyon yavaşlar başlar, yavaş biter."
+    },
+    {
+      "value": "step-start",
+      "description": "steps(1, start) değerine eşittir"
+    },
+    {
+      "value": "step-end",
+      "description": "steps(1, end) değerine eşittir"
+    },
+    {
+      "value": "steps(sayı, start | end)",
+      "description": "Adımlı olarak animasyonu çalıştırır, animasyon akmaz belirlenen sayıya göre bölerek çalışır."
+    }
+  ],
+  "examples": [
+    {
+      "code": "<div class=\"box\"></div>\n<div class=\"box timing-ease-in\">ease-in</div>\n<div class=\"box timing-ease-out\">ease-out</div>\n<div class=\"box timing-ease-in-out\">ease-in-out</div>\n<div class=\"box timing-linear\">linear</div>\n<div class=\"box timing-step-start\">step-start</div>\n<div class=\"box timing-step-end\">step-end</div>\n<div class=\"box timing-steps-start\">steps(4, start)</div>\n<div class=\"box timing-steps-end\">steps(4, end)</div>\n<div class=\"box timing-custom\">steps(4, end)</div>\n\n<style>\n    .box {\n        width: 100px;\n        height: 60px;\n        margin-bottom: 10px;\n        background: blue;\n        position: relative;\n        color: #fff;\n        display: flex;\n        align-items: center;\n        justify-content: center;\n        text-align: center;\n        font-size: 14px;\n        font-weight: bold;\n        animation: boxAnimation 1s infinite alternate;\n    }\n    .box.timing-ease-in {\n        animation-timing-function: ease-in;\n    }\n    .box.timing-ease-out {\n        animation-timing-function: ease-out;\n    }\n    .box.timing-ease-in-out {\n        animation-timing-function: ease-in-out;\n    }\n    .box.timing-linear {\n        animation-timing-function: linear;\n    }\n    .box.timing-step-start {\n        animation-timing-function: step-start;\n    }\n    .box.timing-step-end {\n        animation-timing-function: step-end;\n    }\n    .box.timing-steps-start {\n        animation-timing-function: steps(4, start);\n    }\n    .box.timing-steps-end {\n        animation-timing-function: steps(4, end);\n    }\n    .box.timing-custom {\n        animation-timing-function: cubic-bezier(0.105, 1.345, 0.790, -0.105);\n    }\n    @keyframes boxAnimation {\n        from {left: 0}\n        to {left: 250px}\n    }\n</style>",
+      "description": "Tüm fonksiyonların bir arada kullanıldığı örnek"
+    }
+  ]
+}
