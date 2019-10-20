@@ -1,0 +1,17 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "CSS animation Özelliği",
+  "name": "animation",
+  "syntax": "animation: name duration timing-function delay iteration-count direction fill-mode play-state;",
+  "js_syntax": "object.style.animation=\"animasyonAdi 5s infinite\"",
+  "description": "Tüm animasyon özelliklerinin kısa kullanımıdır. <code>animation-name</code> ve <code>animation-duration</code> zorunlu diğerleri opsiyoneldir.",
+  "version": "CSS3",
+  "examples": [
+    {
+      "code": "<div class=\"box\"></div>\n\n<style>\n    .box {\n        width: 60px;\n        height: 60px;\n        background: blue;\n        position: relative;\n        left: 0;\n        animation: boxAnimation 1s ease-in 1s infinite alternate backwards;\n    }\n    @keyframes boxAnimation {\n        from {left: 0; background: red}\n        to {left: 250px}\n    }\n</style>",
+      "description": "Tüm animasyon özelliklerinin bir arada kullanıldığı örnek"
+    }
+  ],
+  "animatable": false,
+  "default_value": "none 0 ease 0 1 normal none running"
+}
