@@ -31,7 +31,7 @@
       "description": "Son kareden başlayacak bir animasyon oluşturalım."
     },
     {
-      "code": "<style>\n    .box {\n        width: 60px;\n        height: 60px;\n        background: blue;\n        position: relative;\n        animation: boxAnimation 1s infinite;\n        animation-direction: alternate;\n    }\n    @keyframes boxAnimation {\n        from {left: 0; opacity: 0}\n        to {left: 200px; opacity: 1}\n    }\n</style>",
+      "code": "<div class=\"box\"></div>\n\n<style>\n    .box {\n        width: 60px;\n        height: 60px;\n        background: blue;\n        position: relative;\n        animation: boxAnimation 1s infinite;\n        animation-direction: alternate;\n    }\n    @keyframes boxAnimation {\n        from {left: 0; opacity: 0}\n        to {left: 200px; opacity: 1}\n    }\n</style>",
       "description": "Baştan başlayıp tekrar eden bir animasyon oluşturalım."
     },
     {
