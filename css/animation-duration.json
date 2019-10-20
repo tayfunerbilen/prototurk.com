@@ -1,0 +1,27 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "CSS animation-duration Özelliği",
+  "name": "animation-duration",
+  "syntax": "animation-duration: süre",
+  "js_syntax": "object.style.animationDuration=\"3s\"",
+  "description": "Bu özellik, animasyonun oynama süresini belirler. Saniye cinsinden ya da mili saniye cinsinden tanımlanır.",
+  "version": "CSS3",
+  "values": [
+    {
+      "value": "süre",
+      "description": "Saniye ya da milisaniye cinsinden süre"
+    }
+  ],
+  "examples": [
+    {
+      "code": "<div class=\"box\"></div>\n\n<style>\n    .box {\n        width: 40px;\n        height: 40px;\n        border-radius: 50%;\n        background: green;\n        position: relative;\n        animation: boxAnimation;\n        animation-duration: 3s;\n    }\n    @keyframes boxAnimation {\n        from {left: 0; opacity: 0}\n        to {left: 200px; opacity: 1}\n    }\n</style>",
+      "description": "3 saniye sürecek bir animasyon oluşturalım."
+    },
+    {
+      "code": "<div class=\"box\"></div>\n\n<style>\n    .box {\n        width: 40px;\n        height: 40px;\n        border-radius: 50%;\n        background: green;\n        position: relative;\n        animation: boxAnimation;\n        animation-duration: 500ms;\n    }\n    @keyframes boxAnimation {\n        from {left: 0; opacity: 0}\n        to {left: 200px; opacity: 1}\n    }\n</style>",
+      "description": "500 mili saniye sürecek bir animasyon oluşturalım."
+    }
+  ],
+  "animatable": false,
+  "default_value": "0"
+}
