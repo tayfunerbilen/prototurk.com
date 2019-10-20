@@ -1,0 +1,32 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "CSS animation-play-state Özelliği",
+  "name": "animation-play-state",
+  "syntax": "animation-play-state: paused | running",
+  "js_syntax": "object.style.animationPlayState=\"paused\"",
+  "description": "Animasyonun oynatılıp oynatılmayacağını tanımlar. Eğer animasyon durdurulmuş ise yine de ilk karedeki değerler elemana uygulanır ve bekler.",
+  "note": "Bu özelliği genel olarak Javascript ile birlikte animasyonu durdurup devam ettirmek için kullanabiliriz.",
+  "version": "CSS3",
+  "values": [
+    {
+      "value": "running",
+      "description": "Varsayılan değerdir. Bu özelliği yazmasanızda animasyon otomatik olarak oynatılacaktır."
+    },
+    {
+      "value": "paused",
+      "description": "Animasyon oynatılmaz ancak ilk karedeki değerler animasyon uygulanacak elemana uygulanır."
+    }
+  ],
+  "examples": [
+    {
+      "code": "<div class=\"box\"></div>\n\n<style>\n    .box {\n        width: 60px;\n        height: 60px;\n        background: blue;\n        position: relative;\n        animation: boxAnimation 1s;\n        animation-play-state: paused;\n    }\n    @keyframes boxAnimation {\n        from {left: 0; opacity: 0}\n        to {left: 200px; opacity: 1}\n    }\n</style>",
+      "description": "Bir animasyon oluşturalım ancak durduralım, bu durumda ilk karedeki değerler elemana uygulanacak ve örneğimizde opacity değeri 0 olacaktır."
+    },
+    {
+      "code": "<div id=\"box\"></div>\n\n<button id=\"playBtn\">Oynat</button>\n<button id=\"pauseBtn\">Durdur</button>\n\n<style>\n    #box {\n        width: 60px;\n        height: 60px;\n        background: blue;\n        position: relative;\n        animation: boxAnimation 5s;\n        animation-play-state: paused;\n    }\n    @keyframes boxAnimation {\n        from {left: 0}\n        to {left: 400px}\n    }\n</style>\n\n<script>\n    var playBtn = document.getElementById('playBtn'),\n        pauseBtn = document.getElementById('pauseBtn'),\n        box = document.getElementById('box');\n    \n    playBtn.addEventListener('click', function(){\n        box.style.animationPlayState = \"running\";\n    });\n    \n    pauseBtn.addEventListener('click', function(){\n        box.style.animationPlayState = \"paused\";\n    });\n</script>",
+      "description": "Javascript ile kullanımını merak ediyorsanız, işte size basit bir örnek."
+    }
+  ],
+  "animatable": false,
+  "default_value": "running"
+}
