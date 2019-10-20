@@ -1,0 +1,44 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "CSS animation-direction Özelliği",
+  "name": "animation-direction",
+  "syntax": "animation-direction: normal | reverse | alternate | alternate-reverse",
+  "js_syntax": "object.style.animationDirection=\"reverse\"",
+  "description": "Bu özellik, animasyonun oynatılacağı yönü belirlemek için kullanılır. Örneğin animasyon ilk kareden başlayıp sonda bitebilir, son kareden başlayıp ilk karede bitebilir ya da animasyon ilk kareden başlar, son kareye geldiğinde tekrar ilk kareye geri döner ve bu şekilde tekrarlar ya da tam tersi son kareden başlar, ilk kareye geldiğinde animasyon kendini tekrar eder.",
+  "note": "Normal bir animasyon işleminde bu özelliği kullanmanıza gerek yoktur. Zaten varsayılan olarak animasyon olması gerektiği gibi uygulanır.",
+  "version": "CSS3",
+  "values": [
+    {
+      "value": "normal",
+      "description": "Animasyon olması gerektiği gibi ilerler."
+    },
+    {
+      "value": "reverse",
+      "description": "Animasyon son kareden başlar ve ilk karede sonlanır."
+    },
+    {
+      "value": "alternate",
+      "description": "Animasyon ilk kareden başlar, son kareye geldiğinde bu sefer tam tersine son kareden başlar ve tekrar ilk karede biter. Bu sürekli olarak tekrarlanır."
+    },
+    {
+      "value": "alternate-reverse",
+      "description": "Animasyon son kareden başlar, ilk kareye geldiğinde bu sefer tam tersine ilk kareden başlar ve son karede biter. Bu sürekli olarak tekrarlanır."
+    }
+  ],
+  "examples": [
+    {
+      "code": "<div class=\"box\"></div>\n\n<style>\n    .box {\n        width: 60px;\n        height: 60px;\n        background: blue;\n        position: relative;\n        animation: boxAnimation 3s infinite;\n        animation-direction: reverse;\n    }\n    @keyframes boxAnimation {\n        from {left: 0; opacity: 0}\n        to {left: 200px; opacity: 1}\n    }\n</style>",
+      "description": "Son kareden başlayacak bir animasyon oluşturalım."
+    },
+    {
+      "code": "<style>\n    .box {\n        width: 60px;\n        height: 60px;\n        background: blue;\n        position: relative;\n        animation: boxAnimation 1s infinite;\n        animation-direction: alternate;\n    }\n    @keyframes boxAnimation {\n        from {left: 0; opacity: 0}\n        to {left: 200px; opacity: 1}\n    }\n</style>",
+      "description": "Baştan başlayıp tekrar eden bir animasyon oluşturalım."
+    },
+    {
+      "code": "<div class=\"box\"></div>\n\n<style>\n    .box {\n        width: 60px;\n        height: 60px;\n        background: blue;\n        position: relative;\n        animation: boxAnimation 1s infinite;\n        animation-direction: alternate-reverse;\n    }\n    @keyframes boxAnimation {\n        from {left: 0; opacity: 0}\n        to {left: 200px; opacity: 1}\n    }\n</style>",
+      "description": "Sondan başlayıp tekrar eden bir animasyon oluşturalım."
+    }
+  ],
+  "animatable": false,
+  "default_value": "0s"
+}
