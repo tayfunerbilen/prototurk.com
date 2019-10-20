@@ -40,5 +40,5 @@
     }
   ],
   "animatable": false,
-  "default_value": "0s"
+  "default_value": "normal"
 }
