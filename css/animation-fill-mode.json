@@ -1,0 +1,42 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "CSS animation-fill-mode Özelliği",
+  "name": "animation-fill-mode",
+  "syntax": "animation-fill-mode: none | forwards | backwards | both",
+  "js_syntax": "object.style.animationFillMode=\"forwards\"",
+  "version": "CSS3",
+  "values": [
+    {
+      "value": "none",
+      "description": "Varsayılan değerdir. Animasyon işlemi bittikten sonra animasyon uygulanan elemanın değerleri ilk haline döner."
+    },
+    {
+      "value": "forwards",
+      "description": "Animasyon işlemi bittikten sonra uygulanan değerler kalır. Örneğin rengi maviyse ve animasyon ile rengi kırmızıya dönmüşse, animasyon bittiğinde rengi kırmızı olarak kalır."
+    },
+    {
+      "value": "backwards",
+      "description": "Animasyon başlamadan önce ilk karedeki değerler uygulanır ve bittiğinde animasyon uygulanan eleman varsayılan değerlerine geri döner. Örneğin animasyon uygulanan elemanın rengi maviyse ve animasyonun ilk karesinde rengini kırmızıya döndürüyorsak, animasyon başlamamış bile olsa ilk karedeki değerler uygulanır. Animasyona başlangıç süresi verdiğimizde, bunu daha net görebiliriz."
+    },
+    {
+      "value": "both",
+      "description": "Animasyon başlamadan önce ilk karedeki değerler uygulanır, bittiğinde ise son karedeki uygulanan değerlerle birlikte kalır. Kısaca <code>forwards</code> ve <code>backwards</code> değerlerinin ikisini de kullanmak için kullanılır."
+    }
+  ],
+  "examples": [
+    {
+      "code": "<div class=\"box\"></div>\n\n<style>\n    .box {\n        width: 60px;\n        height: 60px;\n        background: blue;\n        position: relative;\n        animation: boxAnimation 1s;\n        animation-fill-mode: forwards;\n    }\n    @keyframes boxAnimation {\n        from {left: 0}\n        to {left: 200px; background: green}\n    }\n</style>",
+      "description": "Animasyon bittikten sonra son karedeki değerlerde kalan bir örnek hazırlayalım."
+    },
+    {
+      "code": "<div class=\"box\"></div>\n\n<style>\n    .box {\n        width: 60px;\n        height: 60px;\n        background: blue;\n        position: relative;\n        animation: boxAnimation 1s;\n        animation-delay: 1s;\n        animation-fill-mode: backwards;\n    }\n    @keyframes boxAnimation {\n        from {background: red; left: 0}\n        to {left: 200px; background: green}\n    }\n</style>",
+      "description": "Animasyon başlamadan önce ilk karedeki değerleri alan bir örnek hazırlayalım. Bunun için animation-delay kullanarak animasyonun başlama süresini biraz artırarak örneği daha net görelim."
+    },
+    {
+      "code": "<div class=\"box\"></div>\n\n<style>\n    .box {\n        width: 60px;\n        height: 60px;\n        background: blue;\n        position: relative;\n        animation: boxAnimation 1s;\n        animation-delay: 1s;\n        animation-fill-mode: both;\n    }\n    @keyframes boxAnimation {\n        from {background: red; left: 0}\n        to {left: 200px; background: green}\n    }\n</style>",
+      "description": "Şimdi de hem animasyon başlamadan önce ilk karedeki değerleri alan hem de animasyon bitince son karedeki değerler uygulanarak kalacak bir animasyon oluşturalım."
+    }
+  ],
+  "animatable": false,
+  "default_value": "none"
+}
