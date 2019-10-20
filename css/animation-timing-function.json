@@ -37,6 +37,10 @@
     {
       "value": "steps(sayı, start | end)",
       "description": "Adımlı olarak animasyonu çalıştırır, animasyon akmaz belirlenen sayıya göre bölerek çalışır."
+    },
+    {
+      "value": "cubic-bezier(n,n,n,n)",
+      "description": "Özel hız eğrisi oluşturmak için kullanılır"
     }
   ],
   "examples": [
