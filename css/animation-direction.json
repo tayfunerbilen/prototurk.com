@@ -5,7 +5,7 @@
   "syntax": "animation-direction: normal | reverse | alternate | alternate-reverse",
   "js_syntax": "object.style.animationDirection=\"reverse\"",
   "description": "Bu özellik, animasyonun oynatılacağı yönü belirlemek için kullanılır. Örneğin animasyon ilk kareden başlayıp sonda bitebilir, son kareden başlayıp ilk karede bitebilir ya da animasyon ilk kareden başlar, son kareye geldiğinde tekrar ilk kareye geri döner ve bu şekilde tekrarlar ya da tam tersi son kareden başlar, ilk kareye geldiğinde animasyon kendini tekrar eder.",
-  "note": "Normal bir animasyon işleminde bu özelliği kullanmanıza gerek yoktur. Zaten varsayılan olarak animasyon olması gerektiği gibi uygulanır.",
+  "note": "Normal bir animasyon işleminde bu özelliği kullanmanıza gerek yoktur. Zaten varsayılan olarak animasyon olması gerektiği gibi uygulanır. Özelliğin getirdiği yeniliği görebilmek için <code>infinite</code> ile tekrar eden animasyon olarak daha net göreceğimiz için örnekleri buna göre oluşturdum.",
   "version": "CSS3",
   "values": [
     {
@@ -18,11 +18,11 @@
     },
     {
       "value": "alternate",
-      "description": "Animasyon ilk kareden başlar, son kareye geldiğinde bu sefer tam tersine son kareden başlar ve tekrar ilk karede biter. Bu sürekli olarak tekrarlanır."
+      "description": "Animasyon ilk kareden başlar, son kareye geldiğinde bu sefer tam tersine son kareden başlar ve tekrar ilk karede biter."
     },
     {
       "value": "alternate-reverse",
-      "description": "Animasyon son kareden başlar, ilk kareye geldiğinde bu sefer tam tersine ilk kareden başlar ve son karede biter. Bu sürekli olarak tekrarlanır."
+      "description": "Animasyon son kareden başlar, ilk kareye geldiğinde bu sefer tam tersine ilk kareden başlar ve son karede biter."
     }
   ],
   "examples": [
