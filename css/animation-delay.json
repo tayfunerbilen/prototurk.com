@@ -4,8 +4,8 @@
   "name": "animation-delay",
   "syntax": "animation-delay: süre",
   "js_syntax": "object.style.animationDelay = \"1s\"",
-  "description": "Bu özellik, animasyon işleminin ne zaman başlayacağını belirler.",
-  "note": "Negatif değer verildiğinde animasyon ona göre başlangıç yapar. Örneğin 5 saniye sürecek bir animasyon işleminde -2500ms değeri verilirse animasyon işlemi ortadan başlayarak devam eder.",
+  "description": "Animasyonun başlamadan önce ne kadar süre bekleyeceğini belirler.",
+  "note": "Negatif değer verildiğinde animasyon ona göre başlangıç yapar. Örneğin 5 saniye sürecek bir animasyon işleminde -2500ms değeri verilirse animasyon işlemi ortadan başlayarak devam eder.\nGecikme sadece ilk kez oynatıldığında geçerli olur.",
   "version": "CSS3",
   "values": [
     {
