@@ -1,0 +1,20 @@
+{
+  "author": "Tan Siret AKINCI <tansiretakinci@yandex.com>",
+  "title": "<embed> Etiketi",
+  "name": "embed",
+  "syntax": "<embed> ",
+  "description": "Bir dosya formatını HTML içine gömmeye yarar.",
+  "version": "HTML5",
+  "closing_tag": true,
+  "display": "blok",
+  "usage": "Yapısal",
+  "default_css": "embed",
+  "note": "Bir dosya formatını HTML dosyası içine gömmek için kullanılır. Genelde medya dosyaları için iş görür.",
+  "examples": [
+    {
+      "code": "<embed src=\"helloworld.swf\"></embed>",
+      "description": "Medya dosyalarını gömmek için",
+      "title": "Medya dosyaları"
+    }
+  ]
+}
