@@ -1,0 +1,25 @@
+{
+    "author": "efeataroglu <atarogluefe@gmail.com>",
+    "title": "PHP'de Range() Fonksiyonu",
+    "name": "range()",
+    "syntax": "range(başlangıç, bitiş, aralık)",
+    "description": "Range() fonksiyonu belirli bir aralıkta dizi oluşturmamızı sağlar. Range() fonksiyonu dizi olarak ürettiği için bunu echo ile yazdıramayız bunun için print_r() fonksiyonunu veya çeşitli döngüleri (örneğin: foreach döngüsü) kullanabilirsiniz. ",
+    "compatibilities": [
+      "php 4",
+      "php 5",
+      "php 7"
+    ],
+    "examples": [
+      {
+        "code": "<?php \n\n\t//0 ile 100 arasındaki çift sayıları dizi olarak elde ediyoruz..\n\tprint_r(range(0, 100, 2));\n\t\n\t//0 ile 100 arasındaki çift sayıları integer olarak elde ediyoruz.\n\tforeach(range(0, 100, 2) as $ciftsayilar) {\n    \techo $ciftsayilar;\n}\n\n?>",
+        "description": "0 ile 100 arasındaki çift sayıları range() fonksiyonu yardımı ile elde ediyoruz.",
+        "title": "0 ile 100 arasındaki çift sayıları range() fonksiyonu ile elde etme"
+      },
+      {
+        "code": "<?php \n\n\t//A-Z Alfabemizi string olarak elde ediyoruz.\n\tforeach(range('a', 'z') as $alfabe) {\n        echo $alfabe;\n}\n\n?>",
+        "description": "Range() fonksiyonunu kullanarak alfabemizi yazdırıyoruz. ",
+        "title": "range() fonksiyonu ile alfabe yazdırma."
+      }
+    ],
+    "deprecated": false
+  }
