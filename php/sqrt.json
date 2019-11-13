@@ -1,0 +1,20 @@
+{
+    "author": "efeataroglu <atarogluefe@gmail.com>",
+    "title": "PHP'de Karekök Alma Fonksiyonu",
+    "name": "sqrt()",
+    "syntax": "sqrt ( float $arg ) : float",
+    "description": "PHP'de karekök işlemi yapmamızı sağlayan fonksiyondur.",
+    "compatibilities": [
+      "php 4",
+      "php 5",
+      "php 7"
+    ],
+    "examples": [
+      {
+        "code": "<?php \n\techo sqrt(9);\n?>\n\n\n\n\n\n",
+        "description": "9 Sayısını kök dışına çıkartıyoruz.",
+        "title": "Sayıyı Kök Dışına Çıkarma"
+      }
+    ],
+    "deprecated": false
+  }
