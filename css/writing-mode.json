@@ -1,0 +1,35 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "CSS writing-mode Özelliği",
+  "name": "writing-mode",
+  "syntax": "writing-mode: horizontal-tb | vertical-rl | vertical-lr",
+  "js_syntax": "object.style.writingMode = \"vertical-rl\"",
+  "description": "Bu özellik metinlerin yatay mı dikey mi gözükeceğini belirler.",
+  "version": "CSS3",
+  "values": [
+    {
+      "value": "horizontal-tb",
+      "description": "İçeriğin yatay olarak soldan sağa, dikey olarak yukarıdan aşağı görünmesini sağlar. (varsayılan değerdir)"
+    },
+    {
+      "value": "vertical-rl",
+      "description": "İçeriğin yatay olarak yukarıdan aşağı, dikey olarak sağdan sola görünmesini sağlar."
+    },
+    {
+      "value": "vertical-lr",
+      "description": "İçeriğin yatay olarak yukarıdan aşağı, dikey olarak soldan sağa görünmesini sağlar."
+    }
+  ],
+  "examples": [
+    {
+      "code": "<div class=\"box\">\n\t<h3>PROTOTURK.COM</h3>\n\t<p>\n\t\tBu bir writing-mode örneğidir.\n\t</p>\n</div>\n\n<style>\n.box {\n\theight: 400px;\n\twidth: 400px;\n\tbackground: red;\n\tdisplay: flex;\n}\n.box h3 {\n\twriting-mode: vertical-lr;\n\ttext-align: center;\n}\n</style>",
+      "description": "Örneğin bir yazıyı yatayda yukarıdan aşağı olacak şekilde gösterelim."
+    },
+    {
+      "code": "<div class=\"box\">\n\t<h3>PROTOTURK.COM</h3>\n\t<p>\n\t\tBu bir writing-mode örneğidir.\n\t</p>\n</div>\n\n<style>\n.box {\n\theight: 400px;\n\twidth: 400px;\n\tbackground: red;\n\tdisplay: flex;\n\twriting-mode: vertical-rl;\n}\n.box * {\n\tflex: 1;\n}\n</style>",
+      "description": "vertical-rl örneği"
+    }
+  ],
+  "animatable": false,
+  "default_value": "horizontal-tb"
+}
