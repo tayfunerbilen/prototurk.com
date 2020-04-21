@@ -1,0 +1,80 @@
+{
+  "author": "osman <dctosman@hotmail.com>",
+  "title": "PHP'de setcookie() Fonksiyonu",
+  "name": "setcookie",
+  "syntax": "setcookie ( string $name [, string $value = \"\" [, int $time = 0 [, string $path = \"\" [, string $domain = \"\" [, bool $secure = false [, bool $httponly = false ]]]]] : bool",
+  "description": "Belirtilen isim, değer, süre ve diğer bilgilere sahip bir çerez oluşturur.",
+  "note": "Bu fonksiyon html etiketinden önce çağrılmalıdır.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "$name",
+      "type": "string",
+      "description": "Çerezin ismi",
+      "required": true
+    },
+    {
+      "name": "$value",
+      "type": "string",
+      "description": "Çerezin alacağı değer",
+      "default": "\"\"",
+      "required": false
+    },
+    {
+      "name": "$time",
+      "type": "int",
+      "description": "Çerezin sona ereceği zaman",
+      "default": "0",
+      "required": false
+    },
+    {
+      "name": "$path",
+      "type": "string",
+      "description": "Çerezin bulunacağı yol",
+      "default": "\"\"",
+      "required": false
+    },
+    {
+      "name": "$domain",
+      "type": "string",
+      "description": "Çerezin bulunacağı alan adı",
+      "default": "\"\"",
+      "required": false
+    },
+    {
+      "name": "$secure",
+      "type": "boolean",
+      "description": "Eğer <b>TRUE</b> girilirse, çerez yalnızca ssl sertifikası olduğunda çalışacaktır.",
+      "default": "false",
+      "required": false
+    },
+    {
+      "name": "$httponly",
+      "type": "boolean",
+      "description": "Eğer <b>TRUE</b> girilirse, çerez yalnızca HTTP protokülü ile çalışacaktır.",
+      "default": "false",
+      "required": false
+    }
+  ],
+  "examples": [
+    {
+      "code": "<?php\n\t$deger = \"prototurk.com\";\n\t\n\t// Tarayıcı kapandığında sona erecek bir çerez.\n\tsetcookie(\"site\", $deger);\n\t\n\t// 1 saat sonra sona erecek bir çerez.\n\tsetcookie(\"site\", $deger, time() + 60 * 60);\n\n\t// 1 gün sonra sona erecek bir çerez.\n\tsetcookie(\"site\", $deger, time() + 60 * 60 * 24);\n?>",
+      "description": "Değerlerimiz saniye cinsinden olduğu için çarpma yöntemiyle ifade ediyoruz.",
+      "title": "Saat kullanımı"
+    },
+    {
+      "code": "<?php\n\tsetcookie(\"yazar\", \"tayfun erbilen\");\n\n\t$str = \"Yazarımız: \" + $_COOKIE[\"yazar\"];\n\techo $str;\n\n\t// Yazarımız: tayfun erbilen\n?>",
+      "description": "Oluşturduğumuz bir çerezin taşıdığı değeri almak için $_COOKIE tanımlı dizisinden faydalanıyoruz.",
+      "title": "Bir çerezin değerini almak"
+    }
+  ],
+  "return": {
+    "type": "boolean",
+    "text": "Fonksiyon çağrılmadan önce herhangi bir çıktı varsa, fonksiyon başarısız olur ve <b>FALSE</b> değeri döndürür. Fonksiyon başarıyla çağrılırsa <b>TRUE</b> değeri döndürür."
+  },
+  "deprecated": false
+}
