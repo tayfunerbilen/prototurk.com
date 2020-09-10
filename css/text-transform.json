@@ -28,6 +28,10 @@
     {
       "code": "<div class=\"uppercase\">küçük harflerle yazdık ama büyük görünecek</div>\n<div class=\"lowercase\">BÜYÜK HARFLERLE YAZDIK AMA KÜÇÜK GÖRÜNECEK</div>\n<div class=\"capitalize\">her kelimenin ilk harfi büyük görünecek</div>\n\n<style>\n.uppercase {\n\ttext-transform: uppercase;\n}\n.lowercase {\n\ttext-transform: lowercase;\n}\n.capitalize {\n\ttext-transform: capitalize;\n}\n</style>",
       "description": "Her değer için bir örnek vermek gerekirse;"
+    },
+    {
+      "code": "<div class=\"uppercase\">istanbul</div>\n<div class=\"uppercase\" lang=\"tr\">istanbul</div>\n\n<div class=\"lowercase\">İSTANBUL</div>\n<div class=\"lowercase\" lang=\"tr\">İSTANBUL</div>\n\n<div class=\"capitalize\">istanbul büyük şehir belediyesi</div>\n<div class=\"capitalize\" lang=\"tr\">istanbul büyük şehir belediyesi</div>\n\n<style>\n    .uppercase {\n        text-transform: uppercase;\n    }\n    .lowercase {\n        text-transform: lowercase;\n    }\n    .capitalize {\n        text-transform: capitalize;\n    }\n</style>",
+      "description": "Büyük İ ve küçük ı gibi karakterlerde büyük harfe ve küçük harfe çevirirken problem yaşayabilirsiniz. Bunun çözümü etiketinize ya da html etiketinize lang=\"tr\" değerini eklemek."
     }
   ],
   "animatable": false,
