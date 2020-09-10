@@ -1,0 +1,22 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "CSS tab-size Özelliği",
+  "name": "tab-size",
+  "syntax": "tab-size: sayı",
+  "js_syntax": "object.style.tabSize=\"16\"",
+  "description": "Tab karakterinin genişliğini ayarlamak için kullanılır. Tüm tarayıcılarda geçerli olması için örnekte verildiği gibi ön eklerle kullanılması önerilir.",
+  "version": "CSS3",
+  "values": [
+    {
+      "value": "sayı",
+      "description": "Genişliği girilen sayı kadar boşluktan oluşur."
+    }
+  ],
+  "examples": [
+    {
+      "code": "<pre class=\"tab-4\">tab\tkarakteri\t4\tolarak\tayarlandı.</pre>\n<pre class=\"tab-12\">tab\tkarakteri\t12\tolarak\tayarlandı.</pre>\n\n<style>\n.tab-4 {\n\t-moz-tab-size: 4; /* firefox için */\n\t-o-tab-size: 4; /* Opera 10.6-12.1 için */\n\ttab-size: 4;\n}\n.tab-12 {\n\t-moz-tab-size: 12; /* firefox için */\n\t-o-tab-size: 12; /* Opera 10.6-12.1 için */\n\ttab-size: 12;\n}\n</style>"
+    }
+  ],
+  "animatable": false,
+  "default_value": "8"
+}
