@@ -30,7 +30,7 @@
       "description": "Her değer için bir örnek vermek gerekirse;"
     },
     {
-      "code": "<div class=\"uppercase\">istanbul</div>\n<div class=\"uppercase\" lang=\"tr\">istanbul</div>\n\n<div class=\"lowercase\">İSTANBUL</div>\n<div class=\"lowercase\" lang=\"tr\">İSTANBUL</div>\n\n<div class=\"capitalize\">istanbul büyük şehir belediyesi</div>\n<div class=\"capitalize\" lang=\"tr\">istanbul büyük şehir belediyesi</div>\n\n<style>\n    .uppercase {\n        text-transform: uppercase;\n    }\n    .lowercase {\n        text-transform: lowercase;\n    }\n    .capitalize {\n        text-transform: capitalize;\n    }\n</style>",
+      "code": "<div class=\"uppercase\">istanbul</div>\n<div class=\"uppercase\" lang=\"tr\">istanbul</div>\n\n<div class=\"lowercase\">İSTANBUL</div>\n<div class=\"lowercase\" lang=\"tr\">İSTANBUL</div>\n\n<div class=\"capitalize\">istanbul büyük şehir belediyesi</div>\n\n<style>\n    .uppercase {\n        text-transform: uppercase;\n    }\n    .lowercase {\n        text-transform: lowercase;\n    }\n    /* ne yazık ki bu hiçbir şekilde desteklemiyor */\n    .capitalize {\n        text-transform: capitalize;\n    }\n</style>",
       "description": "Büyük İ ve küçük ı gibi karakterlerde büyük harfe ve küçük harfe çevirirken problem yaşayabilirsiniz. Bunun çözümü etiketinize ya da html etiketinize lang=\"tr\" değerini eklemek."
     }
   ],
