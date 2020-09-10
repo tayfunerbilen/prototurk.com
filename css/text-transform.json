@@ -1,53 +1,35 @@
 {
-    "author": "onuralpkaratas <onuralpkaratasme@gmail.com>",
-    "title": "CSS text-transform Özelliği",
-    "name": "text-transform",
-    "lang": "css",
-    "description": "<code>text-transform</code> özelliği, metnin büyük veya küçük harf olarak görünmesini sağlamak veya her kelimenin büyük harfle yazılması için kullanılır.",
-    "syntax": "text-transform: none | capitalize | uppercase | lowercase | initial | inherit;",
-    "version": "CSS1",
-    "animatable": false,
-    "inherited": true,
-    "default_value": "none",
-    "js_syntax": "object.style.textTransform=\"Değer\"",
-    "values": [
-        {
-            "value": "none",
-            "description": "Metin olduğu gibi işler."
-        },
-        {
-            "value": "capitalize",
-            "description": "Her kelimenin ilk karakterini büyük harfe dönüştürür."
-        },
-        {
-            "value": "uppercase",
-            "description": "Tüm karakterleri büyük harfe dönüştürür."
-        },
-        {
-            "value": "lowercase",
-            "description": "Tüm karakterleri küçük harfe dönüştürür."
-        },
-        {
-            "value": "initial",
-            "description": "Varsayılan değerine geri döndürür."
-        },
-        {
-            "value": "inherit",
-            "description": "Değerini üst öğesinden miras alır."
-        }
-    ],
-    "examples": [
-        {
-            "code": "h1 { text-transform: uppercase; }",
-            "description": "h1 elementi içerisindeki yazımızın tüm karakterlerini büyük harfe dönüştürmek istersek;"
-        },
-        {
-            "code": "h2 { text-transform: lowercase; }",
-            "description": "h2 elementi içerisindeki yazımızın tüm karakterlerini küçük harfe dönüştürmek istersek;"
-        },
-        {
-            "code": "h3 { text-transform: capitalize; }",
-            "description": "h3 elementi içerisindeki her kelimenin ilk karakterini büyük harfe dönüştürmek istersek; Fakat burada yazımızın tüm karakterleri büyük ise herhangi bir dönüştürme işlemi yapamayız."
-        }
-    ]
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "CSS text-transform Özelliği",
+  "name": "text-transform",
+  "syntax": "text-transform: uppercase | lowercase | capitalize;",
+  "js_syntax": "object.style.textTransform=\"uppercase\"",
+  "description": "Harflerin büyük-küçük dönüşümünü sağlamak için bu özellik kullanılır.",
+  "version": "CSS1",
+  "values": [
+    {
+      "value": "none",
+      "description": "Metin olduğu gibi gösterilir. Varsayılan değerdir."
+    },
+    {
+      "value": "capitalize",
+      "description": "Her kelimenin ilk harfini büyük harfe dönüştürür."
+    },
+    {
+      "value": "uppercase",
+      "description": "Tüm karakterleri büyük harfe dönüştürür."
+    },
+    {
+      "value": "lowercase",
+      "description": "Tüm karakterleri küçük harfe dönüştürür."
+    }
+  ],
+  "examples": [
+    {
+      "code": "<div class=\"uppercase\">küçük harflerle yazdık ama büyük görünecek</div>\n<div class=\"lowercase\">BÜYÜK HARFLERLE YAZDIK AMA KÜÇÜK GÖRÜNECEK</div>\n<div class=\"capitalize\">her kelimenin ilk harfi büyük görünecek</div>\n\n<style>\n.uppercase {\n\ttext-transform: uppercase;\n}\n.lowercase {\n\ttext-transform: lowercase;\n}\n.capitalize {\n\ttext-transform: capitalize;\n}\n</style>",
+      "description": "Her değer için bir örnek vermek gerekirse;"
+    }
+  ],
+  "animatable": false,
+  "default_value": "none"
 }
