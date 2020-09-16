@@ -1,0 +1,28 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "CSS empty-cells Özelliği",
+  "name": "empty-cells",
+  "syntax": "empty-cells: show | hide | initial | inherit;",
+  "js_syntax": "object.style.emptyCells=\"hide\"",
+  "description": "Tablo sütunlarında boş olan sütunların arkaplan ve kenarlıklarını gösterip gizlemek için kullanılır.",
+  "note": "<code>border-collapse</code> özelliği <code>collapse</code> değerinde kullanılırsa bu özelliğin bir etkisi olmayacağını unutmayın.",
+  "version": "CSS3",
+  "values": [
+    {
+      "value": "show",
+      "description": "Varsayılan değerdir ve boş sütunlar görünür."
+    },
+    {
+      "value": "hide",
+      "description": "Boş sütunlar gizlenir."
+    }
+  ],
+  "examples": [
+    {
+      "code": "<table class=\"table-1\">\n\t<tr>\n\t\t<td>Tayfun Erbilen</td>\n\t\t<td>http://erbilen.net</td>\n\t</tr>\n\t<tr>\n\t\t<td>PROTOTÜRK</b>\n\t\t<td></td>\n\t</tr>\n</table>\n\n<hr>\n\n<table class=\"table-2\">\n\t<tr>\n\t\t<td>Tayfun Erbilen</td>\n\t\t<td>http://erbilen.net</td>\n\t</tr>\n\t<tr>\n\t\t<td>PROTOTÜRK</b>\n\t\t<td></td>\n\t</tr>\n</table>\n\n<style>\ntable {\n\twidth: 100%;\n}\ntable td {\n\tborder: 2px solid rebeccapurple;\n}\ntable.table-2 td {\n\tempty-cells: hide;\n}\n</style>",
+      "description": "İki farklı tabloda değerleri örneklendirmek gerekirse"
+    }
+  ],
+  "animatable": false,
+  "default_value": "show"
+}
