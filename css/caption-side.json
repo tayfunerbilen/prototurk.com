@@ -1,0 +1,27 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "CSS caption-side Özelliği",
+  "name": "caption-side",
+  "syntax": "caption-side: top | bottom | initial | inherit;",
+  "js_syntax": "object.style.captionSide = \"bottom\"",
+  "description": "Tablo etiketi içinde bulunan <code>&lt;caption></code> etiketinin pozisyonunu belirlemek için kullanılır.",
+  "version": "CSS3",
+  "values": [
+    {
+      "value": "top",
+      "description": "Varsayılan değerdir ve yukarıda gösterilir."
+    },
+    {
+      "value": "bottom",
+      "description": "Aşağıda gösterilir."
+    }
+  ],
+  "examples": [
+    {
+      "code": "<table class=\"table-1\" border=\"1\">\n\t<caption>Tablo 1.1 - Kişiler ve Siteler</caption>\n\t<tr>\n\t\t<td>Tayfun Erbilen</td>\n\t\t<td>http://erbilen.net</td>\n\t</tr>\n\t<tr>\n\t\t<td>PROTOTÜRK</b>\n\t\t<td></td>\n\t</tr>\n</table>\n\n<hr>\n\n<table class=\"table-2\" border=\"1\">\n\t<caption>Tablo 1.1 - Kişiler ve Siteler</caption>\n\t<tr>\n\t\t<td>Tayfun Erbilen</td>\n\t\t<td>http://erbilen.net</td>\n\t</tr>\n\t<tr>\n\t\t<td>PROTOTÜRK</b>\n\t\t<td></td>\n\t</tr>\n</table>\n\n<style>\ntable {\n\twidth: 100%;\n}\ntable.table-1 {\n\tcaption-side: top;\n}\ntable.table-2 {\n\tcaption-side: bottom;\n}\n</style>",
+      "description": "İki farklı tabloda değerleri örneklendirmek gerekirse"
+    }
+  ],
+  "animatable": false,
+  "default_value": "top"
+}
