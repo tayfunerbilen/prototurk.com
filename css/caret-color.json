@@ -1,0 +1,27 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "CSS caret-color Özelliği",
+  "name": "caret-color",
+  "syntax": "caret-color: auto | renk;",
+  "js_syntax": "object.style.caretColor = \"red\"",
+  "description": "input, textarea ve düzenlenebilir (contenteditable) etiketlerde fare imleç rengini belirlemek için kullanılır.",
+  "version": "CSS3",
+  "values": [
+    {
+      "value": "auto",
+      "description": "Tarayıcının varsayılan renk değeri"
+    },
+    {
+      "value": "renk",
+      "description": "Belirleyeceğiniz herhangi bir renk değeri"
+    }
+  ],
+  "examples": [
+    {
+      "code": "<input type=\"text\" class=\"input-1\">\n\n<input type=\"text\" class=\"input-2\">\n\n<div contenteditable>bu yazıyı düzenlemek için üzerine tıkla</div>\n\n<style>\n\tinput {\n\t\tfont-size: 20px;\n\t}\n\t.input-2 {\n\t\tcaret-color: orange;\n\t}\n\tdiv {\n\t\tcaret-color: orange;\n\t}\n</style>",
+      "description": "Varsayılan ve belirlediğimiz bir rengi test edelim"
+    }
+  ],
+  "animatable": true,
+  "default_value": "auto"
+}
