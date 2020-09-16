@@ -5,7 +5,7 @@
   "syntax": "caption-side: top | bottom | initial | inherit;",
   "js_syntax": "object.style.captionSide = \"bottom\"",
   "description": "Tablo etiketi içinde bulunan <code>&lt;caption></code> etiketinin pozisyonunu belirlemek için kullanılır.",
-  "version": "CSS3",
+  "version": "CSS2",
   "values": [
     {
       "value": "top",
