@@ -5,7 +5,7 @@
   "syntax": "table-layout: auto | fixed | initial | inherit;",
   "js_syntax": "object.style.tableLayout = \"fixed\"",
   "description": "Bu özellik, tablonun satır ve sütun düzeninin nasıl olacağını belirler. Sabit yaparak satır ve sütun aralarını sabitleyebilir ya da varsayılan olarak otomatik bırakarak içeriğe göre tablonun gösterilmesine karar verebilirsiniz.",
-  "version": "CSS1",
+  "version": "CSS2",
   "values": [
     {
       "value": "auto",
