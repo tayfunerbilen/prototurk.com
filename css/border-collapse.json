@@ -19,7 +19,7 @@
   "examples": [
     {
       "code": "<table class=\"table-seperate\" border=\"1\">\n\t<tr>\n\t\t<td>Tayfun Erbilen</td>\n\t\t<td>http://erbilen.net</td>\n\t</tr>\n\t<tr>\n\t\t<td>PROTOTÜRK</b>\n\t\t<td>https://prototurk.com</td>\n\t</tr>\n</table>\n\n<hr>\n\n<table class=\"table-collapse\" border=\"1\">\n\t<tr>\n\t\t<td>Tayfun Erbilen</td>\n\t\t<td>http://erbilen.net</td>\n\t</tr>\n\t<tr>\n\t\t<td>PROTOTÜRK</b>\n\t\t<td>https://prototurk.com</td>\n\t</tr>\n</table>\n\n<style>\ntable {\n\twidth: 250px;\n}\ntable.table-seperate {\n\tborder-collapse: seperate;\n}\ntable.table-collapse {\n\tborder-collapse: collapse;\n}\n</style>",
-      "description": "<span>collapse</span> değeri kullanılırsa, birbirini tekrar eden kenarlık sorunu ortadan kalkıyor. Aşağıdaki örneği inceleyerek arasındaki farkı daha net bir şekilde anlayabilirsiniz."
+      "description": "<code>collapse</code> değeri kullanılırsa, birbirini tekrar eden kenarlık sorunu ortadan kalkıyor. Aşağıdaki örneği inceleyerek arasındaki farkı daha net bir şekilde anlayabilirsiniz."
     }
   ],
   "animatable": false,
