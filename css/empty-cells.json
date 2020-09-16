@@ -6,7 +6,7 @@
   "js_syntax": "object.style.emptyCells=\"hide\"",
   "description": "Tablo sütunlarında boş olan sütunların arkaplan ve kenarlıklarını gösterip gizlemek için kullanılır.",
   "note": "<code>border-collapse</code> özelliği <code>collapse</code> değerinde kullanılırsa bu özelliğin bir etkisi olmayacağını unutmayın.",
-  "version": "CSS3",
+  "version": "CSS2",
   "values": [
     {
       "value": "show",
