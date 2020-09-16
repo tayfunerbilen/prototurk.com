@@ -1,0 +1,27 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "CSS border-collapse Özelliği",
+  "name": "border-collapse",
+  "syntax": "border-collapse: separate | collapse | initial | inherit;",
+  "js_syntax": "object.style.borderCollapse = \"collapse\"",
+  "description": "Bu özellik, tablonun kenarlıklarının ayrı mı yoksa tek bir bütün halinde mi görüneceğini ayarlamak için kullanılır.",
+  "version": "CSS2",
+  "values": [
+    {
+      "value": "seperate",
+      "description": "Varsayılan değerdir ve kenarlıklar ayrı görünür."
+    },
+    {
+      "value": "collapse",
+      "description": "Tablonun kenarlıkları bir bütün halinde tek bir kenarlık olarak görünür."
+    }
+  ],
+  "examples": [
+    {
+      "code": "<table class=\"table-seperate\" border=\"1\">\n\t<tr>\n\t\t<td>Tayfun Erbilen</td>\n\t\t<td>http://erbilen.net</td>\n\t</tr>\n\t<tr>\n\t\t<td>PROTOTÜRK</b>\n\t\t<td>https://prototurk.com</td>\n\t</tr>\n</table>\n\n<hr>\n\n<table class=\"table-collapse\" border=\"1\">\n\t<tr>\n\t\t<td>Tayfun Erbilen</td>\n\t\t<td>http://erbilen.net</td>\n\t</tr>\n\t<tr>\n\t\t<td>PROTOTÜRK</b>\n\t\t<td>https://prototurk.com</td>\n\t</tr>\n</table>\n\n<style>\ntable {\n\twidth: 250px;\n}\ntable.table-seperate {\n\tborder-collapse: seperate;\n}\ntable.table-collapse {\n\tborder-collapse: collapse;\n}\n</style>",
+      "description": "<span>collapse</span> değeri kullanılırsa, birbirini tekrar eden kenarlık sorunu ortadan kalkıyor. Aşağıdaki örneği inceleyerek arasındaki farkı daha net bir şekilde anlayabilirsiniz."
+    }
+  ],
+  "animatable": false,
+  "default_value": "separate"
+}
