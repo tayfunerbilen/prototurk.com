@@ -1,0 +1,27 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "CSS table-layout Özelliği",
+  "name": "table-layout",
+  "syntax": "table-layout: auto | fixed | initial | inherit;",
+  "js_syntax": "object.style.tableLayout = \"fixed\"",
+  "description": "Bu özellik, tablonun satır ve sütun düzeninin nasıl olacağını belirler. Sabit yaparak satır ve sütun aralarını sabitleyebilir ya da varsayılan olarak otomatik bırakarak içeriğe göre tablonun gösterilmesine karar verebilirsiniz.",
+  "version": "CSS1",
+  "values": [
+    {
+      "value": "auto",
+      "description": "Tablonun içeriğine göre satır ve sütun görünümü ayarlanır."
+    },
+    {
+      "value": "fixed",
+      "description": "Tablonun içeriğine bakmaksızın satır ve sütun görünümü sabitlenir."
+    }
+  ],
+  "examples": [
+    {
+      "code": "<table class=\"table-auto\" border=\"1\">\n\t<tr>\n\t\t<td>Tayfun Erbilen</td>\n\t\t<td>http://erbilen.net</td>\n\t</tr>\n\t<tr>\n\t\t<td>PROTOTÜRK</b>\n\t\t<td>https://prototurk.com</td>\n\t</tr>\n</table>\n\n<table class=\"table-fixed\" border=\"1\">\n\t<tr>\n\t\t<td>Tayfun Erbilen</td>\n\t\t<td>http://erbilen.net</td>\n\t</tr>\n\t<tr>\n\t\t<td>PROTOTÜRK</b>\n\t\t<td>https://prototurk.com</td>\n\t</tr>\n</table>\n\n<style>\ntable {\n\twidth: 250px;\n}\ntable.table-auto {\n\ttable-layout: auto;\n}\ntable.table-fixed {\n\ttable-layout: fixed;\n}\n</style>",
+      "description": "Her iki değer içinde birer örnek vermek gerekirse"
+    }
+  ],
+  "animatable": false,
+  "default_value": "auto"
+}
