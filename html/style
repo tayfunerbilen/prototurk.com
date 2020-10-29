@@ -1,0 +1,25 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "<style> Etiketi",
+  "name": "style",
+  "syntax": "<style> .. </style>",
+  "description": "CSS tanımı yapmak için bu etiket kullanılır. Eğer bir CSS dosyası çağırılacak ise <a href=\"/html/link-etiketi\"><link></a> etiketi kullanmanız gerekir.",
+  "version": "HTML",
+  "closing_tag": true,
+  "display": "görünmez",
+  "usage": "Yapısal",
+  "note": "Bu etiket <code><head></code> etiketi içerisinde yer almalıdır.",
+  "attributes": [
+    {
+      "name": "type",
+      "value": "text/css",
+      "description": "CSS tip tanımlaması belirtilir"
+    }
+  ],
+  "examples": [
+    {
+      "code": "<html>\n<head>\n\t...\n\t<style type=\"text/css\">\n\tbody {\n\t\tbackground-color: lime;\n\t}\n\t</style>\n\t...\n</head>\n<body>\n\t....\n</body>\n</html>",
+      "description": "Örneğin inline bir css kodu yazalım"
+    }
+  ]
+}
