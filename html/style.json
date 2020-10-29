@@ -3,7 +3,7 @@
   "title": "<style> Etiketi",
   "name": "style",
   "syntax": "<style> .. </style>",
-  "description": "CSS tanımı yapmak için bu etiket kullanılır. Eğer bir CSS dosyası çağırılacak ise <a href=\"/html/link-etiketi\"><link></a> etiketi kullanmanız gerekir.",
+  "description": "CSS tanımı yapmak için bu etiket kullanılır. Eğer bir CSS dosyası çağırılacak ise <a href=\"/html/link-etiketi\">&lt;link></a> etiketi kullanmanız gerekir.",
   "version": "HTML",
   "closing_tag": true,
   "display": "görünmez",
