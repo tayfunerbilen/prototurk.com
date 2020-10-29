@@ -8,7 +8,7 @@
   "closing_tag": true,
   "display": "görünmez",
   "usage": "Yapısal",
-  "note": "Bu etiket <code><head></code> etiketi içerisinde yer almalıdır.",
+  "note": "Bu etiket <code>&lt;head></code> etiketi içerisinde yer almalıdır.",
   "attributes": [
     {
       "name": "type",
