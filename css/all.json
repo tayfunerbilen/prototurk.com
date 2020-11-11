@@ -6,6 +6,7 @@
   "js_syntax": "object.style.all=\"initial\"",
   "description": "Elemanın tüm css özelliklerini başlangıçtaki ya da devralınmış özelliklerine geri döndürür.",
   "version": "CSS3",
+  "browser": "css/properties/all.json",
   "values": [
     {
       "value": "initial",
