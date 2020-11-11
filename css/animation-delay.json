@@ -2,6 +2,7 @@
   "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
   "title": "CSS animation-delay Özelliği",
   "name": "animation-delay",
+  "browser_support": "css/properties/animation-delay.json",
   "syntax": "animation-delay: süre",
   "js_syntax": "object.style.animationDelay = \"1s\"",
   "description": "Animasyonun başlamadan önce ne kadar süre bekleyeceğini belirler.",
