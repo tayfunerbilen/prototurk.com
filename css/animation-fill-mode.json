@@ -2,6 +2,7 @@
   "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
   "title": "CSS animation-fill-mode Özelliği",
   "name": "animation-fill-mode",
+  "browser_support": "css/properties/animation-fill-mode.json",
   "syntax": "animation-fill-mode: none | forwards | backwards | both",
   "js_syntax": "object.style.animationFillMode=\"forwards\"",
   "description": "Animasyon başlamadan önce ve bittikten sonra ne olacağı belirlenir. Örneğin animasyon başlamadan önce, ilk karenin stilleri uygulanabilir, animasyon bittikten sonra son karenin stilleriyle kalabilir ya da her ikisi olabilir gibi.",
