@@ -1,0 +1,54 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "Javascript filter() Metodu",
+  "name": "filter",
+  "syntax": "array.filter(function(currentValue, index, arr), thisValue)",
+  "description": "Dizideki öğeleri belirli bir koşula göre filtreler. Filtrelenen öğeler varsa geriye döndürülür, yoksa boş bir dizi geriye döner.",
+  "example": "const names = ['tayfun', 'cem', 'ece', 'burak', 'gül', 'mehmet', 'neşe'];\n\nconst result = names.filter(name => name.length <= 4);\n\nconsole.log(result);\n// Çıktı: [\"cem\", \"ece\", \"gül\", \"neşe\"]",
+  "version": [
+    "ES5"
+  ],
+  "params": [
+    {
+      "name": "currentValue",
+      "description": "Test edilen elemanın değeri",
+      "required": true
+    },
+    {
+      "name": "index",
+      "description": "Test edilen elemanın indis değeri",
+      "required": false
+    },
+    {
+      "name": "arr",
+      "description": "Test edilen elemanın ait olduğu dizi objesi",
+      "required": false
+    }
+  ],
+  "examples": [
+    {
+      "code": "function isBigEnough(value) {\n  return value > 10;\n}\n\nconst filtered = [12, 5, 8, 130, 44].filter(isBigEnough);\nconsole.log(filtered); // [12, 130, 44]",
+      "description": "Aşağıdaki kod, değeri 10'dan büyük olan öğeleri filtreler.",
+      "title": "Tüm küçük öğeleri filtrelemek"
+    },
+    {
+      "code": "const filtered_with_arrow = [12, 5, 8, 130, 44].filter(value => value > 10);\nconsole.log(filtered_with_arrow); // [12, 130, 44]",
+      "description": "Arrow fonksiyonları aynı işlemin daha kısa yazılmasını sağlar.",
+      "title": "Arrow fonksiyonlarla kullanımı"
+    },
+    {
+      "code": "const users = [\n\t{\n\t\tname: \"Tayfun Erbilen\",\n\t\tage: 27\n\t},\n\t{\n\t\tname: \"Mehmet Seven\",\n\t\tage: 27\n\t},\n\t{\n\t\tname: \"Batuhan Aydın\",\n\t\tage: 28\n\t}\n];\n\nconst filtered = users.filter(user => user.age === 27);\nconsole.log(filtered);",
+      "description": "Aşağıdaki kod, dizi içindeki objelerin değerlerine göre filtreme yapar.",
+      "title": "Objelerin değerlerine göre filtrelemek"
+    },
+    {
+      "code": "const names = ['Tayfun', 'tarkan', 'tufan', 'mehmet', 'ahmet', 'hayko'];\n\nconst search = keyword => names.filter(name => name.toLowerCase().includes(keyword.toLowerCase()));\n\nconsole.log(search('ay')); // [\"Tayfun\", \"hayko\"]",
+      "description": "Öğeler içinde arama yapmak içinde bu metod kullanılır.",
+      "title": "Arama yapmak"
+    }
+  ],
+  "return": {
+    "text": "Koşula uyan öğeleri geriye döndürür."
+  },
+  "deprecated": false
+}
