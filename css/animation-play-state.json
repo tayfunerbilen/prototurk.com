@@ -2,6 +2,7 @@
   "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
   "title": "CSS animation-play-state Özelliği",
   "name": "animation-play-state",
+  "browser_support": "css/properties/animation-play-state.json",
   "syntax": "animation-play-state: paused | running",
   "js_syntax": "object.style.animationPlayState=\"paused\"",
   "description": "Animasyonun oynatılıp oynatılmayacağını tanımlar. Eğer animasyon durdurulmuş ise yine de ilk karedeki değerler elemana uygulanır ve bekler.",
