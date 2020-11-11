@@ -2,6 +2,7 @@
   "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
   "title": "CSS animation-direction Özelliği",
   "name": "animation-direction",
+  "browser_support": "css/properties/animation-direction.json",
   "syntax": "animation-direction: normal | reverse | alternate | alternate-reverse",
   "js_syntax": "object.style.animationDirection=\"reverse\"",
   "description": "Bu özellik, animasyonun oynatılacağı yönü belirlemek için kullanılır. Örneğin animasyon ilk kareden başlayıp sonda bitebilir, son kareden başlayıp ilk karede bitebilir ya da animasyon ilk kareden başlar, son kareye geldiğinde tekrar ilk kareye geri döner ve bu şekilde tekrarlar ya da tam tersi son kareden başlar, ilk kareye geldiğinde animasyon kendini tekrar eder.",
