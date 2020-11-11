@@ -2,6 +2,7 @@
   "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
   "title": "CSS animation-duration Özelliği",
   "name": "animation-duration",
+  "browser_support": "css/properties/animation-duration.json",
   "syntax": "animation-duration: süre",
   "js_syntax": "object.style.animationDuration=\"3s\"",
   "description": "Bu özellik, animasyonun oynama süresini belirler. Saniye cinsinden ya da mili saniye cinsinden tanımlanır.",
