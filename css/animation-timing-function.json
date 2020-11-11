@@ -2,6 +2,7 @@
   "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
   "title": "CSS animation-timing-function Özelliği",
   "name": "animation-timing-function",
+  "browser_support": "css/properties/animation-timing-function.json",
   "syntax": "animation-timing-function: linear | ease | ease-in | ease-out | ease-in-out | step-start | step-end | steps(sayı, start | end) | cubic-bezier(n,n,n,n)",
   "js_syntax": "object.style.animationTimingFunction=\"linear\"",
   "description": "Animasyonun hız eğrisini belirler. Bu sayede animasyon oynatılırken nasıl bir akışta oynatılacağı belirlenir, belli başlı zamanlama fonksiyonları hariç kendinizde özel olarak <code>cubic-bezier()</code> kullanarak hız eğrisini oluşturabilirsiniz.",
