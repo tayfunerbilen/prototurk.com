@@ -2,6 +2,7 @@
   "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
   "title": "CSS'de background-image Özelliği",
   "name": "background-image",
+  "browser_support": "css/properties/background-image.json",
   "syntax": "background-image: url | none | initial | inherit;",
   "js_syntax": "object.style.backgroundImage=\"url('test.jpg')\"",
   "description": "Bu özellik ile bir ve ya birden fazla arkaplan görseli ayarlanabilir.\n\nVarsayılan olarak, bir arkaplan resmi sol üst köşeden başlayıp kendisini genişlik ve yükseklik kadar tekrar eder.",
