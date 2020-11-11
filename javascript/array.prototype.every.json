@@ -1,0 +1,59 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "Javascript every() Metodu",
+  "name": "every",
+  "syntax": "array.every(function(currentValue, index, arr), thisValue)",
+  "description": "Dizideki tüm öğelerin belirtilen koşula uygun olup olmadığını test eder. Testi geçemeyen ilk öğede metod geriye <code>false</code> döndürür ve işlemi durdurur. Eğer tüm öğeler testi geçerse geriye <code>true</code> döner.",
+  "example": "const ikiyeBolunebilir = (currentValue) => currentValue % 2 === 0;\n\nconst array1 = [2, 4, 6, 8, 10];\n\nconsole.log(array1.every(ikiyeBolunebilir));\n// Çıktı: true\n\nconst array2 = [2, 4, 6, 7, 10];\n\nconsole.log(array2.every(ikiyeBolunebilir));\n// Çıktı: false (Çünkü 7 ikiye bölümediği için tüm öğeler testi geçemez ve false döner)",
+  "version": [
+    "ES5"
+  ],
+  "params": [
+    {
+      "name": "currentValue",
+      "description": "Test edilen elemanın değeri",
+      "required": true
+    },
+    {
+      "name": "index",
+      "description": "Test edilen elemanın indis değeri",
+      "required": false
+    },
+    {
+      "name": "arr",
+      "description": "Test edilen elemanın ait olduğu dizi objesi",
+      "required": false
+    }
+  ],
+  "examples": [
+    {
+      "code": "function isBigEnough(el) {\n  return el >= 10;\n}\n[12, 5, 8, 130, 44].every(isBigEnough);   // false\n[12, 54, 18, 130, 44].every(isBigEnough); // true",
+      "description": "Aşağıdaki kod, dizideki tüm öğelerin 10'dan büyük olup olmadığını test eder.",
+      "title": "Tüm öğelerin değerini test etme"
+    },
+    {
+      "code": "[12, 5, 8, 130, 44].every(x => x >= 10);   // false\n[12, 54, 18, 130, 44].every(x => x >= 10); // true",
+      "description": "Arrow fonksiyonları aynı işlemin daha kısa yazılmasını sağlar.",
+      "title": "Arrow fonksiyonlarla kullanımı"
+    },
+    {
+      "code": "const users = [\n\t{\n\t\tname: \"Tayfun Erbilen\",\n\t\tage: 27\n\t},\n\t{\n\t\tname: \"Mehmet Seven\",\n\t\tage: 27\n\t},\n\t{\n\t\tname: \"Batuhan Aydın\",\n\t\tage: 27\n\t}\n];\n\nconsole.log(users.every(el => el.age === 27));",
+      "description": "Metod parametre olarak sadece dizi değil bir değerde alabilir. Aşağıdaki kod, bir değer ve dizilerin birleşimini gösterir.",
+      "title": "Objeleri test etmek"
+    },
+    {
+      "code": "const users = [\n\t{\n\t\tname: \"Tayfun Erbilen\",\n\t\tage: 27\n\t},\n\t{\n\t\tname: \"Mehmet Seven\",\n\t\tage: 27\n\t},\n\t{\n\t\tname: \"Batuhan Aydın\",\n\t\tage: 28\n\t}\n];\n\nfunction isSameAge(el, index, arr) {\n\tif (index === 0 || index === arr.length - 1)\n\t\treturn true;\n\telse\n\t\treturn (el.age === arr[index - 1].age);\n}\n\nconsole.log(users.every(isSameAge));\n// Çıktı: true\n// çünkü ilk ve son öğe ise doğrudan true döndürdük, bu yüzden son öğeyi\n// kontrol etmedi ve bütün öğelerin yaşının eşit olduğunu varsaydı.",
+      "description": "Aşağıdaki kod, 2. ve 3. parametrelerinin kullanımını gösteren bir örnektir.",
+      "title": "Diğer parametrelerine bir örnek"
+    },
+    {
+      "code": "// Öğeleri güncellemek\nlet arr = [1, 2, 3, 4];\nlet result = arr.every( (elem, index, arr) => {\n  arr[index + 2] -= 2; // her test ettiğinde 2 sonraki öğesinin indisini 2 azaltıyoruz\n  console.log(`[${arr}][${index}] -> ${elem}`)\n  return elem < 2\n});\n\nconsole.log(result);\n// Çıktı\n// \"[1,2,1,4][0] -> 1\"\n// \"[1,2,1,2][1] -> 2\"\n//  false\n\n\n// Yeni öğe eklemek\narr = [1, 2, 3];\nresult = arr.every( (elem, index, arr) => {\n  arr.push('new')\n  console.log(`[${arr}][${index}] -> ${elem}`)\n  return elem < 4\n});\n\nconsole.log(result)\n// Çıktı\n// \"[1,2,3,new][0] -> 1\"\n// \"[1,2,3,new,new][1] -> 2\"\n// \"[1,2,3,new,new,new][2] -> 3\"\n// true\n\n// Öğeleri silmek\narr = [1, 2, 3, 4];\nresult = arr.every( (elem, index, arr) => {\n  arr.pop()\n  console.log(`[${arr}][${index}] -> ${elem}`)\n  return elem >= 1 && elem < 3;\n});\n\nconsole.log(result);\n// Çıktı\n// \"[1,2,3][0] -> 1\"\n// \"[1,2][1] -> 2\"\n// true",
+      "description": "Eğer test sırasında diziyi güncellerseniz, yeni bir öğe eklerseniz ya da bir öğeyi silerseniz nasıl işleyeceğine dair bir örnek.",
+      "title": "Öğelerin değiştirilmesi"
+    }
+  ],
+  "return": {
+    "text": "Dizideki tüm öğeler testi geçerse <code>true</code>, aksi halde <code>false</code> döner."
+  },
+  "deprecated": false
+}
