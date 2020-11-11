@@ -2,6 +2,7 @@
   "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
   "title": "CSS animation-name Özelliği",
   "name": "animation-name",
+  "browser_support": "css/properties/animation-name.json",
   "syntax": "animation-name: animasyonAdi",
   "js_syntax": "object.style.animationName=\"animasyonAdi\"",
   "description": "Elemana uygulanacak animasyonu belirler. Rasgele bir isim almaz, animasyon için oluşturulan <code>@keyframes</code> adı ne ise aynı isme sahip olmalıdır.",
