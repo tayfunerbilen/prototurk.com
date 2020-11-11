@@ -2,6 +2,7 @@
   "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
   "title": "CSS backdrop-filter Özelliği",
   "name": "backdrop-filter",
+  "browser_support": "css/properties/backdrop-filter.json",
   "syntax": "backdrop-filter: blur() | brightness() | constrast() | grayscale() | hue-rotate() | opacity() | saturate() | sepia()",
   "js_syntax": "object.style.backdropFilter = \"blur(5px)\"",
   "description": "Adından da anlaşılacağı üzere, arkaplan görseline/fonuna filtre uygulamak için kullanılır. Filtreler sadece arakafon'a uygulanıyor, içerik alanı bu işlemlerden etkilenmez.",
