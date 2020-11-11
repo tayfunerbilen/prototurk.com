@@ -1,7 +1,8 @@
 {
   "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
-  "title": "CSS'de background-position Özelliği",
+  "title": "CSS background-position Özelliği",
   "name": "background-position",
+  "browser_support": "css/properties/background-position.json",
   "syntax": "background-position: değer;",
   "js_syntax": "object.style.backgroundPosition=\"center\"",
   "description": "Arkaplan görselinin nereden başlayacağını belirler. Arkaplan varsayılan olarak sol üst köşeye dayalı bir şekilde görünecektir. ",
