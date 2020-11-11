@@ -2,6 +2,7 @@
   "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
   "title": "CSS animation Özelliği",
   "name": "animation",
+  "browser_support": "css/properties/animation.json",
   "syntax": "animation: name duration timing-function delay iteration-count direction fill-mode play-state;",
   "js_syntax": "object.style.animation=\"animasyonAdi 5s infinite\"",
   "description": "Tüm animasyon özelliklerinin kısa kullanımıdır. <code>animation-name</code> ve <code>animation-duration</code> zorunlu diğerleri opsiyoneldir.",
