@@ -2,6 +2,7 @@
   "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
   "title": "CSS animation-iteration-count Özelliği",
   "name": "animation-iteration-count",
+  "browser_support": "css/properties/animation-iteration-count.json",
   "syntax": "animation-iteration-count: sayı | infinite",
   "js_syntax": "object.style.animationIterationCount=\"infinite\"",
   "description": "Bu özellik, elemana uygulanan annimasyonun kaç defa oynatılacağını belirler.",
