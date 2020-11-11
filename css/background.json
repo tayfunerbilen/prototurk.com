@@ -2,7 +2,7 @@
   "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
   "title": "CSS background Özelliği",
   "name": "background",
-  "browser_support": "css/properties/backgroud.json",
+  "browser_support": "css/properties/background.json",
   "syntax": "background: bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment initial | inherit;",
   "js_syntax": "object.style.background=\"red url(ataturk.jpg) top left no-repeat\"",
   "description": "<code>background</code> özelliği aşağıdaki background özelliklerinin kısa halde kullanımıdır.\n\n<a href=\"/css/background-color-ozelligi\">background-color</a>\nbackground-image\nbackground-position\nbackground-size\nbackground-repeat\nbackground-origin\nbackground-clip\nbackground-attachment\n\nKullanılırken background özelliklerini sırasına göre tam şekilde yazmak zorunda değiliz yani <code>background: #fff url(test.png) fixed;</code> şeklinde bir kullanımda geçerli olacaktır.",
