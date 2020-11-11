@@ -2,6 +2,7 @@
   "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
   "title": "CSS'de background-color Özelliği",
   "name": "background-color",
+  "browser_support": "css/properties/background-color.json",
   "syntax": "background-color: renk| transparent | initial | inherit;",
   "js_syntax": "object.style.backgroundColor=\"#00FF00\"",
   "description": "Arkplan rengi belirlemek için kullanılır.",
