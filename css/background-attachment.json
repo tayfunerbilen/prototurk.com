@@ -2,6 +2,7 @@
   "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
   "title": "CSS background-attachment Özelliği",
   "name": "background-attachment",
+  "browser_support": "css/properties/background-attachment.json",
   "syntax": "background-attachment: scroll | fixed | local",
   "js_syntax": "object.style.backgroundAttachment=\"fixed\"",
   "description": "Kaydırma (scroll) işlemi olduğunda arkaplan görselinin nasıl davranacağı belirlenir. Sayfa ile birlikte kayabilir ya da sabit kalabilir.",
