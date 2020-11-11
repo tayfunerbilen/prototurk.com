@@ -1,7 +1,8 @@
 {
   "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
-  "title": "CSS'de backface-visibility Özelliği",
+  "title": "CSS backface-visibility Özelliği",
   "name": "backface-visibility",
+  "browser_support": "css/properties/backface-visibility.json",
   "syntax": "backface-visibility: visible | hidden | initial | inherit;",
   "js_syntax": "object.style.backfaceVisibility=\"hidden\"",
   "description": "Etiketin arka yüzünün görünür olup olmadığı belirlenir.",
