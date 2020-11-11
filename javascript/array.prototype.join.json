@@ -1,0 +1,29 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "Javascript join() Metodu",
+  "name": "join",
+  "syntax": "array.join(separator)",
+  "description": "Dizi elemanlarını belirlenen ayraç yardımıyla birleştirir. Geriye bir string ifade döner.",
+  "example": "const array = ['pro', 'to', 'turk'];\n\nconsole.log(array.join());\n// çıktı: \"pro,to,turk\"\n\nconsole.log(array.join(''));\n// çıktı: \"prototurk\"\n\nconsole.log(array.join('-'));\n// çıktı: \"pro-to-turk\"",
+  "version": [
+    "ES1"
+  ],
+  "params": [
+    {
+      "name": "separator",
+      "description": "Elemanları birleştirirken kullanılacak ayraç.  Boş bırakılırsa varsayılan ayraç virgül ayarlanır.",
+      "required": false
+    }
+  ],
+  "examples": [
+    {
+      "code": "const a = ['Pro', 'To', 'Turk'];\n\nconsole.log(a.join());      // \"Pro,To,Turk\"\nconsole.log(a.join(', '));  // \"Pro, To, Turk\"\nconsole.log(a.join(' + ')); // \"Pro + To + Turk\"\nconsole.log(a.join(''));    // \"ProToTurk\"",
+      "description": "Aşağıdaki kod, farklı ayraçlar ile elemanların birleştirilmesini göstermektedir.",
+      "title": "Dizi elemanlarının birleştirilmesi"
+    }
+  ],
+  "return": {
+    "text": "Belirlenen ayraç yardımı ile birleştirilmiş dizi elemanlarını bir string olarak geriye döndürür."
+  },
+  "deprecated": false
+}
