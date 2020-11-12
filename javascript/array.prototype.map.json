@@ -1,0 +1,49 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "Javascript map() Metodu",
+  "name": "map",
+  "syntax": "array.map(function(currentValue, index, arr), thisValue)",
+  "description": "<code>map()</code> metodu, dizi içerisindeki tüm elemanları bir işlemden geçirmek için kullanılır. Her bir eleman tek tek işlenir, değerleri değiştirilebilir, geriye ne döndürüleceği belirlenebilir. Ve sonunda ise, işlemden geçen öğelerden oluşan bir dizi geriye döner.",
+  "example": "const array1 = [1, 4, 9, 16];\n\nconst map1 = array1.map(x => x * 2);\n\nconsole.log(map1);\n//  [2, 8, 18, 32]",
+  "note": "Değeri olmayan dizilerde işe yaramaz.\nBu metod, varsayılan diziyi değiştirmez.",
+  "version": [
+    "ES5"
+  ],
+  "params": [
+    {
+      "name": "currentValue",
+      "description": "İşlemden geçen elemanın değeri",
+      "required": true
+    },
+    {
+      "name": "index",
+      "description": "İşlemden geçen elemanın indis değeri",
+      "required": false
+    },
+    {
+      "name": "arr",
+      "description": "İşlemden geçen elemanın ait olduğu dizi",
+      "required": false
+    }
+  ],
+  "examples": [
+    {
+      "code": "let numbers = [1, 4, 9]\nlet roots = numbers.map(num => Math.sqrt(num));\n\nconsole.log(roots); // [1, 2, 3]\nconsole.log(numbers); // [1, 4, 9]",
+      "description": "Aşağıdaki kod, tüm elemanları karekökünü aldığımız bir işlemden geçirir.",
+      "title": "Her elemanın karekökünü almak için map() metodunu kullanmak"
+    },
+    {
+      "code": "const users = [\n\t{\n\t\tname: \"Tayfun\",\n\t\tsurname: \"Erbilen\",\n\t\tage: 27\n\t},\n\t{\n\t\tname: \"Mehmet\",\n\t\tsurname: \"Seven\",\n\t\tage: 27\n\t}\n];\n\nconst newUsers = users.map(user => {\n\tuser.fullName = `${user.name} ${user.surname}`;\n\treturn {\n\t    fullName: user.fullName,\n\t\tage: `${user.age} years old`\n\t}\n});\n\nconsole.log(newUsers)\nconsole.log(users)",
+      "description": "Aşağıdaki kod, dizi içindeki obje elemanlarının yeniden biçimlendirilmesini sağlar.",
+      "title": "Objeyi yeniden biçimlendirmek için map() metodunu kullanmak"
+    },
+    {
+      "code": "const array = ['1', '2', '3'];\nconsole.log(array.map(Number));",
+      "description": "Şöyle bir kullanımı olduğunu da unutmayın."
+    }
+  ],
+  "return": {
+    "text": "İşlemden geçen öğelerden geriye kalan bir dizi döner."
+  },
+  "deprecated": false
+}
