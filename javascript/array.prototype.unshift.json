@@ -1,0 +1,29 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "Javascript unshift() Metodu",
+  "name": "unshift",
+  "syntax": "array.unshift(item1, item2, ..., itemX)",
+  "description": "<code>unshift</code> metodu, dizinin başına yeni değerler eklemek için kullanılır. İşlem sonucunda ise, dizinin yeni uzunluğunu geriye döner.",
+  "example": "const array1 = [1, 2, 3];\n\nconsole.log(array1.unshift(4, 5));\n// 5 (dizinin yeni uzunluğu)\n\nconsole.log(array1);\n// [4, 5, 1, 2, 3]",
+  "note": "Bu metod, dizinin uzunluğunu değiştirir. \nBir dizinin sonuna yeni değerler eklemek için ise <a href=\"/javascript/array-push-metodu\">push()</a> metodunu deneyin.",
+  "version": [
+    "ES1"
+  ],
+  "params": [
+    {
+      "name": "item1, item2, ..., itemX",
+      "description": "Dizinin başına eklenecek değerler",
+      "required": true
+    }
+  ],
+  "examples": [
+    {
+      "code": "let arr = [1, 2]\n\narr.unshift(0); //  geriye 3 döndürür (dizi uzunluğu)\nconsole.log(arr);\n// [0, 1, 2]\n\narr.unshift(-2, -1); // geriye 5 döndürür (dizi uzunluğu)\nconsole.log(arr);\n// [-2, -1, 0, 1, 2]\n\narr.unshift([-4, -3]); // geriye 6 döndürür (dizi uzunluğu)\nconsole.log(arr);\n// [[-4, -3], -2, -1, 0, 1, 2]\n\narr.unshift([-7, -6], [-5]); // geriye 8 döndürür (dizi uzunluğu)\nconsole.log(arr);\n// [ [-7, -6], [-5], [-4, -3], -2, -1, 0, 1, 2 ]",
+      "description": "Unshift kullanım örnekleri"
+    }
+  ],
+  "return": {
+    "text": "Dizinin yeni uzunluğunu (eleman sayısını) döndürür."
+  },
+  "deprecated": false
+}
