@@ -1,0 +1,33 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "Javascript push() Metodu",
+  "name": "push",
+  "syntax": "array.push(item1, item2, ..., itemX)",
+  "description": "<code>push</code> metodu, dizinin sonuna yeni değerler eklemek için kullanılır. İşlem sonucunda ise, dizinin yeni uzunluğunu geriye döner.",
+  "example": "const animals = ['pigs', 'goats', 'sheep'];\n\nconst count = animals.push('cows');\nconsole.log(count);\n// 4\n\nconsole.log(animals);\n// [\"pigs\", \"goats\", \"sheep\", \"cows\"]\n\nanimals.push('chickens', 'cats', 'dogs');\nconsole.log(animals);\n// [\"pigs\", \"goats\", \"sheep\", \"cows\", \"chickens\", \"cats\", \"dogs\"]",
+  "note": "Bu metod, dizinin uzunluğunu değiştirir. \nBir dizinin başına yeni değerler eklemek için ise <a href=\"/javascript/array-unshift-metodu\">unshift()</a> metodunu deneyin.",
+  "version": [
+    "ES1"
+  ],
+  "params": [
+    {
+      "name": "item1, item2, ..., itemX",
+      "description": "Dizinin sonuna eklenecek değerler",
+      "required": true
+    }
+  ],
+  "examples": [
+    {
+      "code": "let sports = ['soccer', 'baseball']\nlet total = sports.push('football', 'swimming')\n\nconsole.log(sports); // ['soccer', 'baseball', 'football', 'swimming']\nconsole.log(total); // 4",
+      "title": "push() kullanım örnekleri"
+    },
+    {
+      "code": "const users = [\n\t{ name: \"Tayfun Erbilen\", age: 27 },\n\t{ name: \"Mehmet Seven\", age: 27 }\n];\n\nusers.push({\n\tname: \"Gökhan Kandemir\",\n\tage: 30\n})\n\nconsole.log(users)",
+      "title": "push() ile dizi sonuna obje ekleme örneği"
+    }
+  ],
+  "return": {
+    "text": "Dizinin yeni uzunluğunu (eleman sayısını) döndürür."
+  },
+  "deprecated": false
+}
