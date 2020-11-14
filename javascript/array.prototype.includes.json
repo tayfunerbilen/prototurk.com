@@ -1,0 +1,44 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "Javascript includes() Metodu",
+  "name": "includes",
+  "syntax": "array.includes(valueToFind, fromIndex)",
+  "description": "<code>includes()</code> metodu, belirtilen değerin dizi öğelerinde olup olmadığını test eder. Metod, belirtilen değerin içinde geçmesini değil, tam olarak eşleşip eşleşmediğini kontrol eder.\nEğer aranan değer eşleşiyorsa <code>true</code> eşleşmiyorsa <code>false</code> döner.",
+  "example": "const array1 = [1, 2, 3];\n\nconsole.log(array1.includes(2));\n// expected output: true\n\nconst pets = ['cat', 'dog', 'bat'];\n\nconsole.log(pets.includes('cat'));\n// true\n\nconsole.log(pets.includes('at'));\n// false - çünkü at ifadesi cat içinde geçsede bu metod tam eşleşme arar",
+  "note": "Metod, büyük/küçük harfe duyarlıdır. O yüzden <code>prototurk</code> ile <code>Prototurk</code> eşleşmeyecektir.",
+  "version": [
+    "ES7"
+  ],
+  "params": [
+    {
+      "name": "valueToFind",
+      "description": "Aranacak değer",
+      "required": true
+    },
+    {
+      "name": "fromIndex",
+      "description": "Aramanın başlayacağı indis değeri",
+      "required": false
+    }
+  ],
+  "examples": [
+    {
+      "code": "console.log( [1, 2, 3].includes(2) )      // true\nconsole.log( [1, 2, 3].includes(4) )      // false\nconsole.log( [1, 2, 3].includes(3, 3) )   // false\nconsole.log( [1, 2, 3].includes(3, -1) )  // true\nconsole.log( [1, 2, NaN].includes(NaN) )  // true",
+      "description": "En basit örneklerle açıklamak gerekirse"
+    },
+    {
+      "code": "let arr = ['a', 'b', 'c']\n\narr.includes('c', 3)    // false\narr.includes('c', 100)  // false",
+      "description": "Eğer bu parametrenin değeri dizi uzunluğundan fazla olursa, metod eşleşme aramadan <code>false</code> döndürecektir.",
+      "title": "<code>fromIndex</code> parametresi"
+    },
+    {
+      "code": "// örnek bir anlatım\n// array uzunluğu = 3\n// fromIndex = -100\n// indis başlangıcı = 3 + (-100) = -97\n\nlet arr = ['a', 'b', 'c']\n\narr.includes('a', -100) // true\narr.includes('b', -100) // true\narr.includes('c', -100) // true\narr.includes('a', -2)   // false - çünkü (3 + (-2)) = 1 olacağı için 1. indiste değer b olduğundan false döner",
+      "description": "Eğer fromIndex parametresini sıfırdan küçük değer verirseniz mevcut dizi uzunluğu ile verdiğiniz değer toplanır ve ona göre eşleşme aranır. ",
+      "title": "<code>fromIndex</code> 0'dan küçük ise"
+    }
+  ],
+  "return": {
+    "text": "Eğer dizi içinde aranan değer varsa <code>true</code> yoksa <code>false</code> döndürür."
+  },
+  "deprecated": false
+}
