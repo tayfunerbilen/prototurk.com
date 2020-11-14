@@ -1,0 +1,44 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "Javascript find() Metodu",
+  "name": "find",
+  "syntax": "array.find(function(currentValue, index, arr),thisValue)",
+  "description": "<code>find()</code> metodu, dizi içinde belirlediğimiz koşula uygun olan ilk elemanı seçmeye yarar.\nEğer koşula uygun eleman bulunamazsa, geriye <code>undefined</code> döndürür.",
+  "example": "const animals = ['pigs', 'goats', 'sheep'];\n\nconst count = animals.push('cows');\nconsole.log(count);\n// 4\n\nconsole.log(animals);\n// [\"pigs\", \"goats\", \"sheep\", \"cows\"]\n\nanimals.push('chickens', 'cats', 'dogs');\nconsole.log(animals);\n// [\"pigs\", \"goats\", \"sheep\", \"cows\", \"chickens\", \"cats\", \"dogs\"]",
+  "note": "Bu metod varsayılan diziyi değiştirmez ve test edilen dizi boş ise çalışmaz.\nEğer bulunan ilk dizi elemanının indis değerini almak isterseniz <a href=\"/javascript/array-findindex-metodu\">findIndex()</a> metoduna bakın.\nEğer dizide geçen bir değeri bulmak istiyorsanız <a href=\"/javascript/array-includes-metodu\">includes()</a> metoduna bakın.\nEğer herhangi bir öğenin koşulu karşılayıp karşılamadığını test etmek istiyorsanız <a href=\"/javascript/array-some-metodu\">some()</a> metoduna bakın.",
+  "version": [
+    "ES6"
+  ],
+  "params": [
+    {
+      "name": "currentValue",
+      "description": "İşlemden geçen elemanın değeri",
+      "required": true
+    },
+    {
+      "name": "index",
+      "description": "İşlemden geçen elemanın indis değeri",
+      "required": false
+    },
+    {
+      "name": "arr",
+      "description": "İşlemden geçen elemanın ait olduğu dizi",
+      "required": false
+    }
+  ],
+  "examples": [
+    {
+      "code": "const inventory = [\n  {name: 'apples', quantity: 2},\n  {name: 'bananas', quantity: 0},\n  {name: 'cherries', quantity: 5}\n];\n\nfunction isCherries(fruit) { \n  return fruit.name === 'cherries';\n}\n\nconsole.log(inventory.find(isCherries)); \n// { name: 'cherries', quantity: 5 }",
+      "description": "Aşağıdaki kod, <code>inventory</code> dizisinde <code>name</code> özelliği <code>cherries</code> olan öğeyi döndürecektir.",
+      "title": "Nesnenin özelliğine göre dizi öğesini bulma"
+    },
+    {
+      "code": "const inventory = [\n  {name: 'apples', quantity: 2},\n  {name: 'bananas', quantity: 0},\n  {name: 'cherries', quantity: 5}\n];\n\n// Bunu arrow fonsiyonu ve destructuring ile bulmak isteseydiniz\nconsole.log(inventory.find( ({ name }) => name === 'cherries' ));",
+      "description": "Aynı işlemin arrow fonksiyon ve destructuring yöntemi ile kullanımı"
+    }
+  ],
+  "return": {
+    "text": "Koşula uyan ilk dizi elemanını döndürür. Hiçbiri koşula uymazsa geriye <code>undefined</code> döndürür."
+  },
+  "deprecated": false
+}
