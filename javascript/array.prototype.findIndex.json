@@ -1,0 +1,43 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "Javascript findIndex() Metodu",
+  "name": "findIndex",
+  "syntax": "array.findIndex(function(currentValue, index, arr), thisValue)",
+  "description": "<code>findIndex()</code> metodu, dizi içerisinde belirlediğimiz koşula uygun olan elemanın indis değerini döndürür.",
+  "example": "const numbers = [5, 12, 8, 130, 44];\n\nconsole.log(numbers.findIndex( number > 13 ));\n// 3 - ilk 3 eleman 13den küçüktür, 130 değeri 13'den büyük olduğu için 3 indisi geriye döner",
+  "note": "Eğer koşula uygun dizi elemanını bulmak isterseniz <a href=\"/javascript/array-find-metodu\">find()</a> metoduna bakın.",
+  "version": [
+    "ES6"
+  ],
+  "params": [
+    {
+      "name": "currentValue",
+      "description": "İşlemden geçen elemanın değeri",
+      "required": true
+    },
+    {
+      "name": "index",
+      "description": "İşlemden geçen elemanın indis değeri",
+      "required": false
+    },
+    {
+      "name": "arr",
+      "description": "İşlemden geçen elemanın ait olduğu dizi",
+      "required": false
+    }
+  ],
+  "examples": [
+    {
+      "code": "const fruits = [\"apple\", \"banana\", \"cantaloupe\", \"blueberries\", \"grapefruit\"];\n\nconst index = fruits.findIndex(fruit => fruit === \"blueberries\");\n\nconsole.log(index); // 3\nconsole.log(fruits[index]); // blueberries",
+      "description": "En basit haliyle kullanımı"
+    },
+    {
+      "code": "const users = [\n  { name: \"Tayfun\", age: 27 },\n  { name: \"Mehmet\", age: 27 },\n  { name: \"Gökhan\", age: 32 }\n];\n\nlet found = users.findIndex(user => user.name == \"Mehmet\");\nconsole.log(users[found]);\n// { name: \"Mehmet\", age: 27 }",
+      "title": "findIndex() metodunun objeler ile kullanımı"
+    }
+  ],
+  "return": {
+    "text": "Koşula uygun ilk öğenin indis değeri döner, koşula uygun öğe yoksa <code>-1</code> döner."
+  },
+  "deprecated": false
+}
