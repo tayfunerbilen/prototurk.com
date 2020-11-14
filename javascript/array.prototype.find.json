@@ -4,7 +4,7 @@
   "name": "find",
   "syntax": "array.find(function(currentValue, index, arr),thisValue)",
   "description": "<code>find()</code> metodu, dizi içinde belirlediğimiz koşula uygun olan ilk elemanı seçmeye yarar.\nEğer koşula uygun eleman bulunamazsa, geriye <code>undefined</code> döndürür.",
-  "example": "const animals = ['pigs', 'goats', 'sheep'];\n\nconst count = animals.push('cows');\nconsole.log(count);\n// 4\n\nconsole.log(animals);\n// [\"pigs\", \"goats\", \"sheep\", \"cows\"]\n\nanimals.push('chickens', 'cats', 'dogs');\nconsole.log(animals);\n// [\"pigs\", \"goats\", \"sheep\", \"cows\", \"chickens\", \"cats\", \"dogs\"]",
+  "example": "const array1 = [5, 12, 8, 130, 44];\n\n// değeri 10 dan büyük olan ilk öğeyi döndürür\nconst found = array1.find(element => element > 10);\n\nconsole.log(found);\n// Çıktı: 12",
   "note": "Bu metod varsayılan diziyi değiştirmez ve test edilen dizi boş ise çalışmaz.\nEğer bulunan ilk dizi elemanının indis değerini almak isterseniz <a href=\"/javascript/array-findindex-metodu\">findIndex()</a> metoduna bakın.\nEğer dizide geçen bir değeri bulmak istiyorsanız <a href=\"/javascript/array-includes-metodu\">includes()</a> metoduna bakın.\nEğer herhangi bir öğenin koşulu karşılayıp karşılamadığını test etmek istiyorsanız <a href=\"/javascript/array-some-metodu\">some()</a> metoduna bakın.",
   "version": [
     "ES6"
