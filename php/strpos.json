@@ -1,0 +1,44 @@
+{
+  "author": "yusufhan <yusufhankrkc@gmail.com>",
+  "title": "strpos() Fonksiyonu",
+  "name": "strpos",
+  "syntax": "strpos ( string $samanlık , mixed $iğne [, int $başlangıç = 0 ] ) : int",
+  "description": "<?php\n$samanlık = 'abc';\n$iğne   = 'a';\n$konum = strpos($samanlık, $iğne);\n\n// !== işleci de kullanılabilir.  'a' 0. karakter olduğundan\n// != işleci beklendiği gibi çalışmayacak, (0 != false) deyimi\n// yanlış sonuç verecektir.\nif ($konum !== false) {\n    echo \"'$samanlık' dizgesi içinde '$iğne' dizgesi var\";\n    echo \" ve $konum. karakterden başlıyor\";\n} else {\n    echo \"'$samanlık' dizgesi içinde '$iğne' dizgesi yok\";\n}\n?>",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "$samanlik",
+      "type": "string",
+      "description": "Aramanın yapılacağı değişken",
+      "required": true
+    },
+    {
+      "name": "$iğne",
+      "type": "string",
+      "description": "Değişken içerisinde aranacak değer",
+      "required": true
+    },
+    {
+      "name": "$başlangıç",
+      "type": "int",
+      "description": "Başlangıç indisi",
+      "default": "0",
+      "required": false
+    }
+  ],
+  "examples": [
+    {
+      "code": "<?php\n$konum = strpos(\"Yusufhan\",\"han\");\n\n\tif($konum !== false)\n\t{\n\t\techo \"Değişken içinde aradığınız karakter var, $konum. karakterden başlıyor\";\t\n\t}\n\telse\n\t{\n\t\techo \"Aradığınız karakter bulunamadı\";\n\t}\n?>",
+      "description": "Değişken içinde karakter arama",
+      "title": "Strpos() Örneği"
+    }
+  ],
+  "return": {
+    "type": "boolean",
+    "text": "Samanlık içinde iğne varsa TRUE yoksa FALSE değeri döndürür"
+  }
+}
