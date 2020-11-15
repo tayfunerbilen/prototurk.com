@@ -40,5 +40,6 @@
   "return": {
     "text": "Eğer dizi içinde aranan değer varsa <code>true</code> yoksa <code>false</code> döndürür."
   },
-  "deprecated": false
+  "deprecated": false,
+  "video": "https://www.youtube.com/watch?v=c3Q8V-rEkPM"
 }
