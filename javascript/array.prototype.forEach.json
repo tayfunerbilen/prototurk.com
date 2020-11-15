@@ -1,0 +1,57 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "Javascript forEach() Metodu",
+  "name": "forEach",
+  "syntax": "array.forEach(function(currentValue, index, arr), thisValue)",
+  "description": "<code>forEach()</code> metodu, dizideki her elemanı bir işlevden geçirir. Kısaca döngüye sokmanızı sağlar.",
+  "example": "const array = ['a', 'b', 'c'];\n\narray.forEach(element => console.log(element));\n\n// \"a\"\n// \"b\"\n// \"c\"",
+  "note": "Eğer dizi boş ise bu metod çalışmaz.",
+  "version": [
+    "ES5"
+  ],
+  "params": [
+    {
+      "name": "currentValue",
+      "description": "İşlemden geçen elemanın değeri",
+      "required": true
+    },
+    {
+      "name": "index",
+      "description": "İşlemden geçen elemanın indis değeri",
+      "required": false
+    },
+    {
+      "name": "arr",
+      "description": "İşlemden geçen elemanın ait olduğu dizi",
+      "required": false
+    }
+  ],
+  "examples": [
+    {
+      "code": "const array = [1,3,,7]\nlet numCallbackRuns = 0\n\narray.forEach(el => {\n  console.log(el)\n  numCallbackRuns++\n})\n\nconsole.log(\"numCallbackRuns: \", numCallbackRuns)\n\n// 1\n// 3\n// 7\n// numCallbackRuns: 3\n// gördüğünüz gibi 3 ve 7 arasındaki başlatılmamıboş değerler sayılmadı",
+      "title": "Boş değerler işleme alınmaz"
+    },
+    {
+      "code": "const items = ['item1', 'item2', 'item3']\nconst copyItems = []\n\n// öncesi\nfor (let i = 0; i < items.length; i++) {\n  copyItems.push(items[i])\n}\n\n// sonrası\nitems.forEach(function(item){\n  copyItems.push(item)\n})",
+      "title": "For döngüsünü forEach'e çevirme"
+    },
+    {
+      "code": "function Counter() {\n  this.sum = 0\n  this.count = 0\n}\nCounter.prototype.add = function(array) {\n  array.forEach(entry => {\n    this.sum += entry\n    ++this.count\n  }, this)\n}\n\nconst obj = new Counter()\nobj.add([2, 5, 9])\nconsole.log(obj.count)\n// 3 \nconsole.log(obj.sum)\n// 16",
+      "title": "<code>thisArg</code> kullanımı"
+    },
+    {
+      "code": "let words = ['one', 'two', 'three', 'four']\nwords.forEach((word) => {\n  console.log(word)\n  if (word === 'two') {\n    words.shift() //'one' diziden silinecek\n  }\n}) // one // two ​​​​// four\n\nconsole.log(words);  //['two', 'three',​​​​ 'four']",
+      "description": "Döngü içinde <code>two</code> değerine geldiğinde, <code>unshift()</code> ile dizinin ilk değeri silinecek. Ve <code>two</code> değerinden sonraki değerlerin indisi birer azalacağı için 3. yü pas geçerek dördüncüden devam edecek.",
+      "title": "Döngüdeyken dizide değişiklik yapmak"
+    },
+    {
+      "code": "function flatten(arr) {\n  const result = []\n\n  arr.forEach((i) => {\n    if (Array.isArray(i)) {\n      result.push(...flatten(i))\n    } else {\n      result.push(i)\n    }\n  })\n  \n  return result\n}\n\n// Kullanımı\nconst nested = [1, 2, 3, [4, 5, [6, 7], 8, 9]]\n\nconsole.log(flatten(nested)) // [1, 2, 3, 4, 5, 6, 7, 8, 9]",
+      "description": "Aşağıdaki örnek <code>forEach()</code> metodunu öğrenme amaçlı hazırlanmıştır. Bu işlem için zaten <a href=\"/javascript/array-flat-metodu\">flat()</a> metodu kullanılmaktadır.",
+      "title": "İç içe dizileri düzleştirmek"
+    }
+  ],
+  "return": {
+    "text": "Geriye değer dönmez."
+  },
+  "deprecated": false
+}
