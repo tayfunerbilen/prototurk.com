@@ -45,5 +45,6 @@
   "return": {
     "text": "İşlemden geçen öğelerden geriye kalan bir dizi döner."
   },
-  "deprecated": false
+  "deprecated": false,
+  "video": "https://www.youtube.com/watch?v=e2UN_Kmv7hE"
 }
