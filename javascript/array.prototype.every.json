@@ -55,5 +55,6 @@
   "return": {
     "text": "Dizideki tüm öğeler testi geçerse <code>true</code>, aksi halde <code>false</code> döner."
   },
-  "deprecated": false
+  "deprecated": false,
+  "video": "https://www.youtube.com/watch?v=Vc97wGfUN_4"
 }
