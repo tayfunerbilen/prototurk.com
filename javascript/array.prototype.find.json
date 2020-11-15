@@ -40,5 +40,6 @@
   "return": {
     "text": "Koşula uyan ilk dizi elemanını döndürür. Hiçbiri koşula uymazsa geriye <code>undefined</code> döndürür."
   },
-  "deprecated": false
+  "deprecated": false,
+  "video": "https://www.youtube.com/watch?v=4JkMF9862uY"
 }
