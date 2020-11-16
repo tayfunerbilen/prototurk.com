@@ -1,0 +1,69 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "Javascript reduce() Metodu",
+  "name": "reduce",
+  "syntax": "array.reduce(function(accumulator, currentValue, index, arr), initialValue)",
+  "description": "<code>reduce()</code> metodu, dizinin her değeri için bir işlev yürütür ve sonunda diziyi tek bir değere düşürür.\nMetodun dönüş değeri ilk parametresi olan <code>accumulator</code> parametresinde saklanır.",
+  "example": "const array1 = [1, 2, 3, 4];\nconst reducer = (accumulator, currentValue) => accumulator + currentValue;\n\n// 1 + 2 + 3 + 4\nconsole.log(array1.reduce(reducer));\n// 10\n\n// 5 + 1 + 2 + 3 + 4\nconsole.log(array1.reduce(reducer, 5));\n// 15",
+  "note": "Eğer dizi boş ise bu metod çalışmaz.\nVarolan diziyi etkilemez.",
+  "version": [
+    "ES5"
+  ],
+  "params": [
+    {
+      "name": "accumulator",
+      "description": "Dönüş değeri",
+      "required": true
+    },
+    {
+      "name": "currentValue",
+      "description": "İşlemde olan mevcut öğe",
+      "required": true
+    },
+    {
+      "name": "arr",
+      "description": "İşlemden geçen elemanın ait olduğu dizi",
+      "required": false
+    },
+    {
+      "name": "initialValue",
+      "description": "Başlangıç değeri (sayı, dizi, obje vb. olabilir)",
+      "required": false
+    }
+  ],
+  "examples": [
+    {
+      "code": "let sum = [0, 1, 2, 3].reduce(function (accumulator, currentValue) {\n  return accumulator + currentValue\n}, 0)\nconsole.log(sum) // 6\n\n// alternatif olarak arrow function ile şöyle yazılabilir\nlet total = [ 0, 1, 2, 3 ].reduce(( accumulator, currentValue ) => accumulator + currentValue, 0)\nconsole.log(total) // 6",
+      "title": "<code>reduce()</code> ile dizideki tüm değerlerin toplamını bulmak"
+    },
+    {
+      "code": "const basket = [\n    {\n        name: \"iPhone 8\",\n        price: 7000\n    },\n    {\n        name: \"Apple Macbook Pro\",\n        price: 14000\n    },\n    {\n        name: \"Harman/kardon\",\n        price: 255\n    }\n]\nlet sumBasket = basket.reduce((acc, item) => acc + item.price, 0)\n\nconsole.log(sumBasket) // 21255",
+      "title": "Nesne değerlerinin toplamını bulmak"
+    },
+    {
+      "code": "let names = ['Tayfun', 'Mehmet', 'Ahmet', 'Gökhan', 'Tayfun']\n\nlet countedNames = names.reduce(function (allNames, name) { \n  if (name in allNames) {\n    allNames[name]++\n  } else {\n    allNames[name] = 1\n  }\n  return allNames\n}, {})\n\nconsole.log(countedNames)\n// { Tayfun: 2, Mehmet: 1, Ahmet: 1, 'Gökhan': 1 }",
+      "title": "Nesne değerlerinin tekrarını saymak"
+    },
+    {
+      "code": "const products = [\n    {\n        name: \"NT1-A Condenser Mikrofon\",\n        brand: \"Rode\"\n    },\n    {\n        name: \"iPhone XS\",\n        brand: \"Apple\"\n    },\n    {\n        name: \"SmartLav Plus+ Yaka Mikrofonu\",\n        brand: \"Rode\"\n    },\n    {\n        name: \"M-AUDIO Keystation 61\",\n        brand: \"M-Audio\"\n    }\n]\n\nconst groupBy = (array, prop) => {\n    return array.reduce((acc, obj) => {\n        let key = obj[prop]\n        if (!acc[key]){\n            acc[key] = []\n        }\n        acc[key].push(obj)\n        return acc\n    }, {})\n}\n\nlet groupedProducts = groupBy(products, 'brand')\nconsole.log(groupedProducts)",
+      "title": "Değere göre nesneleri gruplama"
+    },
+    {
+      "code": "const posts = [\n  {\n    title: \"Post 1\",\n    tags: [\"php\", \"css\"],\n  },\n  {\n    title: \"Post 2\",\n    tags: [\"js\", \"c#\"],\n  },\n  {\n    title: \"Post 3\",\n    tags: [\"html5\", \"css\"],\n  },\n];\n\nconst allTags = posts.reduce((acc, post) => [...acc, ...post.tags], []);\nconsole.log([...new Set(allTags)])",
+      "title": "Spread operatörü ve initalValue değerini kullanarak nesne içindeki dizi değerlerini birleştirmek"
+    },
+    {
+      "code": "let myArray = ['a', 'b', 'a', 'b', 'c', 'e', 'e', 'c', 'd', 'd', 'd', 'd']\nlet myOrderedArray = myArray.reduce(function (acc, currentValue) {\n  if (!acc.includes(currentValue)) {\n    acc.push(currentValue)\n  }\n  return acc\n}, [])\n\nconsole.log(myOrderedArray)",
+      "description": "Daha kolay kullanımı için <code>Set()</code>",
+      "title": "Tekrarlanan değerleri silmek"
+    },
+    {
+      "code": "const numbers = [-5, 6, 2, 0,]\n\nconsole.log(\n    numbers\n    .filter(number => number > 0)\n    .map(number => number * 2)\n)\n\nconsole.log(\n    numbers.reduce((acc, number) => {\n        if (number > 0){\n            acc.push(number * 2)\n        }\n        return acc\n    }, [])\n)",
+      "title": "<code>filter()</code> ve <code>map()</code> yerine <code>reduce()</code> kullanmak"
+    }
+  ],
+  "return": {
+    "text": "Geriye biriken değer döner."
+  },
+  "deprecated": false
+}
