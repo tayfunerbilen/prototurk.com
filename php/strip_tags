@@ -1,0 +1,39 @@
+{
+  "author": "yusufhan <yusufhankrkc@gmail.com>",
+  "title": "strip_tags() Fonksiyonu",
+  "name": "strip_tags",
+  "syntax": "strip_tags ( string $dizge [, string $ayıklanmayacaklar ] ) : string",
+  "description": "Bu fonksiyon string değişkenlerinizden bilgi girişi aldığınız verilerden Tagları engellemek ve ayıklanmış bir yazı döndürmek için kullanılır",
+  "note": "Formlardan gelen bilgileri bu şekilde ayıklayabilirsiniz.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "$dizge",
+      "type": "string",
+      "description": "Ayıklama yapılacak değişken",
+      "required": true
+    },
+    {
+      "name": "$ayıklanmayacaklar",
+      "type": "string",
+      "description": "Ayıklanmayacak, izin verilen karakterler",
+      "required": false
+    }
+  ],
+  "examples": [
+    {
+      "code": "<?php\n$metin = '<p>Deneme yazısı.</p><!-- Yorum Satırı --> ' .\n         '<a href=\"#test\">Test'e Git</a>';\necho strip_tags($metin);\necho \"\\n\";\n\n// <p> ve <a>'ya izin verelim\necho strip_tags($metin, '<p><a>');\n?>\n\nÇIKTI:\nDeneme yazısı. Test'e Git\n<p>Deneme yazısı.</p> <a href=\"#test\">Test'e Git</a>",
+      "description": "Örnek Kodlar",
+      "title": "Örnek"
+    }
+  ],
+  "return": {
+    "type": "string",
+    "text": "Tag'lardan Ayıklanmış String"
+  },
+  "deprecated": false
+}
