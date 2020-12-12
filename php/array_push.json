@@ -1,0 +1,41 @@
+{
+  "author": "emrtnm <emrtnm@gmail.com>",
+  "title": "PHP'de array_push() Fonksiyonu",
+  "name": "array_push",
+  "syntax": "array_push ( array $array , $values) : int",
+  "description": "Belirtilen diziye yeni bir eleman ekler.",
+  "compatibilities": [
+    "php 4",
+    "php 5",
+    "php 7"
+  ],
+  "params": [
+    {
+      "name": "$array",
+      "type": "array",
+      "description": "Elemanın ekleneceği dizi",
+      "required": true
+    },
+    {
+      "name": "$values",
+      "type": "array",
+      "description": "Diziye eklenecek yeni değer",
+      "required": true
+    }
+  ],
+  "examples": [
+    {
+      "code": "<?php\n\n$data = [1,2,3,4,5];\narray_push($data, 6);\n\n?>",
+      "description": "$data dizisine yeni bir değer ekleyelim."
+    },
+    {
+      "code": "<?php\n\n$data = [1,2,3,4,5];\narray_push($data, [6,7,8]);\n\n?>",
+      "description": "$data dizisine yeni bir dizi ekleyelim."
+    }
+  ],
+  "return": {
+    "type": "int",
+    "text": "Dizinin eleman sayısını döndürür."
+  },
+  "deprecated": false
+}
