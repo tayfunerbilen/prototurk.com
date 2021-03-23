@@ -1,0 +1,49 @@
+{
+    "author": "onuralpkaratas <onuralpkaratasme@gmail.com>",
+    "title": "CSS padding Özelliği",
+    "name": "padding",
+    "lang": "css",
+    "description": "<code>padding</code> özelliği, herhangi bir html öğesinin kenarları ile içeriği arasındaki boşluğu ayarlamak için kullanılır. Detayları aşağıda örneklerle belirtilmiştir.",
+    "syntax": "padding: uzunluk | % | initial | inherit;",
+    "version": "CSS1",
+    "animatable": true,
+    "inherited": false,
+    "default_value": "0",
+    "js_syntax": "object.style.padding=\"Değer\"",
+    "values": [
+        {
+            "value": "uzunluk",
+            "description": "İçten boşluk vermek için px, pt, cm, em gibi değerler kullanılabilir."
+        },
+        {
+            "value": "%",
+            "description": "Yüzde (%) değeri kullanarak içten boşluk verilebilir."
+        },
+        {
+            "value": "initial",
+            "description": "Varsayılan değerine geri döndürür."
+        },
+        {
+            "value": "inherit",
+            "description": "Değerini üst öğesinden miras alır."
+        }
+    ],
+    "examples": [
+        {
+            "code": "div {\n\tpadding: 20px; \n}",
+            "description": "1 değer kullanıldığında, boşluk elementin 4 kısmından (kenarlar) içe doğru 20px ayarlanmış olur."
+        },
+        {
+            "code": "div {\n\tpadding: 20px 10px; \n}",
+            "description": "2 değer kullanıldığında, boşluk elementin üst ve alt kısmı için 20px, sağ ve sol kısmı için ise 10px içe doğru ayarlanmış olur."
+        },
+        {
+            "code": "div {\n\tpadding: 20px 10px 7px; \n}",
+            "description": "3 değer kullanıldığında, boşluk elementin üst kısmı için 20px, sağ ve sol kısmı için 10px ve alt kısmı için ise 7px içe doğru ayarlanmış olur."
+        },
+        {
+            "code": "div {\n\tpadding: 20px 10px 7px 30px; \n}",
+            "description": "4 değer kullanıldığında, boşluk elementin üst kısmı için 20px, sağ kısmı için 10px, alt kısmı için 7px ve sol kısmı için ise 30px içe doğru ayarlanmış olur."
+        }
+    ]
+}
