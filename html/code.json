@@ -1,0 +1,20 @@
+{
+  "author": "Tan Siret AKINCI <tansiretakinci@yandex.com>",
+  "title": "<code> Etiketi",
+  "name": "code",
+  "syntax": "<code> ",
+  "description": "Bilgisayar kodlarını belirtir.",
+  "version": "HTML5",
+  "closing_tag": true,
+  "display": "görünmez",
+  "usage": "Metinsel",
+  "default_css": "code",
+  "note": "Bilgisayar kodlarını ve komutlarını belirtmek için kullanılır. Kendi başına bir stili yoktur ama CSS ile oluşturulabilir.",
+  "examples": [
+    {
+      "code": "<code>sudo apt update</code>",
+      "description": "Kod ve komutları belirtmek için",
+      "title": "Kod ve Komutlar"
+    }
+  ]
+}

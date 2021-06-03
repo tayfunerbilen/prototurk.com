@@ -1,0 +1,20 @@
+{
+  "author": "Tan Siret AKINCI <tansiretakinci@yandex.com>",
+  "title": "<em> Etiketi",
+  "name": "em",
+  "syntax": "<em> ",
+  "description": "Vurgulanmış metin",
+  "version": "HTML5",
+  "closing_tag": true,
+  "display": "görünmez",
+  "usage": "Metinsel",
+  "default_css": "code",
+  "note": "Bir metni vurgulamak için kullanılır. Kendi başına bir stili yoktur ama CSS ile oluşturulabilir.",
+  "examples": [
+    {
+      "code": "<em>Vurgulanmış bir metin.</em>",
+      "description": "Metinleri vurgulamak için",
+      "title": "Vurgulanmış Metin"
+    }
+  ]
+}
