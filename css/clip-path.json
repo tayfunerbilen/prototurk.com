@@ -1,0 +1,67 @@
+{
+  "author": "ziarparvaiz <ziarparvaiz@gmail.com>",
+  "title": "CSS clip path Özellik",
+  "name": "clip-path",
+  "syntax": "clip-path: circle(50%);",
+  "js_syntax": "nesne .style.clipPath=\"daire(%50)\" ",
+  "description": "Tanım ve Kullanım\nclip-pathTesis temel şekline veya bir SVG kaynağına bir öğe klibi sağlar.\nNot:clip-path özellik kaldırılmış yerini alacak clipözelliği.\n\nVarsayılan değer: \tYok\nMiras: \tHayır\n\n\nCSS Sözdizimi\n<code>clip: clip-source|basic-shape|margin-box|border-box|padding-box|content-box|fill-box|stroke-box|view-box|none|initial|inherit;</code>",
+  "version": "CSS3",
+  "values": [
+    {
+      "value": "clip-source",
+      "description": "Bir SVG <clipPath> öğesine bir URL tanımlar"
+    },
+    {
+      "value": "basic-shape",
+      "description": "Bir öğeyi temel bir şekle klipsler: daire, elips, çokgen veya iç metin"
+    },
+    {
+      "value": "margin-box",
+      "description": "Referans kutusu olarak kenar boşluğu kutusunu kullanır"
+    },
+    {
+      "value": "border-box",
+      "description": "Referans kutusu olarak sınır kutusunu kullanır"
+    },
+    {
+      "value": "padding-box",
+      "description": "Referans kutusu olarak dolgu kutusunu kullanır"
+    },
+    {
+      "value": "content-box",
+      "description": "Referans kutusu olarak içerik kutusunu kullanır"
+    },
+    {
+      "value": "fill-box",
+      "description": "Referans kutusu olarak nesne sınırlama kutusunu kullanır"
+    },
+    {
+      "value": "stroke-box",
+      "description": "Referans kutusu olarak kontur sınırlama kutusunu kullanır"
+    },
+    {
+      "value": "view-box",
+      "description": "SVG görünüm penceresini referans kutusu olarak kullanır"
+    },
+    {
+      "value": "none",
+      "description": "Bu varsayılandır. Kırpma yapılmaz"
+    },
+    {
+      "value": "initial",
+      "description": "Bu özelliği varsayılan değerine ayarlar."
+    },
+    {
+      "value": "inherit",
+      "description": "Bu özelliği üst öğesinden devralır."
+    }
+  ],
+  "examples": [
+    {
+      "code": "<code>img {\n  clip-path: circle(50%);\n}</code>",
+      "description": "Bir resmi %50'lik bir daireye kırpın:",
+      "title": "clip-path Özellik"
+    }
+  ],
+  "animatable": true
+}
