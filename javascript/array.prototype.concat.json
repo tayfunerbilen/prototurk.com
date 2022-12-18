@@ -1,0 +1,45 @@
+{
+  "author": "tayfunerbilen <tayfunerbilen@gmail.com>",
+  "title": "Javascript concat() Metodu",
+  "name": "concat",
+  "syntax": "array1.concat(array2, array3, ..., arrayX)",
+  "description": "İki ve ya daha fazla diziyi birleştirmek için kullanılır.\nBu metod, varolan diziyi değiştirmez. Birleştirilmiş yeni bir dizi döndürür.",
+  "example": "let array1 = ['p', 'r', 'o'];\nlet array2 = ['t', 'o', 't'];\nlet array3 = ['u', 'r', 'k'];\n\nlet newArray = array1.concat(array2, array3);\n\nconsole.log(newArray);\n// Çıktı: Array [\"p\", \"r\", \"o\", \"t\", \"o\", \"t\", \"u\", \"r\", \"k\"]",
+  "version": [
+    "ES1"
+  ],
+  "params": [
+    {
+      "name": "array2, array3, ..., arrayX",
+      "description": "Birleştirilecek diziler",
+      "required": true
+    }
+  ],
+  "examples": [
+    {
+      "code": "const letters = ['a', 'b', 'c'];\nconst numbers = [1, 2, 3];\n\nconst newArray = letters.concat(numbers);\nconsole.log(newArray);\n\n// Çıktı: ['a', 'b', 'c', 1, 2, 3]",
+      "description": "Aşağıdaki kod, iki diziyi birleştirir.",
+      "title": "İki dizinin birleştirilmesi"
+    },
+    {
+      "code": "const num1 = [1, 2, 3];\nconst num2 = [4, 5, 6];\nconst num3 = [7, 8, 9];\n\nconst numbers = num1.concat(num2, num3);\nconsole.log(numbers); \n\n// Çıktı: [1, 2, 3, 4, 5, 6, 7, 8, 9]",
+      "description": "Aşağıdaki kod, üç diziyi birleştirir. Bu şekilde 2 veya daha fazla diziyi birleştirebilirsiniz.",
+      "title": "Üç dizinin birleştirilmesi"
+    },
+    {
+      "code": "const array1 = ['a', 'b', 'c'];\n\nconst newArray = array1.concat('d', ['e', 'f']);\nconsole.log(newArray);\n\n// Çıktı: [\"a\", \"b\", \"c\", \"d\", \"e\", \"f\"]",
+      "description": "Metod parametre olarak sadece dizi değil bir değerde alabilir. Aşağıdaki kod, bir değer ve dizilerin birleşimini gösterir.",
+      "title": "Değerleri diziye birleştirme"
+    },
+    {
+      "code": "const num1 = [[1]];\nconst num2 = [2, [3]];\n\nconst numbers = num1.concat(num2);\n\nconsole.log(numbers);\n// Çıktı: [[1], 2, [3]]\n\n// num1 dizisinin ilk elemanına yeni bir değer ekle\nnum1[0].push(4);\n\nconsole.log(numbers);\n// Çıktı: [[1, 4], 2, [3]]",
+      "description": "Aşağıdaki kod, iç içe dizileri birleştirmeye ve referansların korunmasına örnektir.",
+      "title": "İç içe dizileri birleştirme"
+    }
+  ],
+  "return": {
+    "text": "Birleştirilmiş dizi objesini döndürür."
+  },
+  "deprecated": false,
+  "video": "https://www.youtube.com/watch?v=hrzDmtBs9A4"
+}
