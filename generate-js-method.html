@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Etiket Oluşturucu</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    
+    <style>
+        .output {
+            border-left: 1px solid;
+            background: #333;
+        }
+
+        .output h3 {
+            color: #fff;
+        }
+
+        .output pre {
+            color: rgba(255, 255, 255, .7);
+            line-height: 140%;
+            background: rgba(255, 255, 255, .04);
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-md-7">
+
+            <div class="alert alert-primary">
+                Bu bölümde HTML'de etiketler için JSON formatında dosya oluşturabilirsiniz. Lütfen tam olarak
+                doldurduğunuzdan emin olun.
+            </div>
+
+            <form method="post" action="">
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Yazar Adınız</label>
+                            <input type="text" class="form-control" name="author_name">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Yazar E-posta Adresiniz</label>
+                            <input type="text" class="form-control" name="author_email">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Makale Başlığı</label>
+                    <input type="text" class="form-control" name="title" placeholder="Örn: &lt;strong> Etiketi">
+                </div>
+                <div class="form-group">
+                    <label>Etiket Adı</label>
+                    <input type="text" class="form-control" name="name" placeholder="Örn: strong">
+                </div>
+                <div class="form-group">
+                    <label>Etiket Yapısı (Syntax)</label>
+                    <input type="text" class="form-control" name="syntax" placeholder="Örn: &lt;a> .. &lt;/a>">
+                </div>
+                <div class="form-group">
+                    <label>Etiket Versiyonu</label>
+                    <div class="form-check">
+                        <input class="form-check-input version" type="radio" name="version" value="HTML" id="html">
+                        <label class="form-check-label" for="html">
+                            HTML
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input version" type="radio" name="version" value="HTML5" id="html5">
+                        <label class="form-check-label" for="html5">
+                            HTML5
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Kapanan Etiket mi?</label>
+                    <select name="closing_tag" class="form-control">
+                        <option value="">Seçin</option>
+                        <option value="1">Evet</option>
+                        <option value="0">Hayır</option>
+                    </select>
+                    <small>Örneğin <code>&lt;p>&lt;/p></code> şeklinde.</small>
+                </div>
+                <div class="form-group">
+                    <label>Etiket Görünümü</label>
+                    <select name="display" class="form-control">
+                        <option value="">Seçin</option>
+                        <option value="blok">blok</option>
+                        <option value="satıriçi">satıriçi</option>
+                        <option value="görünmez">görünmez</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Etiket Kullanımı</label>
+                    <select name="usage" class="form-control">
+                        <option value="">Seçin</option>
+                        <option value="Yapısal">Yapısal</option>
+                        <option value="Metinsel">Metinsel</option>
+                        <option value="Anlamsal">Anlamsal</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Varsayılan CSS Değerleri</label>
+                    <textarea name="default_css" class="form-control" id="default_css" cols="30" rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Etiket Açıklaması</label>
+                    <textarea name="description" cols="30" rows="6" class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Etiket Notu</label>
+                    <textarea name="note" cols="30" rows="6" class="form-control"></textarea>
+                </div>
+                <hr>
+                <h3>Nitelikler</h3>
+                <div class="attributes">
+                    <div class="attribute">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Nitelik Adı</label>
+                                    <input type="text" name="attr_name" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Değer</label>
+                                    <input type="text" name="attr_value" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Açıklama</label>
+                                    <input type="text" name="attr_desc" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <a href="#" class="btn btn-primary" id="add-attribute">Yeni Ekle</a>
+                    </div>
+                </div>
+
+                <hr>
+                <h3>Örnekler</h3>
+                <div class="examples">
+                    <div class="example">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Başlık</label>
+                                    <input type="text" name="title" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Açıklama</label>
+                                    <input type="text" name="description" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Örnek Kodlar</label>
+                                    <textarea name="code" class="form-control" cols="30" rows="10"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <a href="#" class="btn btn-primary" id="add-example">Yeni Ekle</a>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+        <div class="col-md-5 output">
+            <h3>JSON Çıktı</h3>
+            <pre id="output"></pre>
+        </div>
+
+    </div>
+</div>
+
+<template id="attribute">
+    <div class="attribute">
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label>Nitelik Adı</label>
+                    <input type="text" name="attr_name" class="form-control">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label>Değer</label>
+                    <input type="text" name="attr_value" class="form-control">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label>Açıklama</label>
+                    <input type="text" name="attr_desc" class="form-control">
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template id="value">
+    <div class="row value">
+        <div class="col">
+            <div class="form-group">
+                <label>Değer</label>
+                <input type="text" class="form-control" name="value_name" placeholder="Örn: cover">
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-group">
+                <label>Açıklama</label>
+                <input type="text" class="form-control" name="value_description">
+            </div>
+        </div>
+    </div>
+</template>
+
+<template id="example">
+    <div class="example">
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label>Başlık</label>
+                    <input type="text" name="title" class="form-control">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label>Açıklama</label>
+                    <input type="text" name="description" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label>Örnek Kodlar</label>
+                    <textarea name="code" class="form-control" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+    $(function () {
+
+        $("textarea").keydown(function (e) {
+            if (e.keyCode === 9) { // tab was pressed
+                // get caret position/selection
+                var start = this.selectionStart;
+                end = this.selectionEnd;
+
+                var $this = $(this);
+
+                // set textarea value to: text before caret + tab + text after caret
+                $this.val($this.val().substring(0, start)
+                    + "\t"
+                    + $this.val().substring(end));
+
+                // put caret at right position again
+                this.selectionStart = this.selectionEnd = start + 1;
+
+                // prevent the focus lose
+                return false;
+            }
+        });
+
+        $('#add-value').on('click', function (e) {
+            var html = $('#value').html();
+            $('.values').append(html);
+            e.preventDefault();
+        });
+
+        $('#add-example').on('click', function (e) {
+            var html = $('#example').html();
+            $('.examples').append(html);
+            e.preventDefault();
+        });
+
+        $('#add-attribute').on('click', function (e) {
+            var html = $('#attribute').html();
+            $('.attributes').append(html);
+            e.preventDefault();
+        });
+
+        $(document.body).on('change input click', '.form-control, .form-check-input', function () {
+
+            var json = {};
+
+            var author_name = $('[name=\'author_name\']').val(),
+                author_email = $('[name=\'author_email\']').val(),
+                title = $('[name=\'title\']').val(),
+                name = $('[name=\'name\']').val(),
+                syntax = $('[name=\'syntax\']').val(),
+                js_syntax = $('[name=\'js_syntax\']').val(),
+                description = $('[name=\'description\']').val(),
+                animatable = $('[name=\'animatable\'] option:selected').val(),
+                default_value = $('[name=\'default_value\']').val(),
+                version = $('[name=\'version\']:checked').val(),
+                closing_tag = $('[name=\'closing_tag\'] option:selected').val(),
+                display = $('[name=\'display\'] option:selected').val(),
+                usage = $('[name=\'usage\'] option:selected').val(),
+                default_css = $('[name=\'default_css\']').val(),
+                note = $('[name=\'note\']').val();
+
+            if (author_name || author_email) json.author = `${author_name} &lt;${author_email }>`;
+            if (title) json.title = title.replace(/</g, '&lt;');
+            if (name) json.name = name.replace(/</g, '&lt;');
+            if (syntax) json.syntax = syntax.replace(/</g, '&lt;');
+            if (js_syntax) json.js_syntax = js_syntax.replace(/</g, '&lt;');
+            if (description) json.description = description.replace(/</g, '&lt;');
+            if (version) json.version = version.replace(/</g, '&lt;');
+            if (closing_tag) json.closing_tag = closing_tag === "1" ? true : false;
+            if (display) json.display = display;
+            if (usage) json.usage = usage;
+            if (default_css) json.default_css = default_css.replace(/</g, '&lt;');
+            if (note) json.note = note.replace(/</g, '&lt;');
+
+            $('.attribute').each(function () {
+                var name = $('[name=\'attr_name\']', this).val(),
+                    val = $('[name=\'attr_value\']', this).val(),
+                    desc = $('[name=\'attr_desc\']', this).val();
+                if (name && desc) {
+                    if (!json.attributes) json.attributes = [];
+                    json.attributes.push({
+                        name: name,
+                        value: val,
+                        description: desc.replace(/</g, '&lt;')
+                    });
+                }
+            });
+
+            $('.value').each(function () {
+                var name = $('[name=\'value_name\']', this).val(),
+                    desc = $('[name=\'value_description\']', this).val();
+                if (name && desc) {
+                    if (!json.values) json.values = [];
+                    json.values.push({
+                        value: name,
+                        description: desc.replace(/</g, '&lt;')
+                    });
+                }
+            });
+
+            $('.example').each(function () {
+                var title = $('[name=\'title\']', this).val(),
+                    desc = $('[name=\'description\']', this).val(),
+                    code = $('[name=\'code\']', this).val();
+                if (code) {
+                    if (!json.examples) json.examples = [];
+                    var example = {
+                        code: code.replace(/</g, '&lt;')
+                    };
+                    if (desc) example.description = desc;
+                    if (title) example.title = title;
+                    json.examples.push(example);
+                }
+            });
+
+            if (animatable) json.animatable = animatable == '1' ? true : false;
+            if (default_value) json.default_value = default_value;
+
+            if (Object.keys(json).length)
+                $('#output').html(JSON.stringify(json, null, 2));
+            else
+                $('#output').html('');
+        });
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "author": "yuswf <yusu@duck.com>",
+  "title": "pop()",
+  "name": "pop",
+  "syntax": "array.pop()",
+  "description": "Arrayden son elemanı siler.",
+  "version": [
+    "ES1"
+  ],
+  "note": "Herhangi bir değer vermenize gerek yoktur. Direkt olarak son elemanı siler.",
+  "examples": [
+    {
+      "code": "const arr = ['tayfun', 'erbilen', 'A'];\narr.pop();\nconsole.log(arr); // output: ['tayfun', 'erbilen'];\narr.pop();\nconsole.log(arr); // output: ['tayfun'];\n",
+      "description": "Basit düzeyde gösterim."
+    }
+  ],
+  "deprecated": false
+}
